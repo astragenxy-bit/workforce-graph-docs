@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hướng dẫn Workforce Graph</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Bố cục: trang bài viết của trung tâm hỗ trợ — dải tiêu đề tối, một cột đọc ~70 ký tự, mục lục dính bên phải trên màn rộng.
+   Màu theo nhận diện của chính sản phẩm (đen than + cam), không dùng nhận diện của bên khác. */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f4f2;
+  --ink: #141211;
+  --ink-2: #57524e;
+  --line: #e4dfdb;
+  --band: #141211;
+  --band-ink: #f6f2ee;
+  --band-ink-2: #c9c0b8;
+  --accent: #b5520f;
+  --accent-soft: #fcefe5;
+  --accent-ink: #9a440c;
+  --ok-bg: #edeae7;
+  --warn: #8a3e0a;
+  --shadow: 0 1px 2px rgba(20, 18, 17, .06), 0 8px 24px rgba(20, 18, 17, .06);
+  --f-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161412; --bg-soft: #1f1c1a; --ink: #f1ece7; --ink-2: #b9b0a8; --line: #36312d;
+    --band: #0c0b0a; --band-ink: #f6f2ee; --band-ink-2: #b9b0a8;
+    --accent: #f08a4b; --accent-soft: #3a2416; --accent-ink: #f4a374; --ok-bg: #2a2623; --warn: #f4a374;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161412; --bg-soft: #1f1c1a; --ink: #f1ece7; --ink-2: #b9b0a8; --line: #36312d;
+  --band: #0c0b0a; --band-ink: #f6f2ee; --band-ink-2: #b9b0a8;
+  --accent: #f08a4b; --accent-soft: #3a2416; --accent-ink: #f4a374; --ok-bg: #2a2623; --warn: #f4a374;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 16px/1.7 var(--f-body); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent-ink); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* Thanh trên */
+.top { border-bottom: 1px solid var(--line); background: var(--bg); }
+.top-in { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 15px; color: var(--ink); text-decoration: none; }
+.mark { width: 26px; height: 26px; border-radius: 7px; background: var(--band); display: grid; place-items: center; }
+.mark svg { display: block; }
+.brand small { font-weight: 500; color: var(--ink-2); }
+.top nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
+.top nav a { color: var(--ink-2); text-decoration: none; }
+.top nav a:hover { color: var(--ink); }
+
+/* Dải tiêu đề */
+.hero { background: var(--band); color: var(--band-ink); }
+.hero-in { max-width: 1180px; margin: 0 auto; padding-block: 52px 46px; }
+.eyebrow { font: 500 12px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--band-ink-2); }
+.hero h1 { font-size: clamp(30px, 4.6vw, 44px); line-height: 1.15; margin: 14px 0 14px; letter-spacing: -.01em; text-wrap: balance; font-weight: 700; }
+.hero p { max-width: 70ch; margin: 0; color: var(--band-ink-2); font-size: 17px; }
+
+/* Thân bài */
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px; padding-block: 28px 64px; }
+@media (min-width: 1100px) { .wrap { grid-template-columns: minmax(0, 1fr) 260px; } }
+article { min-width: 0; max-width: 780px; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 14px; color: var(--ink-2); padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.meta b { color: var(--ink); font-weight: 600; }
+article > p:first-of-type { margin-top: 22px; }
+h2 { font-size: 28px; line-height: 1.25; margin: 56px 0 16px; letter-spacing: -.005em; scroll-margin-top: 16px; text-wrap: balance; }
+h3 { font-size: 21px; line-height: 1.35; margin: 44px 0 10px; scroll-margin-top: 16px; text-wrap: balance; display: flex; gap: 10px; align-items: baseline; }
+h3 .n { font: 600 14px/1 var(--f-mono); color: var(--accent-ink); background: var(--accent-soft); padding: 5px 7px; border-radius: 6px; flex: none; }
+h4 { font-size: 16px; margin: 22px 0 6px; }
+p { margin: 10px 0; }
+ul, ol { margin: 8px 0 12px; padding-left: 22px; }
+li { margin: 4px 0; }
+li::marker { color: var(--accent); }
+strong { font-weight: 600; }
+.lead-val { margin: 6px 0 8px; }
+.path { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px; font: 500 13px/1.4 var(--f-mono); background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; color: var(--ink); white-space: nowrap; }
+.path i { font-style: normal; color: var(--ink-2); }
+.who { display: inline-block; font: 600 12px/1 var(--f-body); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin-right: 6px; }
+figure { margin: 18px 0 8px; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); background: #fff; }
+figcaption { font-size: 13px; color: var(--ink-2); margin-top: 8px; }
+.note { border-left: 3px solid var(--accent); background: var(--accent-soft); padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 14px 0; font-size: 15px; }
+.note p { margin: 4px 0; }
+.tbl { overflow-x: auto; margin: 12px 0 16px; border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; line-height: 1.5; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: var(--bg-soft); font-weight: 600; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 600; }
+.cmp td:first-child { font-weight: 600; white-space: nowrap; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--ok-bg); color: var(--ink); white-space: nowrap; }
+.tag.off { background: var(--accent-soft); color: var(--warn); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
+.end { margin-top: 48px; padding: 20px 22px; background: var(--bg-soft); border-radius: 12px; border: 1px solid var(--line); }
+.end p { margin: 6px 0; }
+
+/* Mục lục */
+.toc { display: none; }
+@media (min-width: 1100px) {
+  .toc { display: block; position: sticky; top: calc(16px + env(safe-area-inset-top, 0px)); align-self: start; max-height: calc(100vh - 32px); overflow: auto; font-size: 13.5px; padding-top: 6px; }
+}
+.toc b { display: block; font: 500 11px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 10px; }
+.toc ol { list-style: none; padding: 0; margin: 0 0 14px; border-left: 1px solid var(--line); }
+.toc li { margin: 0; }
+.toc a { display: block; padding: 4px 0 4px 12px; color: var(--ink-2); text-decoration: none; border-left: 2px solid transparent; margin-left: -1px; line-height: 1.4; }
+.toc a:hover { color: var(--ink); }
+.toc a.on { color: var(--ink); border-left-color: var(--accent); font-weight: 600; }
+.toc .sub a { padding-left: 22px; font-size: 13px; }
+
+/* Bản in / PDF: nền sáng, bỏ thanh trên và mục lục, không cắt ảnh và bảng giữa hai trang */
+@media print {
+  :root { --bg: #ffffff; --bg-soft: #f6f4f2; --ink: #141211; --ink-2: #57524e; --line: #e4dfdb; --band: #141211;
+          --band-ink: #f6f2ee; --band-ink-2: #c9c0b8; --accent: #b5520f; --accent-soft: #fcefe5; --accent-ink: #9a440c;
+          --ok-bg: #edeae7; --warn: #8a3e0a; --shadow: none; color-scheme: light; }
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  body { font-size: 11pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .top, .toc { display: none !important; }
+  .wrap { display: block; padding-block: 12px 0; }
+  article { max-width: none; }
+  .hero-in { padding-block: 28px 24px; }
+  h2 { margin-top: 28px; break-after: avoid; }
+  h3, h4 { break-after: avoid; }
+  h2#tinh-nang, h2#cai-tien, h2#quy-dinh, h2#su-co { break-before: page; }
+  figure, .tbl, .note, .end, tr { break-inside: avoid; }
+  figure img { box-shadow: none; }
+  a { color: inherit; text-decoration: none; }
+}
+</style>
+<style>
+/* Bổ sung cho tài liệu hướng dẫn: danh sách bước có số, khối phần, thẻ vai trò */
+ol.steps { list-style: none; counter-reset: st; padding-left: 0; margin: 10px 0 14px; }
+ol.steps > li { counter-increment: st; position: relative; padding-left: 38px; margin: 8px 0; }
+ol.steps > li::before { content: counter(st); position: absolute; left: 0; top: 1px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--band); color: var(--band-ink); font: 600 13px/26px var(--f-mono); text-align: center; }
+.part { font: 500 12px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); margin: 64px 0 -8px; }
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 14px 0; }
+.roles a { display: block; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--ink); background: var(--bg); }
+.roles a:hover { border-color: var(--accent); }
+.roles b { display: block; margin-bottom: 2px; }
+.roles span { font-size: 13.5px; color: var(--ink-2); }
+dl.faq dt { font-weight: 600; margin-top: 16px; }
+dl.faq dd { margin: 4px 0 0; color: var(--ink); }
+.ph { display: inline-block; vertical-align: middle; margin-left: 8px; font: 600 11px/1 var(--f-mono); letter-spacing: .04em; padding: 4px 7px; border-radius: 6px; border: 1px solid var(--line); color: var(--ink-2); }
+h3 .ph { position: relative; top: -2px; }
+@media print { .part { break-before: page; margin-top: 0; } .roles a { break-inside: avoid; } }
+</style>
+
+<header class="top"><div class="top-in gutter">
+  <a class="brand" href="#top" aria-label="Workforce Graph — Trung tâm hỗ trợ"><span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="4" cy="4" r="2.2" fill="#f08a4b"/><circle cx="12" cy="5" r="2.2" fill="#f6f2ee"/><circle cx="7" cy="12" r="2.2" fill="#f6f2ee"/><path d="M4 4 12 5 7 12Z" fill="none" stroke="#f6f2ee" stroke-width="1"/></svg></span>Workforce Graph <small>Trung tâm hỗ trợ</small></a>
+  <nav aria-label="Trong tài liệu">
+    <a href="#gioi-thieu">Giới thiệu</a><a href="#bat-dau">Bắt đầu</a><a href="#nhan-vien">Nhân viên</a><a href="#cap-tren">Cấp trên</a><a href="#nhan-su">Nhân sự</a><a href="#hoi-dap">Hỏi đáp</a>
+  </nav>
+</div></header>
+
+<section class="hero" id="top"><div class="hero-in gutter">
+  <div class="eyebrow">Hướng dẫn sử dụng</div>
+  <h1>Giới thiệu và hướng dẫn sử dụng Workforce Graph</h1>
+  <p>Tài liệu dành cho người dùng giai đoạn thí điểm Toho Gas: hệ thống làm gì, các khái niệm cần biết, và từng thao tác cho nhân viên, cấp trên, nhân sự, ban giám đốc và quản trị. Áp dụng cho phiên bản cập nhật 20.11.</p>
+</div></section>
+
+<div class="wrap gutter">
+<article>
+  <div class="meta"><span>Cập nhật: <b>20/11/2026</b></span><span>Phiên bản: <b>Workforce Graph cập nhật 20.11</b></span><span>Ngôn ngữ giao diện: <b>tiếng Nhật · tiếng Việt</b></span></div>
+
+  <p>Mỗi phần hướng dẫn ghi đường dẫn trong menu dạng <span class="path">Nhóm <i>→</i> Trang</span>, rồi các bước thao tác theo thứ tự. Nhãn <span class="ph">Phase 1</span> hoặc <span class="ph">Phase 2</span> cạnh tiêu đề cho biết tính năng mở ở phase triển khai nào. Ảnh minh họa chụp từ môi trường thử nghiệm với dữ liệu mẫu, giao diện tiếng Việt.</p>
+  <div class="roles" aria-label="Đi thẳng tới phần của bạn">
+    <a href="#nhan-vien"><b>Nhân viên</b><span>Hồ sơ kỹ năng, nghề nghiệp, IDP, tuyển nội bộ</span></a>
+    <a href="#cap-tren"><b>Cấp trên, người đăng tuyển</b><span>Duyệt IDP, hậu kiểm, phản hồi đơn, người mới chuyển</span></a>
+    <a href="#nhan-su"><b>Nhân sự</b><span>Dữ liệu, chuỗi sáu bước, job, tuyển nội bộ, điều chuyển</span></a>
+    <a href="#lanh-dao"><b>Ban giám đốc, Văn phòng DX</b><span>Danh mục nhân sự, an toàn, chỉ số</span></a>
+    <a href="#quan-tri"><b>Quản trị</b><span>Nhập file, người dùng, đồng ý, nhật ký</span></a>
+  </div>
+
+  <div class="part">Phần 1</div>
+  <h2 id="gioi-thieu">Giới thiệu</h2>
+
+  <h3 id="g1">Workforce Graph là gì</h3>
+  <p>Workforce Graph là nền tảng phát triển nghề nghiệp và thị trường nhân lực nội bộ dựa trên kỹ năng. Hệ thống nối chiến lược kinh doanh với kỹ năng của từng người để trả lời bốn câu hỏi:</p>
+  <ul>
+    <li><strong>Tổ chức cần gì:</strong> chiến lược đòi hỏi năng lực nào, job nào, bao nhiêu người, vào lúc nào.</li>
+    <li><strong>Đang có gì:</strong> mỗi người có kỹ năng gì, ở mức nào, căn cứ vào bằng chứng nào.</li>
+    <li><strong>Còn thiếu gì:</strong> khoảng cách giữa cần và có, theo mức độ và thời gian.</li>
+    <li><strong>Nên làm gì:</strong> đào tạo, chuyển nội bộ, biệt phái, tuyển, hay giao việc thử; và theo dõi kết quả sau đó.</li>
+  </ul>
+  <p>Hệ thống không thay thế hệ thống nhân sự, hệ thống đào tạo hay công cụ AI tạo sinh đang dùng. Nó là lớp nối giữa cầu (job) và cung (người).</p>
+
+  <h3 id="g2">Chuỗi sáu bước</h3>
+  <p>Mọi việc trong hệ thống đi theo cùng một trình tự. Phần lớn chuỗi thuộc Phase 2; từ Phase 2, thanh sáu bước hiện ở trang <span class="path">Việc cần làm</span> và ở sáu trang của chuỗi, cho biết bước nào đã đủ dữ liệu, bước nào còn việc chờ.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Bước</th><th>Câu hỏi</th><th>Trang</th></tr></thead>
+    <tbody>
+      <tr><td>1. Bối cảnh</td><td>Thị trường và chiến lược đang thay đổi thế nào?</td><td>Bối cảnh và chuyển đổi chiến lược</td></tr>
+      <tr><td>2. Năng lực</td><td>Chiến lược cần năng lực tổ chức nào, do job nào gánh?</td><td>Năng lực cần có</td></tr>
+      <tr><td>3. Con người</td><td>Ai đang có kỹ năng gì?</td><td>Con người và kỹ năng</td></tr>
+      <tr><td>4. Thiếu hụt</td><td>Thiếu gì, ở đâu, cần trong bao lâu?</td><td>Thiếu hụt</td></tr>
+      <tr><td>5. Hành động</td><td>Lấp thiếu hụt bằng cách nào?</td><td>Kế hoạch hành động</td></tr>
+      <tr><td>6. Theo dõi</td><td>Hành động có hiệu quả không?</td><td>Theo dõi tiến độ</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="g3">Khái niệm cần biết</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Thuật ngữ</th><th>Ý nghĩa</th></tr></thead>
+    <tbody>
+      <tr><td>Chuyển đổi chiến lược</td><td>Một hướng thay đổi lớn của doanh nghiệp, ví dụ chuyển người từ đọc đồng hồ sang an toàn và dữ liệu. Mọi hành động phát triển phải nối được về một chuyển đổi.</td></tr>
+      <tr><td>Năng lực</td><td>Khả năng tổ chức cần có để thực hiện chuyển đổi, ví dụ quản trị dữ liệu toàn công ty.</td></tr>
+      <tr><td>Job và ngạch</td><td>Job là công việc (có mô tả và yêu cầu kỹ năng). Ngạch là bậc trong chế độ nhân sự mới từ 4/2026; mỗi ngạch của một job có thể có mức yêu cầu riêng.</td></tr>
+      <tr><td>Kỹ năng và mức</td><td>Kỹ năng lấy theo デジタルスキル標準 ver.2.0 và bộ kỹ năng ngành năng lượng. Mức chung từ 1 (Biết) tới 5 (Dẫn dắt); một số kỹ năng có thang riêng, ví dụ thang việc hiện trường 0–4.</td></tr>
+      <tr><td>Bằng chứng và độ tin cậy</td><td>Tự khai, đánh giá, chứng chỉ, dự án, xác nhận của cấp trên. Mỗi loại có trọng số; kỹ năng chỉ được tính là "có" khi độ tin cậy từ 0,5.</td></tr>
+      <tr><td>Thiếu hụt</td><td>Khoảng cách giữa mức cần và mức đang có, kèm lý do kinh doanh và thời gian cần lấp.</td></tr>
+      <tr><td>Hàng duyệt</td><td>Nơi người có thẩm quyền quyết định các đề xuất của hệ thống. Không đề xuất nào có hiệu lực trước khi được duyệt.</td></tr>
+      <tr><td>IDP</td><td>Kế hoạch phát triển cá nhân: các task học có giờ, hướng tới một job và ngạch mục tiêu, do cấp trên duyệt.</td></tr>
+      <tr><td>Hậu kiểm</td><td>Người duyệt xem bằng chứng nhân viên nộp và kết luận Đạt hoặc Trả lại. Chỉ task Đạt mới tính tiến độ.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="g4">Nguyên tắc sử dụng dữ liệu</h3>
+  <ul>
+    <li><strong>Không quyết định tự động về con người:</strong> hệ thống và AI chỉ đề xuất; người có thẩm quyền quyết định và quyết định được ghi lại.</li>
+    <li><strong>Dữ liệu kỹ năng chỉ dùng cho phát triển và bố trí,</strong> không dùng để trừ điểm hay xếp hạng cắt giảm.</li>
+    <li><strong>Mức tự đánh giá không phải xếp hạng chính thức;</strong> nó là mốc để lập kế hoạch học.</li>
+    <li><strong>Họ tên và thông tin liên lạc được mã hóa</strong> và chỉ hiện với người có quyền; mọi lần xem đều được ghi nhật ký.</li>
+  </ul>
+
+  <div class="part">Phần 2</div>
+  <h2 id="bat-dau">Bắt đầu</h2>
+
+  <h3 id="b1">Vai trò và những gì bạn thấy</h3>
+  <p>Menu bên trái chỉ hiện những trang vai trò của bạn được dùng. Nhân sự công ty con chỉ thấy người của công ty mình; ban giám đốc chỉ thấy số tổng hợp.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Vai trò</th><th>Dùng chính</th></tr></thead>
+    <tbody>
+      <tr><td>Nhân viên</td><td>Lộ trình của tôi, Nghề nghiệp và nguyện vọng, Kế hoạch phát triển (IDP), Tuyển dụng nội bộ, Theo dõi sau chuyển</td></tr>
+      <tr><td>Cấp trên trực tiếp</td><td>Việc cần làm của đơn vị, Nhóm của tôi, Duyệt IDP và hậu kiểm, phản hồi đơn tuyển nội bộ, checklist 90 ngày</td></tr>
+      <tr><td>Người đăng tuyển</td><td>Đăng cơ hội nội bộ, xem ứng viên không tên, chọn vào vòng trong</td></tr>
+      <tr><td>Nhân sự công ty</td><td>Như nhân sự tập đoàn, trong phạm vi công ty mình</td></tr>
+      <tr><td>Nhân sự tập đoàn</td><td>Toàn bộ chuỗi sáu bước, hàng duyệt, kiến trúc job, điều chuyển định kỳ, khung theo ngạch, Chỉ số PoC</td></tr>
+      <tr><td>Ban giám đốc</td><td>Danh mục nhân sự, An toàn và kế thừa, Chỉ số PoC (số tổng hợp)</td></tr>
+      <tr><td>Văn phòng DX</td><td>Từ điển kỹ năng DX, tab Nhân lực DX</td></tr>
+      <tr><td>Quản trị</td><td>Thiết lập dữ liệu, Quản trị, Nhịp vận hành</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="b2">Bố cục màn hình</h3>
+  <ul>
+    <li><strong>Menu bên trái</strong> nhóm theo phạm vi, như các hệ thống nhân sự lớn: <strong>Của tôi</strong> (hồ sơ, nghề nghiệp, IDP của chính bạn), <strong>Nhóm của tôi</strong> (cho cấp trên), <strong>Tổ chức</strong> (bốn nhóm con: Chuỗi chiến lược, Nhân lực, Phát triển và dịch chuyển, Tri thức) và <strong>Vận hành</strong> ở cuối. Bấm tên nhóm để thu gọn hoặc mở. Số màu cam là số việc đang chờ bạn.</li>
+    <li><strong>Tìm nhanh:</strong> bấm <span class="path">Ctrl K</span> (máy Mac: <span class="path">⌘ K</span>) hoặc ô <span class="path">Tìm nhanh</span> để tìm trang theo tên; nhân sự và cấp trên tìm được cả job, kỹ năng, năng lực. Chưa gõ thì hiện các trang vừa mở.</li>
+    <li><strong>Ghim:</strong> rê chuột vào một mục và bấm ☆ để đưa mục đó lên nhóm <span class="path">Đã ghim</span> ở đầu menu. Nút <span class="path">Ẩn menu</span> dưới tên tài khoản cho thêm chỗ cho nội dung.</li>
+    <li><strong>Góc trên bên phải:</strong> chuông thông báo và nút đổi ngôn ngữ.</li>
+    <li><strong>Dải màu cam</strong> ở đầu trang nhắc đây là môi trường thử nghiệm với dữ liệu mẫu.</li>
+    <li><strong>Nút Hướng dẫn</strong> dưới tên tài khoản mở lại phần giới thiệu nhanh cho vai trò của bạn.</li>
+  </ul>
+  <figure><img src="img/home.jpg" alt="Trang Việc cần làm với thanh sáu bước và danh sách việc cần quyết định" loading="lazy" width="1690" height="1056"><figcaption>Trang Việc cần làm: thanh sáu bước ở trên, việc cần quyết định xếp theo mức rủi ro ở dưới.</figcaption></figure>
+
+  <h3 id="b-phase">Triển khai theo phase</h3>
+  <p>Hệ thống được mở dần theo hai phase để mỗi người chỉ phải làm quen vài trang mỗi lần, và để dữ liệu kỹ năng đủ tin cậy trước khi dùng cho quyết định bố trí người.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Phase</th><th>Gồm</th><th>Dữ liệu được làm đầy</th></tr></thead>
+    <tbody>
+      <tr><td>Phase 1 · Hồ sơ kỹ năng và phát triển cá nhân</td><td>Lộ trình của tôi, Nghề nghiệp và nguyện vọng, IDP, Duyệt IDP và hậu kiểm, Con người và kỹ năng, Khám phá mạng lưới, An toàn và kế thừa, Chương trình phát triển, Kiến trúc job, Khung theo ngạch, Yêu cầu đính chính</td><td>Job và yêu cầu kỹ năng, mức tự đánh giá, bằng chứng đã hậu kiểm, job mục tiêu, chứng chỉ</td></tr>
+      <tr><td>Phase 2 · Chiến lược và dịch chuyển nội bộ</td><td>Bối cảnh, Năng lực cần có, Thiếu hụt, Kế hoạch hành động, Theo dõi tiến độ, Kịch bản, Rủi ro phụ thuộc, Danh mục nhân sự, Tuyển dụng nội bộ, Điều chuyển định kỳ, Theo dõi sau chuyển</td><td>Chuyển đổi chiến lược, năng lực, thiếu hụt, kết quả chuyển người</td></tr>
+      <tr><td>Vận hành (mọi phase)</td><td>Hàng duyệt, Chỉ số PoC, Nhịp vận hành, Dữ liệu và thiết lập, Quản trị</td><td>—</td></tr>
+    </tbody>
+  </table></div>
+  <ul>
+    <li><strong>Trang của phase chưa mở</strong> vẫn nằm trong nhóm của nó nhưng mờ đi, có nhãn <span class="path">Sắp mở</span>. Nhân viên và cấp trên chưa mở được; trang Việc cần làm cũng không đưa việc dẫn tới các trang này.</li>
+    <li><strong>Nhân sự và quản trị</strong> mở được trang của phase sau để chuẩn bị dữ liệu trước (ví dụ soạn bối cảnh và chuyển đổi chiến lược trong Phase 1); đầu trang có dòng nhắc trang chưa mở cho nhân viên.</li>
+    <li><strong>Chuyển phase</strong> do quản trị hệ thống đổi trong cấu hình của tổ chức; người dùng không phải cài đặt gì.</li>
+  </ul>
+  <figure><img src="img/menu_phase.jpg" alt="Menu của cấp trên ở Phase 1: nhóm Của tôi, Nhóm của tôi; mục Phase 2 mờ với nhãn Sắp mở" loading="lazy" width="1600" height="1000"><figcaption>Menu của cấp trên ở Phase 1: mục chưa mở mờ với nhãn "Sắp mở"; mở thẳng đường dẫn cũng chỉ thấy thông báo.</figcaption></figure>
+  <figure><img src="img/phase_prep.jpg" alt="Nhân sự mở trang Bối cảnh ở Phase 1, đầu trang có dòng nhắc chuẩn bị dữ liệu" loading="lazy" width="1600" height="1000"><figcaption>Nhân sự mở trang Phase 2 để chuẩn bị dữ liệu trước.</figcaption></figure>
+
+  <h3 id="b3">Đổi ngôn ngữ</h3>
+  <ol class="steps">
+    <li>Bấm <span class="path">日本語</span> hoặc <span class="path">VI</span> ở góc trên bên phải. Lựa chọn được nhớ cho lần sau.</li>
+    <li>Nhãn, nút, thông báo và dữ liệu có bản song ngữ (tên job, mô tả job, đơn vị, kỹ năng, phát hiện) đổi ngay theo ngôn ngữ đã chọn.</li>
+    <li>Ở giao diện tiếng Việt, họ tên người Nhật hiện dạng chữ Latin (服部 悠斗 → Hattori Yuto). File xuất ra luôn giữ tên gốc.</li>
+  </ol>
+  <div class="note"><p>Hệ thống không hiện câu nửa Việt nửa Nhật. Nội dung chưa có bản dịch (ví dụ ghi chú do người dùng tự nhập) được giữ nguyên như khi nhập.</p></div>
+
+  <h3 id="b4">Thông báo</h3>
+  <p>Chuông ở góc trên báo IDP được duyệt hoặc từ chối, task Đạt hoặc bị trả lại, bằng chứng chờ hậu kiểm, IDP chờ duyệt. Bấm một thông báo để đi tới đúng trang; bấm <span class="path">Đánh dấu đã đọc</span> để xoá số chưa đọc.</p>
+
+  <h3 id="b5">Đồng ý sử dụng dữ liệu</h3>
+  <p>Lần đầu đăng nhập, hoặc khi tổ chức thêm bên được xem dữ liệu, một khung đồng ý hiện ở đầu trang với nội dung theo ngôn ngữ bạn chọn và danh sách ai được xem. Bấm <span class="path">Tôi đồng ý</span> để tiếp tục. Muốn rút đồng ý, liên hệ bộ phận nhân sự.</p>
+
+  <div class="part">Phần 3</div>
+  <h2 id="nhan-vien">Hướng dẫn cho nhân viên</h2>
+
+  <h3 id="nv1"><span class="n">1</span>Xem hồ sơ kỹ năng của mình<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Lộ trình của tôi</span></p>
+  <ol class="steps">
+    <li>Xem danh sách kỹ năng, mức hiện tại và độ tin cậy của từng kỹ năng.</li>
+    <li>Mở một kỹ năng để xem bằng chứng đứng sau: tự khai, đánh giá, chứng chỉ, dự án, xác nhận của cấp trên.</li>
+    <li>Thấy thông tin sai: gửi yêu cầu đính chính. Yêu cầu vào hàng duyệt; bạn theo dõi kết quả ở <span class="path">Yêu cầu đính chính</span>.</li>
+  </ol>
+  <figure><img src="img/profile.jpg" alt="Trang Lộ trình của tôi với kỹ năng, mức và độ tin cậy" loading="lazy" width="1690" height="1056"><figcaption>Hồ sơ kỹ năng của nhân viên.</figcaption></figure>
+
+  <h3 id="nv2"><span class="n">2</span>Tìm job phù hợp và đặt nguyện vọng<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Nghề nghiệp và nguyện vọng</span></p>
+  <ol class="steps">
+    <li>Xem <strong>Mức đáp ứng job hiện tại</strong> và chứng chỉ đang có.</li>
+    <li>Ở <strong>Job phù hợp trong toàn nhóm</strong>, đọc mô tả job, mức sẵn sàng (%), kỹ năng đã có và kỹ năng cần thêm. Dòng "N người đã đi đường này" cho biết đã có bao nhiêu người chuyển theo hướng này.</li>
+    <li>Chọn tối đa 3 job mong muốn, chọn ai được xem nguyện vọng (chỉ nhân sự, hoặc cả cấp trên), bấm <span class="path">Lưu nguyện vọng</span>.</li>
+    <li>Với mỗi nguyện vọng, xem lộ trình học: khoá học, dự án nội bộ để thực hành, chứng chỉ nên lấy.</li>
+  </ol>
+  <figure><img src="img/career.jpg" alt="Trang nghề nghiệp với job phù hợp, mô tả job và mức sẵn sàng" loading="lazy" width="1690" height="1056"><figcaption>Job phù hợp trong toàn nhóm, mỗi thẻ có mô tả job và mức sẵn sàng.</figcaption></figure>
+
+  <h3 id="nv3"><span class="n">3</span>Chuẩn bị buổi trao đổi nghề nghiệp (キャリア面談)<span class="ph">Phase 1</span></h3>
+  <ol class="steps">
+    <li>Ở cuối trang <span class="path">Nghề nghiệp và nguyện vọng</span>, tạo bản chuẩn bị và chọn phần muốn chia sẻ với cấp trên (kỹ năng mới, job mong muốn, khoảng cách).</li>
+    <li>Cấp trên chỉ thấy phần bạn chọn. Sau buổi trao đổi, cấp trên ghi kết quả và cam kết học tập.</li>
+  </ol>
+
+  <h3 id="nv4"><span class="n">4</span>Lập kế hoạch phát triển cá nhân (IDP)<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Kế hoạch phát triển (IDP)</span></p>
+  <ol class="steps">
+    <li>Chọn <strong>ngạch hiện tại</strong>, <strong>job mục tiêu</strong> và <strong>ngạch mục tiêu</strong>. Ngạch có dấu ★ có bộ yêu cầu riêng; không có ★ thì dùng yêu cầu chung của job.</li>
+    <li>Bấm <span class="path">Gợi ý từ hồ sơ</span> để điền sẵn mức (chỉ điền khi hồ sơ có dữ liệu cho ít nhất một nửa số kỹ năng), rồi kiểm tra lại.</li>
+    <li>Chấm mức hiện tại cho từng kỹ năng theo thang của kỹ năng đó; dưới mỗi lựa chọn có mô tả mức. Bấm <span class="path">Lưu nháp</span> nếu cần làm tiếp sau.</li>
+    <li>Bấm <span class="path">Hoàn tất và lập IDP</span> khi đã chấm đủ (số trên nút cho biết đã chấm bao nhiêu). Hệ thống lập IDP và gửi cấp trên duyệt.</li>
+    <li>Xem IDP: các task có giờ học, khoá gợi ý (nội bộ → miễn phí → có phí), mục <strong>Để sau</strong> (vượt quá 90 ngày) và <strong>Khoảng cách tham khảo</strong> (kỹ năng không học được qua khoá học).</li>
+  </ol>
+  <div class="note"><p>Đánh giá lại hoặc đổi mục tiêu bao nhiêu lần cũng được. Mỗi lần tạo IDP mới chờ duyệt; task đã Đạt của cùng kỹ năng được giữ.</p></div>
+
+  <h3 id="nv5"><span class="n">5</span>Làm task và nộp bằng chứng<span class="ph">Phase 1</span></h3>
+  <ol class="steps">
+    <li>Sau khi IDP được duyệt (có thông báo), bấm <span class="path">Bắt đầu</span> ở task muốn làm.</li>
+    <li>Học hoặc thực hành theo task. Khoá có phí: bạn tự quyết có đăng ký hay không.</li>
+    <li>Nộp bằng chứng: chọn file ảnh JPG/PNG hoặc PDF (tối đa 10 MB), hoặc dán đường link; thêm ghi chú cho người duyệt (không ghi thông tin cá nhân). Bấm <span class="path">Nộp bằng chứng</span>.</li>
+    <li>Theo dõi trạng thái: Chờ duyệt → Đạt, hoặc Bị trả lại kèm lý do (nộp lại được). Nếu AI đang bật, bạn thấy nhận xét sơ bộ; người duyệt vẫn là người kết luận.</li>
+    <li>Khi task Đạt, trả lời câu hỏi độ khó (1–5) hoặc bấm <span class="path">Bỏ qua</span>. Kỹ năng của task Đạt được ghi vào hồ sơ.</li>
+  </ol>
+  <figure><img src="img/idp.jpg" alt="IDP đang chạy với tiến độ, task Đạt và câu hỏi độ khó" loading="lazy" width="1690" height="1056"><figcaption>IDP đang chạy: tiến độ chỉ tính task đã Đạt; task chờ duyệt hiện riêng.</figcaption></figure>
+
+  <h3 id="nv6"><span class="n">6</span>Ứng tuyển nội bộ<span class="ph">Phase 2</span></h3>
+  <p>Đường dẫn: <span class="path">Tuyển dụng nội bộ</span></p>
+  <ol class="steps">
+    <li>Ở tab <strong>Cơ hội đang mở</strong>, xem cơ hội tuyển nội bộ, dự án và việc làm thêm trong nhóm, cùng mức phù hợp của bạn với từng cơ hội.</li>
+    <li>Bật <strong>Nhận gợi ý</strong> để hệ thống đưa cơ hội hợp với bạn lên đầu.</li>
+    <li>Ứng tuyển. Đơn được ẩn danh: phòng tuyển chỉ thấy hồ sơ kỹ năng không tên, cấp trên hiện tại chỉ biết khi đơn được chọn vào vòng trong.</li>
+    <li>Theo dõi ở tab <strong>Đơn của tôi</strong>. Đơn không được chọn có lý do và kỹ năng nên bổ sung; cấp trên không thấy đơn bị loại.</li>
+  </ol>
+  <figure><img src="img/market.jpg" alt="Trang tuyển dụng nội bộ phía nhân viên" loading="lazy" width="1690" height="1056"><figcaption>Cơ hội đang mở và mức phù hợp của chính nhân viên.</figcaption></figure>
+
+  <h3 id="nv7"><span class="n">7</span>Sau khi chuyển sang job mới<span class="ph">Phase 2</span></h3>
+  <p>Đường dẫn: <span class="path">Theo dõi sau chuyển</span>. Bạn thấy kế hoạch 90 ngày do cấp trên mới theo dõi. Khảo sát ngắn ở ngày 30, ngày 90 và tháng thứ 12 hiện ngay trên trang khi đến hạn; câu trả lời chỉ bạn và nhân sự xem.</p>
+
+  <div class="part">Phần 4</div>
+  <h2 id="cap-tren">Hướng dẫn cho cấp trên và người đăng tuyển</h2>
+
+  <h3 id="ct1"><span class="n">1</span>Việc cần làm của đơn vị</h3>
+  <p>Trang <span class="path">Việc cần làm</span> gom việc của đơn vị bạn: IDP cần duyệt, bằng chứng cần hậu kiểm, đơn tuyển nội bộ cần phản hồi, mốc kế hoạch 90 ngày. Mỗi dòng có nút đi thẳng tới chỗ xử lý.</p>
+
+  <h3 id="ct2"><span class="n">2</span>Xem kỹ năng của nhóm và ghi nhận bằng chứng<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Nhóm của tôi <i>→</i> Kỹ năng của nhóm</span>.</p>
+  <ol class="steps">
+    <li>Mỗi ô là một người; ô viền cam là người còn ít hơn 5 kỹ năng đã xác nhận. Bấm để mở hồ sơ.</li>
+    <li>Ghi nhận kỹ năng thể hiện qua công việc, dự án, chứng chỉ của cấp dưới. Bằng chứng của cấp trên có trọng số cao hơn tự khai.</li>
+  </ol>
+
+  <h3 id="ct3"><span class="n">3</span>Duyệt IDP<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Duyệt IDP và hậu kiểm</span>, phần A.</p>
+  <ol class="steps">
+    <li>Xem mục tiêu, danh sách task, giờ học so với ngân sách và các khoảng cách không học được qua khoá học.</li>
+    <li>Bấm <span class="path">Xem chi tiết</span> để mở IDP đầy đủ của nhân viên.</li>
+    <li>Bấm <span class="path">Duyệt IDP</span>, hoặc <span class="path">Từ chối</span> kèm lý do. Nhân viên nhận thông báo.</li>
+  </ol>
+
+  <h3 id="ct4"><span class="n">4</span>Hậu kiểm bằng chứng<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Duyệt IDP và hậu kiểm</span>, phần B.</p>
+  <ol class="steps">
+    <li>Mở file hoặc link bằng chứng, đọc yêu cầu bằng chứng của task, ghi chú của nhân viên và nhận xét sơ bộ của AI (nếu có).</li>
+    <li>Bấm <span class="path">Đạt</span>, hoặc <span class="path">Trả lại</span> kèm lý do để nhân viên bổ sung.</li>
+    <li>Xử lý trong 5 ngày làm việc; bằng chứng quá hạn được đánh dấu đỏ và báo cho nhân sự.</li>
+  </ol>
+  <figure><img src="img/idp_review.jpg" alt="Trang duyệt IDP và hậu kiểm bằng chứng" loading="lazy" width="1690" height="1056"><figcaption>Hàng hậu kiểm của cấp trên trực tiếp.</figcaption></figure>
+
+  <h3 id="ct5"><span class="n">5</span>Phản hồi đơn tuyển nội bộ của cấp dưới<span class="ph">Phase 2</span></h3>
+  <ol class="steps">
+    <li>Bạn chỉ được báo khi đơn của cấp dưới đã vào vòng trong và được nhân sự xác nhận.</li>
+    <li>Trong 14 ngày, chọn <span class="path">Đồng ý</span>, hoặc đề nghị hoãn một lần, có lý do, tối đa 90 ngày. Bạn không có quyền từ chối.</li>
+    <li>Xem gợi ý bù người để chuẩn bị cho đơn vị trước khi người chuyển đi.</li>
+  </ol>
+
+  <h3 id="ct6"><span class="n">6</span>Đăng cơ hội nội bộ và chọn ứng viên (người đăng tuyển)<span class="ph">Phase 2</span></h3>
+  <ol class="steps">
+    <li>Ở <span class="path">Tuyển dụng nội bộ</span>, tab <strong>Cơ hội tôi đăng</strong>, bấm <span class="path">Đăng cơ hội mới</span>: chọn loại (tuyển nội bộ, dự án, làm thêm), job, đơn vị, mô tả và kỹ năng cần. Cơ hội được nhân sự duyệt trước khi đăng.</li>
+    <li>Xem ứng viên xếp theo mức phù hợp, chỉ có hồ sơ kỹ năng không tên.</li>
+    <li>Chọn ứng viên vào vòng trong (lúc này mới thấy tên), rồi chọn người được chọn. Loại đơn phải ghi lý do; lý do được gửi cho ứng viên.</li>
+  </ol>
+
+  <h3 id="ct7"><span class="n">7</span>Hỗ trợ người mới chuyển về đơn vị<span class="ph">Phase 2</span></h3>
+  <p>Đường dẫn: <span class="path">Theo dõi sau chuyển</span>. Đánh dấu checklist 90 ngày (chào đón, người hướng dẫn, mục tiêu, đào tạo, hướng dẫn an toàn) và các mốc 30/60/90 ngày.</p>
+  <figure><img src="img/followup.jpg" alt="Kế hoạch 90 ngày với checklist, mốc kiểm tra và khảo sát" loading="lazy" width="1690" height="1056"><figcaption>Kế hoạch 90 ngày của một người vừa chuyển.</figcaption></figure>
+
+  <div class="part">Phần 5</div>
+  <h2 id="nhan-su">Hướng dẫn cho nhân sự</h2>
+
+  <h3 id="ns1"><span class="n">1</span>Nạp và cập nhật dữ liệu</h3>
+  <p>Đường dẫn: <span class="path">Vận hành <i>→</i> Dữ liệu và thiết lập</span> (trang <strong>Dữ liệu và thiết lập</strong>).</p>
+  <ol class="steps">
+    <li>Làm lần lượt 6 bước: Từ điển kỹ năng và vai trò, Danh sách nhân viên, Bằng chứng kỹ năng, Bối cảnh, Năng lực, Mục tiêu và kế thừa.</li>
+    <li>Ở mỗi bước, bấm <span class="path">Tải file mẫu</span>, điền dữ liệu vào các sheet.</li>
+    <li>Chạy <strong>Kiểm tra trước</strong> để xem lỗi theo từng dòng mà chưa ghi dữ liệu, sửa file, rồi nạp.</li>
+    <li>Bước đã đủ có dấu ✓; bước cần làm tiếp được tô cam.</li>
+  </ol>
+  <figure><img src="img/setup.jpg" alt="Trang dữ liệu và thiết lập 6 bước" loading="lazy" width="1690" height="1056"><figcaption>Dữ liệu và thiết lập: 5/6 bước đã đủ.</figcaption></figure>
+
+  <h3 id="ns2"><span class="n">2</span>Bối cảnh, chuyển đổi chiến lược và năng lực<span class="ph">Phase 2</span></h3>
+  <ol class="steps">
+    <li><span class="path">Tổ chức <i>→</i> Chuỗi chiến lược <i>→</i> 1 · Bối cảnh và chuyển đổi chiến lược</span>: xem phát hiện theo 3 tiêu chí × 3 thời điểm và các chuyển đổi chiến lược (bản đồ, luồng căn cứ, bảng 3×3).</li>
+    <li><span class="path">Năng lực cần có</span>: xem mỗi chuyển đổi cần năng lực nào, năng lực do job nào gánh và cần kỹ năng gì.</li>
+    <li><span class="path">Kịch bản tương lai</span>: so sánh nhu cầu năng lực theo các kịch bản.</li>
+  </ol>
+  <figure><img src="img/context.jpg" alt="Bản đồ bối cảnh với phát hiện và chuyển đổi chiến lược" loading="lazy" width="1690" height="1056"><figcaption>Bản đồ bối cảnh.</figcaption></figure>
+
+  <h3 id="ns3"><span class="n">3</span>Kiến trúc job: tên, mô tả và yêu cầu kỹ năng<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Kiến trúc job</span>, tab <strong>Job</strong>.</p>
+  <ol class="steps">
+    <li>Chọn job ở danh sách bên trái (mỗi job có đoạn trích mô tả).</li>
+    <li>Sửa <strong>tên job</strong> và <strong>mô tả job</strong>: mỗi thứ có hai ô, một ô bản gốc (ngôn ngữ dữ liệu của tổ chức, với Toho là tiếng Nhật) và một ô bản dịch. Mỗi ô chỉ ghi một ngôn ngữ. Thiếu bản dịch thì người dùng ngôn ngữ kia thấy bản gốc.</li>
+    <li>Chọn công ty, bậc vai trò, loại job, trạng thái, phân khúc; bấm <span class="path">Lưu job</span>.</li>
+    <li>Ở <strong>Yêu cầu kỹ năng</strong>, thêm hoặc bỏ kỹ năng, chọn mức và loại Bắt buộc / Nên có / Có thì tốt; bấm <span class="path">Lưu yêu cầu</span>.</li>
+    <li>Ở <strong>Đề xuất kỹ năng từ mô tả job</strong>, mô tả đã lưu được điền sẵn; bấm <span class="path">Đề xuất kỹ năng</span>, rồi <span class="path">Chấp nhận</span> từng đề xuất phù hợp. Không có gì được lưu tới khi bạn chấp nhận và lưu yêu cầu.</li>
+  </ol>
+  <figure><img src="img/jobs.jpg" alt="Trang Kiến trúc job với danh sách job kèm mô tả và hai ô tên, mô tả theo hai ngôn ngữ" loading="lazy" width="1690" height="1056"><figcaption>Sửa job: ô bản gốc tiếng Nhật và ô bản dịch tiếng Việt cho tên và mô tả.</figcaption></figure>
+
+  <h3 id="ns4"><span class="n">4</span>Khung năng lực theo ngạch<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">Khung theo ngạch</span>.</p>
+  <ol class="steps">
+    <li>Xem các thang mức (ví dụ thang việc hiện trường 0–4, thang kinh nghiệm kèm cặp 0–4).</li>
+    <li>Chọn job, chọn ngạch để xem mức yêu cầu, trọng số, kỹ năng có học được qua khoá học không.</li>
+    <li>Đổi khung: bấm <span class="path">Tải template</span>, điền một dòng cho mỗi ngạch × kỹ năng, đặt tên phiên bản, bấm <span class="path">Tải lên và so sánh</span>.</li>
+    <li>Đọc báo cáo ảnh hưởng: mục thêm, bỏ, đổi; số người và số IDP bị ảnh hưởng.</li>
+    <li>Ghi người xác nhận phía tổ chức và ngày xác nhận, bấm <span class="path">Kích hoạt</span>; hoặc <span class="path">Huỷ bản nháp</span>. Bản cũ được lưu lại, không ghi đè.</li>
+  </ol>
+
+  <h3 id="ns5"><span class="n">5</span>Hàng duyệt</h3>
+  <p>Đường dẫn: <span class="path">Vận hành <i>→</i> Hàng duyệt</span>.</p>
+  <ol class="steps">
+    <li>Chọn tab: Thiếu hụt, Hành động phát triển, Cơ hội nội bộ, Đề cử người kế thừa, Yêu cầu đính chính, Bằng chứng do AI trích xuất.</li>
+    <li>Với thiếu hụt, bấm một ô của ma trận "Việc chờ dồn ở đâu" để lọc; nên duyệt ô Bắt buộc · 0–12 tháng trước.</li>
+    <li>Chọn từng mục hoặc <strong>Chọn tất cả</strong> các mục đang lọc, bấm <span class="path">Duyệt</span>, hoặc ghi lý do và bấm <span class="path">Từ chối</span>.</li>
+  </ol>
+  <figure><img src="img/reviews.jpg" alt="Trang hàng duyệt với ma trận việc chờ và thao tác duyệt hàng loạt" loading="lazy" width="1690" height="1056"><figcaption>Hàng duyệt: lọc theo ô của ma trận rồi duyệt hàng loạt.</figcaption></figure>
+
+  <h3 id="ns6"><span class="n">6</span>Thiếu hụt và kế hoạch hành động<span class="ph">Phase 2</span></h3>
+  <ol class="steps">
+    <li><span class="path">Tổ chức <i>→</i> Chuỗi chiến lược <i>→</i> 4 · Thiếu hụt</span>: xem thiếu hụt theo mức độ × thời gian cần; bấm <span class="path">Lý do</span> để xem căn cứ kinh doanh.</li>
+    <li><span class="path">Kế hoạch hành động</span>: mỗi cột là một trạng thái. Kéo thẻ sang cột kế tiếp hoặc bấm nút trên thẻ để cập nhật; hành động ở cột Chờ duyệt cần nhân sự duyệt trước.</li>
+    <li><span class="path">Theo dõi tiến độ</span>: dòng chảy thiếu hụt, sức khỏe dữ liệu, thiếu hụt đang mở theo thời gian cần lấp.</li>
+  </ol>
+  <figure><img src="img/plans.jpg" alt="Trang kế hoạch hành động dạng các cột trạng thái" loading="lazy" width="1690" height="1056"><figcaption>Kế hoạch hành động theo trạng thái.</figcaption></figure>
+
+  <h3 id="ns7"><span class="n">7</span>Danh mục nhân sự và công bố vốn con người<span class="ph">Phase 2</span></h3>
+  <p>Đường dẫn: <span class="path">Tổ chức <i>→</i> Nhân lực <i>→</i> Danh mục nhân sự</span>. Tab <strong>Cung – cầu</strong> theo job, công ty, giai đoạn và kịch bản; <strong>Nhân lực DX</strong> đếm theo kỹ năng thực; <strong>Công bố vốn con người</strong> có 23 chỉ số xuất ra file; <strong>Nhu cầu</strong> để nhập nhu cầu nhân lực.</p>
+  <figure><img src="img/portfolio.jpg" alt="Bảng cung – cầu theo job" loading="lazy" width="1690" height="1056"><figcaption>Cung – cầu theo job.</figcaption></figure>
+
+  <h3 id="ns8"><span class="n">8</span>An toàn và kế thừa<span class="ph">Phase 1</span></h3>
+  <p>Đường dẫn: <span class="path">An toàn và kế thừa</span>. Xem số người có chứng chỉ theo đơn vị so với mức tối thiểu (theo luật và chuẩn nội bộ), nhìn trước tới 180 ngày, chứng chỉ sắp hết hạn và kế hoạch truyền nghề. Khi một quyết định chuyển người làm đơn vị xuống dưới mức, hệ thống chặn; chỉ vượt được khi ghi lý do và phương án bù.</p>
+  <figure><img src="img/safety.jpg" alt="Số người có chứng chỉ theo đơn vị so với mức tối thiểu" loading="lazy" width="1690" height="1056"><figcaption>Đơn vị sắp dưới mức được tô cam.</figcaption></figure>
+
+  <h3 id="ns9"><span class="n">9</span>Tuyển dụng nội bộ: duyệt và quyết định<span class="ph">Phase 2</span></h3>
+  <ol class="steps">
+    <li>Duyệt cơ hội mới ở <span class="path">Hàng duyệt</span>, tab <strong>Cơ hội nội bộ</strong>.</li>
+    <li>Khi phòng tuyển đã chọn người, xác nhận đơn; hệ thống báo cấp trên phòng đi.</li>
+    <li>Sau khi cấp trên phòng đi đồng ý, hoãn, hoặc hết 14 ngày không phản hồi, quyết định chuyển. Ngày chuyển mặc định sau 60 ngày, hoặc theo ngày hoãn đã thống nhất. Người chuyển tự có kế hoạch 90 ngày.</li>
+  </ol>
+
+  <h3 id="ns10"><span class="n">10</span>Điều chuyển định kỳ và biệt phái<span class="ph">Phase 2</span></h3>
+  <p>Đường dẫn: <span class="path">Điều chuyển định kỳ</span>.</p>
+  <ol class="steps">
+    <li>Nhập tên đợt và ngày áp dụng, bấm <span class="path">Tạo đợt</span>.</li>
+    <li>Với mỗi vị trí cần người, xem ứng viên xếp theo mức phù hợp và cảnh báo an toàn; lập phương án.</li>
+    <li>Bấm <span class="path">Duyệt phương án</span>, rồi <span class="path">Xuất file cho hệ thống nhân sự</span>.</li>
+    <li>Theo dõi người đang biệt phái và số ngày còn lại ở bảng <strong>Biệt phái đang có</strong>.</li>
+  </ol>
+
+  <h3 id="ns11"><span class="n">11</span>Chương trình phát triển và Chỉ số PoC</h3>
+  <ul>
+    <li><span class="path">Chương trình phát triển</span>: số người có IDP theo trạng thái, tiến độ trung bình, task chờ duyệt, hậu kiểm quá hạn, tỷ lệ AI đạt sơ bộ, tỷ lệ bị trả lại; lọc theo trạng thái và bấm <span class="path">Xuất Excel</span>.</li>
+    <li><span class="path">Chỉ số hiệu quả</span>: mức sử dụng (% nhân viên dùng trang nghề nghiệp, tài khoản hoạt động, xu hướng 8 tuần), thời gian lấp vị trí bằng người nội bộ, tỷ lệ chấp nhận gợi ý AI so với mục tiêu 80%. Chỉ có số tổng hợp.</li>
+  </ul>
+  <figure><img src="img/metrics.jpg" alt="Trang chỉ số PoC" loading="lazy" width="1690" height="1056"><figcaption>Chỉ số PoC.</figcaption></figure>
+
+  <h3 id="lanh-dao"><span class="n">12</span>Ban giám đốc và Văn phòng DX</h3>
+  <ul>
+    <li><strong>Ban giám đốc:</strong> <span class="path">Danh mục nhân sự</span>, <span class="path">An toàn và kế thừa</span>, <span class="path">Chỉ số hiệu quả</span>. Mọi số liệu ở dạng tổng hợp, không xem dữ liệu từng người.</li>
+    <li><strong>Văn phòng DX:</strong> <span class="path">Kiến trúc job</span> cho kỹ năng DX và tab <strong>Nhân lực DX</strong> ở Danh mục nhân sự.</li>
+  </ul>
+
+  <h3 id="quan-tri"><span class="n">13</span>Quản trị</h3>
+  <p>Đường dẫn: <span class="path">Quản trị</span>.</p>
+  <ul>
+    <li><strong>Nhập file CSV / XLSX</strong> từng loại dữ liệu (nâng cao), với nút <span class="path">Kiểm tra</span> trước khi nhập; <strong>Lịch sử nhập</strong>.</li>
+    <li><strong>Kiểm tra chất lượng dữ liệu</strong> và chạy ngay các tác vụ nền.</li>
+    <li><strong>Đồng ý theo mục đích:</strong> xem và thu hồi đồng ý của nhân viên.</li>
+    <li><strong>Người dùng:</strong> danh sách và <span class="path">Tạo</span> tài khoản mới theo vai trò.</li>
+  </ul>
+  <p>Trang <span class="path">Nhịp vận hành</span> cho biết các tác vụ định kỳ đã chạy lúc nào và kết quả.</p>
+
+  <div class="part">Phần 6</div>
+  <h2 id="hoi-dap">Hỏi đáp</h2>
+  <dl class="faq">
+    <dt>Mức tự đánh giá có dùng để đánh giá thành tích không?</dt>
+    <dd>Không. Mức tự đánh giá là mốc để lập kế hoạch học. Nó được ghi như bằng chứng tự khai, có trọng số thấp nhất trong độ tin cậy kỹ năng.</dd>
+    <dt>Ai thấy tôi đã ứng tuyển nội bộ?</dt>
+    <dd>Phòng tuyển chỉ thấy hồ sơ kỹ năng không tên cho tới khi chọn bạn vào vòng trong. Cấp trên hiện tại chỉ biết từ bước đó. Nếu đơn không được chọn, cấp trên không thấy.</dd>
+    <dt>Vì sao tiến độ IDP chưa tăng sau khi tôi nộp bằng chứng?</dt>
+    <dd>Tiến độ chỉ tính task đã được người duyệt kết luận Đạt. Task đang chờ duyệt hiện riêng.</dd>
+    <dt>AI có tự quyết định gì không?</dt>
+    <dd>Không. AI chỉ gợi ý kỹ năng cho job, trích kỹ năng từ văn bản và chấm sơ bộ bằng chứng. Mọi gợi ý đều qua người xác nhận. Khi AI tắt, hệ thống vẫn chạy: gợi ý dùng so khớp từ điển, bằng chứng vào thẳng người duyệt.</dd>
+    <dt>Vì sao tôi thấy tên người dạng chữ Latin?</dt>
+    <dd>Ở giao diện tiếng Việt, họ tên người Nhật hiện theo cách đọc (フリガナ) bằng chữ Latin. Đổi sang 日本語 để thấy tên gốc.</dd>
+    <dt>Vì sao một số mục trong menu bị mờ?</dt>
+    <dd>Các mục đó thuộc phase triển khai chưa mở (nhãn "Sắp mở"). Chúng sẽ mở khi tổ chức chuyển sang phase đó; dữ liệu bạn nhập ở phase trước vẫn được giữ và dùng tiếp.</dd>
+    <dt>Cấp trên có từ chối cho tôi chuyển nội bộ được không?</dt>
+    <dd>Không. Cấp trên phòng đi chỉ đồng ý hoặc đề nghị hoãn một lần, có lý do, tối đa 90 ngày.</dd>
+  </dl>
+
+  <h2 id="quy-dinh">Quy định</h2>
+  <p>Giá trị thiết lập cho giai đoạn thí điểm Toho Gas; đổi được theo cấu hình của tổ chức.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Quy định</th><th>Giá trị</th></tr></thead>
+    <tbody>
+      <tr><td>Cấp trên phòng đi phản hồi đơn tuyển nội bộ</td><td class="num">14 ngày</td></tr>
+      <tr><td>Hoãn chuyển (một lần, có lý do)</td><td class="num">tối đa 90 ngày</td></tr>
+      <tr><td>Ngày chuyển mặc định sau quyết định</td><td class="num">60 ngày</td></tr>
+      <tr><td>Thời gian dành cho 社内副業</td><td class="num">tối đa 20%</td></tr>
+      <tr><td>Một giai đoạn IDP</td><td class="num">90 ngày · 4 giờ học/tuần (~51 giờ)</td></tr>
+      <tr><td>Hạn hậu kiểm bằng chứng</td><td class="num">5 ngày làm việc</td></tr>
+      <tr><td>File bằng chứng</td><td class="num">JPG, PNG, PDF · ≤ 10 MB</td></tr>
+      <tr><td>Khảo sát sau chuyển</td><td class="num">ngày 30, ngày 90, tháng 12</td></tr>
+      <tr><td>Nhắc chứng chỉ sắp hết hạn</td><td class="num">trước 90 ngày</td></tr>
+      <tr><td>Kỹ năng được tính là "có"</td><td class="num">độ tin cậy ≥ 0,5</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="su-co">Xử lý sự cố</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Hiện tượng</th><th>Nguyên nhân</th><th>Cách xử lý</th></tr></thead>
+    <tbody>
+      <tr><td>Nút "Hoàn tất và lập IDP" bị mờ</td><td>Chưa chấm đủ mọi kỹ năng</td><td>Chấm mức cho các kỹ năng còn trống</td></tr>
+      <tr><td>Báo "Chỉ nhận ảnh JPG/PNG hoặc PDF"</td><td>Nội dung file không phải ảnh hoặc PDF</td><td>Xuất lại file đúng định dạng, hoặc nộp bằng đường link</td></tr>
+      <tr><td>Bằng chứng ghi "AI không chấm được"</td><td>AI chưa bật, hoặc lỗi sau 3 lần thử</td><td>Không cần làm gì: bằng chứng vẫn vào hàng hậu kiểm</td></tr>
+      <tr><td>Phòng tuyển không thấy tên ứng viên</td><td>Đơn ứng tuyển ẩn danh tới vòng trong</td><td>Chọn đơn vào vòng trong để thấy tên</td></tr>
+      <tr><td>Duyệt chuyển người bị chặn</td><td>Đơn vị an toàn sẽ xuống dưới số người tối thiểu có chứng chỉ</td><td>Chọn người khác, hoặc ghi lý do và phương án bù</td></tr>
+      <tr><td>Không thấy IDP để duyệt</td><td>Chỉ cấp trên trực tiếp hoặc nhân sự được duyệt; không ai tự duyệt IDP của mình</td><td>Kiểm tra đơn vị của nhân viên, hoặc chuyển cho nhân sự</td></tr>
+      <tr><td>Không kích hoạt được bản nháp khung</td><td>Chưa ghi người xác nhận, hoặc ngày xác nhận ở tương lai</td><td>Ghi chức danh/bộ phận người xác nhận và ngày đã xác nhận</td></tr>
+      <tr><td>Thông báo đồng ý hiện lại</td><td>Tổ chức thêm bên được xem dữ liệu</td><td>Đọc phần "Mới thêm" và bấm Tôi đồng ý</td></tr>
+      <tr><td>Mục menu mờ, nhãn "Sắp mở"</td><td>Trang thuộc phase chưa mở</td><td>Chờ tổ chức chuyển phase; nhân sự, quản trị vẫn mở được để chuẩn bị dữ liệu</td></tr>
+      <tr><td>Không thấy thanh sáu bước</td><td>Tổ chức đang ở Phase 1; thanh này hiện từ Phase 2</td><td>Không cần làm gì</td></tr>
+      <tr><td>Một nội dung vẫn ở ngôn ngữ kia</td><td>Nội dung chưa có bản dịch (ví dụ ghi chú tự nhập, mô tả job chưa có ô bản dịch)</td><td>Nhân sự bổ sung bản dịch ở ô tương ứng; ghi chú tự nhập giữ nguyên</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="end">
+    <p>Nếu có nội dung cần giải đáp hoặc thao tác cần hướng dẫn, Anh/Chị vui lòng liên hệ cán bộ phụ trách dự án. Danh sách thay đổi của phiên bản này xem ở tài liệu <strong>Workforce Graph cập nhật 20.11</strong>.</p>
+    <p>Cảm ơn Anh/Chị đã đồng hành cùng giai đoạn thí điểm!</p>
+  </div>
+</article>
+
+<aside class="toc" aria-label="Mục lục">
+  <b>Trong tài liệu</b>
+  <ol>
+    <li><a href="#gioi-thieu">1. Giới thiệu</a></li>
+    <li class="sub"><a href="#g2">Chuỗi sáu bước</a></li>
+    <li class="sub"><a href="#g3">Khái niệm cần biết</a></li>
+    <li><a href="#bat-dau">2. Bắt đầu</a></li>
+    <li class="sub"><a href="#b-phase">Triển khai theo phase</a></li>
+    <li class="sub"><a href="#b3">Đổi ngôn ngữ</a></li>
+    <li><a href="#nhan-vien">3. Nhân viên</a></li>
+    <li class="sub"><a href="#nv4">Lập IDP</a></li>
+    <li class="sub"><a href="#nv6">Ứng tuyển nội bộ</a></li>
+    <li><a href="#cap-tren">4. Cấp trên</a></li>
+    <li class="sub"><a href="#ct3">Duyệt IDP</a></li>
+    <li class="sub"><a href="#ct4">Hậu kiểm</a></li>
+    <li><a href="#nhan-su">5. Nhân sự</a></li>
+    <li class="sub"><a href="#ns1">Nạp dữ liệu</a></li>
+    <li class="sub"><a href="#ns3">Kiến trúc job</a></li>
+    <li class="sub"><a href="#ns5">Hàng duyệt</a></li>
+    <li class="sub"><a href="#ns9">Tuyển dụng nội bộ</a></li>
+    <li class="sub"><a href="#lanh-dao">Ban giám đốc, DX</a></li>
+    <li class="sub"><a href="#quan-tri">Quản trị</a></li>
+    <li><a href="#hoi-dap">6. Hỏi đáp</a></li>
+    <li><a href="#quy-dinh">Quy định</a></li>
+    <li><a href="#su-co">Xử lý sự cố</a></li>
+  </ol>
+</aside>
+</div>
+
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting && byId[e.target.id]) {
+        links.forEach(function (a) { a.classList.remove('on'); });
+        byId[e.target.id].classList.add('on');
+      }
+    });
+  }, { rootMargin: '0px 0px -75% 0px' });
+  Object.keys(byId).forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
+})();
+</script>
+
+<a href="../" style="position:fixed;left:12px;bottom:12px;z-index:20;background:#141211;color:#f6f2ee;padding:8px 12px;border-radius:8px;font:600 13px/1 system-ui,sans-serif;text-decoration:none">← Trang tài liệu</a>
+</html>
