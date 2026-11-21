@@ -136,6 +136,20 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
   figure img { box-shadow: none; }
   a { color: inherit; text-decoration: none; }
 }
+
+/* Ma trận phân quyền */
+.tbl.mx table { font-size: 13px; }
+.tbl.mx table { table-layout: fixed; width: 100%; }
+.tbl.mx th { font-size: 12px; line-height: 1.25; vertical-align: bottom; white-space: normal; hyphens: none; }
+.tbl.mx th:first-child, .tbl.mx td:first-child { width: 30%; }
+.tbl.mx th:not(:first-child), .tbl.mx td:not(:first-child) { text-align: center; padding-left: 4px; padding-right: 4px; }
+.tbl.mx td:first-child small { display: block; color: var(--ink-2); font-size: 11px; }
+.tbl.mx td.y { color: var(--ink); font-weight: 600; }
+.tbl.mx td.n { color: var(--line); }
+.tbl.mx td.s, .tbl.mx td.p { color: var(--accent); font-weight: 600; }
+.tbl.mx .sep { display: none; }
+.fn { font-size: 13px; color: var(--ink-2); margin-top: -6px; }
+@media print { .tbl.mx { break-inside: auto; } .tbl.mx table { font-size: 10.5px; } .tbl.mx th { font-size: 10px; } }
 </style>
 <style>
 /* Bổ sung cho tài liệu hướng dẫn: danh sách bước có số, khối phần, thẻ vai trò */
@@ -233,11 +247,40 @@ h3 .ph { position: relative; top: -2px; }
     <li><strong>Họ tên và thông tin liên lạc được mã hóa</strong> và chỉ hiện với người có quyền; mọi lần xem đều được ghi nhật ký.</li>
   </ul>
 
+  <h3 id="g5">Năm tình huống sử dụng chính</h3>
+  <p>Năm tình huống tạo giá trị lớn nhất trong giai đoạn thí điểm. Mỗi dòng ghi ai làm, đi qua những trang nào và đo kết quả bằng gì; các bước chi tiết ở phần hướng dẫn theo vai trò bên dưới.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Tình huống</th><th>Ai làm</th><th>Các bước chính</th><th>Đo kết quả</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Chuyển người đọc đồng hồ sang an toàn và dữ liệu</strong><br>Đồng hồ thông minh thu hẹp việc đọc đồng hồ.</td>
+        <td>Nhân sự, nhân viên, cấp trên, phòng nhận</td>
+        <td>Danh mục nhân sự (ghép nguồn → đích) → Nghề nghiệp và nguyện vọng → IDP → Tuyển dụng nội bộ → Người mới chuyển về</td>
+        <td>Số người chuyển vào mảng chiến lược; thời gian lấp vị trí bằng người nội bộ</td></tr>
+      <tr><td><strong>2. Giữ đủ người có chứng chỉ an toàn và truyền nghề</strong><br>Nhân lực an toàn già đi, khó tuyển.</td>
+        <td>Nhân sự, cấp trên trung tâm an toàn</td>
+        <td>Việc cần làm (cảnh báo) → An toàn và kế thừa (mức tối thiểu, chứng chỉ sắp hết hạn, kế hoạch truyền nghề, đề cử kế thừa) → IDP lấy chứng chỉ</td>
+        <td>Số đơn vị dưới mức (mục tiêu 0); job an toàn chưa có người kế thừa (mục tiêu 0)</td></tr>
+      <tr><td><strong>3. Lập và thực hiện IDP theo ngạch mới</strong><br>Chế độ nhân sự mới từ 4/2026.</td>
+        <td>Nhân viên, cấp trên</td>
+        <td>Kế hoạch phát triển (IDP): tự đánh giá → lập IDP → cấp trên duyệt → làm task, nộp bằng chứng → hậu kiểm → kỹ năng vào hồ sơ</td>
+        <td>Số IDP đã duyệt; tiến độ; tỷ lệ trả lại; % hồ sơ kỹ năng đủ</td></tr>
+      <tr><td><strong>4. Tuyển nội bộ cho mảng chiến lược</strong><br>Điện, quốc tế, công nghệ trung hòa carbon, dữ liệu.</td>
+        <td>Người đăng tuyển, nhân viên, cấp trên phòng đi, nhân sự</td>
+        <td>Đăng cơ hội → nhân viên ứng tuyển ẩn danh → chọn vào vòng trong → phòng đi đồng ý hoặc hoãn → quyết định chuyển → kế hoạch 90 ngày</td>
+        <td>Số đơn; thời gian lấp vị trí; giữ chân sau 12 tháng</td></tr>
+      <tr><td><strong>5. Danh mục nhân sự động từ chiến lược</strong><br>Kế hoạch kinh doanh 2025–2027.</td>
+        <td>Nhân sự, ban giám đốc, Văn phòng DX</td>
+        <td>Chuỗi chiến lược 1 → 6 (bối cảnh, năng lực, thiếu hụt, kế hoạch, theo dõi) → Kịch bản → Danh mục nhân sự → Toàn cảnh graph</td>
+        <td>Ban giám đốc dùng bản đồ cung – cầu; thiếu hụt bắt buộc đã có kế hoạch</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><p>Năm tình huống nối với nhau: tình huống 5 xác định job nào thiếu và khi nào; tình huống 1 và 4 lấp bằng người nội bộ; tình huống 3 tạo năng lực và làm dữ liệu kỹ năng đáng tin; tình huống 2 là ràng buộc an toàn — không quyết định chuyển nào được làm đơn vị an toàn xuống dưới mức.</p></div>
+
   <div class="part">Phần 2</div>
   <h2 id="bat-dau">Bắt đầu</h2>
 
   <h3 id="b1">Vai trò và những gì bạn thấy</h3>
-  <p>Menu bên trái chỉ hiện những trang vai trò của bạn được dùng. Nhân sự công ty con chỉ thấy người của công ty mình; ban giám đốc chỉ thấy số tổng hợp.</p>
+  <p>Menu bên trái chỉ hiện những trang vai trò của bạn được dùng. Nhân sự công ty con chỉ thấy người của công ty mình; ban giám đốc chỉ thấy số tổng hợp. Ma trận đầy đủ ở <a href="#phan-quyen">Phần 6</a>.</p>
   <div class="tbl"><table>
     <thead><tr><th>Vai trò</th><th>Dùng chính</th></tr></thead>
     <tbody>
@@ -256,10 +299,10 @@ h3 .ph { position: relative; top: -2px; }
   <ul>
     <li><strong>Menu bên trái</strong> nhóm theo phạm vi, như các hệ thống nhân sự lớn: <strong>Của tôi</strong> (hồ sơ, nghề nghiệp, IDP của chính bạn), <strong>Nhóm của tôi</strong> (cho cấp trên), <strong>Tổ chức</strong> (bốn nhóm con: Chuỗi chiến lược, Nhân lực, Phát triển và dịch chuyển, Tri thức) và <strong>Vận hành</strong> ở cuối. Bấm tên nhóm để thu gọn hoặc mở. Số màu cam là số việc đang chờ bạn.</li>
     <li><strong>Tìm nhanh:</strong> bấm <span class="path">Ctrl K</span> (máy Mac: <span class="path">⌘ K</span>) hoặc ô <span class="path">Tìm nhanh</span> để tìm trang theo tên; nhân sự và cấp trên tìm được cả job, kỹ năng, năng lực. Chưa gõ thì hiện các trang vừa mở.</li>
-    <li><strong>Ghim:</strong> rê chuột vào một mục và bấm ☆ để đưa mục đó lên nhóm <span class="path">Đã ghim</span> ở đầu menu. Nút <span class="path">Ẩn menu</span> dưới tên tài khoản cho thêm chỗ cho nội dung.</li>
+    <li><strong>Ghim:</strong> rê chuột vào một mục và bấm ☆ để đưa mục đó lên nhóm <span class="path">Đã ghim</span> ở đầu menu. Nút có hình thu gọn bảng bên (cạnh nút Đăng xuất, dưới tên tài khoản) ẩn menu để có thêm chỗ cho nội dung; nút <span class="path">☰ Menu</span> ở góc trên mở lại.</li>
     <li><strong>Góc trên bên phải:</strong> chuông thông báo và nút đổi ngôn ngữ.</li>
     <li><strong>Dải màu cam</strong> ở đầu trang nhắc đây là môi trường thử nghiệm với dữ liệu mẫu.</li>
-    <li><strong>Nút Hướng dẫn</strong> dưới tên tài khoản mở lại phần giới thiệu nhanh cho vai trò của bạn.</li>
+    <li><strong>Nút có dấu hỏi</strong> dưới tên tài khoản mở lại phần giới thiệu nhanh cho vai trò của bạn.</li>
   </ul>
   <figure><img src="img/home.jpg" alt="Trang Việc cần làm với thanh sáu bước và danh sách việc cần quyết định" loading="lazy" width="1690" height="1056"><figcaption>Trang Việc cần làm: thanh sáu bước ở trên, việc cần quyết định xếp theo mức rủi ro ở dưới.</figcaption></figure>
 
@@ -512,6 +555,127 @@ h3 .ph { position: relative; top: -2px; }
   <p>Trang <span class="path">Nhịp vận hành</span> cho biết các tác vụ định kỳ đã chạy lúc nào và kết quả.</p>
 
   <div class="part">Phần 6</div>
+  <h2 id="phan-quyen">Vai trò, luồng vận hành và phân quyền</h2>
+  <p>Phần này dành cho nhân sự, quản trị và người phụ trách dự án: ai làm gì, việc đi qua những ai, và mỗi vai trò thấy được gì. Quyền được chặn ở máy chủ, không chỉ ẩn trên màn hình: mở một trang hoặc thao tác ngoài quyền sẽ nhận thông báo "không có quyền".</p>
+
+  <h3 id="pq1">Tám vai trò</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Vai trò</th><th>Ai</th><th>Thấy dữ liệu của</th><th>Không được</th></tr></thead>
+    <tbody>
+      <tr><td>Nhân viên</td><td>Mọi nhân viên có tài khoản</td><td>Chính mình</td><td>Xem hồ sơ người khác</td></tr>
+      <tr><td>Cấp trên</td><td>Trưởng nhóm, trưởng phòng</td><td>Đơn vị mình phụ trách và đơn vị con</td><td>Tự duyệt hoặc tự ghi nhận cho chính mình; xem nguyện vọng khi nhân viên không cho phép; thấy đơn tuyển nội bộ của người trong đơn vị trước khi nhân sự xác nhận</td></tr>
+      <tr><td>Người đăng tuyển</td><td>Phòng cần người</td><td>Cơ hội mình đăng và ứng viên (không tên ở vòng sơ loại)</td><td>Đăng cơ hội cho đơn vị khác; duyệt chuyển người</td></tr>
+      <tr><td>Nhân sự công ty</td><td>Nhân sự của từng công ty trong tập đoàn</td><td>Mọi đơn vị của công ty mình</td><td>Xem hoặc đề xuất người ngoài công ty mình; quản lý phiên bản khung</td></tr>
+      <tr><td>Nhân sự tập đoàn</td><td>Phòng nhân sự công ty mẹ</td><td>Toàn tập đoàn</td><td>Quyết định không qua hàng duyệt</td></tr>
+      <tr><td>Ban giám đốc</td><td>Lãnh đạo</td><td>Số tổng hợp; ô dưới 5 người bị ẩn</td><td>Xem hồ sơ cá nhân</td></tr>
+      <tr><td>Văn phòng DX</td><td>Văn phòng thúc đẩy DX</td><td>Số tổng hợp; từ điển kỹ năng DX, kiến trúc job</td><td>Xem hồ sơ cá nhân</td></tr>
+      <tr><td>Quản trị</td><td>Bộ phận vận hành hệ thống</td><td>Tài khoản, dữ liệu nạp, tác vụ</td><td>Xem hồ sơ cá nhân</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="pq2">Nguyên tắc phân quyền</h3>
+  <ul>
+    <li><strong>Người quyết định, hệ thống gợi ý.</strong> Thiếu hụt, hành động, IDP, kế thừa, chuyển người đều qua một bước duyệt có tên người duyệt.</li>
+    <li><strong>Không tự duyệt cho mình.</strong> Cấp trên không duyệt IDP, không ghi bằng chứng, không ghi kết quả phỏng vấn của chính mình.</li>
+    <li><strong>Nhân viên làm chủ dữ liệu của mình:</strong> tự khai kỹ năng, chọn job mục tiêu, gửi yêu cầu đính chính, ứng tuyển và rút đơn.</li>
+    <li><strong>Nguyện vọng nghề nghiệp</strong> chỉ bản thân và nhân sự thấy; cấp trên thấy khi nhân viên cho phép.</li>
+    <li><strong>Đơn tuyển nội bộ được giữ kín</strong> với phòng hiện tại cho tới khi nhân sự xác nhận.</li>
+    <li><strong>Lãnh đạo xem số tổng hợp;</strong> ô có 1–4 người bị ẩn để không lần ra cá nhân.</li>
+    <li><strong>An toàn là ràng buộc cứng:</strong> quyết định làm đơn vị an toàn xuống dưới mức bị chặn; chỉ nhân sự được vượt, kèm lý do và phương án bù người.</li>
+    <li><strong>Mọi thao tác ghi đều có nhật ký:</strong> ai, vai trò gì, làm gì, lúc nào.</li>
+  </ul>
+
+  <h3 id="pq3">Luồng vận hành chính</h3>
+  <p>Mỗi dòng là một luồng; mũi tên là thứ tự, trong ngoặc là vai trò làm bước đó.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Luồng</th><th>Các bước và người làm</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Khởi tạo dữ liệu</strong></td><td>Tạo tài khoản, gán vai trò và đơn vị (quản trị) → nạp tổ chức, nhân viên, job, kỹ năng (quản trị, nhân sự) → mô tả job và yêu cầu kỹ năng (nhân sự tập đoàn) → đăng nội dung đồng ý, phiên bản khung (quản trị, nhân sự tập đoàn) → chạy tác vụ định kỳ (quản trị, nhân sự)</td></tr>
+      <tr><td><strong>Chuỗi chiến lược</strong></td><td>Bối cảnh, chuyển đổi chiến lược (nhân sự) → năng lực cần có (nhân sự) → so khớp kỹ năng (hệ thống) → sinh thiếu hụt và duyệt (nhân sự) → hành động (nhân sự, cấp trên) → theo dõi (nhân sự; ban giám đốc xem tổng hợp)</td></tr>
+      <tr><td><strong>IDP</strong></td><td>Tự đánh giá, lập IDP (nhân viên) → duyệt hoặc trả lại (cấp trên trực tiếp, nhân sự) → làm task, nộp bằng chứng (nhân viên) → hậu kiểm (cấp trên, nhân sự) → kỹ năng vào hồ sơ (hệ thống)</td></tr>
+      <tr><td><strong>Tuyển dụng nội bộ</strong></td><td>Đăng cơ hội (người đăng tuyển, cấp trên, nhân sự) → ứng tuyển (nhân viên) → vòng trong, chọn (người đăng tuyển) → xác nhận và kiểm an toàn (nhân sự) → đồng ý hoặc hoãn (cấp trên phòng đi, có hạn phản hồi) → duyệt chuyển (nhân sự) → kế hoạch 90 ngày (cấp trên mới) → khảo sát (người đã chuyển). Loại đơn: người đăng tuyển ở hai bước đầu, nhân sự từ bước xác nhận; luôn ghi lý do gửi ứng viên.</td></tr>
+      <tr><td><strong>Điều chuyển định kỳ</strong></td><td>Lập đợt (nhân sự) → thêm đề xuất (nhân sự; nhân sự công ty trong công ty mình) → cảnh báo chặn: an toàn, trùng vị trí, biệt phái (hệ thống) → duyệt biệt phái (nhân sự cả hai công ty) → duyệt đợt (nhân sự) → ghi nhận đã thực hiện, tạo kế hoạch 90 ngày (nhân sự)</td></tr>
+      <tr><td><strong>An toàn và kế thừa</strong></td><td>Cảnh báo dưới mức, chứng chỉ sắp hết hạn (hệ thống) → kế hoạch truyền nghề, đề cử kế thừa (nhân sự, cấp trên trong phạm vi) → vượt cảnh báo khi cần (chỉ nhân sự, có lý do)</td></tr>
+      <tr><td><strong>Nguyện vọng và phỏng vấn</strong></td><td>Chọn job mong muốn và mức chia sẻ (nhân viên) → chuẩn bị nội dung (nhân viên) → ghi kết quả và cam kết (cấp trên trực tiếp, nhân sự) → đánh dấu cam kết đã làm (cả ba)</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="pq4">Ma trận phân quyền theo trang</h3>
+  <p><strong>✓</strong> dùng được trong phạm vi của vai trò · <strong>Σ</strong> chỉ số tổng hợp · <strong>—</strong> không có trong menu. Nhân sự công ty có cùng trang với nhân sự tập đoàn nhưng chỉ thấy dữ liệu công ty mình. Trang thuộc Phase 2 hiện mờ cho tới khi mở phase.</p>
+  <div class="tbl mx"><table>
+    <thead><tr><th>Trang</th><th>Nhân viên</th><th>Cấp trên</th><th>Người đăng tuyển</th><th>Nhân sự công ty</th><th>Nhân sự tập đoàn</th><th>Ban giám đốc</th><th>Văn phòng DX</th><th>Quản trị</th></tr></thead>
+    <tbody>
+      <tr><td>Việc cần làm</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Lộ trình của tôi<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Nghề nghiệp và nguyện vọng<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Kế hoạch phát triển (IDP)<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Tuyển dụng nội bộ<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Theo dõi sau chuyển<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Yêu cầu đính chính<small><span class="sep"> · </span>Của tôi</small></td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Kỹ năng của nhóm<small><span class="sep"> · </span>Nhóm của tôi</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Duyệt IDP và hậu kiểm<small><span class="sep"> · </span>Nhóm của tôi</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Cơ hội và đơn ứng tuyển<small><span class="sep"> · </span>Nhóm của tôi</small></td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Người mới chuyển về<small><span class="sep"> · </span>Nhóm của tôi</small></td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>An toàn của đơn vị<small><span class="sep"> · </span>Nhóm của tôi</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>1 · Bối cảnh và chuyển đổi chiến lược<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>2 · Năng lực cần có<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>3 · Con người và kỹ năng<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>4 · Thiếu hụt<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>5 · Kế hoạch hành động<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>6 · Theo dõi tiến độ<small><span class="sep"> · </span>Chuỗi chiến lược</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Danh mục nhân sự<small><span class="sep"> · </span>Nhân lực</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="s">Σ</td><td class="s">Σ</td><td class="y">✓</td></tr>
+      <tr><td>Kịch bản tương lai<small><span class="sep"> · </span>Nhân lực</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Rủi ro phụ thuộc<small><span class="sep"> · </span>Nhân lực</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>An toàn và kế thừa<small><span class="sep"> · </span>Nhân lực</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="s">Σ</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Chương trình phát triển<small><span class="sep"> · </span>Phát triển và dịch chuyển</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Duyệt IDP và hậu kiểm<small><span class="sep"> · </span>Phát triển và dịch chuyển</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Tuyển dụng nội bộ<small><span class="sep"> · </span>Phát triển và dịch chuyển</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Điều chuyển định kỳ<small><span class="sep"> · </span>Phát triển và dịch chuyển</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Theo dõi sau chuyển<small><span class="sep"> · </span>Phát triển và dịch chuyển</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="s">Σ</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Toàn cảnh graph tri thức<small><span class="sep"> · </span>Tri thức</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Khám phá mạng lưới<small><span class="sep"> · </span>Tri thức</small></td><td class="n">—</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Kiến trúc job<small><span class="sep"> · </span>Tri thức</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Khung theo ngạch<small><span class="sep"> · </span>Tri thức</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Hàng duyệt<small><span class="sep"> · </span>Vận hành</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Chỉ số hiệu quả<small><span class="sep"> · </span>Vận hành</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="s">Σ</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Nhịp vận hành<small><span class="sep"> · </span>Vận hành</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Dữ liệu và thiết lập<small><span class="sep"> · </span>Vận hành</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Quản trị hệ thống<small><span class="sep"> · </span>Vận hành</small></td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 id="pq5">Ma trận phân quyền theo thao tác</h3>
+  <p><strong>✓</strong> được · <strong>P</strong> trong phạm vi (đơn vị mình phụ trách, hoặc công ty mình) · <strong>M</strong> chỉ cho chính mình · <strong>Σ</strong> số tổng hợp · <strong>—</strong> không.</p>
+  <div class="tbl mx"><table>
+    <thead><tr><th>Thao tác</th><th>Nhân viên</th><th>Cấp trên</th><th>Người đăng tuyển</th><th>Nhân sự công ty</th><th>Nhân sự tập đoàn</th><th>Ban giám đốc</th><th>Văn phòng DX</th><th>Quản trị</th></tr></thead>
+    <tbody>
+      <tr><td>Xem hồ sơ kỹ năng cá nhân</td><td class="p">M</td><td class="p">P</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Ghi bằng chứng kỹ năng cho nhân viên</td><td class="n">—</td><td class="p">P¹</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Lập IDP, nộp bằng chứng task</td><td class="p">M</td><td class="p">M</td><td class="p">M</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Duyệt IDP, hậu kiểm bằng chứng</td><td class="n">—</td><td class="p">P¹</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Ghi bối cảnh, chuyển đổi chiến lược; sinh thiếu hụt</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Duyệt ở hàng duyệt chung</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Tạo hành động cho thiếu hụt đã duyệt</td><td class="n">—</td><td class="p">P</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Sửa kiến trúc job</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="p">P²</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Xem nguyện vọng của nhân viên</td><td class="p">M</td><td class="p">P³</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Ghi kết quả phỏng vấn nghề nghiệp</td><td class="n">—</td><td class="p">P¹</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Đăng cơ hội nội bộ</td><td class="n">—</td><td class="p">P</td><td class="p">P</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Ứng tuyển, rút đơn</td><td class="p">M</td><td class="p">M</td><td class="p">M</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Chọn vào vòng trong, chọn ứng viên</td><td class="n">—</td><td class="p">P⁴</td><td class="p">P⁴</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Xác nhận và duyệt chuyển người</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Phản hồi của phòng đi (đồng ý, hoãn)</td><td class="n">—</td><td class="p">P</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Lập đợt và đề xuất điều chuyển</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Vượt cảnh báo an toàn (có lý do, phương án bù)</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Cập nhật kế hoạch 90 ngày</td><td class="n">—</td><td class="p">P</td><td class="p">P</td><td class="p">P</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+      <tr><td>Xem danh mục nhân sự, chỉ số</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="s">Σ</td><td class="s">Σ</td><td class="y">✓</td></tr>
+      <tr><td>Nạp dữ liệu, chạy tác vụ</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td>Quản lý tài khoản</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+    </tbody>
+  </table></div>
+  <p class="fn">¹ Không cho chính mình. ² Chỉ job của công ty mình. ³ Chỉ khi nhân viên cho phép cấp trên xem. ⁴ Chỉ với cơ hội mình đăng.</p>
+  <div class="note"><p>Bản đầy đủ, có ghi vị trí trong mã nguồn của từng luật, nằm ở tài liệu <span class="path">docs/toho-gas/14-VAI-TRO-LUONG-PHAN-QUYEN.md</span>. Người chuyển phòng cần được quản trị đổi đơn vị ngay để phạm vi của cấp trên đúng.</p></div>
+
+  <div class="part">Phần 7</div>
   <h2 id="hoi-dap">Hỏi đáp</h2>
   <dl class="faq">
     <dt>Mức tự đánh giá có dùng để đánh giá thành tích không?</dt>
@@ -578,6 +742,7 @@ h3 .ph { position: relative; top: -2px; }
     <li><a href="#gioi-thieu">1. Giới thiệu</a></li>
     <li class="sub"><a href="#g2">Chuỗi sáu bước</a></li>
     <li class="sub"><a href="#g3">Khái niệm cần biết</a></li>
+    <li class="sub"><a href="#g5">Năm tình huống chính</a></li>
     <li><a href="#bat-dau">2. Bắt đầu</a></li>
     <li class="sub"><a href="#b-phase">Triển khai theo phase</a></li>
     <li class="sub"><a href="#b3">Đổi ngôn ngữ</a></li>
@@ -594,7 +759,11 @@ h3 .ph { position: relative; top: -2px; }
     <li class="sub"><a href="#ns9">Tuyển dụng nội bộ</a></li>
     <li class="sub"><a href="#lanh-dao">Ban giám đốc, DX</a></li>
     <li class="sub"><a href="#quan-tri">Quản trị</a></li>
-    <li><a href="#hoi-dap">6. Hỏi đáp</a></li>
+    <li><a href="#phan-quyen">6. Vai trò và phân quyền</a></li>
+    <li class="sub"><a href="#pq3">Luồng vận hành</a></li>
+    <li class="sub"><a href="#pq4">Ma trận theo trang</a></li>
+    <li class="sub"><a href="#pq5">Ma trận theo thao tác</a></li>
+    <li><a href="#hoi-dap">7. Hỏi đáp</a></li>
     <li><a href="#quy-dinh">Quy định</a></li>
     <li><a href="#su-co">Xử lý sự cố</a></li>
   </ol>
@@ -618,6 +787,3 @@ h3 .ph { position: relative; top: -2px; }
   Object.keys(byId).forEach(function (id) { var el = document.getElementById(id); if (el) obs.observe(el); });
 })();
 </script>
-
-<a href="../" style="position:fixed;left:12px;bottom:12px;z-index:20;background:#141211;color:#f6f2ee;padding:8px 12px;border-radius:8px;font:600 13px/1 system-ui,sans-serif;text-decoration:none">← Trang tài liệu</a>
-</html>
