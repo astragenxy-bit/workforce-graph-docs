@@ -150,6 +150,61 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 48px 0 0; }
 .tbl.mx .sep { display: none; }
 .fn { font-size: 13px; color: var(--ink-2); margin-top: -6px; }
 @media print { .tbl.mx { break-inside: auto; } .tbl.mx table { font-size: 10.5px; } .tbl.mx th { font-size: 10px; } }
+
+/* Năm tình huống: sơ đồ nối và quy trình từng bước */
+.ucmap { list-style: none; padding: 0; margin: 18px 0 10px; display: grid; gap: 10px 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-areas: "a b d" "a c d" "e e e"; }
+.ucmap li { margin: 0; position: relative; display: flex; }
+.ucmap a { flex: 1; display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+  color: var(--ink); text-decoration: none; font-weight: 600; font-size: 14.5px; line-height: 1.35; }
+.ucmap a:hover { border-color: var(--accent); }
+.ucmap b { display: inline-grid; place-items: center; width: 22px; height: 22px; margin-right: 6px; border-radius: 50%;
+  background: var(--accent); color: #fff; font: 600 12px/1 var(--f-mono); vertical-align: 1px; }
+.ucmap small { display: block; margin-top: 4px; font-weight: 400; font-size: 13px; color: var(--ink-2); }
+.ucmap .m-a { grid-area: a; } .ucmap .m-b { grid-area: b; } .ucmap .m-c { grid-area: c; } .ucmap .m-d { grid-area: d; } .ucmap .m-e { grid-area: e; }
+.ucmap .m-a a, .ucmap .m-d a { display: flex; flex-direction: column; justify-content: center; }
+.ucmap .m-a::after, .ucmap .m-b::after, .ucmap .m-c::after { content: "→"; position: absolute; right: -21px; top: 50%; transform: translateY(-50%);
+  color: var(--accent); font-weight: 700; }
+.ucmap .m-e a { background: var(--accent-soft); border-color: transparent; border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; }
+@media (max-width: 640px) {
+  .ucmap { grid-template-columns: 1fr; grid-template-areas: "a" "b" "c" "d" "e"; gap: 22px; }
+  .ucmap .m-a::after, .ucmap .m-c::after { content: "↓"; right: auto; left: 22px; top: auto; bottom: -21px; transform: none; }
+  .ucmap .m-b::after { content: none; }
+}
+.uclegend { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 13px; color: var(--ink-2); margin: 6px 0 4px; }
+.role { display: inline-block; font: 600 12px/1.3 var(--f-body); padding: 2px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+.r-nv { background: var(--accent-soft); color: var(--accent-ink); }
+.r-ct { background: var(--ink); color: var(--bg); }
+.r-ns { background: var(--bg); color: var(--ink); border-color: var(--ink-2); }
+.r-ld { background: var(--ok-bg); color: var(--ink); }
+.r-ht { background: var(--bg); color: var(--ink-2); border: 1px dashed var(--ink-2); }
+.qd { display: inline-block; font: 600 11px/1.3 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--accent-ink);
+  border: 1px solid var(--accent); border-radius: 4px; padding: 1px 5px; }
+.uc { border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px 14px; margin: 18px 0; background: var(--bg); }
+.uc h4 { display: flex; gap: 10px; align-items: center; margin: 0 0 4px; font-size: 18px; line-height: 1.35; scroll-margin-top: 16px; }
+.ucn { flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: var(--band); color: var(--band-ink);
+  font: 600 14px/1 var(--f-mono); }
+.why { margin: 0 0 12px 40px; color: var(--ink-2); font-size: 15px; }
+.whos { display: block; font-size: 13.5px; }
+.flow { list-style: none; padding: 0; margin: 0 0 6px; counter-reset: s; }
+.flow > li { position: relative; margin: 0; padding: 0 0 14px 40px; counter-increment: s; }
+.flow > li::before { content: counter(s); position: absolute; left: 0; top: 1px; width: 28px; height: 28px; border-radius: 50%;
+  border: 2px solid var(--accent); background: var(--bg); color: var(--accent-ink); font: 600 13px/24px var(--f-mono); text-align: center; z-index: 1; }
+.flow > li.dec::before { border-radius: 7px; background: var(--accent); color: #fff; }
+.flow > li::after { content: ""; position: absolute; left: 13px; top: 30px; bottom: 0; width: 2px; background: var(--line); }
+.flow > li:last-child { padding-bottom: 4px; }
+.flow > li:last-child::after { content: none; }
+.flow p { margin: 0; }
+.flow .st { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; line-height: 1.45; padding-top: 3px; }
+.flow .st strong { flex-basis: 100%; font-size: 15.5px; }
+@media (min-width: 700px) { .flow .st strong { flex-basis: auto; } }
+.flow .pg .path { white-space: normal; }
+.flow .pg { margin-top: 4px; font-size: 13.5px; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+.flow .alt { margin-top: 4px; font-size: 13.5px; color: var(--ink-2); }
+.kpi { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 8px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13.5px; }
+.kpi b { font: 600 11px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); margin-right: 4px; }
+.kpi span { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+@media print { .uc, .flow > li, .ucmap { break-inside: avoid; } .uc h4 { break-after: avoid; } }
 </style>
 <style>
 /* Bổ sung cho tài liệu hướng dẫn: danh sách bước có số, khối phần, thẻ vai trò */
@@ -248,33 +303,106 @@ h3 .ph { position: relative; top: -2px; }
   </ul>
 
   <h3 id="g5">Năm tình huống sử dụng chính</h3>
-  <p>Năm tình huống tạo giá trị lớn nhất trong giai đoạn thí điểm. Mỗi dòng ghi ai làm, đi qua những trang nào và đo kết quả bằng gì; các bước chi tiết ở phần hướng dẫn theo vai trò bên dưới.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Tình huống</th><th>Ai làm</th><th>Các bước chính</th><th>Đo kết quả</th></tr></thead>
-    <tbody>
-      <tr><td><strong>1. Chuyển người đọc đồng hồ sang an toàn và dữ liệu</strong><br>Đồng hồ thông minh thu hẹp việc đọc đồng hồ.</td>
-        <td>Nhân sự, nhân viên, cấp trên, phòng nhận</td>
-        <td>Danh mục nhân sự (ghép nguồn → đích) → Nghề nghiệp và nguyện vọng → IDP → Tuyển dụng nội bộ → Người mới chuyển về</td>
-        <td>Số người chuyển vào mảng chiến lược; thời gian lấp vị trí bằng người nội bộ</td></tr>
-      <tr><td><strong>2. Giữ đủ người có chứng chỉ an toàn và truyền nghề</strong><br>Nhân lực an toàn già đi, khó tuyển.</td>
-        <td>Nhân sự, cấp trên trung tâm an toàn</td>
-        <td>Việc cần làm (cảnh báo) → An toàn và kế thừa (mức tối thiểu, chứng chỉ sắp hết hạn, kế hoạch truyền nghề, đề cử kế thừa) → IDP lấy chứng chỉ</td>
-        <td>Số đơn vị dưới mức (mục tiêu 0); job an toàn chưa có người kế thừa (mục tiêu 0)</td></tr>
-      <tr><td><strong>3. Lập và thực hiện IDP theo ngạch mới</strong><br>Chế độ nhân sự mới từ 4/2026.</td>
-        <td>Nhân viên, cấp trên</td>
-        <td>Kế hoạch phát triển (IDP): tự đánh giá → lập IDP → cấp trên duyệt → làm task, nộp bằng chứng → hậu kiểm → kỹ năng vào hồ sơ</td>
-        <td>Số IDP đã duyệt; tiến độ; tỷ lệ trả lại; % hồ sơ kỹ năng đủ</td></tr>
-      <tr><td><strong>4. Tuyển nội bộ cho mảng chiến lược</strong><br>Điện, quốc tế, công nghệ trung hòa carbon, dữ liệu.</td>
-        <td>Người đăng tuyển, nhân viên, cấp trên phòng đi, nhân sự</td>
-        <td>Đăng cơ hội → nhân viên ứng tuyển ẩn danh → chọn vào vòng trong → phòng đi đồng ý hoặc hoãn → quyết định chuyển → kế hoạch 90 ngày</td>
-        <td>Số đơn; thời gian lấp vị trí; giữ chân sau 12 tháng</td></tr>
-      <tr><td><strong>5. Danh mục nhân sự động từ chiến lược</strong><br>Kế hoạch kinh doanh 2025–2027.</td>
-        <td>Nhân sự, ban giám đốc, Văn phòng DX</td>
-        <td>Chuỗi chiến lược 1 → 6 (bối cảnh, năng lực, thiếu hụt, kế hoạch, theo dõi) → Kịch bản → Danh mục nhân sự → Toàn cảnh graph</td>
-        <td>Ban giám đốc dùng bản đồ cung – cầu; thiếu hụt bắt buộc đã có kế hoạch</td></tr>
-    </tbody>
-  </table></div>
-  <div class="note"><p>Năm tình huống nối với nhau: tình huống 5 xác định job nào thiếu và khi nào; tình huống 1 và 4 lấp bằng người nội bộ; tình huống 3 tạo năng lực và làm dữ liệu kỹ năng đáng tin; tình huống 2 là ràng buộc an toàn — không quyết định chuyển nào được làm đơn vị an toàn xuống dưới mức.</p></div>
+  <p>Năm tình huống tạo giá trị lớn nhất trong giai đoạn thí điểm. Sơ đồ dưới cho thấy chúng nối với nhau thế nào; bấm vào một ô để tới quy trình của tình huống đó. Mỗi quy trình đi theo thứ tự: ai làm, làm gì, ở trang nào, và đo kết quả bằng gì.</p>
+  <ol class="ucmap" aria-label="Năm tình huống nối với nhau">
+    <li class="m-a"><a href="#uc5"><span><b>5</b> Danh mục nhân sự động</span><small>Biết job nào thiếu, khi nào</small></a></li>
+    <li class="m-b"><a href="#uc1"><span><b>1</b> Chuyển đọc đồng hồ sang an toàn, dữ liệu</span><small>Lấp bằng người nội bộ</small></a></li>
+    <li class="m-c"><a href="#uc4"><span><b>4</b> Tuyển nội bộ mảng chiến lược</span><small>Lấp bằng người nội bộ</small></a></li>
+    <li class="m-d"><a href="#uc3"><span><b>3</b> IDP theo ngạch mới</span><small>Tạo năng lực, dữ liệu kỹ năng đáng tin</small></a></li>
+    <li class="m-e"><a href="#uc2"><span><b>2</b> Giữ đủ người có chứng chỉ an toàn</span><small>Ràng buộc: không quyết định chuyển nào làm đơn vị an toàn xuống dưới mức</small></a></li>
+  </ol>
+  <p class="uclegend"><span class="role r-nv">Nhân viên</span> <span class="role r-ct">Cấp trên, người đăng tuyển, phòng nhận</span> <span class="role r-ns">Nhân sự</span> <span class="role r-ld">Ban giám đốc, DX</span> <span class="role r-ht">Hệ thống</span> <span><span class="qd">Quyết định</span> bước có người quyết định</span></p>
+  <section class="uc" aria-labelledby="uc1">
+    <h4 id="uc1"><span class="ucn">1</span>Chuyển người đọc đồng hồ sang an toàn và dữ liệu</h4>
+    <p class="why">Đồng hồ thông minh thu hẹp việc đọc đồng hồ. <span class="whos">Tham gia: Nhân viên, Nhân sự, Phòng nhận.</span></p>
+    <ol class="flow">
+        <li><p class="st"><span class="role r-ns">Nhân sự</span> <strong>Ghép job nguồn với job đích, xem ai có kỹ năng gần nhất</strong></p>
+          <p class="pg"><span class="path">Danh mục nhân sự</span> <a href="#ns7">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Ghi job mong muốn, trao đổi với cấp trên trong buổi キャリア面談</strong></p>
+          <p class="pg"><span class="path">Nghề nghiệp và nguyện vọng</span> <a href="#nv2">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Lập IDP nhắm job đích; cấp trên duyệt</strong></p>
+          <p class="pg"><span class="path">Kế hoạch phát triển (IDP)</span> <a href="#nv4">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Ứng tuyển cơ hội ở mảng mới</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#nv6">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ct">Phòng nhận</span> <strong>Đón người mới, theo kế hoạch 90 ngày</strong></p>
+          <p class="pg"><span class="path">Theo dõi sau chuyển</span> <a href="#ct7">Xem cách làm</a></p></li>
+    </ol>
+    <p class="kpi"><b>Đo kết quả</b> <span>Số người chuyển vào mảng chiến lược</span><span>Thời gian lấp vị trí bằng người nội bộ</span></p>
+  </section>
+  <section class="uc" aria-labelledby="uc2">
+    <h4 id="uc2"><span class="ucn">2</span>Giữ đủ người có chứng chỉ an toàn và truyền nghề</h4>
+    <p class="why">Nhân lực an toàn già đi, khó tuyển. <span class="whos">Tham gia: Nhân viên, Cấp trên.</span></p>
+    <ol class="flow">
+        <li><p class="st"><span class="role r-ht">Hệ thống</span> <strong>Báo chứng chỉ sắp hết hạn và đơn vị sắp dưới mức tối thiểu</strong></p>
+          <p class="pg"><span class="path">Việc cần làm</span> <a href="#ct1">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ct">Cấp trên</span> <strong>Xem mức tối thiểu và người có chứng chỉ của đơn vị</strong></p>
+          <p class="pg"><span class="path">An toàn và kế thừa</span> <a href="#ns8">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ct">Cấp trên</span> <strong>Lập kế hoạch truyền nghề, đề cử người kế thừa</strong></p>
+          <p class="pg"><span class="path">An toàn và kế thừa</span> <a href="#ns8">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Thêm hoạt động lấy hoặc gia hạn chứng chỉ vào IDP</strong></p>
+          <p class="pg"><span class="path">Kế hoạch phát triển (IDP)</span> <a href="#nv4">Xem cách làm</a></p></li>
+    </ol>
+    <p class="kpi"><b>Đo kết quả</b> <span>Đơn vị dưới mức tối thiểu: mục tiêu 0</span><span>Job an toàn chưa có người kế thừa: mục tiêu 0</span></p>
+  </section>
+  <section class="uc" aria-labelledby="uc3">
+    <h4 id="uc3"><span class="ucn">3</span>Lập và thực hiện IDP theo ngạch mới</h4>
+    <p class="why">Chế độ nhân sự mới từ 4/2026. <span class="whos">Tham gia: Nhân viên, Cấp trên.</span></p>
+    <ol class="flow">
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Tự đánh giá kỹ năng</strong></p>
+          <p class="pg"><span class="path">Kế hoạch phát triển (IDP)</span> <a href="#nv4">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Lập IDP: khoảng cách kỹ năng thành task</strong></p>
+          <p class="pg"><span class="path">Kế hoạch phát triển (IDP)</span> <a href="#nv4">Xem cách làm</a></p></li>
+        <li class="dec"><p class="st"><span class="role r-ct">Cấp trên</span> <span class="qd">Quyết định</span> <strong>Duyệt IDP</strong></p>
+          <p class="pg"><span class="path">Duyệt IDP và hậu kiểm</span> <a href="#ct3">Xem cách làm</a></p>
+          <p class="alt">↺ Trả lại: nhân viên sửa và gửi lại.</p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Làm task, nộp bằng chứng</strong></p>
+          <p class="pg"><span class="path">Kế hoạch phát triển (IDP)</span> <a href="#nv5">Xem cách làm</a></p></li>
+        <li class="dec"><p class="st"><span class="role r-ct">Cấp trên</span> <span class="qd">Quyết định</span> <strong>Hậu kiểm bằng chứng</strong></p>
+          <p class="pg"><span class="path">Duyệt IDP và hậu kiểm</span> <a href="#ct4">Xem cách làm</a></p>
+          <p class="alt">↺ Chưa đạt: trả lại kèm lý do, nhân viên làm lại bước 4.</p></li>
+        <li><p class="st"><span class="role r-ht">Hệ thống</span> <strong>Kỹ năng Đã xác minh vào hồ sơ</strong></p>
+          <p class="pg"><span class="path">Lộ trình của tôi</span> <a href="#nv1">Xem cách làm</a></p></li>
+    </ol>
+    <p class="kpi"><b>Đo kết quả</b> <span>Số IDP đã duyệt</span><span>Tiến độ IDP</span><span>Tỷ lệ trả lại</span><span>% hồ sơ kỹ năng đủ</span></p>
+  </section>
+  <section class="uc" aria-labelledby="uc4">
+    <h4 id="uc4"><span class="ucn">4</span>Tuyển nội bộ cho mảng chiến lược</h4>
+    <p class="why">Điện, quốc tế, công nghệ trung hòa carbon, dữ liệu. <span class="whos">Tham gia: Nhân viên, Nhân sự, Người đăng tuyển, Phòng nhận, Cấp trên phòng đi.</span></p>
+    <ol class="flow">
+        <li><p class="st"><span class="role r-ct">Người đăng tuyển</span> <strong>Đăng cơ hội</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#ct6">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-nv">Nhân viên</span> <strong>Ứng tuyển; phòng hiện tại không thấy đơn</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#nv6">Xem cách làm</a></p></li>
+        <li class="dec"><p class="st"><span class="role r-ct">Người đăng tuyển</span> <span class="qd">Quyết định</span> <strong>Chọn vào vòng trong</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#ct6">Xem cách làm</a></p>
+          <p class="alt">↺ Không chọn: đơn đóng, phòng hiện tại không biết.</p></li>
+        <li class="dec"><p class="st"><span class="role r-ct">Cấp trên phòng đi</span> <span class="qd">Quyết định</span> <strong>Đồng ý cho chuyển hoặc đề nghị hoãn</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#ct5">Xem cách làm</a></p></li>
+        <li class="dec"><p class="st"><span class="role r-ns">Nhân sự</span> <span class="qd">Quyết định</span> <strong>Quyết định chuyển</strong></p>
+          <p class="pg"><span class="path">Tuyển dụng nội bộ</span> <a href="#ns9">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ct">Phòng nhận</span> <strong>Kế hoạch 90 ngày cho người mới</strong></p>
+          <p class="pg"><span class="path">Theo dõi sau chuyển</span> <a href="#ct7">Xem cách làm</a></p></li>
+    </ol>
+    <p class="kpi"><b>Đo kết quả</b> <span>Số đơn</span><span>Thời gian lấp vị trí</span><span>Giữ chân sau 12 tháng</span></p>
+  </section>
+  <section class="uc" aria-labelledby="uc5">
+    <h4 id="uc5"><span class="ucn">5</span>Danh mục nhân sự động từ chiến lược</h4>
+    <p class="why">Kế hoạch kinh doanh 2025–2027. <span class="whos">Tham gia: Nhân sự, Ban giám đốc, DX.</span></p>
+    <ol class="flow">
+        <li><p class="st"><span class="role r-ns">Nhân sự</span> <strong>Ghi bối cảnh, chuyển đổi chiến lược và năng lực cần</strong></p>
+          <p class="pg"><span class="path">Bối cảnh · Năng lực</span> <a href="#ns2">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ns">Nhân sự</span> <strong>Xác định thiếu hụt năng lực theo job và thời điểm</strong></p>
+          <p class="pg"><span class="path">Thiếu hụt</span> <a href="#ns6">Xem cách làm</a></p></li>
+        <li class="dec"><p class="st"><span class="role r-ns">Nhân sự</span> <span class="qd">Quyết định</span> <strong>Lập kế hoạch hành động và theo dõi tiến độ</strong></p>
+          <p class="pg"><span class="path">Kế hoạch · Theo dõi</span> <a href="#ns6">Xem cách làm</a></p>
+          <p class="alt">↺ Mỗi hành động qua hàng duyệt trước khi chạy.</p></li>
+        <li><p class="st"><span class="role r-ns">Nhân sự</span> <strong>So các kịch bản cung – cầu</strong></p>
+          <p class="pg"><span class="path">Kịch bản</span> <a href="#ns7">Xem cách làm</a></p></li>
+        <li><p class="st"><span class="role r-ld">Ban giám đốc, DX</span> <strong>Xem bản đồ cung – cầu để ra quyết định</strong></p>
+          <p class="pg"><span class="path">Danh mục nhân sự · Toàn cảnh graph</span> <a href="#lanh-dao">Xem cách làm</a></p></li>
+    </ol>
+    <p class="kpi"><b>Đo kết quả</b> <span>Ban giám đốc dùng bản đồ cung – cầu</span><span>Thiếu hụt bắt buộc đã có kế hoạch</span></p>
+  </section>
 
   <div class="part">Phần 2</div>
   <h2 id="bat-dau">Bắt đầu</h2>
