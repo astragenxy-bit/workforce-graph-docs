@@ -39,10 +39,11 @@ figure { margin: 18px 0; }
 hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
 figcaption { color: var(--ink2); font-size: 14px; text-align: center; }
 footer { color: var(--ink2); font-size: 13px; margin-top: 24px; }
+.audience { margin: 0 0 14px; padding: 10px 14px; border-radius: 10px; background: #fff; border: 1px solid var(--line); color: var(--ink2); font-size: 14.5px; }
 @media print { header.top { display: none; } article { border: none; padding: 0; } }
 </style>
 <header class="top"><div class="in"><a class="home" href="../">← Tài liệu Talent Flow</a><a href="index.html">Mục lục</a><a href="01-giai-phap.html" aria-current="page">Giải pháp</a><a href="02-ky-thuat.html">Kỹ thuật</a><a href="03-du-lieu.html">Dữ liệu</a><a href="04-ontology.html">Ontology</a><a href="srs-bang-hinh.html">SRS bằng hình</a><a href="a3.html">Tổng quan A3</a></div></header>
-<main><div class="in"><article>
+<main><div class="in"><p class="audience">Tài liệu kỹ thuật dành cho đội triển khai. Người dùng xem <a href="../huong-dan/#g6">Giải pháp bằng hình</a> trong hướng dẫn sử dụng.</p><article>
 <h1 id="kiến-trúc-giải-pháp-talent-flow-cho-nhóm-toho-gas">Kiến trúc giải pháp — Talent Flow cho nhóm Toho Gas</h1>
 <blockquote><p>Ngày 23/11/2026. Bản nháp, viết từ tài liệu và code trong repo tới ngày này. Chưa kiểm chứng với Toho Gas. Mức chi tiết: nghiệp vụ và giải pháp (ai dùng, khối nào làm gì, luật nào không được phá, triển khai theo thứ tự nào). Chi tiết kỹ thuật xem <a href="02-ky-thuat.html"><code>02-KIEN-TRUC-KY-THUAT.md</code></a>; dữ liệu (graph, PostgreSQL, dòng dữ liệu) xem <a href="03-du-lieu.html"><code>03-KIEN-TRUC-DU-LIEU.md</code></a>. Nguồn gốc: <code>ARCHITECTURE.md</code>, <code>docs/core/02-workforce-graph-architecture.md</code>.</p></blockquote>
 <p><strong>Cách đọc.</strong> Mỗi mục có hình trước, chữ ngắn sau. Nguồn ghi trong ngoặc, theo tên file. Chữ <strong>giả định</strong> đánh dấu điều chưa được Toho Gas xác nhận (G1–G7 trong SRS và kịch bản <code>07-DEPLOYMENT-SCENARIO.md</code>). Hình vẽ theo bốn kiểu thể hiện của bộ kit <code>tools/diagrams/kit.py</code>: bản đồ quy trình có mốc, luồng công việc, hệ sinh thái đồng tâm, hành trình nhiều làn.</p>
