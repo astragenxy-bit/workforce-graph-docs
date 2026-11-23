@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Yêu cầu Toho Gas (SRS) bằng hình · Talent Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap">
+<style>
+:root { --bg: #f6f4f2; --card: #fff; --ink: #141211; --ink2: #57524e; --line: #e4dfdb; --accent: #b5520f; --code: #f1ece8; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.7 "Be Vietnam Pro", system-ui, sans-serif; }
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+header.top { background: #141211; color: #f6f2ee; padding: 14px 16px; position: sticky; top: 0; z-index: 2; }
+header.top .in { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+header.top a { color: #f6f2ee; text-decoration: none; font-size: 14px; }
+header.top a[aria-current="page"] { color: #f08a4b; font-weight: 700; }
+header.top .home { font-weight: 700; margin-right: auto; }
+.in { max-width: 1040px; margin: 0 auto; }
+main { padding: 28px 16px 64px; }
+article { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: clamp(18px, 4vw, 40px); }
+h1 { font-size: clamp(26px, 4.5vw, 36px); line-height: 1.2; margin: 0 0 16px; }
+h2 { font-size: 24px; line-height: 1.3; margin: 40px 0 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+h3 { font-size: 19px; margin: 28px 0 8px; }
+h4 { font-size: 16px; margin: 22px 0 6px; }
+p, li { max-width: 78ch; }
+blockquote { margin: 0 0 18px; padding: 10px 16px; border-left: 4px solid var(--accent); background: #fbf3ec; color: var(--ink2); }
+blockquote p { margin: 0; }
+code { font: 0.9em ui-monospace, SFMono-Regular, Consolas, monospace; background: var(--code); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+pre { background: #1d1a18; color: #f1ece8; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: inherit; }
+.tbl { overflow-x: auto; margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: #f3eeea; }
+img { max-width: 100%; height: auto; display: block; margin: 10px auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+figure { margin: 18px 0; }
+hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+figcaption { color: var(--ink2); font-size: 14px; text-align: center; }
+footer { color: var(--ink2); font-size: 13px; margin-top: 24px; }
+@media print { header.top { display: none; } article { border: none; padding: 0; } }
+</style>
+<header class="top"><div class="in"><a class="home" href="../">← Tài liệu Talent Flow</a><a href="index.html">Mục lục</a><a href="01-giai-phap.html">Giải pháp</a><a href="02-ky-thuat.html">Kỹ thuật</a><a href="03-du-lieu.html">Dữ liệu</a><a href="04-ontology.html">Ontology</a><a href="srs-bang-hinh.html" aria-current="page">SRS bằng hình</a><a href="a3.html">Tổng quan A3</a></div></header>
+<main><div class="in"><article>
+<h1 id="yêu-cầu-toho-gas-srs-bằng-hình">Yêu cầu Toho Gas (SRS) bằng hình</h1>
+<blockquote><p>Trích mục “Tổng quan bằng hình” của tài liệu yêu cầu Toho Gas. Bản đầy đủ của tài liệu yêu cầu không xuất bản trên site này.</p></blockquote>
+<p>Tám hình tóm tắt tài liệu; mỗi hình nằm ở mục liên quan bên dưới. Quy ước chung: ◆ hoặc tam giác là bước có người quyết định, nét cam là luồng chính hoặc chỗ chuyển việc, mã FR/BR/IF và đường dẫn trang ghi ngay trên hình. Nguồn vẽ: <code>tools/diagrams/specs/srs.py</code> (sinh SVG, rồi <code>node tools/diagrams/render_svg.mjs</code> xuất PNG).</p>
+<h2 id="bối-cảnh-và-bên-liên-quan">Bối cảnh và bên liên quan</h2>
+<p>Nhân viên ở tâm, các vòng đơn vị → công ty → tập đoàn kèm vai trò hệ thống và phạm vi xem; hệ thống sẵn có nối qua IF-01…08 (SRS mục B2).</p>
+<figure><img src="img/srs-boi-canh.png" alt="Bối cảnh và bên liên quan" loading="lazy"></figure>
+<h2 id="lộ-trình">Lộ trình</h2>
+<p>PoC 12 tuần TG0–TG4, đợt bổ sung TG5–TG9, việc chờ Toho, giai đoạn 1 và 2 (SRS mục A5.1).</p>
+<figure><img src="img/srs-lo-trinh.png" alt="Lộ trình" loading="lazy"></figure>
+<h2 id="bản-đồ-epic-e1e11">Bản đồ epic E1–E11</h2>
+<p>Bốn chặng cầu → cung → dịch chuyển → sau chuyển; quan hệ giữa các epic, vấn đề P1–P7 mỗi epic giải (SRS mục A5.2).</p>
+<figure><img src="img/srs-epic.png" alt="Bản đồ epic E1–E11" loading="lazy"></figure>
+<h2 id="năm-use-case">Năm use case</h2>
+<p>UC1–UC5 theo làn: bước, trang, người quyết định, chỗ chuyển việc giữa use case, kết quả đo được (SRS mục A6).</p>
+<figure><img src="img/srs-use-case.png" alt="Năm use case" loading="lazy"></figure>
+<h2 id="tuyển-nội-bộ-社内公募">Tuyển nội bộ 社内公募</h2>
+<p>Sáu bước, vùng ẩn danh, nhánh loại, hạn 14 / 90 / 60 ngày, kiểm tra an toàn (SRS mục B3.5).</p>
+<figure><img src="img/srs-tuyen-noi-bo.png" alt="Tuyển nội bộ 社内公募" loading="lazy"></figure>
+<h2 id="idp-và-hậu-kiểm">IDP và hậu kiểm</h2>
+<p>Tự đánh giá → IDP qua duyệt → bằng chứng → AI chấm sơ bộ → hậu kiểm → Evidence; hoạt động đề xuất khi job đổi (SRS mục B3.10).</p>
+<figure><img src="img/srs-idp.png" alt="IDP và hậu kiểm" loading="lazy"></figure>
+<h2 id="mười-quy-tắc-br">Mười quy tắc BR</h2>
+<p>BR-01…BR-10 xếp theo phạm vi bảo vệ, kèm chỗ thực thi (SRS mục B7).</p>
+<figure><img src="img/srs-quy-tac.png" alt="Mười quy tắc BR" loading="lazy"></figure>
+<h2 id="vòng-đời-yêu-cầu-và-reviewdecision">Vòng đời yêu cầu và ReviewDecision</h2>
+<p>Yêu cầu → hàng duyệt → duyệt / từ chối → hiệu lực; mọi quyết định ghi ReviewDecision và nhật ký (SRS mục B7).</p>
+<figure><img src="img/srs-review.png" alt="Vòng đời yêu cầu và ReviewDecision" loading="lazy"></figure>
+</article><footer>Bản dựng từ tài liệu trong repo Talent Flow. Hình vẽ bằng bộ vẽ chung (tools/diagrams); ảnh giao diện lấy từ môi trường thử nghiệm với dữ liệu mẫu.</footer></div></main>
+</html>

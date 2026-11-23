@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kiến trúc Talent Flow bằng hình · Talent Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&display=swap">
+<style>
+:root { --bg: #f6f4f2; --card: #fff; --ink: #141211; --ink2: #57524e; --line: #e4dfdb; --accent: #b5520f; --code: #f1ece8; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.7 "Be Vietnam Pro", system-ui, sans-serif; }
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+header.top { background: #141211; color: #f6f2ee; padding: 14px 16px; position: sticky; top: 0; z-index: 2; }
+header.top .in { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; }
+header.top a { color: #f6f2ee; text-decoration: none; font-size: 14px; }
+header.top a[aria-current="page"] { color: #f08a4b; font-weight: 700; }
+header.top .home { font-weight: 700; margin-right: auto; }
+.in { max-width: 1040px; margin: 0 auto; }
+main { padding: 28px 16px 64px; }
+article { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: clamp(18px, 4vw, 40px); }
+h1 { font-size: clamp(26px, 4.5vw, 36px); line-height: 1.2; margin: 0 0 16px; }
+h2 { font-size: 24px; line-height: 1.3; margin: 40px 0 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+h3 { font-size: 19px; margin: 28px 0 8px; }
+h4 { font-size: 16px; margin: 22px 0 6px; }
+p, li { max-width: 78ch; }
+blockquote { margin: 0 0 18px; padding: 10px 16px; border-left: 4px solid var(--accent); background: #fbf3ec; color: var(--ink2); }
+blockquote p { margin: 0; }
+code { font: 0.9em ui-monospace, SFMono-Regular, Consolas, monospace; background: var(--code); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+pre { background: #1d1a18; color: #f1ece8; padding: 14px 16px; border-radius: 10px; overflow-x: auto; }
+pre code { background: none; padding: 0; color: inherit; }
+.tbl { overflow-x: auto; margin: 0 0 18px; }
+table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+th { background: #f3eeea; }
+img { max-width: 100%; height: auto; display: block; margin: 10px auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+figure { margin: 18px 0; }
+hr { border: none; border-top: 1px solid var(--line); margin: 28px 0; }
+figcaption { color: var(--ink2); font-size: 14px; text-align: center; }
+footer { color: var(--ink2); font-size: 13px; margin-top: 24px; }
+@media print { header.top { display: none; } article { border: none; padding: 0; } }
+</style>
+<header class="top"><div class="in"><a class="home" href="../">← Tài liệu Talent Flow</a><a href="index.html" aria-current="page">Mục lục</a><a href="01-giai-phap.html">Giải pháp</a><a href="02-ky-thuat.html">Kỹ thuật</a><a href="03-du-lieu.html">Dữ liệu</a><a href="04-ontology.html">Ontology</a><a href="srs-bang-hinh.html">SRS bằng hình</a><a href="a3.html">Tổng quan A3</a></div></header>
+<main><div class="in"><article>
+<h1 id="kiến-trúc-talent-flow-bằng-hình">Kiến trúc Talent Flow bằng hình</h1>
+<blockquote><p>Cập nhật 23/11/2026. Ba tài liệu kiến trúc và hình cho SRS được viết theo nguyên tắc <strong>hình trước, chữ ngắn sau</strong>, mỗi hình có tiêu đề, một dòng cách đọc và dòng nguồn ghi file thật. Khi tài liệu và code khác nhau, code là nguồn đúng; các điểm lệch ghi ở mục cuối mỗi tài liệu.</p></blockquote>
+<div class="tbl"><table><thead><tr><th>Tài liệu</th><th>Trả lời câu hỏi</th><th>Hình</th></tr></thead><tbody><tr><td><a href="01-giai-phap.html">01 · Kiến trúc giải pháp</a></td><td>Giải quyết việc gì, cho ai, gồm những khối nào, khác biệt của khách hàng đặt ở đâu, theo nguyên tắc nào</td><td>9 (<code>gp-*</code>)</td></tr><tr><td><a href="02-ky-thuat.html">02 · Kiến trúc kỹ thuật</a></td><td>Chạy bằng gì, một request đi qua đâu, quyền chặn ở đâu, AI, đa ngôn ngữ, tác vụ nền, môi trường, CI</td><td>9 (<code>kt-*</code>)</td></tr><tr><td><a href="03-du-lieu.html">03 · Kiến trúc dữ liệu</a></td><td>Dữ liệu nằm ở đâu, graph 7 lớp, ranh giới PII, kỹ năng thành Đã xác minh thế nào, lịch sử</td><td>9 (<code>dl-*</code>)</td></tr><tr><td><a href="04-ontology.html">04 · Ontology và làm giàu tri thức</a></td><td>Lõi tri thức gồm ontology, taxonomy nào (bối cảnh, năng lực, job, ngạch, kỹ năng, chứng chỉ, học liệu); dữ liệu từ đâu làm giàu chúng, qua kiểm tra và người duyệt nào; vòng phản hồi, nhịp, ai giữ</td><td>7 (<code>on-*</code>)</td></tr><tr><td><a href="srs-bang-hinh.html">SRS Toho</a> mục "Tổng quan bằng hình"</td><td>Bối cảnh, lộ trình, epic, use case, luồng nghiệp vụ, quy tắc</td><td>8 (<code>srs-*</code>)</td></tr><tr><td><a href="a3.html">Tổng quan hoạt động — A3</a></td><td>Một tờ A3 cho từng vai trò (màn hình <code>/a3</code> và tờ hướng dẫn)</td><td>4 (<code>a3-*</code>)</td></tr></tbody></table></div>
+<h2 id="bốn-kiểu-thể-hiện">Bốn kiểu thể hiện</h2>
+<p>Theo bốn mẫu chủ dự án chọn; mỗi hình dùng kiểu hợp nhất với nội dung, có thể phối hợp.</p>
+<div class="tbl"><table><thead><tr><th>Kiểu</th><th>Hợp với</th><th>Ví dụ</th></tr></thead><tbody><tr><td><strong>1. Bản đồ quy trình có mốc</strong> — nhãn mốc nền đen, biểu tượng nét đơn, mũi tên nhiều nhánh, hộp trích dẫn</td><td>Lộ trình, nhịp chạy, vòng đời, quyết định theo thời gian</td><td><code>gp-trien-khai</code>, <code>gp-quyet-dinh</code>, <code>kt-tac-vu-nen</code>, <code>dl-lich-su</code>, <code>srs-lo-trinh</code></td></tr><tr><td><strong>2. Luồng công việc</strong> — hộp tối có ô kiểm, tam giác quyết định CÓ / KHÔNG, đường cam, vòng mốc thời gian</td><td>Luồng có điều kiện, cổng chặn</td><td><code>kt-request</code>, <code>kt-ai</code>, <code>dl-quy-trinh-nhap</code>, <code>dl-do-tin-cay</code>, <code>srs-tuyen-noi-bo</code>, <code>srs-idp</code>, <code>gp-nguyen-tac</code></td></tr><tr><td><strong>3. Hệ sinh thái đồng tâm</strong> — vùng tròn lồng nhau, vòng vệ tinh, khối chữ trong vùng</td><td>Bối cảnh, bên liên quan, lớp và ranh giới</td><td><code>gp-boi-canh</code>, <code>gp-khoi-giai-phap</code>, <code>kt-ngan-xep</code>, <code>kt-bao-mat</code>, <code>dl-mo-hinh-7-lop</code>, <code>dl-kho-postgres</code>, <code>srs-boi-canh</code>, <code>srs-quy-tac</code></td></tr><tr><td><strong>4. Hành trình nhiều làn</strong> — làn nghiêng, nút tròn / thoi đánh số, nét đứt cam chuyển giao, vòng kết quả</td><td>Vai trò, tầng hệ thống, dòng dữ liệu</td><td><code>gp-gia-tri-vai-tro</code>, <code>kt-thanh-phan</code>, <code>kt-i18n</code>, <code>dl-dong-du-lieu</code>, <code>srs-use-case</code>, <code>a3-*</code> (ô luồng việc)</td></tr></tbody></table></div>
+<p>Quy ước chung: ◆ / thoi / tam giác = bước có người quyết định; nét đứt = chưa có hoặc giả định chưa xác nhận; màu chỉ để nhấn, ý nghĩa luôn có chữ.</p>
+<h2 id="vẽ-lại-hình">Vẽ lại hình</h2>
+<p>Bộ vẽ dùng chung: <code>tools/diagrams/kit.py</code> (không cần thư viện ngoài). Mỗi tài liệu có script riêng trong <code>tools/diagrams/specs/</code> — sửa chữ hoặc bước trong script, không sửa tay SVG:</p>
+<pre><code>python tools/diagrams/specs/giai_phap.py
+python tools/diagrams/specs/ky_thuat.py
+python tools/diagrams/specs/du_lieu.py
+python tools/diagrams/specs/ontology.py
+python tools/diagrams/specs/srs.py
+python tools/diagrams/specs/a3_huong_dan.py docs/toho-gas/img
+node tools/diagrams/render_svg.mjs docs/kien-truc/img docs/kien-truc/img/gp-*.svg</code></pre>
+<p><code>render_svg.mjs</code> xuất PNG cỡ gấp đôi và báo chữ chồng, chữ tràn, nét chạy qua chữ; đặt <code>JPG=1 SCALE=1.25 Q=80</code> để ra ảnh nhẹ cho hướng dẫn sử dụng (<code>docs/huong-dan/img-huong-dan-20-11/</code>).</p>
+<h2 id="điểm-cần-chủ-dự-án-toho-xác-nhận-gom-từ-các-tài-liệu">Điểm cần chủ dự án / Toho xác nhận (gom từ các tài liệu)</h2>
+<div class="tbl"><table><thead><tr><th>Chủ đề</th><th>Tóm tắt</th><th>Ở đâu</th></tr></thead><tbody><tr><td>Lúc cấp trên hiện tại biết có đơn ứng tuyển</td><td>Code và SRS: từ vòng trong (<code>shortlisted</code>); <code>14-VAI-TRO…</code> mục 2.5 và <code>CLAUDE.md</code> ghi khác</td><td>SRS hình <code>srs-tuyen-noi-bo</code></td></tr><tr><td>Múi giờ tác vụ nền</td><td>Lịch cố định <code>Asia/Ho_Chi_Minh</code>; với Toho 02:00 giờ Việt Nam là 04:00 giờ Nhật</td><td>02 mục 10, 03 mục 10</td></tr><tr><td>Duyệt hoạt động đề xuất (FR-1106)</td><td>Chỉ ghi nhật ký kiểm toán, chưa ghi ReviewDecision</td><td>SRS hình <code>srs-review</code></td></tr><tr><td>Ngưỡng HAS_SKILL</td><td>Code đòi thêm <code>level ≥ 1</code>, ngưỡng theo tenant; tài liệu cũ chỉ ghi <code>confidence ≥ 0,5</code></td><td>03 mục 10</td></tr><tr><td>Ràng buộc duy nhất còn thiếu</td><td><code>KnowledgeTransferPlan</code>, <code>FAInvite</code> chưa có khoá duy nhất trong <code>schema.cypher</code></td><td>03 mục 10</td></tr><tr><td>Hệ thống ngoài</td><td>SAP (G2), SSO, Thư/Teams, Graffer, TOGIS, mốc công đoàn: giả định chưa xác nhận</td><td>01 mục 2, 10</td></tr><tr><td>Thiếu hụt hằng tuần và khung theo ngạch</td><td><code>gap_candidates_individual.cypher</code> (Q6) đọc <code>REQUIRES</code> chung; IDP, Lên ngạch, luyện phỏng vấn đọc <code>REQUIRES_AT_GRADE</code></td><td>04 mục 9</td></tr><tr><td><code>REQUIRES</code> không có phiên bản</td><td>Lưu ở Kiến trúc job là ghi đè; bản cũ chỉ còn trong <code>audit_log</code></td><td>04 mục 2.2, 9</td></tr><tr><td>Tuyển nội bộ được duyệt chưa đổi <code>HOLDS</code></td><td>Chỉ điều chuyển định kỳ đổi vị trí trong graph</td><td>04 mục 4.5, 9</td></tr><tr><td>Tri thức không tự dày lên từ hoạt động</td><td>Chứng chỉ người giữ không sinh <code>Evidence</code>; <code>TRANSITIONS_TO.observed_count</code> chỉ từ file; Dựng bộ kỹ năng không tạo kỹ năng mới</td><td>04 mục 6, 9</td></tr><tr><td>Bước nhân sự Toho rà mô tả job mẫu</td><td>Tài liệu 12 yêu cầu; code chưa có bước duyệt riêng (giả định)</td><td>04 mục 4.1</td></tr><tr><td>Bảng dải đãi ngộ tham khảo</td><td>Số liệu mẫu; bảng thật, phạm vi công khai, tham vấn công đoàn chờ Toho</td><td><code>toho-gas/20</code> mục 9, Q8</td></tr></tbody></table></div>
+</article><footer>Bản dựng từ tài liệu trong repo Talent Flow. Hình vẽ bằng bộ vẽ chung (tools/diagrams); ảnh giao diện lấy từ môi trường thử nghiệm với dữ liệu mẫu.</footer></div></main>
+</html>
