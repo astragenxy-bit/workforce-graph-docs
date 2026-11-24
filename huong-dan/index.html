@@ -60,6 +60,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .top nav { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; }
 .top nav a { color: var(--ink-2); text-decoration: none; }
 .top nav a:hover { color: var(--ink); }
+/* Nút quay về trang chủ site (chỉ bản công khai) */
+.top .home { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; }
+.top .home:hover { border-color: var(--accent); }
+.top .home + .brand { margin-right: auto; }
 
 /* Dải tiêu đề */
 .hero { background: var(--band); color: var(--band-ink); }
@@ -267,6 +272,7 @@ h3 .ph { position: relative; top: -2px; }
 </style>
 
 <header class="top"><div class="top-in gutter">
+  <a class="home" href="../">← Tài liệu Talent Flow</a>
   <a class="brand" href="#top" aria-label="Talent Flow — Trung tâm hỗ trợ"><span class="mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><circle cx="4" cy="4" r="2.2" fill="#f08a4b"/><circle cx="12" cy="5" r="2.2" fill="#f6f2ee"/><circle cx="7" cy="12" r="2.2" fill="#f6f2ee"/><path d="M4 4 12 5 7 12Z" fill="none" stroke="#f6f2ee" stroke-width="1"/></svg></span>Talent Flow <small>Trung tâm hỗ trợ</small></a>
   <nav aria-label="Trong tài liệu">
     <a href="#moi">Có gì mới</a><a href="#gioi-thieu">Giới thiệu</a><a href="#bat-dau">Bắt đầu</a><a href="#nhan-vien">Nhân viên</a><a href="#cap-tren">Cấp trên</a><a href="#nhan-su">Nhân sự</a><a href="#hoi-dap">Hỏi đáp</a>
