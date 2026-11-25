@@ -16,11 +16,11 @@ BLUR = 'dữ liệu đã làm mờ'
 
 
 # ---------- cover: the description is drawn as the labelled illustration ----------
-S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow<br>cho Tập đoàn BRG',
+S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow',
     'Từ dự án chiến lược đến kỹ năng của từng nhân sự',
     ['Nghiệp vụ<br>nhân sự', 'Luồng<br>dữ liệu', 'Tri thức<br>doanh nghiệp', 'AI'],
     ['Phát triển<br>nghề nghiệp', 'Điều chuyển<br>nhân lực nội bộ'],
-    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI BRG',
+    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI <span style="color:#FCA010"><b>BRG</b></span>',
     'Talent Flow là nền tảng phát triển nghề nghiệp và điều chuyển nhân lực nội bộ dựa trên kỹ năng, kết hợp nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI. Hình minh họa: bốn thành phần (nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp, AI) hội về kỹ năng ở trung tâm và tạo ra hai kết quả: phát triển nghề nghiệp, điều chuyển nhân lực nội bộ. Talent Flow hỗ trợ BRG bố trí nhân sự phù hợp cho các dự án mới (đô thị thông minh, FujiMart, golf – khách sạn) từ nguồn nhân lực sẵn có.')
 
 # ---------- context (unchanged content) ----------

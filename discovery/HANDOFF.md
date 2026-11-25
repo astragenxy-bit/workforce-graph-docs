@@ -1,6 +1,6 @@
 # HANDOFF — Discovery Talent Flow cho BRG và Toho Gas
 
-Tài liệu này giúp một phiên Claude khác (hoặc một thành viên khác trong nhóm) nắm đủ bối cảnh để tiếp tục chỉnh sửa, làm mới tài liệu và bộ slide. Cập nhật lần cuối: 25/11/2026 (bản v3.2).
+Tài liệu này giúp một phiên Claude khác (hoặc một thành viên khác trong nhóm) nắm đủ bối cảnh để tiếp tục chỉnh sửa, làm mới tài liệu và bộ slide. Cập nhật lần cuối: 25/11/2026 (bản v3.3).
 
 > Lưu ý về độ tin cậy: số liệu bên dưới lấy từ tài liệu nghiên cứu trong thư mục này. Nội dung có nhãn **[Inference]** là suy luận, chưa kiểm chứng; khi dùng lại phải giữ nhãn. Phần pháp lý là thông tin tham khảo cho thiết kế, không phải tư vấn pháp lý.
 
@@ -39,6 +39,7 @@ Tài liệu này giúp một phiên Claude khác (hoặc một thành viên khá
 9. **Phản hồi 5 (lỗi hiển thị):** số trong các vòng tròn (timeline dọc) lệch lên góc trên trái trong trình xem thật. Nguyên nhân: Slides bỏ qua `display:flex` để căn giữa chữ bên trong `<p>`. Đã đổi các lớp `.num`, `.tl-dot`, `.vt-dot`, `.df-n` sang `text-align:center` + `line-height` bằng chiều cao vòng tròn.
 10. **Phản hồi 6:** thêm slide **kiến trúc tổng thể** làm trang đầu phụ lục (A1, `ap-architecture`) ở cả hai bộ; các phụ lục còn lại lùi một số (A2–A8), tham chiếu trong slide và ghi chú đã cập nhật.
 11. **Phản hồi 7 (bìa):** nội dung mô tả trên bìa được thể hiện ngay trong hình minh họa, cách biểu diễn tinh tế hơn: bốn dòng chảy (nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp, AI) hội về lõi **Kỹ năng**, rồi tỏa ra hai kết quả (phát triển nghề nghiệp, điều chuyển nhân lực nội bộ); có chuyển động vẽ đường và hiện chữ khi trình chiếu. Đoạn mô tả chữ trên bìa đã bỏ (chuyển vào ghi chú người trình bày).
+    - Chỉnh tiếp theo phản hồi: chữ đặt **bên trong các vòng tròn** (bốn vòng thành phần trên quỹ đạo, hai vòng kết quả màu cam bên dưới); tiêu đề bìa chỉ còn "Talent Flow" (bỏ "cho Tập đoàn BRG", "cho Toho Gas"); tên công ty ở chân trang bìa được làm nổi bật (chữ đậm, màu cam).
 12. **Không đưa vào slide khách hàng:** khoảng cách năng lực nội bộ (Doc 2), tên khách hàng khác (TPBank, LPBank…).
 13. **Ảnh chụp màn hình Talent Flow** lấy từ tài liệu giới thiệu sản phẩm, chứa dữ liệu mẫu của bản thí điểm Toho Gas:
     - Bộ Toho Gas dùng **ảnh rõ**.
@@ -88,8 +89,8 @@ Các liên kết dưới đây **riêng tư theo tài khoản chủ sở hữu**
 | Doc 3 · Data flow và tri thức doanh nghiệp | https://claude.ai/artifact/PnXs8NL381BYBXLUd5Rc8K | project `b8848a7b-6395-4b71-a37d-c0a04e389e54`, tab `f67a94fb-b24d` |
 | Doc 4 · First principles | https://claude.ai/artifact/J6vs8y4uVA9bBbFmZeUXgB | project `8a7f456d-ee81-4c0a-b4c2-2e4561f850a0`, tab `46d51631-b64d` |
 | Tài liệu "BRG và Toho Gas — phân tích giải pháp: phần dùng chung và phần đặc thù" | https://claude.ai/artifact/Uteqea6diUDjBmHyRcq2pL | slug `e1dcfebb-a609-439d-af85-3e64bcbbbd8d` (có trên tài khoản; nội dung chưa được đối chiếu trong phiên cập nhật này) |
-| Slide BRG | https://claude.ai/artifact/WNZocWXGjQCUHFyWnRT19B | slug `eddbdb35-5a5b-4b2b-a6c7-51c35a3993ca`, bản v3.2: `1795566192-4cb7` |
-| Slide Toho Gas | https://claude.ai/artifact/MzfgagwLnMp4KcZfksb5Uy | slug `aa0401c9-a65c-4ed4-b87c-61f333d53bb6`, bản v3.2: `1795566198-ad5e` |
+| Slide BRG | https://claude.ai/artifact/WNZocWXGjQCUHFyWnRT19B | slug `eddbdb35-5a5b-4b2b-a6c7-51c35a3993ca`, bản v3.3: `1795566546-39c5` |
+| Slide Toho Gas | https://claude.ai/artifact/MzfgagwLnMp4KcZfksb5Uy | slug `aa0401c9-a65c-4ed4-b87c-61f333d53bb6`, bản v3.3: `1795566548-08e7` |
 
 - Kiểu artifact Slides: slug `3e9dc3d6-8a10-4143-ac0b-5af4f2b03a61`.
 - Ảnh đã tải lên (URL nằm trong `decks/<deck>/blobs.json`, bản gốc trong `decks/<deck>/assets/`):

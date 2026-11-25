@@ -16,11 +16,11 @@ SAMPLE = 'dữ liệu mẫu trong môi trường thử nghiệm'
 
 
 # ---------- cover: the description is drawn as the labelled illustration ----------
-S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow<br>cho Toho Gas',
+S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow',
     'Từ chiến lược đến kỹ năng của từng thành viên',
     ['Nghiệp vụ<br>nhân sự', 'Luồng<br>dữ liệu', 'Tri thức<br>doanh nghiệp', 'AI'],
     ['Phát triển<br>nghề nghiệp', 'Điều chuyển<br>nhân lực nội bộ'],
-    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI TOHO GAS',
+    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI <span style="color:#FCA010"><b>TOHO GAS</b></span>',
     'Talent Flow là nền tảng phát triển nghề nghiệp và điều chuyển nhân lực nội bộ dựa trên kỹ năng, kết hợp nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI. Hình minh họa: bốn thành phần (nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp, AI) hội về kỹ năng ở trung tâm và tạo ra hai kết quả: phát triển nghề nghiệp, điều chuyển nhân lực nội bộ. Talent Flow hỗ trợ nhóm Toho Gas chuyển kế hoạch trung hạn thành nhu cầu kỹ năng cụ thể và bố trí nhân sự nội bộ cho mảng chiến lược.')
 
 # ---------- context (unchanged content) ----------
