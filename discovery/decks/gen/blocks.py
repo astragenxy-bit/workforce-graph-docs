@@ -280,10 +280,11 @@ def system_arch_slide(sid, eyebrow, title, users, channels, modules, ai, data, i
 # so no stroke is drawn over a bubble; label <p>s are pinned on top, centred in each bubble.
 import math as _m
 _CV_O = (960, 120)                 # svg origin (canvas px), size 832 x 780
-_CV_C = (1376, 510)                # core centre (canvas px)
-_CV_R_CORE, _CV_R_IN, _CV_R_OUT = 88, 95, 110
-_CV_IN_ANG = [-150, -110, -70, -30]
-_CV_OUT_ANG = [120, 60]
+_CV_C = (1390, 524)                # core centre (canvas px)
+_CV_R_CORE, _CV_R_IN, _CV_R_OUT = 88, 95, 95
+_CV_ORBIT = 300                    # all six circles sit on one orbit, 60 degrees apart
+_CV_IN_ANG = [180, 240, 300, 0]    # left, upper-left, upper-right, right
+_CV_OUT_ANG = [120, 60]            # lower-left, lower-right
 
 
 def _cv_pt(ang, dist):
@@ -306,8 +307,8 @@ def cover_slide(sid, eyebrow, title_html, sub, inputs, outputs, foot_left, aside
     ox, oy = _CV_O
     S = lambda p: (p[0] - ox, p[1] - oy)
     C = S(_CV_C)
-    nin = [S(_cv_pt(a, 300)) for a in _CV_IN_ANG]
-    nout = [S(_cv_pt(a, 290)) for a in _CV_OUT_ANG]
+    nin = [S(_cv_pt(a, _CV_ORBIT)) for a in _CV_IN_ANG]
+    nout = [S(_cv_pt(a, _CV_ORBIT)) for a in _CV_OUT_ANG]
     defs = ('<defs><radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FCA010" stop-opacity="0.20"/>'
             '<stop offset="1" stop-color="#FCA010" stop-opacity="0"/></radialGradient>'
             '<radialGradient id="core" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#2C3E6B"/><stop offset="1" stop-color="#14203C"/></radialGradient>'
@@ -315,7 +316,7 @@ def cover_slide(sid, eyebrow, title_html, sub, inputs, outputs, foot_left, aside
             '<radialGradient id="obub" cx="0.5" cy="0.35" r="0.65"><stop offset="0" stop-color="#FFB733"/><stop offset="1" stop-color="#F29400"/></radialGradient>'
             '</defs>')
     back = ('<circle cx="%.1f" cy="%.1f" r="250" fill="url(#halo)"/>'
-            '<circle cx="%.1f" cy="%.1f" r="300" fill="none" stroke="#3A4C7A" stroke-opacity="0.7" stroke-width="1.5" stroke-dasharray="3 9"/>') % (C + C)
+            '<circle cx="%.1f" cy="%.1f" r="%d" fill="none" stroke="#4A5D8C" stroke-opacity="0.9" stroke-width="2" stroke-dasharray="4 10"/>') % (C + C + (_CV_ORBIT,))
     streams = []
     for n in nin:
         ux, uy = C[0] - n[0], C[1] - n[1]
@@ -347,25 +348,26 @@ def cover_slide(sid, eyebrow, title_html, sub, inputs, outputs, foot_left, aside
                           n[0], n[1], _CV_R_IN + 6, n[0], n[1], _CV_R_IN) for n in nin)
     bubbles += ''.join('<circle cx="%.1f" cy="%.1f" r="%d" fill="none" stroke="#FCA010" stroke-opacity="0.35" stroke-width="2"/>'
                        '<circle cx="%.1f" cy="%.1f" r="%d" fill="url(#obub)"/>' % (
-                           n[0], n[1], _CV_R_OUT + 12, n[0], n[1], _CV_R_OUT) for n in nout)
-    sparks = ''.join('<circle cx="%.1f" cy="%.1f" r="%s" fill="#BFC8DA" fill-opacity="%s"/>' % (C[0] + dx, C[1] + dy, r, o) for dx, dy, r, o in [
-        (-205, -40, '2.5', '0.5'), (205, -40, '2.5', '0.5'), (-150, 120, '2', '0.4'), (150, 120, '2', '0.4'), (0, -170, '2', '0.45'), (0, 170, '2', '0.4')])
+                           n[0], n[1], _CV_R_OUT + 6, n[0], n[1], _CV_R_OUT) for n in nout)
+    sparks = ''.join('<circle cx="%.1f" cy="%.1f" r="%s" fill="#BFC8DA" fill-opacity="%s"/>' % (
+        C[0] + 172 * _m.cos(_m.radians(a)), C[1] + 172 * _m.sin(_m.radians(a)), r, o)
+        for a, r, o in [(30, '2.5', '0.5'), (90, '2', '0.45'), (150, '2.5', '0.5'), (210, '2', '0.4'), (270, '2.5', '0.5'), (330, '2', '0.4')])
     svg = ('<svg style="position:absolute;left:%dpx;top:%dpx" width="832" height="780" viewBox="0 0 832 780" '
            'aria-label="Bốn thành phần nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI hội về kỹ năng, '
            'tạo ra phát triển nghề nghiệp và điều chuyển nhân lực nội bộ">%s%s%s%s%s%s</svg>') % (
         ox, oy, defs, back, ''.join(streams), core, bubbles, sparks)
     labs = []
     for i, (a, lab) in enumerate(zip(_CV_IN_ANG, inputs)):
-        x, y = _cv_pt(a, 300)
+        x, y = _cv_pt(a, _CV_ORBIT)
         lines = lab.count('<br>') + 1
         labs.append('<p class="cv-in" style="left:%dpx;top:%dpx;animation-delay:%dms">%s</p>' % (
             round(x) - 87, round(y - lines * 15), 150 + 120 * i, lab))
     labs.append('<p class="cv-core" style="left:%dpx;top:%dpx;animation-delay:650ms">%s</p>' % (_CV_C[0] - 80, _CV_C[1] - 20, core_label))
     for i, (a, lab) in enumerate(zip(_CV_OUT_ANG, outputs)):
-        x, y = _cv_pt(a, 290)
+        x, y = _cv_pt(a, _CV_ORBIT)
         lines = lab.count('<br>') + 1
         labs.append('<p class="cv-out" style="left:%dpx;top:%dpx;animation-delay:%dms">%s</p>' % (
-            round(x) - 102, round(y - lines * 15), 1000 + 150 * i, lab))
+            round(x) - 87, round(y - lines * 15), 1000 + 150 * i, lab))
     inner = '''%s
 <div class="cv-text" style="width:800px">
 <p class="eyebrow">%s</p>
