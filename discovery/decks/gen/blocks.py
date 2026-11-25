@@ -236,3 +236,119 @@ def migrate(old_dir, old_id, new_id, eyebrow=None, title=None):
     if title:
         h = re.sub(r'<h2 class="title">.*?</h2>', '<h2 class="title">%s</h2>' % title, h, count=1)
     return h
+
+
+def system_arch_slide(sid, eyebrow, title, users, channels, modules, ai, data, integ, systems, gov, infra, aside, foot):
+    """Overall architecture: users -> Talent Flow (modules, AI, data, integration) -> existing systems,
+    plus governance and infrastructure bands. Items: 'text' or ('text', cls) with cls in o/k."""
+    def chips(items):
+        out = []
+        for it in items:
+            if isinstance(it, tuple):
+                out.append('<p class="nd %s">%s</p>' % (it[1], it[0]))
+            else:
+                out.append('<p class="nd">%s</p>' % it)
+        return ''.join(out)
+    link = '<div class="lyc">%s%s</div>' % (arrow('lya', 'arrow-up'), arrow('lya', 'arrow-down'))
+    mods = ''.join('<p class="nd o">%s</p>' % m for m in modules)
+    inner = head(eyebrow, title) + '''<div class="content" style="gap:0">
+<div class="sa-band"><p class="lbl sa-l">NGƯỜI DÙNG</p>%s%s</div>
+%s
+<div class="sa-plat">
+<div class="sa-tab"><p class="lbl">TALENT FLOW</p><p class="cap">Nền tảng đề xuất</p></div>
+<div class="col" style="flex:1;gap:8px">
+<div class="sa-row"><p class="sa-rl">NGHIỆP VỤ</p><div class="sa-mods">%s</div></div>
+<div class="sa-row"><p class="sa-rl">DỊCH VỤ AI</p><div class="sa-chips">%s</div></div>
+<div class="sa-row"><p class="sa-rl">DỮ LIỆU</p><div class="sa-chips">%s</div></div>
+<div class="sa-row"><p class="sa-rl">TÍCH HỢP</p><div class="sa-chips">%s</div></div>
+</div>
+</div>
+%s
+<div class="sa-band"><p class="lbl sa-l">HỆ THỐNG HIỆN CÓ</p>%s</div>
+<div class="g2" style="margin-top:12px">
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">QUẢN TRỊ VÀ BẢO MẬT</p><p class="t">%s</p></div>
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">HẠ TẦNG</p><p class="t">%s</p></div>
+</div>
+</div>
+''' % (chips(users), chips([(c, 'o') for c in channels]), link, mods, chips(ai), chips(data), chips(integ),
+       link, chips(systems), gov, infra)
+    return section(sid, inner, aside, foot)
+
+
+# Cover art: four input streams flow into the skill core, two output streams flow out.
+# Region (canvas px) and geometry; labels are pinned <p> set in clear space beside each stream end.
+_CV_O = (1060, 150)                      # svg origin, size 732 x 740
+_CV_CORE = (1420, 520)                   # canvas
+_CV_IN = [1145, 1325, 1505, 1690]        # canvas x of the input stream starts (y = 252)
+_CV_OUT = [1250, 1600]                   # canvas x of the output stream ends (y = 792)
+
+
+def cover_slide(sid, eyebrow, title_html, sub, inputs, outputs, foot_left, aside, core_label='Kỹ năng'):
+    """inputs: 4 labels (may contain <br>); outputs: 2 labels. The drawing is one backdrop <svg>;
+    every label sits in clear space, so no stroke crosses text."""
+    ox, oy = _CV_O
+    cx, cy = _CV_CORE[0] - ox, _CV_CORE[1] - oy      # 360, 370
+    R = 92
+    y0, y1 = 252 - oy, 792 - oy                       # 102, 642
+    ins = [x - ox for x in _CV_IN]
+    outs = [x - ox for x in _CV_OUT]
+    ends = [320, 345, 375, 400]
+    def ring_y(x, top=True):
+        d = (R * R - (x - cx) ** 2) ** 0.5
+        return cy - d if top else cy + d
+    defs = ('<defs>'
+            '<radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FCA010" stop-opacity="0.22"/>'
+            '<stop offset="1" stop-color="#FCA010" stop-opacity="0"/></radialGradient>'
+            '<radialGradient id="core" cx="0.5" cy="0.4" r="0.6"><stop offset="0" stop-color="#2C3E6B"/><stop offset="1" stop-color="#14203C"/></radialGradient>'
+            '<linearGradient id="gin" gradientUnits="userSpaceOnUse" x1="0" y1="%d" x2="0" y2="%d"><stop offset="0" stop-color="#6F82B0"/>'
+            '<stop offset="1" stop-color="#FCA010"/></linearGradient>'
+            '<linearGradient id="gout" gradientUnits="userSpaceOnUse" x1="0" y1="%d" x2="0" y2="%d"><stop offset="0" stop-color="#FCA010"/>'
+            '<stop offset="1" stop-color="#FFC24D"/></linearGradient>'
+            '</defs>') % (y0, cy - R, cy + R, y1)
+    paths = []
+    for sx, ex in zip(ins, ends):
+        ey = ring_y(ex)
+        d = 'M%d %d C%d %d %d %d %d %.1f' % (sx, y0, sx, y0 + 100, ex, ey - 90, ex, ey)
+        paths.append('<path d="%s" fill="none" stroke="#6F82B0" stroke-opacity="0.18" stroke-width="12" stroke-linecap="round"/>' % d)
+        paths.append('<path d="%s" fill="none" stroke="url(#gin)" stroke-width="3" stroke-linecap="round" stroke-dasharray="420">'
+                     '<animate attributeName="stroke-dashoffset" values="420;0" dur="1.1s" begin="0s"/></path>' % d)
+    for sx, ex in zip([340, 380], outs):
+        sy = ring_y(sx, top=False)
+        d = 'M%d %.1f C%d %.1f %d %d %d %d' % (sx, sy, sx, sy + 80, ex, y1 - 90, ex, y1)
+        paths.append('<path d="%s" fill="none" stroke="#FCA010" stroke-opacity="0.14" stroke-width="16" stroke-linecap="round"/>' % d)
+        paths.append('<path d="%s" fill="none" stroke="url(#gout)" stroke-width="4" stroke-linecap="round" stroke-dasharray="360">'
+                     '<animate attributeName="stroke-dashoffset" values="360;360;0" dur="1.8s" begin="0s"/></path>' % d)
+    dots = ''.join('<circle cx="%d" cy="%d" r="12" fill="none" stroke="#6F82B0" stroke-opacity="0.55" stroke-width="2"/>'
+                   '<circle cx="%d" cy="%d" r="6" fill="#F3F4F7"/>' % (x, y0, x, y0) for x in ins)
+    dots += ''.join('<circle cx="%d" cy="%d" r="17" fill="none" stroke="#FCA010" stroke-opacity="0.4" stroke-width="2"/>'
+                    '<circle cx="%d" cy="%d" r="9" fill="#FCA010"/>' % (x, y1, x, y1) for x in outs)
+    sparks = ''.join('<circle cx="%d" cy="%d" r="%s" fill="#BFC8DA" fill-opacity="%s"/>' % t for t in [
+        (215, 300, '2.5', '0.5'), (520, 290, '2', '0.45'), (250, 460, '2', '0.4'), (480, 470, '2.5', '0.5'), (600, 370, '2', '0.35'), (120, 380, '2', '0.35')])
+    core = ('<circle cx="%d" cy="%d" r="230" fill="url(#halo)"/>'
+            '<circle cx="%d" cy="%d" r="128" fill="none" stroke="#3A4C7A" stroke-width="2" stroke-dasharray="3 9"/>'
+            '<circle cx="%d" cy="%d" r="%d" fill="url(#core)" stroke="#FCA010" stroke-width="5"/>'
+            '<circle cx="%d" cy="%d" r="76" fill="none" stroke="#FCA010" stroke-opacity="0.35" stroke-width="1.5"/>') % (
+        cx, cy, cx, cy, cx, cy, R, cx, cy)
+    svg = ('<svg style="position:absolute;left:%dpx;top:%dpx" width="732" height="740" viewBox="0 0 732 740" '
+           'aria-label="Bốn dòng chảy nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI hội về kỹ năng, '
+           'tạo ra phát triển nghề nghiệp và điều chuyển nhân lực nội bộ">%s%s%s%s%s</svg>') % (
+        ox, oy, defs, core.split('<circle cx="%d" cy="%d" r="128"' % (cx, cy))[0], ''.join(paths),
+        '<circle cx="%d" cy="%d" r="128"' % (cx, cy) + core.split('<circle cx="%d" cy="%d" r="128"' % (cx, cy))[1] + sparks, dots)
+    labs = []
+    for i, (x, lab) in enumerate(zip(_CV_IN, inputs)):
+        top = 178 if '<br>' in lab else 208
+        labs.append('<p class="cv-in" style="left:%dpx;top:%dpx;animation-delay:%dms">%s</p>' % (x - 85, top, 100 + 120 * i, lab))
+    labs.append('<p class="cv-core" style="left:%dpx;top:%dpx;animation-delay:600ms">%s</p>' % (_CV_CORE[0] - 80, _CV_CORE[1] - 20, core_label))
+    for i, (x, lab) in enumerate(zip(_CV_OUT, outputs)):
+        labs.append('<p class="cv-out" style="left:%dpx;top:808px;animation-delay:%dms">%s</p>' % (x - 130, 1100 + 150 * i, lab))
+    inner = '''%s
+<div class="cv-text" style="width:880px">
+<p class="eyebrow">%s</p>
+<h1 class="cv-title">%s</h1>
+<div class="bar"></div>
+<p class="cv-sub">%s</p>
+</div>
+%s
+''' % (svg, eyebrow, title_html, sub, '\n'.join(labs))
+    return section(sid, inner, aside, '<div class="footer"><p class="fl">%s</p><p class="fr"></p></div>' % foot_left,
+                   cls='dark cover', attrs='data-transition="fade"')

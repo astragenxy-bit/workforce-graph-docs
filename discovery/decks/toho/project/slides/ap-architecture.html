@@ -1,0 +1,26 @@
+<section id="ap-architecture">
+<p class="eyebrow">PHỤ LỤC A1 · KIẾN TRÚC TỔNG THỂ</p>
+<h2 class="title">Kiến trúc tổng thể đề xuất: từ người dùng đến hệ thống hiện có</h2>
+<div class="bar"></div>
+<div class="content" style="gap:0">
+<div class="sa-band"><p class="lbl sa-l">NGƯỜI DÙNG</p><p class="nd">Nhân viên</p><p class="nd">Cấp trên</p><p class="nd">Nhân sự</p><p class="nd">Ban giám đốc</p><p class="nd">Văn phòng DX</p><p class="nd o">Web tiếng Nhật</p><p class="nd o">Di động cho hiện trường</p></div>
+<div class="lyc"><x-shape kind="arrow-up" class="lya"></x-shape><x-shape kind="arrow-down" class="lya"></x-shape></div>
+<div class="sa-plat">
+<div class="sa-tab"><p class="lbl">TALENT FLOW</p><p class="cap">Nền tảng đề xuất</p></div>
+<div class="col" style="flex:1;gap:8px">
+<div class="sa-row"><p class="sa-rl">NGHIỆP VỤ</p><div class="sa-mods"><p class="nd o">M1 · Vị trí và từ điển kỹ năng</p><p class="nd o">M2 · Hồ sơ kỹ năng, bằng chứng</p><p class="nd o">M3 · Danh mục nhân sự động</p><p class="nd o">M4 · Định hướng nghề nghiệp</p><p class="nd o">M5 · Thị trường nhân lực nội bộ</p><p class="nd o">M6 · Điều chuyển và theo dõi</p></div></div>
+<div class="sa-row"><p class="sa-rl">DỊCH VỤ AI</p><div class="sa-chips"><p class="nd">Trích xuất kỹ năng</p><p class="nd">Chuẩn hóa DSS ver.2.0</p><p class="nd">Ghép nối có giải thích</p><p class="nd">Gợi ý lộ trình</p><p class="nd">Mô phỏng kịch bản</p></div></div>
+<div class="sa-row"><p class="sa-rl">DỮ LIỆU</p><div class="sa-chips"><p class="nd k">Workforce Graph · 7 lớp</p><p class="nd o">Lớp công ty, 出向, vị trí 保安</p><p class="nd">Kho định danh · mã hóa</p><p class="nd">Nhật ký truy vết</p></div></div>
+<div class="sa-row"><p class="sa-rl">TÍCH HỢP</p><div class="sa-chips"><p class="nd">Nạp dữ liệu từ hệ thống nguồn</p><p class="nd">Chỉ đọc trường được phép</p><p class="nd">Đăng nhập một lần</p></div></div>
+</div>
+</div>
+<div class="lyc"><x-shape kind="arrow-up" class="lya"></x-shape><x-shape kind="arrow-down" class="lya"></x-shape></div>
+<div class="sa-band"><p class="lbl sa-l">HỆ THỐNG HIỆN CÓ</p><p class="nd">Nhân sự lõi, SAP</p><p class="nd">Đào tạo, DX人材</p><p class="nd">Quản trị mục tiêu, đánh giá</p><p class="nd o">Graffer AI Studio (cần xác nhận)</p></div>
+<div class="g2" style="margin-top:12px">
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">QUẢN TRỊ VÀ BẢO MẬT</p><p class="t">Phân quyền theo vai trò, công ty · thông báo 共同利用 · ẩn danh trước khi AI xử lý · nhật ký truy cập</p></div>
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">HẠ TẦNG</p><p class="t">SaaS, Private Cloud hoặc máy chủ tại doanh nghiệp · dữ liệu lưu tại Nhật Bản · đội Việt Nam dùng dữ liệu ẩn danh</p></div>
+</div>
+</div>
+<div class="footer"><p class="fl">TALENT FLOW · TOHO GAS</p><p class="fr"></p></div>
+<aside>Kiến trúc đề xuất theo tài liệu nghiên cứu Toho Gas (mục 7.2, 7.3). Sáu module nghiệp vụ: M1 kiến trúc vị trí và từ điển kỹ năng; M2 hồ sơ kỹ năng có bằng chứng; M3 danh mục nhân sự động; M4 định hướng nghề nghiệp; M5 thị trường nhân lực nội bộ (社内公募, dự án); M6 hỗ trợ điều chuyển và theo dõi. Lớp dữ liệu theo tài liệu nghiên cứu: Workforce Graph trên Neo4j, thêm lớp công ty trong nhóm; dữ liệu định danh lưu ở PostgreSQL có mã hóa; graph chỉ dùng mã ẩn danh. Tích hợp cần Toho Gas xác nhận: hệ thống nhân sự lõi và SAP (theo báo chí công nghệ, đang chuyển lên S/4HANA Cloud); quản trị mục tiêu và đánh giá theo chế độ mới chỉ đọc trường được phép. [Inference] Graffer AI Studio có thể dùng làm giao diện hỏi đáp về nghề nghiệp.</aside>
+</section>

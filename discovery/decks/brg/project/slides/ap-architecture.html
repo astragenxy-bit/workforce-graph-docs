@@ -1,0 +1,26 @@
+<section id="ap-architecture">
+<p class="eyebrow">PHỤ LỤC A1 · KIẾN TRÚC TỔNG THỂ</p>
+<h2 class="title">Kiến trúc tổng thể đề xuất: từ người dùng đến hệ thống hiện có</h2>
+<div class="bar"></div>
+<div class="content" style="gap:0">
+<div class="sa-band"><p class="lbl sa-l">NGƯỜI DÙNG</p><p class="nd">Nhân viên</p><p class="nd">Quản lý</p><p class="nd">Nhân sự</p><p class="nd">Ban Tổng giám đốc</p><p class="nd">Quản trị</p><p class="nd o">Web tiếng Việt</p><p class="nd o">Di động cho tuyến đầu</p></div>
+<div class="lyc"><x-shape kind="arrow-up" class="lya"></x-shape><x-shape kind="arrow-down" class="lya"></x-shape></div>
+<div class="sa-plat">
+<div class="sa-tab"><p class="lbl">TALENT FLOW</p><p class="cap">Nền tảng đề xuất</p></div>
+<div class="col" style="flex:1;gap:8px">
+<div class="sa-row"><p class="sa-rl">NGHIỆP VỤ</p><div class="sa-mods"><p class="nd o">M1 · Vị trí và từ điển kỹ năng</p><p class="nd o">M2 · Hồ sơ kỹ năng, bằng chứng</p><p class="nd o">M3 · Danh mục nhân sự động</p><p class="nd o">M4 · Định hướng nghề nghiệp</p><p class="nd o">M5 · Thị trường nhân lực nội bộ</p><p class="nd o">M6 · Điều chuyển và theo dõi</p></div></div>
+<div class="sa-row"><p class="sa-rl">DỊCH VỤ AI</p><div class="sa-chips"><p class="nd">Trích xuất kỹ năng</p><p class="nd">Chuẩn hóa</p><p class="nd">Ghép nối có giải thích</p><p class="nd">Gợi ý lộ trình</p><p class="nd">Mô phỏng kịch bản</p></div></div>
+<div class="sa-row"><p class="sa-rl">DỮ LIỆU</p><div class="sa-chips"><p class="nd k">Workforce Graph · 7 lớp</p><p class="nd o">Lớp pháp nhân và đồng ý</p><p class="nd">Kho định danh · mã hóa</p><p class="nd">Nhật ký truy vết</p></div></div>
+<div class="sa-row"><p class="sa-rl">TÍCH HỢP</p><div class="sa-chips"><p class="nd">Nạp dữ liệu từ hệ thống nguồn</p><p class="nd">Chỉ đọc trường được phép</p><p class="nd">Đăng nhập một lần</p></div></div>
+</div>
+</div>
+<div class="lyc"><x-shape kind="arrow-up" class="lya"></x-shape><x-shape kind="arrow-down" class="lya"></x-shape></div>
+<div class="sa-band"><p class="lbl sa-l">HỆ THỐNG HIỆN CÓ</p><p class="nd">Nhân sự lõi từng pháp nhân</p><p class="nd">Học viện SeABank</p><p class="nd">AINAVI: tuyển nội bộ, thi trực tuyến</p><p class="nd">Hệ thống đánh giá</p></div>
+<div class="g2" style="margin-top:12px">
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">QUẢN TRỊ VÀ BẢO MẬT</p><p class="t">Phân quyền theo vai trò, pháp nhân · đồng ý theo mục đích · ẩn danh trước khi AI xử lý · nhật ký truy cập</p></div>
+<div class="band" style="padding:14px 22px;gap:4px"><p class="lbl">HẠ TẦNG</p><p class="t">SaaS, Private Cloud hoặc máy chủ tại doanh nghiệp · dữ liệu lưu tại Việt Nam · SeABank: đề xuất triển khai riêng</p></div>
+</div>
+</div>
+<div class="footer"><p class="fl">TALENT FLOW · BRG</p><p class="fr"></p></div>
+<aside>Kiến trúc đề xuất theo tài liệu nghiên cứu BRG (mục 7.2, 7.3). Sáu module nghiệp vụ: M1 kiến trúc vị trí và từ điển kỹ năng; M2 hồ sơ kỹ năng có bằng chứng; M3 danh mục nhân sự động; M4 định hướng nghề nghiệp cá nhân; M5 thị trường nhân lực nội bộ; M6 hỗ trợ điều chuyển và theo dõi. Lớp dữ liệu theo tài liệu nghiên cứu: Workforce Graph trên Neo4j; dữ liệu định danh lưu ở PostgreSQL có mã hóa, tách theo pháp nhân; graph chỉ dùng mã ẩn danh. Mọi gợi ý của AI có bước người xác nhận và được ghi lại. Danh sách tích hợp cần xác nhận theo hệ thống thực tế của BRG. [Inference] Với SeABank, phương án an toàn là triển khai riêng, chỉ chia sẻ hồ sơ khi nhân viên đồng ý.</aside>
+</section>

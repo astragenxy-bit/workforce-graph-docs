@@ -1,18 +1,27 @@
 # Generates the content slides of the BRG deck into ../brg/project/slides/.
-# Hand-maintained HTML (not written here): cover, thanks and the migrated appendix slides
+# Hand-maintained HTML (not written here): thanks and the migrated appendix slides
 # (ap-principles, ap-matrix, ap-roles, ap-legal, ap-sources).
 import sys, json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from lib import ic, footer, head, section, timeline, write, hdrow, arrow, shot, rounded_bus
 from blocks import (overview_slide, roles_slide, flow_slide, arch_slide, dataflow_slide, ai_slide,
-                    compliance_slide, problems_slide)
+                    compliance_slide, problems_slide, system_arch_slide, cover_slide)
 
 ROOT = os.path.abspath(os.path.join(HERE, '..', 'brg'))
 FT = footer('TALENT FLOW · BRG')
 BLOB = json.load(open(os.path.join(ROOT, 'blobs.json')))  # name -> /_blob/<id>
 S = {}
 BLUR = 'dữ liệu đã làm mờ'
+
+
+# ---------- cover: the description is drawn as the labelled illustration ----------
+S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow<br>cho Tập đoàn BRG',
+    'Từ dự án chiến lược đến kỹ năng của từng nhân sự',
+    ['Nghiệp vụ<br>nhân sự', 'Luồng<br>dữ liệu', 'Tri thức<br>doanh nghiệp', 'AI'],
+    ['Phát triển<br>nghề nghiệp', 'Điều chuyển<br>nhân lực nội bộ'],
+    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI BRG',
+    'Talent Flow là nền tảng phát triển nghề nghiệp và điều chuyển nhân lực nội bộ dựa trên kỹ năng, kết hợp nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI. Hình minh họa: bốn thành phần (nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp, AI) hội về kỹ năng ở trung tâm và tạo ra hai kết quả: phát triển nghề nghiệp, điều chuyển nhân lực nội bộ. Talent Flow hỗ trợ BRG bố trí nhân sự phù hợp cho các dự án mới (đô thị thông minh, FujiMart, golf – khách sạn) từ nguồn nhân lực sẵn có.')
 
 # ---------- context (unchanged content) ----------
 def sector(icon, label, name, roles, stat, cap, hl=False):
@@ -106,10 +115,10 @@ S['problem'] = section('problem',
 <div class="card" style="gap:12px">%s<p class="t28" style="color:#F3F4F7">Thay đổi công việc lâu dài cần người lao động đồng ý</p></div>
 <div class="card" style="gap:12px">%s<p class="t28" style="color:#F3F4F7">Luật Bảo vệ dữ liệu cá nhân, Luật Trí tuệ nhân tạo hiệu lực từ 2026</p></div>
 </div>
-<p class="note">[Inference] Bảy vấn đề cấu thành, cần kiểm chứng cùng BRG: Phụ lục A1.</p>
+<p class="note">[Inference] Bảy vấn đề cấu thành, cần kiểm chứng cùng BRG: Phụ lục A2.</p>
 </div>
 ''' % (ic('svg:city', 'sm', 'Pháp nhân'), ic('Users', 'sm'), ic('svg:scale', 'sm', 'Pháp lý')),
-'Phát biểu bài toán trong một câu. Ba ràng buộc là lý do không áp dụng được cách điều chuyển một chiều: nhiều pháp nhân, quyền đồng ý của người lao động, quy định mới về dữ liệu và AI. Bảy vấn đề cấu thành là giả thuyết, trình bày tại Phụ lục A1, cần kiểm chứng trong workshop.', FT, cls='dark')
+'Phát biểu bài toán trong một câu. Ba ràng buộc là lý do không áp dụng được cách điều chuyển một chiều: nhiều pháp nhân, quyền đồng ý của người lao động, quy định mới về dữ liệu và AI. Bảy vấn đề cấu thành là giả thuyết, trình bày tại Phụ lục A2, cần kiểm chứng trong workshop.', FT, cls='dark')
 
 # ---------- talent-flow overview ----------
 S['talent-flow'] = overview_slide('talent-flow', 'GIẢI PHÁP · TALENT FLOW', 'Bốn câu hỏi, ba luồng hoạt động trên một nền tri thức chung',
@@ -135,7 +144,7 @@ S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Bảy vai trò, mỗi va
      ('Chart', 'Ban Tổng giám đốc', 'Bản đồ cung – cầu, so sánh kịch bản', False),
      ('Key', 'Quản trị hệ thống', 'Tài khoản, dữ liệu nạp, tác vụ hệ thống', False),
      ('Lock', 'Nguyên tắc chung', 'Không tự phê duyệt; ghi nhật ký', True)],
-    'Menu hiển thị theo quyền của vai trò; phân quyền kiểm soát tại máy chủ. Quản lý không phê duyệt IDP hay bằng chứng của chính mình. Ban Tổng giám đốc chỉ xem số liệu tổng hợp, nhóm dưới 5 người được ẩn. Phạm vi dữ liệu của từng vai trò: Phụ lục A4. Ảnh chụp từ môi trường thử nghiệm của Talent Flow, dữ liệu đã làm mờ.', FT)
+    'Menu hiển thị theo quyền của vai trò; phân quyền kiểm soát tại máy chủ. Quản lý không phê duyệt IDP hay bằng chứng của chính mình. Ban Tổng giám đốc chỉ xem số liệu tổng hợp, nhóm dưới 5 người được ẩn. Phạm vi dữ liệu của từng vai trò: Phụ lục A5. Ảnh chụp từ môi trường thử nghiệm của Talent Flow, dữ liệu đã làm mờ.', FT)
 
 # ---------- three flows ----------
 S['flow-dev'] = flow_slide('flow-dev', 'LUỒNG 1 · PHÁT TRIỂN CÁ NHÂN', 'Nhân viên chủ động phát triển, quản lý xác minh kỹ năng',
@@ -157,7 +166,7 @@ S['flow-mobility'] = flow_slide('flow-mobility', 'LUỒNG 2 · DỊCH CHUYỂN N
      ('Đồng thuận ◆', 'Hai đơn vị đồng ý, có phương án bù nhân sự', True),
      ('Thỏa thuận ◆', 'Văn bản về thâm niên, lương', True),
      ('Theo dõi', 'Sau 90 ngày và 12 tháng', False)],
-    '◆ Bước có người phê duyệt · ràng buộc chi tiết: Phụ lục A5',
+    '◆ Bước có người phê duyệt · ràng buộc chi tiết: Phụ lục A6',
     'Cơ hội của các công ty tham gia được đăng tập trung; mỗi pháp nhân chủ động quyết định việc tham gia. Ứng tuyển ẩn danh giảm lo ngại bị đánh giá thiếu gắn bó. Tuyến đầu mùa cao điểm chỉ điều chuyển khi có người thay. Mẫu thỏa thuận chuyển công ty trong tập đoàn cần luật sư của BRG thiết kế.', FT)
 
 S['flow-strategy'] = flow_slide('flow-strategy', 'LUỒNG 3 · CHIẾN LƯỢC NHÂN LỰC', 'Từ thay đổi chiến lược đến kế hoạch nhân sự theo đơn vị',
@@ -182,7 +191,7 @@ S['architecture'] = arch_slide('architecture', 'KIẾN TRÚC CƠ SỞ TRI THỨC
     'QUẢN TRỊ',
     [('Key', 'Phân quyền theo vai trò, pháp nhân'), ('CheckCircle', 'Đồng ý theo mục đích'), ('Users', 'Người xác nhận gợi ý AI'),
      ('Activity', 'Nhật ký truy cập'), ('Lock', 'Ẩn nhóm dưới 5 người'), ('Globe', 'Dữ liệu tại Việt Nam')],
-    'Workforce Graph gồm 7 lớp: bối cảnh kinh doanh, năng lực, tổ chức và vị trí, từ điển kỹ năng, con người và bằng chứng, mạng lưới, phát triển tương lai. Với BRG bổ sung lớp pháp nhân và đồng ý: nhân viên thuộc pháp nhân nào, đồng ý chia sẻ hồ sơ với ai. Graph chỉ lưu mã ẩn danh; dữ liệu định danh lưu riêng theo pháp nhân, có mã hóa. Từ điển kỹ năng ba tầng: chung (Thông tư 02/2025, SFIA 9), ngành (VTOS/ACCSTP), riêng của BRG. [Inference] Với SeABank, phương án an toàn là triển khai riêng theo quy định an toàn thông tin ngành ngân hàng. Tích hợp (cần xác nhận theo hệ thống thực tế của BRG): hệ thống nhân sự lõi của từng pháp nhân (tổ chức, chức danh, lịch sử công tác); đào tạo và e-learning như Học viện SeABank; AINAVI cho tuyển nội bộ và thi trực tuyến kiểm tra kỹ năng; hệ thống đánh giá (chỉ đọc trường được phép); đăng nhập một lần.', FT)
+    'Workforce Graph gồm 7 lớp: bối cảnh kinh doanh, năng lực, tổ chức và vị trí, từ điển kỹ năng, con người và bằng chứng, mạng lưới, phát triển tương lai. Với BRG bổ sung lớp pháp nhân và đồng ý: nhân viên thuộc pháp nhân nào, đồng ý chia sẻ hồ sơ với ai. Graph chỉ lưu mã ẩn danh; dữ liệu định danh lưu riêng theo pháp nhân, có mã hóa. Từ điển kỹ năng ba tầng: chung (Thông tư 02/2025, SFIA 9), ngành (VTOS/ACCSTP), riêng của BRG. [Inference] Với SeABank, phương án an toàn là triển khai riêng theo quy định an toàn thông tin ngành ngân hàng. Tích hợp (cần xác nhận theo hệ thống thực tế của BRG): hệ thống nhân sự lõi của từng pháp nhân (tổ chức, chức danh, lịch sử công tác); đào tạo và e-learning như Học viện SeABank; AINAVI cho tuyển nội bộ và thi trực tuyến kiểm tra kỹ năng; hệ thống đánh giá (chỉ đọc trường được phép); đăng nhập một lần. Kiến trúc tổng thể của giải pháp: Phụ lục A1.', FT)
 
 # ---------- data flow ----------
 S['data-flow'] = dataflow_slide('data-flow', 'LUỒNG DỮ LIỆU', 'Tám chặng dữ liệu, ba điểm con người kiểm soát',
@@ -224,7 +233,7 @@ S['compliance'] = compliance_slide('compliance', 'TUÂN THỦ', 'Yêu cầu phá
           req='Quản lý hệ thống AI theo mức độ rủi ro',
           visual=HUMAN, feats=['Nhật ký hoạt động AI, truy vết']),
      ],
-    'Thông tin tham khảo cho thiết kế, không phải tư vấn pháp lý; cần bộ phận pháp chế của BRG xác nhận. Chi tiết theo điều khoản: Phụ lục A6.',
+    'Thông tin tham khảo cho thiết kế, không phải tư vấn pháp lý; cần bộ phận pháp chế của BRG xác nhận. Chi tiết theo điều khoản: Phụ lục A7.',
     'Bộ luật Lao động: chuyển lâu dài cần thỏa thuận (Điều 33); thay đổi cơ cấu, công nghệ cần phương án sử dụng lao động (Điều 42, 44). Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 có hiệu lực từ 1/1/2026. Nghị định 356 quy định hồ sơ đánh giá tác động do A05 xem xét. Việc AI gợi ý bố trí nhân sự có thuộc nhóm rủi ro cao hay không phụ thuộc văn bản hướng dẫn. Con số 45/60 là ví dụ minh họa giao diện.', FT)
 
 # ---------- poc (unchanged content) ----------
@@ -250,7 +259,7 @@ S['poc'] = section('poc', head('BẮT ĐẦU · PoC 12 TUẦN', 'PoC trên một
 </div>
 </div>
 ''' % '\n'.join(g),
-'Bốn tuần đầu chỉ sử dụng dữ liệu ẩn danh; hồ sơ đánh giá tác động được lập từ tuần 1–2. Nếu hồ sơ chưa được chấp thuận, PoC tiếp tục trên dữ liệu ẩn danh. Ví dụ nhóm nguồn – đích: thu ngân, văn phòng khối bán lẻ chuyển sang cửa hàng FujiMart mới, F&B khách sạn – golf và một số vị trí số (Phụ lục A3). BRG lựa chọn nhóm vị trí thực tế.', FT)
+'Bốn tuần đầu chỉ sử dụng dữ liệu ẩn danh; hồ sơ đánh giá tác động được lập từ tuần 1–2. Nếu hồ sơ chưa được chấp thuận, PoC tiếp tục trên dữ liệu ẩn danh. Ví dụ nhóm nguồn – đích: thu ngân, văn phòng khối bán lẻ chuyển sang cửa hàng FujiMart mới, F&B khách sạn – golf và một số vị trí số (Phụ lục A4). BRG lựa chọn nhóm vị trí thực tế.', FT)
 
 # ---------- kpi (unchanged content) ----------
 tiles = [('≥ 70%', 'nhân viên thí điểm xác nhận hồ sơ kỹ năng'), ('≥ 80%', 'gợi ý kỹ năng của AI được chấp nhận'),
@@ -300,10 +309,22 @@ S['next-steps'] = section('next-steps', head('BƯỚC TIẾP THEO', 'Ba bước 
        scard('2', 'Phạm vi PoC', ['Một nhóm vị trí nguồn – đích tại Hà Nội', '2–3 công ty thành viên', '20–30 vị trí đích, 200–300 nhân viên', 'Tiêu chí thành công trước tuần 1']),
        scard('3', 'Dữ liệu và pháp lý', ['Hồ sơ đánh giá tác động theo Nghị định 356', 'Nhân sự phụ trách bảo vệ dữ liệu', 'Dữ liệu ẩn danh trong bốn tuần đầu', 'Danh sách hệ thống nguồn']),
        '\n'.join('<div class="hd">%s<p class="t" style="flex:1">%s</p></div>' % (ic('Check', 'sm'), c) for c in checks)),
-'Workshop khoảng 3,5 giờ, đi theo năm bước của phương pháp first principles (Phụ lục A2). Đầu ra: danh sách ràng buộc cứng có người chịu trách nhiệm và phạm vi PoC có điểm dừng. Thành phần đề xuất: nhân sự của 2–3 pháp nhân trong PoC, người phụ trách bảo vệ dữ liệu, lãnh đạo các dự án đích (đô thị thông minh, FujiMart, golf). Với BRG, phiên 2–3 nên chạy theo từng pháp nhân trước khi tổng hợp ở phiên 4.', FT)
+'Workshop khoảng 3,5 giờ, đi theo năm bước của phương pháp first principles (Phụ lục A3). Đầu ra: danh sách ràng buộc cứng có người chịu trách nhiệm và phạm vi PoC có điểm dừng. Thành phần đề xuất: nhân sự của 2–3 pháp nhân trong PoC, người phụ trách bảo vệ dữ liệu, lãnh đạo các dự án đích (đô thị thông minh, FujiMart, golf). Với BRG, phiên 2–3 nên chạy theo từng pháp nhân trước khi tổng hợp ở phiên 4.', FT)
 
 # ================= APPENDIX =================
-S['ap-problems'] = problems_slide('ap-problems', 'PHỤ LỤC A1 · VẤN ĐỀ CẤU THÀNH', 'Bảy vấn đề cần kiểm chứng cùng BRG',
+S['ap-architecture'] = system_arch_slide('ap-architecture', 'PHỤ LỤC A1 · KIẾN TRÚC TỔNG THỂ', 'Kiến trúc tổng thể đề xuất: từ người dùng đến hệ thống hiện có',
+    ['Nhân viên', 'Quản lý', 'Nhân sự', 'Ban Tổng giám đốc', 'Quản trị'], ['Web tiếng Việt', 'Di động cho tuyến đầu'],
+    ['M1 · Vị trí và từ điển kỹ năng', 'M2 · Hồ sơ kỹ năng, bằng chứng', 'M3 · Danh mục nhân sự động',
+     'M4 · Định hướng nghề nghiệp', 'M5 · Thị trường nhân lực nội bộ', 'M6 · Điều chuyển và theo dõi'],
+    ['Trích xuất kỹ năng', 'Chuẩn hóa', 'Ghép nối có giải thích', 'Gợi ý lộ trình', 'Mô phỏng kịch bản'],
+    [('Workforce Graph · 7 lớp', 'k'), ('Lớp pháp nhân và đồng ý', 'o'), 'Kho định danh · mã hóa', 'Nhật ký truy vết'],
+    ['Nạp dữ liệu từ hệ thống nguồn', 'Chỉ đọc trường được phép', 'Đăng nhập một lần'],
+    ['Nhân sự lõi từng pháp nhân', 'Học viện SeABank', 'AINAVI: tuyển nội bộ, thi trực tuyến', 'Hệ thống đánh giá'],
+    'Phân quyền theo vai trò, pháp nhân · đồng ý theo mục đích · ẩn danh trước khi AI xử lý · nhật ký truy cập',
+    'SaaS, Private Cloud hoặc máy chủ tại doanh nghiệp · dữ liệu lưu tại Việt Nam · SeABank: đề xuất triển khai riêng',
+    'Kiến trúc đề xuất theo tài liệu nghiên cứu BRG (mục 7.2, 7.3). Sáu module nghiệp vụ: M1 kiến trúc vị trí và từ điển kỹ năng; M2 hồ sơ kỹ năng có bằng chứng; M3 danh mục nhân sự động; M4 định hướng nghề nghiệp cá nhân; M5 thị trường nhân lực nội bộ; M6 hỗ trợ điều chuyển và theo dõi. Lớp dữ liệu theo tài liệu nghiên cứu: Workforce Graph trên Neo4j; dữ liệu định danh lưu ở PostgreSQL có mã hóa, tách theo pháp nhân; graph chỉ dùng mã ẩn danh. Mọi gợi ý của AI có bước người xác nhận và được ghi lại. Danh sách tích hợp cần xác nhận theo hệ thống thực tế của BRG. [Inference] Với SeABank, phương án an toàn là triển khai riêng, chỉ chia sẻ hồ sơ khi nhân viên đồng ý.', FT)
+
+S['ap-problems'] = problems_slide('ap-problems', 'PHỤ LỤC A2 · VẤN ĐỀ CẤU THÀNH', 'Bảy vấn đề cần kiểm chứng cùng BRG',
     [('P1', 'Nhu cầu chưa lượng hóa', 'Dự án mới nêu quy mô, chưa nêu nhu cầu nhân sự theo kỹ năng', 'Trung bình'),
      ('P2', 'Năng lực chưa tổng hợp', 'Kỹ năng chưa số hóa theo chuẩn chung; mỗi đơn vị dùng chuẩn riêng', 'Trung bình'),
      ('P3', 'Đào tạo chưa gắn vị trí đích', 'Đo bằng giờ học (SeABank 62 giờ/người), chưa đo số người đảm nhận vị trí mới', 'Trung bình'),
@@ -315,7 +336,7 @@ S['ap-problems'] = problems_slide('ap-problems', 'PHỤ LỤC A1 · VẤN ĐỀ 
     'Mỗi vấn đề gắn với một chức năng của Talent Flow: P1, P7 với danh mục nhân sự động; P2 với hồ sơ kỹ năng có bằng chứng; P3, P5 với định hướng nghề nghiệp cá nhân; P4, P6 với thị trường nhân lực nội bộ và hỗ trợ điều chuyển.', FT)
 
 
-S['ap-mobility'] = section('ap-mobility', head('PHỤ LỤC A5 · DỊCH CHUYỂN NỘI BỘ', 'Hiệu quả giữ chân và ràng buộc của kênh nội bộ') +
+S['ap-mobility'] = section('ap-mobility', head('PHỤ LỤC A6 · DỊCH CHUYỂN NỘI BỘ', 'Hiệu quả giữ chân và ràng buộc của kênh nội bộ') +
 '''<div class="content">
 %s
 <div class="g2">

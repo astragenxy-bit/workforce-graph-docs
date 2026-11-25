@@ -1,18 +1,27 @@
 # Generates the content slides of the Toho Gas deck into ../toho/project/slides/.
-# Hand-maintained HTML (not written here): cover, thanks and the migrated appendix slides
+# Hand-maintained HTML (not written here): thanks and the migrated appendix slides
 # (ap-usecases, ap-roles, ap-matrix, ap-five-whys, ap-principles, ap-sources).
 import sys, json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from lib import ic, footer, head, section, write, hdrow, arrow, shot
 from blocks import (overview_slide, roles_slide, flow_slide, arch_slide, dataflow_slide, ai_slide,
-                    compliance_slide, problems_slide)
+                    compliance_slide, problems_slide, system_arch_slide, cover_slide)
 
 ROOT = os.path.abspath(os.path.join(HERE, '..', 'toho'))
 FT = footer('TALENT FLOW · TOHO GAS')
 BLOB = json.load(open(os.path.join(ROOT, 'blobs.json')))  # name -> /_blob/<id>
 S = {}
 SAMPLE = 'dữ liệu mẫu trong môi trường thử nghiệm'
+
+
+# ---------- cover: the description is drawn as the labelled illustration ----------
+S['cover'] = cover_slide('cover', 'FPT IS · THÁNG 11/2026', 'Talent Flow<br>cho Toho Gas',
+    'Từ chiến lược đến kỹ năng của từng thành viên',
+    ['Nghiệp vụ<br>nhân sự', 'Luồng<br>dữ liệu', 'Tri thức<br>doanh nghiệp', 'AI'],
+    ['Phát triển<br>nghề nghiệp', 'Điều chuyển<br>nhân lực nội bộ'],
+    'TALENT FLOW · TÀI LIỆU TRAO ĐỔI VỚI TOHO GAS',
+    'Talent Flow là nền tảng phát triển nghề nghiệp và điều chuyển nhân lực nội bộ dựa trên kỹ năng, kết hợp nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp và AI. Hình minh họa: bốn thành phần (nghiệp vụ nhân sự, luồng dữ liệu, tri thức doanh nghiệp, AI) hội về kỹ năng ở trung tâm và tạo ra hai kết quả: phát triển nghề nghiệp, điều chuyển nhân lực nội bộ. Talent Flow hỗ trợ nhóm Toho Gas chuyển kế hoạch trung hạn thành nhu cầu kỹ năng cụ thể và bố trí nhân sự nội bộ cho mảng chiến lược.')
 
 # ---------- context (unchanged content) ----------
 def dcard(icon, label, name, change, skill, hl=False):
@@ -83,10 +92,10 @@ S['problem'] = section('problem',
 <div class="card" style="gap:12px">%s<p class="t28" style="color:#F3F4F7">An toàn cung cấp là ưu tiên tuyệt đối</p></div>
 <div class="card" style="gap:12px">%s<p class="t28" style="color:#F3F4F7">Chế độ nhân sự mới vận hành từ 4/2026</p></div>
 </div>
-<p class="note">[Inference] Bảy vấn đề cấu thành, cần kiểm chứng cùng Toho Gas: Phụ lục A6. Phân tích nguyên nhân 5 Whys: Phụ lục A4.</p>
+<p class="note">[Inference] Bảy vấn đề cấu thành, cần kiểm chứng cùng Toho Gas: Phụ lục A7. Phân tích nguyên nhân 5 Whys: Phụ lục A5.</p>
 </div>
 ''' % (ic('svg:city', 'sm', 'Công ty con'), ic('svg:helmet', 'sm', 'An toàn'), ic('Clock', 'sm')),
-'Phát biểu bài toán trong một câu. Ba ràng buộc: nhân sự phân bổ ở nhiều công ty con, an toàn cung cấp không được ảnh hưởng, giải pháp khớp chế độ nhân sự mới thay vì đề xuất chế độ khác. Bảy vấn đề cấu thành là giả thuyết (Phụ lục A6), cần kiểm chứng trong workshop.', FT, cls='dark')
+'Phát biểu bài toán trong một câu. Ba ràng buộc: nhân sự phân bổ ở nhiều công ty con, an toàn cung cấp không được ảnh hưởng, giải pháp khớp chế độ nhân sự mới thay vì đề xuất chế độ khác. Bảy vấn đề cấu thành là giả thuyết (Phụ lục A7), cần kiểm chứng trong workshop.', FT, cls='dark')
 
 # ---------- talent-flow overview ----------
 S['talent-flow'] = overview_slide('talent-flow', 'GIẢI PHÁP · TALENT FLOW', 'Bốn câu hỏi, bốn luồng hoạt động trên một nền tri thức chung',
@@ -114,7 +123,7 @@ S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Tám vai trò, mỗi vai
      ('Chart', 'Ban giám đốc', 'Cung – cầu, so sánh kịch bản', False),
      ('Lightbulb', 'Văn phòng DX', 'Từ điển kỹ năng DX, số liệu tổng hợp', False),
      ('Key', 'Quản trị', 'Tài khoản, dữ liệu nạp, tác vụ hệ thống', False)],
-    'Menu hiển thị theo quyền của vai trò; phân quyền kiểm soát tại máy chủ. Cấp trên không phê duyệt IDP hay bằng chứng của chính mình. Ban giám đốc và Văn phòng DX chỉ xem số liệu tổng hợp, nhóm dưới 5 người được ẩn. Phạm vi dữ liệu của từng vai trò: Phụ lục A2. Giao diện hỗ trợ tiếng Nhật và tiếng Việt.', FT)
+    'Menu hiển thị theo quyền của vai trò; phân quyền kiểm soát tại máy chủ. Cấp trên không phê duyệt IDP hay bằng chứng của chính mình. Ban giám đốc và Văn phòng DX chỉ xem số liệu tổng hợp, nhóm dưới 5 người được ẩn. Phạm vi dữ liệu của từng vai trò: Phụ lục A3. Giao diện hỗ trợ tiếng Nhật và tiếng Việt.', FT)
 
 # ---------- four flows ----------
 S['flow-dev'] = flow_slide('flow-dev', 'PHASE 1 · LUỒNG 1 · LỘ TRÌNH PHÁT TRIỂN', 'Nhân viên lập lộ trình, cấp trên phê duyệt và xác minh',
@@ -173,7 +182,7 @@ S['architecture'] = arch_slide('architecture', 'KIẾN TRÚC CƠ SỞ TRI THỨC
     'QUẢN TRỊ',
     [('Key', 'Phân quyền theo vai trò, công ty'), ('CheckCircle', 'Thông báo 共同利用'), ('Users', 'Người xác nhận gợi ý AI'),
      ('Activity', 'Nhật ký truy cập'), ('Lock', 'Ẩn nhóm dưới 5 người'), ('Globe', 'Dữ liệu tại Nhật Bản')],
-    'Workforce Graph gồm 7 lớp: bối cảnh kinh doanh, năng lực, tổ chức và vị trí, từ điển kỹ năng, con người và bằng chứng, mạng lưới, phát triển tương lai. Với Toho Gas bổ sung lớp công ty trong nhóm (công ty gốc, công ty đang làm khi biệt phái 出向) và nhãn vị trí 保安 luôn phải có người đủ điều kiện. Graph chỉ lưu mã ẩn danh; dữ liệu định danh lưu riêng, có mã hóa. Tích hợp (cần Toho Gas xác nhận): hệ thống nhân sự lõi và SAP (theo nguồn báo chí công nghệ, đang chuyển lên S/4HANA Cloud); đào tạo, kết quả DX人材; quản trị mục tiêu và đánh giá theo chế độ mới (chỉ đọc trường được phép). [Inference] Graffer AI Studio có thể dùng làm giao diện hỏi đáp về nghề nghiệp.', FT)
+    'Workforce Graph gồm 7 lớp: bối cảnh kinh doanh, năng lực, tổ chức và vị trí, từ điển kỹ năng, con người và bằng chứng, mạng lưới, phát triển tương lai. Với Toho Gas bổ sung lớp công ty trong nhóm (công ty gốc, công ty đang làm khi biệt phái 出向) và nhãn vị trí 保安 luôn phải có người đủ điều kiện. Graph chỉ lưu mã ẩn danh; dữ liệu định danh lưu riêng, có mã hóa. Tích hợp (cần Toho Gas xác nhận): hệ thống nhân sự lõi và SAP (theo nguồn báo chí công nghệ, đang chuyển lên S/4HANA Cloud); đào tạo, kết quả DX人材; quản trị mục tiêu và đánh giá theo chế độ mới (chỉ đọc trường được phép). [Inference] Graffer AI Studio có thể dùng làm giao diện hỏi đáp về nghề nghiệp. Kiến trúc tổng thể của giải pháp: Phụ lục A1.', FT)
 
 # ---------- data flow ----------
 S['data-flow'] = dataflow_slide('data-flow', 'LUỒNG DỮ LIỆU', 'Tám chặng dữ liệu, ba điểm con người kiểm soát',
@@ -239,7 +248,7 @@ S['roadmap'] = section('roadmap', head('LỘ TRÌNH TRIỂN KHAI', 'Hai phase tr
 </div>
 </div>
 ''' % '\n'.join(g),
-'Hai phase giúp dữ liệu kỹ năng đạt độ tin cậy cần thiết trước khi dùng cho bố trí nhân sự. Ví dụ nhóm nguồn – đích cho PoC: nghiệp vụ bán gas và văn phòng (nguồn) sang mảng điện, giải pháp và DX (đích); Toho Gas lựa chọn nhóm thực tế (Phụ lục A3). Phase 2 còn gồm điều chuyển định kỳ.', FT)
+'Hai phase giúp dữ liệu kỹ năng đạt độ tin cậy cần thiết trước khi dùng cho bố trí nhân sự. Ví dụ nhóm nguồn – đích cho PoC: nghiệp vụ bán gas và văn phòng (nguồn) sang mảng điện, giải pháp và DX (đích); Toho Gas lựa chọn nhóm thực tế (Phụ lục A4). Phase 2 còn gồm điều chuyển định kỳ.', FT)
 
 # ---------- kpi (unchanged content) ----------
 tiles = [('≥ 70%', 'nhân viên thí điểm xác nhận hồ sơ kỹ năng'), ('≥ 80%', 'gợi ý kỹ năng của AI được chấp nhận'),
@@ -289,10 +298,22 @@ S['next-steps'] = section('next-steps', head('BƯỚC TIẾP THEO', 'Ba bước 
        scard('2', 'Phạm vi PoC', ['Một nhóm vị trí nguồn – đích rõ nhất', 'Công ty mẹ và một công ty con', '20–30 vị trí đích, 200–300 nhân viên', 'Tiêu chí thành công trước tuần 1']),
        scard('3', 'Dữ liệu và điều kiện', ['Thông báo 共同利用 gồm hạng mục kỹ năng', 'Mức dữ liệu đội Việt Nam được xử lý', 'Danh sách vị trí 保安, mức tối thiểu', 'Dữ liệu nhân sự ẩn danh khi khảo sát']),
        '\n'.join('<div class="hd">%s<p class="t" style="flex:1">%s</p></div>' % (ic('Check', 'sm'), c) for c in checks)),
-'Workshop khoảng 3,5 giờ, đi theo năm bước của phương pháp first principles (Phụ lục A5). Đầu ra: danh sách ràng buộc cứng có người chịu trách nhiệm và phạm vi PoC có điểm dừng. Thành phần đề xuất: 人事部, đại diện mảng điện và mảng lõi, người phụ trách 保安; mời đại diện công đoàn dự phiên 2 và 3. Việc chuyển hệ thống lõi lên SAP S/4HANA Cloud theo nguồn báo chí công nghệ, cần Toho Gas xác nhận.', FT)
+'Workshop khoảng 3,5 giờ, đi theo năm bước của phương pháp first principles (Phụ lục A6). Đầu ra: danh sách ràng buộc cứng có người chịu trách nhiệm và phạm vi PoC có điểm dừng. Thành phần đề xuất: 人事部, đại diện mảng điện và mảng lõi, người phụ trách 保安; mời đại diện công đoàn dự phiên 2 và 3. Việc chuyển hệ thống lõi lên SAP S/4HANA Cloud theo nguồn báo chí công nghệ, cần Toho Gas xác nhận.', FT)
 
 # ================= APPENDIX =================
-S['ap-problems'] = problems_slide('ap-problems', 'PHỤ LỤC A6 · VẤN ĐỀ CẤU THÀNH', 'Bảy vấn đề cần kiểm chứng cùng Toho Gas',
+S['ap-architecture'] = system_arch_slide('ap-architecture', 'PHỤ LỤC A1 · KIẾN TRÚC TỔNG THỂ', 'Kiến trúc tổng thể đề xuất: từ người dùng đến hệ thống hiện có',
+    ['Nhân viên', 'Cấp trên', 'Nhân sự', 'Ban giám đốc', 'Văn phòng DX'], ['Web tiếng Nhật', 'Di động cho hiện trường'],
+    ['M1 · Vị trí và từ điển kỹ năng', 'M2 · Hồ sơ kỹ năng, bằng chứng', 'M3 · Danh mục nhân sự động',
+     'M4 · Định hướng nghề nghiệp', 'M5 · Thị trường nhân lực nội bộ', 'M6 · Điều chuyển và theo dõi'],
+    ['Trích xuất kỹ năng', 'Chuẩn hóa DSS ver.2.0', 'Ghép nối có giải thích', 'Gợi ý lộ trình', 'Mô phỏng kịch bản'],
+    [('Workforce Graph · 7 lớp', 'k'), ('Lớp công ty, 出向, vị trí 保安', 'o'), 'Kho định danh · mã hóa', 'Nhật ký truy vết'],
+    ['Nạp dữ liệu từ hệ thống nguồn', 'Chỉ đọc trường được phép', 'Đăng nhập một lần'],
+    ['Nhân sự lõi, SAP', 'Đào tạo, DX人材', 'Quản trị mục tiêu, đánh giá', ('Graffer AI Studio (cần xác nhận)', 'o')],
+    'Phân quyền theo vai trò, công ty · thông báo 共同利用 · ẩn danh trước khi AI xử lý · nhật ký truy cập',
+    'SaaS, Private Cloud hoặc máy chủ tại doanh nghiệp · dữ liệu lưu tại Nhật Bản · đội Việt Nam dùng dữ liệu ẩn danh',
+    'Kiến trúc đề xuất theo tài liệu nghiên cứu Toho Gas (mục 7.2, 7.3). Sáu module nghiệp vụ: M1 kiến trúc vị trí và từ điển kỹ năng; M2 hồ sơ kỹ năng có bằng chứng; M3 danh mục nhân sự động; M4 định hướng nghề nghiệp; M5 thị trường nhân lực nội bộ (社内公募, dự án); M6 hỗ trợ điều chuyển và theo dõi. Lớp dữ liệu theo tài liệu nghiên cứu: Workforce Graph trên Neo4j, thêm lớp công ty trong nhóm; dữ liệu định danh lưu ở PostgreSQL có mã hóa; graph chỉ dùng mã ẩn danh. Tích hợp cần Toho Gas xác nhận: hệ thống nhân sự lõi và SAP (theo báo chí công nghệ, đang chuyển lên S/4HANA Cloud); quản trị mục tiêu và đánh giá theo chế độ mới chỉ đọc trường được phép. [Inference] Graffer AI Studio có thể dùng làm giao diện hỏi đáp về nghề nghiệp.', FT)
+
+S['ap-problems'] = problems_slide('ap-problems', 'PHỤ LỤC A7 · VẤN ĐỀ CẤU THÀNH', 'Bảy vấn đề cần kiểm chứng cùng Toho Gas',
     [('P1', 'Nhu cầu chưa lượng hóa', 'Báo cáo tích hợp chưa có số liệu dịch chuyển nhân sự', 'Cao'),
      ('P2', 'Kỹ năng chưa số hóa theo chuẩn chung', 'Chỉ số DX人材 đo bằng số người đã học; số liệu chưa phủ toàn nhóm', 'Trung bình'),
      ('P3', 'Đào tạo chưa gắn vị trí đích', 'Mục tiêu 200 DX人材 chưa gắn với vị trí cụ thể', 'Trung bình'),

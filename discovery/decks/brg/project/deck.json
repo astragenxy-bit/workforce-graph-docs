@@ -31,6 +31,7 @@
     "kpi",
     "next-steps",
     "thanks",
+    "ap-architecture",
     "ap-problems",
     "ap-principles",
     "ap-matrix",
@@ -58,7 +59,7 @@
     },
     "s5": {
       "description": "Phụ lục",
-      "start": "ap-problems"
+      "start": "ap-architecture"
     }
   },
   "faces": {

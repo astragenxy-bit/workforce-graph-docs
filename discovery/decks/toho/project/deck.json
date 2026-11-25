@@ -32,6 +32,7 @@
     "kpi",
     "next-steps",
     "thanks",
+    "ap-architecture",
     "ap-usecases",
     "ap-roles",
     "ap-matrix",
@@ -59,7 +60,7 @@
     },
     "s5": {
       "description": "Phụ lục",
-      "start": "ap-usecases"
+      "start": "ap-architecture"
     }
   },
   "faces": {
