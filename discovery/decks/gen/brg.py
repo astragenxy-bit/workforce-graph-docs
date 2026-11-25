@@ -125,7 +125,7 @@ S['talent-flow'] = overview_slide('talent-flow', 'GIẢI PHÁP · TALENT FLOW', 
     'Talent Flow là lớp kết nối, không thay thế hệ thống nhân sự lõi, hệ thống đào tạo hay công cụ AI tạo sinh hiện có của từng công ty. Ba luồng dùng chung một nền tri thức: hồ sơ kỹ năng từ luồng 1 là đầu vào của luồng 2 và 3; hành động của luồng 3 được thực hiện qua luồng 1 (đào tạo) và luồng 2 (điều chuyển).', FT)
 
 # ---------- roles ----------
-S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Bảy vai trò, mỗi vai trò thấy đúng phần việc của mình',
+S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Bảy vai trò, mỗi vai trò có phạm vi và luồng công việc riêng',
     shot(BLOB['brg-menu'], 'Màn hình Việc cần làm với menu theo vai trò', 820, 513, 'Menu, việc cần làm theo quyền của vai trò · ' + BLUR),
     [('Users', 'Nhân viên', 'Hồ sơ kỹ năng, IDP, ứng tuyển nội bộ', False),
      ('CheckCircle', 'Quản lý trực tiếp', 'Duyệt IDP, xác minh kỹ năng', False),

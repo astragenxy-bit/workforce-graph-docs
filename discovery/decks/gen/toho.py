@@ -104,7 +104,7 @@ S['talent-flow'] = overview_slide('talent-flow', 'GIẢI PHÁP · TALENT FLOW', 
     phases=[('PHASE 1 · DỮ LIỆU KỸ NĂNG ĐÁNG TIN CẬY', 2), ('PHASE 2 · BỐ TRÍ NHÂN SỰ', 2)])
 
 # ---------- roles ----------
-S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Tám vai trò, mỗi vai trò thấy đúng phần việc của mình',
+S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Tám vai trò, mỗi vai trò có phạm vi và luồng công việc riêng',
     shot(BLOB['tf-menu'], 'Màn hình Việc cần làm với menu theo vai trò', 820, 513, 'Menu, việc cần làm theo quyền của vai trò · ' + SAMPLE),
     [('Users', 'Nhân viên', 'Hồ sơ kỹ năng, IDP, ứng tuyển nội bộ', False),
      ('CheckCircle', 'Cấp trên', 'Duyệt IDP, hậu kiểm, kế thừa', False),
@@ -117,7 +117,7 @@ S['roles'] = roles_slide('roles', 'VAI TRÒ THAM GIA', 'Tám vai trò, mỗi vai
     'Menu hiển thị theo quyền của vai trò; phân quyền kiểm soát tại máy chủ. Cấp trên không phê duyệt IDP hay bằng chứng của chính mình. Ban giám đốc và Văn phòng DX chỉ xem số liệu tổng hợp, nhóm dưới 5 người được ẩn. Phạm vi dữ liệu của từng vai trò: Phụ lục A2. Giao diện hỗ trợ tiếng Nhật và tiếng Việt.', FT)
 
 # ---------- four flows ----------
-S['flow-dev'] = flow_slide('flow-dev', 'PHASE 1 · LUỒNG 1 · LỘ TRÌNH PHÁT TRIỂN', 'Nhân viên thấy lộ trình, cấp trên phê duyệt và xác minh',
+S['flow-dev'] = flow_slide('flow-dev', 'PHASE 1 · LUỒNG 1 · LỘ TRÌNH PHÁT TRIỂN', 'Nhân viên lập lộ trình, cấp trên phê duyệt và xác minh',
     shot(BLOB['my-path'], 'Màn hình Lộ trình của tôi', 860, 470, 'Lộ trình của tôi · ' + SAMPLE),
     [('Lộ trình của tôi', 'Nhân viên · vị trí hiện tại, mục tiêu 12–24 tháng', False),
      ('Tự đánh giá', 'Nhân viên · theo DSS ver.2.0, kỹ năng ngành', False),

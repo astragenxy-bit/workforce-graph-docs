@@ -85,8 +85,8 @@ Các liên kết dưới đây **riêng tư theo tài khoản chủ sở hữu**
 | Doc 3 · Data flow và tri thức doanh nghiệp | https://claude.ai/artifact/PnXs8NL381BYBXLUd5Rc8K | project `b8848a7b-6395-4b71-a37d-c0a04e389e54`, tab `f67a94fb-b24d` |
 | Doc 4 · First principles | https://claude.ai/artifact/J6vs8y4uVA9bBbFmZeUXgB | project `8a7f456d-ee81-4c0a-b4c2-2e4561f850a0`, tab `46d51631-b64d` |
 | Tài liệu "BRG và Toho Gas — phân tích giải pháp: phần dùng chung và phần đặc thù" | https://claude.ai/artifact/Uteqea6diUDjBmHyRcq2pL | slug `e1dcfebb-a609-439d-af85-3e64bcbbbd8d` (có trên tài khoản; nội dung chưa được đối chiếu trong phiên cập nhật này) |
-| Slide BRG | https://claude.ai/artifact/WNZocWXGjQCUHFyWnRT19B | slug `eddbdb35-5a5b-4b2b-a6c7-51c35a3993ca`, bản v3: `1795564785-7970` |
-| Slide Toho Gas | https://claude.ai/artifact/MzfgagwLnMp4KcZfksb5Uy | slug `aa0401c9-a65c-4ed4-b87c-61f333d53bb6`, bản v3: `1795564807-4d7e` |
+| Slide BRG | https://claude.ai/artifact/WNZocWXGjQCUHFyWnRT19B | slug `eddbdb35-5a5b-4b2b-a6c7-51c35a3993ca`, bản v3: `1795565165-b972` |
+| Slide Toho Gas | https://claude.ai/artifact/MzfgagwLnMp4KcZfksb5Uy | slug `aa0401c9-a65c-4ed4-b87c-61f333d53bb6`, bản v3: `1795565166-9243` |
 
 - Kiểu artifact Slides: slug `3e9dc3d6-8a10-4143-ac0b-5af4f2b03a61`.
 - Ảnh đã tải lên (URL nằm trong `decks/<deck>/blobs.json`, bản gốc trong `decks/<deck>/assets/`):
