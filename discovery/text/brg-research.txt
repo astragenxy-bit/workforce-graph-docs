@@ -1,0 +1,1162 @@
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+BRG — Career Development trong bố i cảnh
+AI: nghiên cứu và giải pháp
+  ​Nov 24, 2026 · ​@Thu Phan Thi
+
+
+
+0. Tóm tắ t điề u hành
+Bài toán: AI đổi task trong job nhanh hơn xóa job. Ở Việ t Nam khoảng 11,5 triệ u lao độ ng
+(1/5 việ c làm) có task chịu tác độ ng của AI tạo sinh, nặ ng nhấ t ở tài chính, bán lẻ và văn
+phòng (ILO, 4/2026). Hệ sinh thái BRG có cả ba mảng này, đồ ng thời có khách sạn – golf
+thiế u người và các dự án mới cầ n người. [Inference] Cách nhanh và ít rủi ro nhấ t để có
+đúng người là chuyển đổi người đang có trong hệ sinh thái.
+
+BRG đang ở đâu:
+
+       Quy mô và đa dạng: gầ n 22.000 nhân viên, hàng chục công ty thành viên và liên
+       doanh; golf, khách sạn, bán lẻ, bấ t độ ng sản, giải trí; SeABank trong hệ sinh thái. Nhiề u
+       đơn vị từng có vố n nhà nước (Hapro, Thăng Long GTC, Intimex) và liên doanh với
+       Sumitomo.
+       Có nề n móng: khi nhậ n Hapro (2018), BRG cam kế t giữ toàn bộ nhân viên và sắ p xế p lại
+       theo năng lực. SeABank có học việ n riêng, trung bình 62 giờ đào tạo/người, 90,5%
+       nhân viên muố n gắ n bó ít nhấ t 2 năm. BRG, SeABank và ĐHQG Hà Nộ i đã ký hợp tác
+       khoa học công nghệ .
+       Điểm còn thiế u: [Unverified] nguồ n công khai không cho thấ y kế hoạch nhân lực hay
+       chiế n lược AI cấ p tậ p đoàn, không có số liệ u nhân sự ngoài SeABank, không rõ cơ chế
+       chuyển người giữa công ty thành viên. Tháng 9/2026, Chủ tịch Quố c hộ i đề nghị BRG
+       và SeABank đẩy mạnh chuyển đổi số và ứng dụng AI.
+
+Nhậ n định: [Inference] BRG không thiế u chương trình đào tạo. BRG thiế u mộ t vòng khép
+kín cấ p hệ sinh thái nố i kế hoạch kinh doanh với job nộ i bộ , skill của từng người, lộ trình
+học và cơ hộ i được bố trí, qua ranh giới các pháp nhân. Khác Nhậ t, luậ t Việ t Nam không
+cho đổi hẳn công việ c mộ t chiề u và người giỏi dễ nhảy việ c, nên dịch chuyển phải tự
+nguyệ n, minh bạch và đủ hấ p dẫ n.
+
+Đề xuấ t: xây thị trường nhân lực nộ i bộ dựa trên skill cho hệ sinh thái BRG, chạy trên nề n
+Workforce Graph (module Career Development của AINAVI): (1) kiế n trúc job và từ điển
+skill theo khung Việ t Nam và quố c tế (Khung năng lực số TT 02/2025, VTOS/ACCSTP, SFIA
+9); (2) hồ sơ skill có bằ ng chứng; (3) danh mục nhân sự độ ng theo kịch bản kinh doanh; (4)
+định hướng nghề nghiệ p cá nhân; (5) ghép nố i nộ i bộ qua tuyển nộ i bộ , dự án và chuyển
+công ty có thỏa thuậ n; (6) đo kế t quả và lưu hồ sơ ưu tiên đào tạo lại. AI chỉ đề xuấ t, con
+người quyế t định, theo Bộ luậ t Lao độ ng, Luậ t Bảo vệ dữ liệ u cá nhân và Luậ t Trí tuệ nhân
+tạo.
+
+
+
+                                                                                            Page 1 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Bước đầ u: PoC 12 tuầ n trên mộ t cặ p "nguồ n – đích" ở khu vực Hà Nộ i (ví dụ thu ngân và
+văn phòng khố i bán lẻ sang FujiMart mới, khách sạn – golf và job số ), khoảng 200–300
+nhân viên, 2–3 công ty thành viên; lậ p hồ sơ đánh giá tác độ ng dữ liệ u ngay tuầ n đầ u.
+
+
+1. Bố i cảnh 1: AI và tự độ ng hóa tạo job mới, đổi skill của job cũ
+Ở Việ t Nam, AI chủ yế u đổi task bên trong job, ít xóa hẳn job. Nhóm chịu tác độ ng mạnh
+nhấ t là tài chính, bán lẻ và văn phòng, tức là các mảng lớn trong hệ sinh thái BRG.
+[Inference]
+
+
+1.1 Toàn cầ u
+       Theo WEF Future of Jobs Report 2025 (hơn 1.000 nhà tuyển dụng, hơn 14 triệ u lao
+       độ ng, 55 nề n kinh tế ): giai đoạn 2025–2030 có 170 triệ u job mới và 92 triệ u job bị thay
+       thế , ròng tăng 78 triệ u.
+       Trung bình 39% skill hiệ n có sẽ thay đổi hoặ c lỗ i thời đế n 2030. 63% nhà tuyển dụng
+       coi khoảng trố ng skill là rào cản lớn nhấ t; 85% ưu tiên nâng cấ p skill.
+       Về AI: 50% nhà tuyển dụng định hướng lại kinh doanh, 2/3 tuyển người có skill AI, 40%
+       dự kiế n giảm người ở nơi AI tự độ ng hóa được.
+       Job giảm nhanh nhấ t: giao dịch viên ngân hàng, nhậ p liệ u, nhân viên bưu chính. Giảm
+       nhiề u nhấ t về số lượng: văn thư – thư ký, thu ngân, bán vé, trợ lý hành chính.
+
+Ý nghĩa: danh sách job giảm của WEF gầ n như là các vị trí tuyế n đầ u của quầ y giao dịch,
+siêu thị, lễ tân khách sạn và sân golf. [Inference] Bài toán chính là người đang làm job cũ
+cầ n skill mới.
+
+
+1.2 Việ t Nam
+       ILO (16/4/2026): khoảng 11,5 triệ u lao độ ng (1/5 việ c làm) ở nghề có task chịu tác độ ng
+       của AI tạo sinh. Rủi ro tự độ ng hóa toàn phầ n dưới 2% lực lượng lao độ ng. Kịch bản
+       chính là đổi task, không phải mấ t job hàng loạt.
+       Phơi nhiễ m cao nhấ t: tài chính – bảo hiểm, bán buôn – bán lẻ, thông tin – truyề n thông.
+       Gầ n 2/3 lao độ ng văn phòng – hỗ trợ làm nghề dễ bị tự độ ng hóa task nhấ t. Nữ 24,1%,
+       nam 17,8%. Hà Nộ i, TP.HCM, Đà Nẵ ng chiế m hơn 1/3 số job chịu tác độ ng.
+       ILO khuyế n nghị đố i thoại xã hộ i tại nơi làm việ c khi đưa AI vào, và đầ u tư skill cho nhóm
+       chịu tác độ ng nhiề u nhấ t.
+       [Unverified] VnEconomy (7/4/2026) viế t: Việ t Nam xế p thứ 38 thế giới về tỷ lệ người
+       dùng AI; ứng dụng AI của doanh nghiệ p tăng 39% năm 2025. Bài không nêu nguồ n số
+       liệ u.
+
+
+
+
+                                                                                              Page 2 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Khung pháp lý mới: Luậ t Trí tuệ nhân tạo (8 chương, 35 điề u) thông qua 10/12/2025,
+       hiệ u lực 1/3/2026. Luậ t phân loại hệ thố ng AI theo rủi ro; rủi ro cao là hệ thố ng có thể
+       gây thiệ t hại đáng kể đế n quyề n và lợi ích hợp pháp của con người. Luậ t Bảo vệ dữ liệ u
+       cá nhân hiệ u lực 1/1/2026 (xem 5.3).
+
+Ngôn ngữ skill chung. [Unverified] Chưa tìm thấ y mộ t chuẩn skill số cho doanh nghiệ p
+được dùng rộ ng rãi như DSS ở Nhậ t. Các khung đang có để ghép lại:
+
+       Khung năng lực số cho người học (Thông tư 02/2025/TT-BGDĐT, hiệ u lực 11/3/2025): 6
+       miề n, 24 năng lực thành phầ n, 8 bậ c; miề n thứ 6 là ứng dụng trí tuệ nhân tạo.
+       Du lịch – khách sạn: VTOS (Việ t Nam) và ACCSTP của ASEAN với 242 đơn vị năng lực,
+       32 chức danh; cùng tiêu chuẩn kỹ năng nghề quố c gia.
+       Skill số và AI chuyên sâu: SFIA 9 (công bố 30/10/2024), có nhóm skill AI và dữ liệ u.
+
+
+1.3 Các ngành của BRG
+Job đang đổi theo bố n mảng. Cộ t skill mới là suy luậ n từ nguồ n ngành. [Inference]
+
+
+  Mảng                               Job đang đổi                     Skill mới cầ n          Tín hiệ u thị trường
+
+  Ngân hàng                          Giao dịch viên, nhậ p            Tư vấ n dựa trên dữ     Khảo sát NHNN quý
+  (SeABank)                          liệ u, hỗ trợ gián tiế p         liệ u, vậ n hành kênh   I/2025: hơn 21% ngân
+                                     → kênh số , callbot              số , quản trị rủi ro    hàng tiế p tục giảm
+                                                                      dữ liệ u                người. Sacombank
+                                                                                              18.088 → 16.816 người,
+                                                                                              VIB 11.736 → 10.278 người
+                                                                                              (cuố i 2024 → cuố i 2025)
+
+  Bán lẻ (BRGMart,                   Thu ngân, nhậ p liệ u            Vậ n hành đa kênh,      ILO: bán buôn – bán lẻ
+  FujiMart, Hapro)                   kho, đặ t hàng thủ               dự báo nhu cầ u,        thuộ c nhóm phơi nhiễ m
+                                     công                             quản lý hàng tươi       cao nhấ t; WEF: thu ngân
+                                                                      bằ ng dữ liệ u          giảm nhiề u nhấ t về số
+                                                                                              lượng
+
+  Khách sạn – golf –                 Lễ tân, đặ t phòng và            Quản trị doanh thu,     Cầ n khoảng 60.000 lao
+  giải trí                           tee time, tổng đài →             CRM, ngoại ngữ,         độ ng/năm, đào tạo cung
+                                     đặ t chỗ online,                 dịch vụ cá nhân hóa     cấ p khoảng 20.000
+                                     chatbot                                                  (Hoteljob.vn). Khách sạn
+                                                                                              từ khoảng 780.000 lao
+                                                                                              độ ng trước dịch còn
+                                                                                              khoảng 300.000 năm
+                                                                                              2024
+
+
+
+
+                                                                                                                     Page 3 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Mảng                               Job đang đổi                     Skill mới cầ n          Tín hiệ u thị trường
+
+  Bấ t độ ng sản – đô                Kinh doanh và vậ n               Năng lượng thông        Thành phố thông minh
+  thị thông minh                     hành tòa nhà truyề n             minh, quản trị đô       Bắ c Hà Nộ i: 6 nhóm giải
+                                     thố ng                           thị số , đo phát thải   pháp thông minh, mục
+                                                                      và ESG                  tiêu trung hòa carbon
+
+
+BRG vì vậ y vừa có job thu hẹp (quầ y, thu ngân, văn phòng), vừa có job thiế u người (khách
+sạn, golf, dự án mới). [Inference] Đây là điề u kiệ n để chuyển người trong nộ i bộ thay vì vừa
+cắ t vừa tuyển.
+
+
+2. Bố i cảnh 2: doanh nghiệ p Việ t Nam tuyển, phát triển và tái cơ
+cấ u nhân sự thế nào
+Khác Nhậ t, doanh nghiệ p Việ t Nam được cho thôi việ c khi đổi công nghệ , nhưng luậ t buộ c
+ưu tiên đào tạo lại. Mọi thay đổi công việ c lâu dài cầ n người lao độ ng đồ ng ý. Vì vậ y dịch
+chuyển nộ i bộ ở Việ t Nam phải là lựa chọn tự nguyệ n và đủ hấ p dẫ n. [Inference]
+
+
+2.1 Khác mô hình Nhậ t ở đâu
+
+  Khía cạnh                     Nhậ t (tham chiế u bản Toho Gas)                  Việ t Nam
+
+  Tuyển dụng                    Tuyển đồ ng loạt sinh viên mới,                   [Inference] Tuyển theo vị trí, nhiề u
+                                không ghi rõ công việ c                           người có kinh nghiệ m; BRG có cả
+                                                                                  chuyên gia nước ngoài (BRG)
+
+  Nghỉ việ c                    Rấ t thấ p (Toho Gas 1,93%)                       Talentnet–Mercer 2025: trung bình
+                                                                                  9,8% ở doanh nghiệ p nộ i, 6,6% ở
+                                                                                  doanh nghiệ p đa quố c gia. Khách
+                                                                                  sạn Đà Nẵ ng: 18,9%; 25% đơn vị từ
+                                                                                  30% trở lên
+
+  Cắ t giảm                     Hạn chế lạm dụng quyề n sa thải;                  Bộ luậ t Lao độ ng 2019, Điề u 42: khi
+                                thông lệ giữ việ c                                đổi cơ cấ u, công nghệ phải có
+                                                                                  phương án sử dụng lao độ ng; có chỗ
+                                                                                  làm mới thì ưu tiên đào tạo lại; trao
+                                                                                  đổi với tổ chức đại diệ n người lao
+                                                                                  độ ng, báo trước 30 ngày cho UBND
+                                                                                  tỉnh; trợ cấ p mấ t việ c 1 tháng
+                                                                                  lương/năm, tố i thiểu 2 tháng
+
+
+
+
+                                                                                                                     Page 4 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Khía cạnh                     Nhậ t (tham chiế u bản Toho Gas)          Việ t Nam
+
+  Điề u chuyển                  Công ty quyế t định (             人事異動)   Điề u 29: chuyển tạm thời tố i đa 60
+                                                                          ngày làm việ c cộ ng dồ n/năm nế u
+                                                                          không có đồ ng ý; giữ lương cũ 30
+                                                                          ngày làm việ c, sau đó ít nhấ t 85%.
+                                                                          Đổi hẳn công việ c phải thỏa thuậ n
+                                                                          sửa hợp đồ ng (Điề u 33)
+
+  Trong nhóm                    Biệ t phái (     出向), chuyển hẳn (転籍)     Mỗ i công ty trong tậ p đoàn có
+  công ty                       phổ biế n                                 quyề n và nghĩa vụ của doanh nghiệ p
+                                                                          độ c lậ p. [Inference] Chuyển hẳn
+                                                                          giữa công ty thường là chấ m dứt
+                                                                          hợp đồ ng cũ, ký hợp đồ ng mới; cầ n
+                                                                          luậ t sư xác nhậ n
+
+  Thị trường                    Thiế u người do dân số già                Tuyển dụng thậ n trọng: 35% doanh
+                                                                          nghiệ p định tuyển thêm năm 2026,
+                                                                          47,7% giữ nguyên quy mô; lương
+                                                                          tăng 6,2–6,3%, thấ p nhấ t 10 năm
+                                                                          (Talentnet–Mercer 2025)
+
+
+
+2.2 Doanh nghiệ p Việ t Nam đang ứng phó AI thế nào
+       Ngân hàng: giảm ở mảng hỗ trợ, tuyển ở mảng số . 28 ngân hàng niêm yế t giảm hơn
+       3.000 người trong quý I/2026, trong khi tuyển dữ liệ u, AI, an ninh mạng tăng.
+       VietinBank gộ p phòng ban trùng chức năng và chuyển người sang kinh doanh.
+       [Inference] Mô hình chủ đạo vẫ n là "giảm rồ i tuyển", chuyển đổi nộ i bộ ít được công
+       bố .
+       FPT: AI-first trong nhân sự. Trợ lý nhân sự ảo Maya xử lý hơn 50.000 yêu cầ u/tháng
+       của khoảng 13.000 nhân viên; hơn 1.000 AI agent; mục tiêu 2025 là 80–100% nhân sự
+       dịch vụ CNTT cho thị trường nước ngoài dùng AI thành thạo, khoảng 20% kỹ sư thành
+       kỹ sư ứng dụng AI.
+       Tiề n lệ của chính BRG: cam kế t giữ người khi tái cơ cấ u. Khi BRG (qua Vinamco) nắ m
+       65% Hapro năm 2018, bà Nguyễ n Thị Nga cho biế t toàn bộ nhân viên tiế p tục làm việ c
+       và không bị nghỉ việ c; HĐQT sẽ tái cơ cấ u bộ máy từ Phó Tổng giám đố c trở lên và sắ p
+       xế p lao độ ng "theo năng lực phù hợp với từng vị trí". Phương án cổ phầ n hóa trước đó
+       có 630 lao độ ng, 550 chuyển sang công ty cổ phầ n, 80 dôi dư.
+
+
+
+
+                                                                                                          Page 5 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+2.3 Kế t luậ n cho bài toán
+[Inference] BRG không thể chỉ dùng điề u chuyển mộ t chiề u kiểu Nhậ t, vì luậ t giới hạn và
+người giỏi dễ nghỉ việ c. BRG cũng không nên chỉ dùng "giảm rồ i tuyển" như nhiề u ngân
+hàng, vì trái cam kế t giữ người tậ p đoàn từng đưa ra ở Hapro và vì ngành khách sạn – golf
+đang thiế u người. Cách phù hợp là thị trường nhân lực nộ i bộ tự nguyệ n, dựa trên skill,
+có hồ sơ cho thấ y tậ p đoàn đã ưu tiên đào tạo lại trước khi cắ t giảm.
+
+
+3. Bố i cảnh 3: sau khi phát triển, đưa người vào job nộ i bộ nào
+Người được đào tạo mà không có job đích sẽ rời đi. Ở Việ t Nam rủi ro này cao hơn Nhậ t vì
+chuyển việ c dễ hơn. [Inference]
+
+
+3.1 Các cơ chế bố trí nộ i bộ ở doanh nghiệ p Việ t Nam
+
+  Cơ chế                                 Ai chủ độ ng                 Cách vậ n hành              Lưu ý pháp lý
+
+  Bổ nhiệ m, điề u                       Công ty                      Lãnh đạo quyế t định;       Đổi hẳn công việ c phải
+  độ ng theo quy                                                      phổ biế n ở doanh nghiệ p   thỏa thuậ n (Điề u 33)
+  hoạch                                                               gố c nhà nước
+                                                                      [Inference]
+
+  Chuyển tạm thời                        Công ty                      Theo nhu cầ u sản xuấ t     Tố i đa 60 ngày làm
+  làm công việ c khác                                                 kinh doanh ghi trong nộ i   việ c/năm nế u không
+                                                                      quy                         đồ ng ý (Điề u 29)
+
+  Tuyển dụng nộ i bộ                     Phòng ban                    Đăng vị trí và yêu cầ u,    Sửa hợp đồ ng khi trúng
+                                         cầ n người                   nhân viên ứng tuyển         tuyển
+
+  Dự án nộ i bộ , kiêm                   Cả hai                       Làm cho đơn vị khác         Thời gian và thù lao cầ n
+  nhiệ m mộ t phầ n                                                   trước khi chuyển hẳn        thỏa thuậ n [Inference]
+  thời gian
+
+  Chuyển công ty                         Công ty và                   Chấ m dứt hợp đồ ng cũ,     Mỗ i công ty là doanh
+  trong tậ p đoàn                        người lao                    ký với công ty mới          nghiệ p độ c lậ p; trợ cấ p
+                                         độ ng                        [Inference]                 thôi việ c và thâm niên
+                                                                                                  cầ n xử lý
+
+
+
+3.2 Dịch chuyển nộ i bộ có giữ được người không
+       LinkedIn Global Talent Trends (10/2022): người đã chuyển vị trí nộ i bộ có 75% khả
+       năng ở lại sau 2 năm, so với 56% ở người chưa chuyển.
+
+
+
+
+                                                                                                                         Page 6 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       PwC Hopes and Fears 2025 – Việ t Nam (hơn 1.000 người, công bố 1/2026): 38% người
+       lao độ ng Việ t Nam dùng AI tạo sinh hằ ng ngày (toàn cầ u 14%); 74% nói được cung cấ p
+       nguồ n lực phát triển; 51% có thể đề nghị tăng lương trong 12 tháng tới.
+       Khảo sát 331 đơn vị khách sạn (Hoteljob.vn, 2026): 203/331 đơn vị cho rằ ng người nghỉ
+       vì thu nhậ p hoặ c vì job khác hấ p dẫ n hơn.
+
+Ý nghĩa: người lao độ ng Việ t Nam đã dùng AI nhiề u và muố n lộ trình rõ. Mộ t bước chuyển
+nộ i bộ phải đi kèm thu nhậ p và triển vọng rõ ràng, nế u không họ sẽ chọn thị trường ngoài.
+[Inference]
+
+
+3.3 Vì sao chuyển nộ i bộ khó chạy trong mộ t tậ p đoàn đa ngành
+[Inference] Giả thuyế t rút từ bản Toho Gas (Recruit Works) và cấ u trúc BRG, cầ n kiểm
+chứng:
+
+   1. Quản lý giữ người giỏi; phòng đi không bù được chỗ trố ng.
+   2. Tiêu chí chọn không minh bạch; người xin chuyển sợ bị xem là thiế u gắ n bó.
+   3. Chuyển giữa công ty thành viên đụng hợp đồ ng, thâm niên, thang lương và phúc lợi
+       khác nhau.
+   4. Văn hóa khác nhau: doanh nghiệ p gố c nhà nước (Hapro), liên doanh Nhậ t (FujiMart, đô
+      thị thông minh), khách sạn mang thương hiệ u quố c tế , ngân hàng niêm yế t.
+   5. [Speculation] Khách sạn do tậ p đoàn quố c tế quản lý có thể dùng hệ thố ng và chuẩn
+       nhân sự của hãng, nên dữ liệ u skill không nằ m ở BRG.
+   6. Không đo kế t quả sau khi chuyển.
+
+
+3.4 Job nộ i bộ nào để đưa người vào
+Với mộ t tậ p đoàn đa ngành như BRG, điểm đế n nên xế p thành bố n nhóm. [Inference]
+
+
+  Nhóm job đích                       Ví dụ trong BRG                        Nguồ n người phù hợp
+
+  A. Job của dự án                    Thành phố thông minh Bắ c Hà Nộ i      Nhân sự bán lẻ, khách sạn, bấ t
+  chiế n lược                         (dự kiế n 100.000–200.000 người        độ ng sản có skill kề cậ n
+                                      số ng và làm việ c), BRIGHTPARK
+                                      Ninh Bình, siêu thị FujiMart mở mới
+
+  B. Job số , dữ liệ u                Dữ liệ u khách hàng xuyên hệ sinh      Người nghiệ p vụ có nề n dữ liệ u
+  và AI                               thái (BRG Elite Card), vậ n hành
+                                      kênh số , tự độ ng hóa quy trình, an
+                                      toàn thông tin
+
+
+
+
+                                                                                                         Page 7 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Nhóm job đích                       Ví dụ trong BRG                        Nguồ n người phù hợp
+
+  C. Job cũ nâng                      Thu ngân → tư vấ n bán hàng đa         Chính người đang làm job đó
+  cấ p                                kênh; lễ tân → trải nghiệ m khách và
+                                      doanh thu; văn phòng → vậ n hành
+                                      có AI hỗ trợ
+
+  D. Job thiế u người                 Khách sạn, golf, F&B, bế p, quản lý    Người từ job bị tự độ ng hóa;
+                                      cấ p trung, người đào tạo nghề         người lớn tuổi, tay nghề cao làm
+                                                                             người dạy
+
+
+Điểm mấ u chố t: phát triển phải bắ t đầ u từ job đích. Nế u đào tạo trước rồ i mới tìm chỗ ,
+người học xong dễ mang skill sang công ty khác.
+
+
+4. Hồ sơ Tậ p đoàn BRG
+BRG là tậ p đoàn tư nhân đa ngành khoảng 22.000 người, lớn lên nhiề u nhờ mua lại và liên
+doanh. Bài toán career development vì thế là bài toán của nhiề u pháp nhân và nhiề u văn
+hóa. [Inference]
+
+
+4.1 Doanh nghiệ p
+       Thành lậ p năm 1993 bởi bà Nguyễ n Thị Nga, khởi đầ u là doanh nghiệ p xuấ t nhậ p khẩu.
+       BRG tự giới thiệ u có "hàng chục" công ty thành viên và liên doanh, gầ n 22.000 nhân
+       viên.
+       Năm 2025, tậ p đoàn nộ p ngân sách hơn 18.000 tỷ đồ ng, thuộ c Top 4 doanh nghiệ p tư
+       nhân. Ngày 12/9/2026 bà Nga nhậ n danh hiệ u Anh hùng Lao độ ng.
+       BRG từng là cổ đông chiế n lược của nhiề u doanh nghiệ p nhà nước cổ phầ n hóa hoặ c
+       có vố n nhà nước: Thăng Long GTC, OSC Việ t Nam, Intimex (hơn 45%), Thăng Long
+       GTC cổ phầ n hóa 2015, BRG nắ m 27%, Hapro (65% từ 2018).
+
+
+  Mảng                             Đơn vị, thương hiệ u chính                Ghi chú
+
+  Golf                             Kings Island, Legend Hill, Ruby Tree,     Hợp tác Nicklaus Design
+                                   BRG Đà Nẵ ng; Legend Valley (2023),
+                                   Golden Sands Huế (2024)
+
+  Khách sạn – nghỉ                 InterContinental Hanoi Westlake,          Đố i tác Hilton, Marriott, IHG
+  dưỡng                            Hilton Garden Inn Hanoi, Sheraton
+                                   Grand Danang, Sheraton Nha Trang;
+                                   Legend Valley Hotel, Century
+                                   Riverside Huế , Mondial Huế , bố n
+                                   khách sạn Vũng Tàu
+
+
+
+
+                                                                                                              Page 8 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Mảng                             Đơn vị, thương hiệ u chính             Ghi chú
+
+  Bán lẻ – thương                  BRGMart; FujiMart (liên doanh          FujiMart: liên doanh ký 3/2022,
+  mại                              Sumitomo); Hapro; Intimex              mục tiêu thêm 50 cửa hàng đế n
+                                                                          2028; mở 12 cửa hàng năm 2024,
+                                                                          6 năm 2025
+
+  Bấ t độ ng sản –                 Thành phố thông minh Bắ c Hà Nộ i      Mục tiêu đô thị trung hòa carbon
+  đô thị                           (liên doanh Sumitomo, gầ n 272 ha,     đầ u tiên
+                                   4,2 tỷ USD, khởi công 19/8/2025);
+                                   Diamond Place Lê Văn Lương
+                                   (2024); Times Square Hanoi
+
+  Vui chơi giải trí                BRIGHTPARK Ninh Bình                   Vậ n hành trong tổ hợp Legend
+                                                                          Valley
+
+  Tài chính – ngân                 SeABank (HOSE: SSB): hơn 5.300         Ngân hàng niêm yế t; bà Nga là
+  hàng                             nhân viên, 181 điểm giao dịch, hơn 4   Phó Chủ tịch Thường trực HĐQT
+                                   triệ u khách hàng
+
+  Khác                             Gố m Chu Đậ u, DNA Pharma
+
+
+Bài toán career development vì thế là bài toán cấ p hệ sinh thái, không chỉ của công ty
+mẹ.
+
+
+4.2 Chiế n lược
+       Định hướng chung: "Going Global", phát triển bề n vững, hộ i nhậ p sâu chuỗ i giá trị
+       toàn cầ u; coi thể thao – du lịch (golf) là ngành công nghiệ p xanh. Sân golf thứ hai của
+       Legend Valley dự kiế n mở 5/2026 (theo tin 1/2026).
+       Đô thị thông minh: 6 nhóm giải pháp (năng lượng, quản trị, đời số ng, sức khỏe – học
+       tậ p, di chuyển, kinh tế thông minh); dự kiế n thu hút 100.000–200.000 người số ng và
+       làm việ c.
+       Công nghệ : BRG sẽ mở rộ ng hợp tác khoa học – công nghệ , chuyển đổi số và đổi mới
+       sáng tạo; ký hợp tác chiế n lược BRG – SeABank – ĐHQG Hà Nộ i về nghiên cứu và
+       chuyển giao công nghệ (theo tin 10/2025). Tháng 9/2026, Chủ tịch Quố c hộ i đề nghị
+       BRG và SeABank "đẩy mạnh chuyển đổi số , ứng dụng khoa học công nghệ hiệ n đại, trí
+       tuệ nhân tạo".
+       SeABank: chiế n lược "Hộ i tụ số "; năm 2025 tái cơ cấ u toàn diệ n mô hình kinh doanh
+       theo ngành dọc.
+
+[Unverified] Chưa tìm thấ y kế hoạch trung hạn hay chiế n lược AI cấ p tậ p đoàn được BRG
+công bố công khai.
+
+
+
+
+                                                                                                     Page 9 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+4.3 Nhân sự
+
+  Chỉ số                                                              Giá trị
+
+  Nhân viên toàn tậ p đoàn                                            Gầ n 22.000 (BRG); [Unverified] chưa rõ có gồ m
+                                                                      SeABank hay không
+
+  SeABank: quy mô                                                     Hơn 5.300 nhân viên, 181 điểm giao dịch
+
+  SeABank: đào tạo (2025)                                             Học việ n SeABank; 1.541 khóa học; trung bình 62
+                                                                      giờ/người
+
+  SeABank: gắ n kế t                                                  90,37% hài lòng; 90,5% muố n gắ n bó ít nhấ t 2 năm;
+                                                                      "Nơi làm việ c tố t nhấ t Việ t Nam" năm thứ 5 liên tiế p
+
+  SeABank: thu nhậ p bình quân                                        31,6 triệ u đồ ng/người/tháng (+4,9%)
+
+  SeABank: nữ quản lý                                                 47% cán bộ quản lý, lãnh đạo là nữ
+
+  Hapro khi cổ phầ n hóa                                              630 lao độ ng, 550 chuyển sang công ty cổ phầ n, 80
+                                                                      dôi dư
+
+  Khách sạn, golf, bán lẻ, bấ t độ ng sản                             Không tìm thấ y số liệ u công khai
+
+
+Đọc số liệ u: SeABank công bố nhân sự rõ nhấ t. Phầ n còn lại của BRG gầ n như không có số
+công khai. [Speculation] Phầ n lớn trong 22.000 người có thể là nhân viên dịch vụ tuyế n
+đầ u (khách sạn, golf, siêu thị); cầ n BRG xác nhậ n.
+
+
+4.4 Chính sách nhân sự hiệ n thấ y
+       Sứ mệ nh: BRG cam kế t tạo và duy trì hàng chục nghìn việ c làm, mở cơ hộ i nghề nghiệ p
+       chuyên nghiệ p, thu hút nhân tài quố c tế .
+       Tiề n lệ tái cơ cấ u: khi nhậ n Hapro, BRG cam kế t giữ toàn bộ nhân viên và sắ p xế p lại
+       theo năng lực (mục 2.2).
+       SeABank: có học việ n nộ i bộ và cam kế t "lộ trình đào tạo và thăng tiế n rõ ràng".
+       Chuyên gia nước ngoài ở các vị trí vậ n hành golf, khách sạn. [Inference]
+
+
+4.5 Những điểm chưa thấ y công bố
+       [Unverified] Không thấ y báo cáo vố n nhân lực cấ p tậ p đoàn; BRG chưa niêm yế t nên
+       không bắ t buộ c công bố .
+       Không rõ hệ thố ng nhân sự lõi dùng chung hay riêng từng công ty.
+       Không rõ có tuyển nộ i bộ hay luân chuyển giữa công ty thành viên không.
+       [Speculation] Khách sạn mang thương hiệ u quố c tế có thể theo chuẩn và hệ thố ng
+       nhân sự của hãng quản lý.
+
+
+
+                                                                                                                          Page 10 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Những điểm này là câu hỏi đầ u tiên cầ n hỏi BRG (mục 8.3).
+
+
+5. Bài toán career development của BRG
+
+5.1 Phát biểu bài toán
+
+    Làm sao để hệ sinh thái BRG, khoảng 22.000 người trải trên hàng chục pháp nhân và
+    nhiề u văn hóa, chuyển được đủ người có đủ skill từ các job đang thu hẹp do AI và tự
+    độ ng hóa sang các job đang thiế u hoặ c mới (khách sạn – golf, đô thị thông minh, số và
+    dữ liệ u), đúng lúc chiế n lược cầ n, mà vẫ n giữ chân người giỏi và tuân thủ luậ t Việ t
+    Nam?
+
+
+5.2 Bảy vấ n đề cấ u thành (giả thuyế t cầ n kiểm chứng với khách hàng)
+[Inference] Toàn bộ bảng là giả thuyế t rút từ nguồ n công khai; mức chắ c chắ n là đánh giá
+của người viế t.
+
+
+  #           Vấ n đề                                                 Bằ ng chứng hiệ n có                    Mức chắ c
+                                                                                                              chắ n
+
+  P1          Cầ u không rõ: chưa thấ y con số                        Không thấ y kế hoạch nhân lực           Trung bình
+              cầ n bao nhiêu người, skill gì cho                      công khai; dự án mới nêu quy mô
+              đô thị thông minh, FujiMart mở                          nhưng không nêu nhu cầ u nhân sự
+              mới, golf và khách sạn mới, job số
+
+  P2          Cung không thấ y: skill thực của                        Ngoài SeABank, không có số liệ u        Trung bình
+              nhân viên chưa số hóa theo                              nhân sự công khai
+              chuẩn chung; mỗ i đơn vị và hãng
+              quản lý dùng chuẩn riêng
+
+  P3          Học không nố i với job: đào tạo                         SeABank báo cáo 62 giờ/người,           Trung bình
+              theo từng đơn vị, đo bằ ng giờ                          không báo cáo số người vào job
+              học, không theo job đích liên                           mới
+              công ty
+
+  P4          Ma sát khi chuyển: hợp đồ ng,                           Bộ luậ t Lao độ ng Điề u 29, 33; mỗ i   Cao
+              thâm niên, thang lương, phúc lợi                        công ty là doanh nghiệ p độ c lậ p
+              khác nhau giữa công ty; đổi hẳn
+              công việ c cầ n đồ ng ý; quản lý giữ
+              người
+
+
+
+
+                                                                                                                    Page 11 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  #           Vấ n đề                                                 Bằ ng chứng hiệ n có               Mức chắ c
+                                                                                                         chắ n
+
+  P5          Thiế u thông tin và lý do để ở lại:                     Nghỉ việ c 9,8% (doanh nghiệ p     Cao
+              nhân viên không biế t job nộ i bộ                       nộ i), khách sạn 18,9%
+              nào mở, cầ n skill gì; người giỏi
+              chọn thị trường ngoài
+
+  P6          Ranh giới pháp nhân và văn hóa:                         Cấ u trúc sở hữu ở mục 4.1         Cao
+              doanh nghiệ p gố c nhà nước, liên
+              doanh Nhậ t, khách sạn thương
+              hiệ u quố c tế , ngân hàng niêm yế t
+
+  P7          Không đo kế t quả: không biế t                          Không thấ y chỉ số vố n nhân lực   Trung bình
+              người đã học hoặ c đã chuyển có                         cấ p tậ p đoàn
+              tạo giá trị không
+
+
+
+5.3 Ràng buộ c phải tôn trọng
+       Luậ t Lao độ ng. Điề u chuyển tạm thời tố i đa 60 ngày làm việ c/năm nế u không có đồ ng
+       ý (Điề u 29); đổi hẳn công việ c phải thỏa thuậ n (Điề u 33). Khi đổi cơ cấ u, công nghệ
+       phải có phương án sử dụng lao độ ng và ưu tiên đào tạo lại (Điề u 42, 44). [Inference]
+       Giải pháp nên tạo được hồ sơ cho thấ y tậ p đoàn đã ưu tiên đào tạo lại và bố trí nộ i bộ .
+       Nộ i dung này cầ n luậ t sư xác nhậ n.
+       Dữ liệ u cá nhân. Luậ t Bảo vệ dữ liệ u cá nhân 91/2025/QH15, Điề u 25 (hiệ u lực 1/1/2026):
+       tuyển dụng chỉ được yêu cầ u thông tin phục vụ mục đích tuyển dụng; công cụ công
+       nghệ quản lý người lao độ ng phải đúng luậ t và người lao độ ng phải được biế t; phải xóa
+       dữ liệ u khi chấ m dứt hợp đồ ng, trừ khi có thỏa thuậ n hoặ c luậ t khác. Nghị định
+       356/2025/NĐ-CP (thay Nghị định 13/2023): đồ ng ý phải rõ và kiểm chứng được; hồ sơ
+       đánh giá tác độ ng do Bộ Công an (A05) xem xét trước; có yêu cầ u về nhân sự bảo vệ
+       dữ liệ u và chuyển dữ liệ u ra nước ngoài.
+       AI. Luậ t Trí tuệ nhân tạo (hiệ u lực 1/3/2026) xế p rủi ro cao cho hệ thố ng có thể gây
+       thiệ t hại đáng kể đế n quyề n, lợi ích hợp pháp. [Inference] AI gợi ý bố trí nhân sự có thể
+       thuộ c nhóm này tùy văn bản hướng dẫ n; thiế t kế an toàn là AI chỉ đề xuấ t, con người
+       quyế t định.
+       Đố i thoại với người lao độ ng. Cho thôi việ c vì đổi cơ cấ u phải trao đổi với tổ chức đại
+       diệ n người lao độ ng; ILO khuyế n nghị đố i thoại xã hộ i khi đưa AI vào. Dữ liệ u skill không
+       được dùng để đánh giá trừ điểm.
+       Ngân hàng niêm yế t. [Inference] SeABank có quản trị riêng và quy định an toàn thông
+       tin của ngành ngân hàng; dữ liệ u nhân sự ngân hàng có thể không chia sẻ chung với
+       các công ty khác.
+
+
+
+
+                                                                                                               Page 12 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Đố i tác quố c tế . [Speculation] Hợp đồ ng quản lý khách sạn (Hilton, Marriott, IHG) và
+       liên doanh Sumitomo có thể quy định quyề n quyế t định nhân sự và quyề n dữ liệ u.
+       Chấ t lượng dịch vụ tuyế n đầ u. [Inference] Không rút người khỏi khách sạn, sân golf
+       vào mùa cao điểm khi chưa có người thay.
+
+
+6. Hướng giải pháp nghiệ p vụ
+Đề xuấ t: mộ t thị trường nhân lực nộ i bộ dựa trên skill cho toàn hệ sinh thái BRG, vậ n
+hành theo vòng khép kín sáu bước.
+
+
+6.1 Nguyên tắ c thiế t kế
+   1. Bắ t đầ u từ job đích, không từ khóa học. Mọi lộ trình trỏ về mộ t job nộ i bộ có thậ t, gắ n
+       với kế hoạch kinh doanh (dự án mới, cửa hàng mới, khách sạn – golf).
+   2. Skill là ngôn ngữ chung. Job, người, khóa học, cơ hộ i đề u mô tả bằ ng cùng mộ t bộ
+      skill: Khung năng lực số (TT 02/2025) cho skill số nề n, VTOS/ACCSTP cho khách sạn –
+       du lịch, SFIA 9 cho skill số chuyên sâu, cộ ng skill riêng của BRG.
+   3. Tự nguyệ n và minh bạch. Không ép điề u chuyển; người lao độ ng thấ y rõ job, khoảng
+       cách skill, thu nhậ p và lộ trình. Phù hợp Điề u 29 và 33.
+   4. Thử trước khi chuyển hẳn. Dự án nộ i bộ , ca làm ở đơn vị khác, mùa cao điểm golf –
+       khách sạn giúp cả người lẫ n đơn vị thử. [Inference]
+   5. Toàn hệ sinh thái, tôn trọng ranh giới pháp nhân. Dữ liệ u và quyế t định thuộ c từng
+       công ty; nề n tảng chỉ kế t nố i khi nhân viên đồ ng ý.
+   6. Đo đế n tậ n nơi. Đo số người đã vào đúng job và tạo được giá trị, không chỉ số giờ học.
+
+
+
+
+                                                                                            Page 13 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+6.2 Vòng career development khép kín (sáu bước)
+
+
+
+
+Vòng career development khép kín · 6 bước, vấ n đề P1–P7
+
+Bước 1 lấ y cầ u từ kế hoạch kinh doanh; bước 6 đo kế t quả rồ i cậ p nhậ t cầ u và cung cho
+vòng sau. Dòng cuố i mỗ i ô ghi ai làm và vấ n đề được giải quyế t.
+
+
+6.3 Biệ n pháp cụ thể cho từng vấ n đề
+       P1 – Danh mục nhân sự độ ng theo kịch bản: bản đồ job theo ba giai đoạn (0–1 năm, 1–2
+       năm, 2–3 năm) cho từng mảng. Gắ n với kịch bản: tố c độ mở FujiMart (kế hoạch liên
+       doanh 5–10 cửa hàng/năm), tiế n độ đô thị thông minh, tỷ lệ giao dịch số tại SeABank,
+       công suấ t khách sạn – golf mùa cao điểm.
+       P2 – Hồ sơ skill có bằ ng chứng: tự khai là điểm bắ t đầ u; bổ sung từ lịch sử công việ c,
+       chứng chỉ (VTOS/ACCSTP, ngoại ngữ, chứng chỉ ngân hàng), kế t quả đào tạo, xác nhậ n
+       của quản lý. Mỗ i skill có độ tin cậ y. Người làm lâu năm không có bằ ng: công nhậ n kỹ
+       năng đã có (RPL), như đề xuấ t cho ngành khách sạn TP.HCM.
+       P3 – Lộ trình học theo job đích: ưu tiên skill kề cậ n với cái đã giỏi. Dùng năng lực có
+       sẵ n: Học việ n SeABank, đào tạo caddie và khách sạn của từng cơ sở, hợp tác ĐHQG Hà
+       Nộ i cho skill dữ liệ u và AI. [Inference]
+       P4 – Giảm ma sát khi chuyển:
+              Ứng tuyển ẩn danh đế n vòng chọn lọc; quản lý hiệ n tại chỉ biế t khi đã vào danh
+              sách ngắ n.
+              Quy tắ c bù người: hệ thố ng đề xuấ t người hoặ c cách thay (tự độ ng hóa, tuyển
+              thay, dự án) cho phòng đi.
+              Tiêu chí chọn công khai, dựa trên skill.
+
+
+
+
+                                                                                           Page 14 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+              Mẫ u thỏa thuậ n chuyển công ty trong tậ p đoàn: cách tính thâm niên, trợ cấ p thôi
+              việ c, thang lương tương đương. [Inference] Cầ n luậ t sư thiế t kế .
+              Dự án nộ i bộ 10–20% thời gian trước khi chuyển hẳn, có thỏa thuậ n bằ ng văn bản.
+       P5 – Định hướng cho từng người: trang nghề nghiệ p cá nhân hiển thị job đang mở
+       trong toàn hệ sinh thái, khoảng cách skill, khóa học, người đi trước, khoảng thu nhậ p.
+       AI hỗ trợ chuẩn bị buổi trao đổi nghề nghiệ p với quản lý.
+       P6 – Thị trường nộ i bộ cấ p hệ sinh thái: đăng vị trí và dự án của mọi công ty tham gia
+       trên mộ t nơi. Mỗ i pháp nhân (SeABank, khách sạn do hãng quản lý, liên doanh) tự
+       quyế t định tham gia và chia sẻ dữ liệ u gì.
+       P7 – Đo hiệ u quả: theo dõi người đã chuyển trong 90 ngày và 12 tháng (đánh giá, gắ n
+       kế t, giữ chân); lậ p bảng chỉ số vố n nhân lực cấ p tậ p đoàn.
+
+
+6.4 Đưa người vào job nộ i bộ nào: ma trậ n nguồ n – đích (giả thuyế t)
+
+  Nguồ n (job thu hẹp hoặ c                         Đích khả thi                        Kỹ năng chuyển đổi chính
+  đổi)
+
+  Giao dịch viên, hỗ trợ gián                       Tư vấ n tài chính, chăm sóc         Giao tiế p khách hàng, tuân
+  tiế p ngân hàng                                   khách hàng số ; dịch vụ khách       thủ quy trình
+                                                    cao cấ p ở khách sạn – golf
+
+  Thu ngân, nhậ p liệ u kho                         Tư vấ n bán hàng đa kênh, vậ n      Hiểu khách, kỷ luậ t vậ n
+  siêu thị                                          hành cửa hàng FujiMart mới,         hành
+                                                    F&B khách sạn
+
+  Văn phòng, hành chính,                            Phân tích dữ liệ u, vậ n hành quy   Hiểu quy trình; kinh nghiệ m
+  nhân sự ở các công ty                             trình tự độ ng, nhân sự bảo vệ      quản lý nhân sự, tổ chức
+                                                    dữ liệ u cá nhân                    được tính vào chuẩn nhân
+                                                                                        sự bảo vệ dữ liệ u (Nghị
+                                                                                        định 356)
+
+  Lễ tân, đặ t chỗ , tổng đài                       Quản trị doanh thu, CRM, vậ n       Hiểu khách, ngoại ngữ
+  khách sạn – golf                                  hành BRG Elite Card
+
+  Bán hàng, vậ n hành bấ t                          Vậ n hành đô thị thông minh,        Quan hệ khách hàng, hiểu
+  độ ng sản truyề n thố ng                          dịch vụ cư dân, quản lý năng        dự án
+                                                    lượng và ESG
+
+  Nhân viên lâu năm ở doanh                         Xuấ t khẩu, chuỗ i cung ứng cho     Chuyên môn sâu, quan hệ
+  nghiệ p gố c nhà nước (ví dụ                      bán lẻ, kiểm soát chấ t lượng       đố i tác
+  Hapro)
+
+  Người lớn tuổi, tay nghề                          Người dạy nghề , đánh giá viên      Chuyên môn sâu
+  cao ở golf – khách sạn                            theo VTOS/ACCSTP
+
+
+
+
+                                                                                                               Page 15 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Ma trậ n này là giả thuyế t. [Inference] Cầ n BRG xác nhậ n job nào đang thu hẹp và mảng
+nào đang thiế u người.
+
+
+7. Giải pháp công nghệ
+
+7.1 Định vị
+Mộ t nề n tảng career development và thị trường nhân lực nộ i bộ dựa trên skill cho hệ
+sinh thái BRG, chạy trên kiế n trúc Workforce Graph. Có thể đóng gói thành module Career
+Development của AINAVI: giao diệ n tiế ng Việ t, từ điển skill theo khung Việ t Nam, dữ liệ u
+lưu tại Việ t Nam. Tuyển nộ i bộ chạy trên ATS và kiểm tra skill dùng thi trực tuyế n sẵ n có
+của AINAVI.
+
+Nề n tảng không thay hệ thố ng nhân sự lõi, hệ thố ng đào tạo hay công cụ AI tạo sinh mà
+từng công ty đang dùng. Nó là lớp ở giữa, nố i cầ u (job) với cung (người) qua ranh giới các
+pháp nhân.
+
+
+7.2 Sáu khố i chức năng
+
+  Khố i                                         Chức năng                              Người dùng        Vấ n
+                                                                                                         đề
+
+  M1. Kiế n trúc job và từ                      Mô tả job bằ ng skill. Từ điển ba      Nhân sự, đơn vị   P1,
+  điển skill                                    tầ ng: chung (Khung năng lực số TT                       P3
+                                                02/2025, SFIA 9); ngành
+                                                (VTOS/ACCSTP, tiêu chuẩn kỹ
+                                                năng nghề quố c gia, ngân hàng,
+                                                bán lẻ, golf, đô thị thông minh và
+                                                ESG); skill riêng BRG. Song ngữ
+                                                Việ t – Anh. AI gợi ý skill từ mô tả
+                                                công việ c hiệ n có
+
+  M2. Hồ sơ skill có bằ ng                      AI đọc lịch sử công việ c, dự án,      Nhân viên, quản   P2
+  chứng                                         chứng chỉ, kế t quả đào tạo và bài     lý
+                                                thi trực tuyế n để đề xuấ t skill.
+                                                Nhân viên và quản lý xác nhậ n. Mỗ i
+                                                skill có độ tin cậ y, giảm dầ n nế u
+                                                không cậ p nhậ t. Có công nhậ n kỹ
+                                                năng đã có (RPL)
+
+
+
+
+                                                                                                         Page 16 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Khố i                                         Chức năng                               Người dùng           Vấ n
+                                                                                                             đề
+
+  M3. Danh mục nhân sự                          Bản đồ cung – cầ u theo mảng,           Ban Tổng giám        P1,
+  độ ng                                         công ty, job, giai đoạn. Mô phỏng       đố c, nhân sự        P7
+                                                theo kịch bản (tố c độ mở cửa hàng,
+                                                tiế n độ dự án, tỷ lệ giao dịch số ).
+                                                Cảnh báo thiế u người kế thừa. Xuấ t
+                                                số liệ u cho báo cáo vố n nhân lực
+
+  M4. Định hướng nghề                           Job phù hợp theo mức sẵ n sàng;         Nhân viên, quản      P3,
+  nghiệ p cá nhân                               khoảng cách skill; skill chuyển đổi     lý                   P5
+                                                gầ n nhấ t; khóa học từ hệ thố ng đào
+                                                tạo; người đi trước; khoảng thu
+                                                nhậ p. AI tóm tắ t để chuẩn bị buổi
+                                                trao đổi với quản lý. Có bản điệ n
+                                                thoại cho nhân viên tuyế n đầ u
+
+  M5. Thị trường nhân                           Đăng tuyển nộ i bộ , dự án, ca làm ở    Nhân viên, đơn vị,   P4,
+  lực nộ i bộ                                   đơn vị khác trong hệ sinh thái.         nhân sự              P6
+                                                Ghép nố i có giải thích (vì sao hợp,
+                                                thiế u gì). Ứng tuyển ẩn danh đế n
+                                                danh sách ngắ n. Quy trình duyệ t
+                                                hai đơn vị. Gợi ý bù người
+
+  M6. Hỗ trợ điề u chuyển                       Đề xuấ t phương án bố trí (con          Nhân sự, quản lý     P4,
+  và theo dõi                                   người quyế t). Mẫ u thỏa thuậ n         mới                  P7
+                                                chuyển công ty. Kế hoạch kế thừa.
+                                                Theo dõi 90 ngày và 12 tháng. Lưu
+                                                hồ sơ "đã ưu tiên đào tạo lại" cho
+                                                phương án sử dụng lao độ ng
+
+
+
+
+                                                                                                             Page 17 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+7.3 Kiế n trúc
+
+
+
+
+Kiế n trúc đề xuấ t · nguồ n dữ liệ u, nề n tảng 3 lớp, 4 nhóm người dùng
+
+Dữ liệ u chảy từ hệ thố ng của từng công ty vào nề n tảng; lớp pháp nhân và đồ ng ý quyế t
+định hồ sơ nào được thấ y ở công ty khác.
+
+       Lớp dữ liệ u: Workforce Graph trên Neo4j với 7 lớp (bố i cảnh kinh doanh, năng lực, tổ
+       chức và job, từ điển skill, con người và bằ ng chứng, mạng lưới, phát triển tương lai),
+       thêm lớp pháp nhân trong hệ sinh thái (nhân viên thuộ c công ty nào, đồ ng ý chia sẻ
+       dữ liệ u với ai). Dữ liệ u định danh lưu riêng ở PostgreSQL có mã hóa, tách theo pháp
+       nhân; graph chỉ dùng mã ẩn danh.
+       Lớp AI:
+
+
+
+
+                                                                                          Page 18 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+              Trích xuấ t skill từ văn bản tiế ng Việ t (hồ sơ cá nhân, mô tả công việ c, đánh giá,
+              chứng chỉ) và chuẩn hóa về từ điển skill.
+              Ghép nố i có giải thích, gợi ý lộ trình, tóm tắ t buổi trao đổi nghề nghiệ p.
+              Mọi gợi ý của AI đề u có bước con người xác nhậ n và được ghi lại để truy vế t.
+       Lớp ứng dụng: web tiế ng Việ t cho nhân viên, quản lý, nhân sự, ban Tổng giám đố c;
+       bản điệ n thoại cho nhân viên khách sạn, golf, siêu thị.
+       Tích hợp (cầ n xác nhậ n hệ thố ng thực tế của BRG):
+              Hệ thố ng nhân sự lõi của từng công ty: tổ chức, chức danh, lịch sử công tác.
+              Hệ thố ng đào tạo và e-learning (ví dụ Học việ n SeABank): khóa học, kế t quả.
+              AINAVI: ATS cho tuyển nộ i bộ , thi trực tuyế n để kiểm tra skill.
+              Hệ thố ng đánh giá (chỉ đọc những trường được phép); đăng nhậ p mộ t lầ n.
+       Hạ tầ ng: dữ liệ u lưu tại Việ t Nam. [Inference] Với SeABank, cầ n theo thêm quy định an
+       toàn thông tin của ngành ngân hàng; phương án an toàn là triển khai riêng cho ngân
+       hàng, chỉ chia sẻ hồ sơ khi nhân viên đồ ng ý.
+
+
+7.4 Quản trị và đạo đức dữ liệ u
+       Dữ liệ u skill chỉ dùng cho phát triển và bố trí, không dùng để đánh giá trừ điểm hay
+       xế p hạng cắ t giảm. Nói rõ với nhân viên và tổ chức đại diệ n người lao độ ng.
+       Nhân viên xem được toàn bộ hồ sơ skill và bằ ng chứng, có quyề n sửa. Thời hạn xử lý
+       yêu cầ u theo Nghị định 356 (truy cậ p, chỉnh sửa: phản hồ i trong 2 ngày làm việ c, thực
+       hiệ n trong 10 ngày).
+       Chia sẻ hồ sơ sang công ty khác trong hệ sinh thái cầ n đồ ng ý rõ ràng, kiểm chứng
+       được.
+       Không ra quyế t định điề u chuyển tự độ ng. AI chỉ đề xuấ t, con người quyế t và được ghi
+       lại.
+       Xóa hoặ c ẩn danh dữ liệ u khi chấ m dứt hợp đồ ng, trừ khi có thỏa thuậ n hoặ c luậ t khác
+       (Điề u 25 Luậ t Bảo vệ dữ liệ u cá nhân).
+       Lậ p hồ sơ đánh giá tác độ ng xử lý dữ liệ u trước khi xử lý dữ liệ u thậ t; chỉ định nhân sự
+       bảo vệ dữ liệ u cá nhân.
+
+
+7.5 Chỉ số thành công
+
+  Nhóm                                 Chỉ số
+
+  Nhìn thấ y                           % nhân viên có hồ sơ skill đã xác nhậ n; % job có mô
+                                       tả skill
+
+
+
+
+                                                                                                Page 19 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Nhóm                                 Chỉ số
+
+  Dịch chuyển                          Số người vào job đích mỗ i năm (dự án mới, job số ,
+                                       job thiế u người); % vị trí lấ p bằ ng người nộ i bộ ; thời
+                                       gian lấ p vị trí
+
+  Tham gia                             % nhân viên dùng trang nghề nghiệ p; số đơn ứng
+                                       tuyển và dự án nộ i bộ ; số công ty thành viên tham
+                                       gia
+
+  Hiệ u quả                            Giữ chân và đánh giá của người đã chuyển sau 12
+                                       tháng; chi phí so với tuyển ngoài
+
+  Tuân thủ và an toàn                  100% chuyển đổi công việ c có thỏa thuậ n bằ ng văn
+                                       bản; không vị trí tuyế n đầ u nào thiế u người thay
+                                       mùa cao điểm; 0 sự cố dữ liệ u
+
+
+
+
+8. Lộ trình PoC, rủi ro và câu hỏi cho khách hàng
+
+8.1 PoC 12 tuầ n
+Phạm vi đề xuấ t: mộ t cặ p "nguồ n – đích" rõ nhấ t trong khu vực Hà Nộ i. Ví dụ: thu ngân và
+văn phòng của khố i bán lẻ (nguồ n) sang cửa hàng FujiMart mới, F&B và dịch vụ khách của
+khố i khách sạn – golf, cùng mộ t số job số (đích). Khoảng 200–300 nhân viên, 20–30 job
+đích, 2–3 công ty thành viên. [Inference] SeABank nên vào giai đoạn 2 vì có quy định riêng
+của ngân hàng. BRG cầ n chọn cặ p thậ t.
+
+
+
+
+                                                                                                     Page 20 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Lộ trình PoC đề xuấ t · 6 giai đoạn, 2 cửa quyế t định
+
+Bố n tuầ n đầ u chỉ dùng dữ liệ u ẩn danh; dữ liệ u thậ t chỉ được xử lý sau khi hồ sơ đánh giá
+tác độ ng được chấ p thuậ n (cửa 1). Việ c chính của từng giai đoạn:
+
+       Khảo sát và dữ liệ u: phỏng vấ n ban Tổng giám đố c, nhân sự, kế hoạch và 2–3 trưởng
+       đơn vị; thu mô tả job, dữ liệ u đào tạo, dữ liệ u nhân sự ẩn danh; lậ p hồ sơ đánh giá tác
+       độ ng.
+       Từ điển skill: ghép TT 02/2025, VTOS/ACCSTP, SFIA 9 và skill ngành; mô tả 20–30 job
+       đích bằ ng skill.
+       Hồ sơ skill thí điểm: AI trích xuấ t, nhân viên và quản lý xác nhậ n; công nhậ n kỹ năng
+       đã có.
+       Bản đồ cung – cầ u: trang định hướng nghề nghiệ p, gợi ý lộ trình học.
+       Chạy thử tuyển nộ i bộ : mộ t đợt tuyển nộ i bộ hoặ c dự án nộ i bộ trên ATS của AINAVI;
+       thu phản hồ i.
+       Đánh giá: so với tiêu chí PoC bên dưới, lậ p kế hoạch mở rộ ng.
+
+Tiêu chí thành công của PoC (đề xuấ t, cầ n thố ng nhấ t với khách hàng):
+
+       ≥ 70% nhân viên thí điểm xác nhậ n hồ sơ skill.
+       ≥ 80% gợi ý skill của AI được chấ p nhậ n.
+       Ban Tổng giám đố c dùng bản đồ cung – cầ u trong ít nhấ t mộ t cuộ c họp kế hoạch nhân
+       sự.
+
+
+
+                                                                                            Page 21 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Số đơn ứng tuyển nộ i bộ hoặ c dự án nộ i bộ cao hơn rõ rệ t so với đợt gầ n nhấ t.
+       100% trường hợp chuyển trong PoC có thỏa thuậ n bằ ng văn bản.
+
+
+8.2 Rủi ro và cách giảm
+
+  Rủi ro                                                              Cách giảm
+
+  Nhân viên sợ dữ liệ u skill bị dùng để đánh                         Cam kế t bằ ng văn bản về mục đích; trao đổi
+  giá hoặ c cắ t giảm                                                 với tổ chức đại diệ n người lao độ ng; nhân
+                                                                      viên kiểm soát hồ sơ của mình
+
+  Quản lý cản trở vì sợ mấ t người                                    Ứng tuyển ẩn danh; cơ chế bù người; đưa
+                                                                      việ c "cho đi người giỏi" vào đánh giá quản lý
+
+  Người học xong nhảy việ c                                           Gắ n học với job đích và thu nhậ p rõ ràng.
+                                                                      [Unverified] Có thể dùng hợp đồ ng đào tạo
+                                                                      có cam kế t thời gian làm việ c (Điề u 62 Bộ luậ t
+                                                                      Lao độ ng 2019), cầ n luậ t sư kiểm tra
+
+  Từ điển skill quá lớn, không ai duy trì                             Bắ t đầ u nhỏ, theo khung có sẵ n; mỗ i mảng
+                                                                      mộ t người chịu trách nhiệ m; AI hỗ trợ cậ p
+                                                                      nhậ t
+
+  AI trích xuấ t sai skill từ văn bản tiế ng Việ t                    Luôn có bước con người xác nhậ n; đo độ
+                                                                      chính xác trong PoC
+
+  Dữ liệ u và quyế t định thuộ c nhiề u pháp                          Mỗ i pháp nhân tự chọn tham gia; chia sẻ theo
+  nhân, đố i tác quố c tế                                             đồ ng ý; rà soát hợp đồ ng quản lý và liên
+                                                                      doanh
+
+  Hồ sơ đánh giá tác độ ng dữ liệ u chưa được                         Lậ p hồ sơ ngay tuầ n 1–2; dùng dữ liệ u ẩn
+  chấ p thuậ n đúng hạn                                               danh cho đế n khi được chấ p thuậ n
+
+  Rút người khỏi dịch vụ tuyế n đầ u mùa cao                          Ràng buộ c cứng: vị trí tuyế n đầ u phải có
+  điểm                                                                người thay trước khi duyệ t chuyển; lịch
+                                                                      chuyển tránh mùa cao điểm
+
+  Chồ ng chéo với hệ thố ng nhân sự hiệ n có                          Định vị là lớp nố i, không thay thế ; tích hợp hai
+                                                                      chiề u
+
+
+
+8.3 Câu hỏi cầ n hỏi BRG (bước nghiên cứu tiế p theo)
+Chiế n lược và cầ u:
+
+   1. Đế n 2027–2028, các dự án mới (đô thị thông minh, FujiMart, golf – khách sạn,
+       BRIGHTPARK) cầ n thêm bao nhiêu người, job gì?
+   2. Job nào đang hoặ c sẽ thu hẹp do tự độ ng hóa, kênh số và AI? Bao nhiêu người?
+
+
+                                                                                                                 Page 22 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+   3. BRG đã có kế hoạch nhân lực hoặ c chiế n lược AI cấ p tậ p đoàn chưa?
+
+Cung và dữ liệ u:
+
+   4. Con số khoảng 22.000 người gồ m những pháp nhân nào? Có gồ m SeABank không?
+   5. Dữ liệ u nhân sự và đào tạo nằ m ở đâu (hệ thố ng nào, dùng chung hay từng công ty,
+       Excel)? Đã có mô tả job chưa?
+   6. Với khách sạn do hãng quố c tế quản lý, dữ liệ u và quyế t định nhân sự thuộ c ai?
+
+Bố trí:
+
+   7. Hiệ n có tuyển nộ i bộ , luân chuyển giữa công ty thành viên không? Mỗ i năm bao nhiêu
+       người chuyển?
+   8. Khi chuyển công ty trong tậ p đoàn, BRG đang xử lý hợp đồ ng, thâm niên, trợ cấ p thế
+       nào?
+   9. Có định mở dự án nộ i bộ , ca làm ở đơn vị khác, hoặ c quy tắ c tuyển nộ i bộ trước tuyển
+       ngoài không?
+
+Tổ chức và điề u kiệ n:
+
+ 10. Ai là chủ đầ u tư và người ra quyế t định: ban Tổng giám đố c tậ p đoàn, khố i nhân sự hay
+     từng công ty?
+ 11. Yêu cầ u bảo mậ t, nơi lưu dữ liệ u, nhân sự bảo vệ dữ liệ u cá nhân đã có chưa, quy trình
+       mua sắ m?
+ 12. Công đoàn và tổ chức đại diệ n người lao độ ng cầ n được tham vấ n ở bước nào?
+
+
+9. Nguồ n
+BRG và hệ sinh thái
+
+       BRG – Giới thiệ u
+       BRG – Lịch sử phát triển
+       BRG – Tuyên bố và sứ mệ nh
+       BRG – Đố i tác quố c tế
+       Thị trường Tài chính Tiề n tệ – Anh hùng Lao độ ng Nguyễ n Thị Nga, số liệ u nộ p ngân
+       sách 2025 (9/2026)
+       VietTimes – BRG năm 2025 và định hướng (1/2026)
+       Nhân Dân – Hợp tác công nghệ của BRG (10/2025)
+       VietTimes – Khởi công Thành phố thông minh Bắ c Hà Nộ i (8/2025)
+       VietnamPlus – Liên doanh FujiMart BRG – Sumitomo (3/2022)
+       Golf Business News – Bố n sân golf của BRG (2017)
+       The Leader – BRG và các thương vụ cổ phầ n hóa (3/2018)
+
+
+
+                                                                                           Page 23 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Doanh nhân – Thăng Long GTC và InterContinental Hanoi Westlake (3/2019)
+       KIS – ĐHĐCĐ Hapro 2018
+       Báo Đầ u tư – Phương án cổ phầ n hóa Hapro (12/2017)
+       VnExpress – Kế t quả SeABank 2025 (1/2026)
+       SeABank – Báo cáo Phát triển bề n vững 2025
+
+Thị trường lao độ ng và AI
+
+       WEF Future of Jobs Report 2025 – Digest
+       ILO – Generative AI and jobs in Viet Nam (4/2026)
+       VnEconomy – AI thay đổi luậ t chơi trong quản trị nhân lực (4/2026)
+       PwC – Hopes and Fears 2025, báo cáo Việ t Nam
+       SGGP – Báo cáo Talentnet–Mercer 2025 (10/2025)
+       LinkedIn – Global Talent Trends, dịch chuyển nộ i bộ và giữ chân (10/2022)
+       Báo Đầ u tư – FPT và nhân sự AI-first (11/2025)
+
+Ngân hàng
+
+       VietnamFinance – Khảo sát NHNN về cắ t giảm nhân sự (6/2025)
+       DNSE – Nhân sự ngân hàng 2024–2026 (5/2026)
+       Thị trường Tài chính Tiề n tệ – Ngân hàng tái phân bổ nhân sự (5/2026)
+
+Du lịch – khách sạn
+
+       The Leader – Nhân lực du lịch, khách sạn Đà Nẵ ng (8/2026)
+       Báo Đầ u tư – Nhân lực ngành du lịch, khách sạn (11/2025)
+       Doanh nghiệ p và Hộ i nhậ p – Chuẩn hóa nhân lực khách sạn theo chuẩn ASEAN
+       (9/2026)
+
+Pháp lý Việ t Nam
+
+       Đại biểu Nhân dân – Quố c hộ i thông qua Luậ t Trí tuệ nhân tạo (12/2025)
+       Tiề n Phong – Điề u 25 Luậ t Bảo vệ dữ liệ u cá nhân (7/2025)
+       EY – Nghị định 356/2025/NĐ-CP
+       Báo Lào Cai – Điề u 42, 47 Bộ luậ t Lao độ ng 2019 (9/2023)
+       CareerLink – Điề u 29, 33 Bộ luậ t Lao độ ng 2019 (8/2026)
+       Thư việ n Nhà đấ t – Công ty trong tậ p đoàn là doanh nghiệ p độ c lậ p (11/2024)
+
+Khung skill
+
+       VnEconomy – Khung năng lực số cho người học (2/2025)
+       SFIA 9 – Release notes
+
+
+
+
+                                                                                           Page 24 of 25
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Các nhãn [Inference], [Speculation], [Unverified] trong tài liệ u đánh dấ u nộ i dung suy luậ n
+hoặ c chưa kiểm chứng được từ nguồ n mở. Phầ n pháp lý không phải tư vấ n luậ t.
+
+
+
+
+                                                                                       Page 25 of 25
+

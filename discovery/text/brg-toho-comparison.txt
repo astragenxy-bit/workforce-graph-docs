@@ -1,0 +1,725 @@
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+BRG và Toho Gas — khác biệ t bài toán và
+khoảng cách năng lực hệ thố ng
+  ​Nov 24, 2026 · ​@Thu Phan Thi
+
+
+
+0. Kế t luậ n
+BRG khác Toho Gas ở ba điểm quyế t định thiế t kế . Hệ thố ng hiệ n có đủ nề n tuyển dụng,
+nhưng phầ n career development phải xây mới cho cả hai khách hàng. [Inference]
+
+Ba khác biệ t quyế t định:
+
+   1. Ai quyế t định việ c chuyển. Ở Toho Gas, công ty quyế t định điề u chuyển và gầ n như
+      không ai nghỉ việ c (1,93%). Ở BRG, đổi hẳn công việ c cầ n người lao độ ng đồ ng ý, và thị
+      trường có tỷ lệ nghỉ việ c 9,8–18,9%. Vì vậ y kênh chính của BRG là tuyển nộ i bộ tự
+      nguyệ n, cộ ng mộ t lớp giữ chân.
+   2. Số pháp nhân và quyề n dữ liệ u. Toho Gas là mộ t nhóm thố ng nhấ t. BRG có hàng chục
+      pháp nhân, mộ t ngân hàng niêm yế t, khách sạn do hãng quố c tế quản lý và liên doanh
+      với Sumitomo. Vì vậ y BRG cầ n lớp pháp nhân và đồ ng ý, cùng hồ sơ đánh giá tác độ ng
+      theo Nghị định 356 trước khi dùng dữ liệ u thậ t.
+   3. Ngôn ngữ skill chung. Toho Gas bám DSS ver.2.0. BRG phải ghép TT 02/2025,
+      VTOS/ACCSTP, SFIA 9 và skill ngành. Vì vậ y từ điển skill cầ n cơ chế ánh xạ nhiề u khung
+      ngay từ đầ u.
+
+Năng lực hệ thố ng (mục 3):
+
+       Đã có: ATS (TAS), trang tin tuyển dụng (Hub), trang tuyển dụng doanh nghiệ p, thi trực
+       tuyế n (AINAVI, IVIEC).
+       Đang hình thành: đọc CV và OCR (demo tiế ng Nhậ t), giao diệ n tiế ng Nhậ t, hồ sơ nhân
+       sự và SMS (TPBank), kế t nố i PeopleSoft (LPBank).
+       Chưa thấ y: từ điển skill, hồ sơ skill, Workforce Graph, danh mục nhân sự độ ng, trang
+       định hướng, thị trường nộ i bộ , theo dõi sau khi chuyển, ghi vế t AI.
+
+Việ c cầ n làm thêm (mục 4): 14 hạng mục lõi dùng chung, 12 hạng mục riêng BRG, 9 hạng
+mục riêng Toho Gas, 6 hạng mục dịch vụ và tổ chức. Có ba quyế t định cầ n chố t trước khi
+bắ t tay làm:
+
+   1. Xác nhậ n năng lực hiệ n có với team (12 câu hỏi ở mục 6).
+   2. Độ i nào làm phầ n career development, và có kỹ sư dữ liệ u, AI không.
+   3. Có được tái dùng phầ n đang làm cho TPBank và LPBank không.
+
+
+
+
+                                                                                          Page 1 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+1. So sánh hai trường hợp
+Hai bài toán có cùng lõi: job cũ thu hẹp, mảng mới thiế u người, cầ n vòng khép kín nố i cầ u
+với cung. Khác biệ t nằ m ở ai quyế t định việ c chuyển, bao nhiêu pháp nhân và có sẵ n ngôn
+ngữ skill chung hay không. [Inference]
+
+
+  Khía cạnh                  Toho Gas                                   BRG                          Hệ quả cho giải pháp
+
+  Loại hình,                 Công ty gas đô thị,                        Tậ p đoàn tư nhân đa         BRG đông người gấ p
+  quy mô                     khoảng 6.131 nhân                          ngành chưa niêm yế t, gầ n   khoảng 3,6 lầ n và phân
+                             viên hợp nhấ t,                            22.000 người, hàng chục      mảnh hơn; cầ n mô hình
+                             khoảng 30 công ty                          công ty và liên doanh;       đa pháp nhân ngay từ
+                             con; công ty mẹ                            SeABank niêm yế t riêng      đầ u
+                             khoảng 970 người
+
+  Ngành                      Mộ t ngành: gas sang                       Năm nhóm ngành: ngân         Từ điển skill phải phủ
+                             điệ n, năng lượng tái                      hàng, bán lẻ, khách sạn –    nhiề u ngành; ma trậ n
+                             tạo, e-methane; tự                         golf, bấ t độ ng sản – đô    nguồ n – đích đi xuyên
+                             độ ng hóa vậ n hành                        thị, giải trí                ngành
+
+  Cầ u (kế                   Kế hoạch trung hạn                         Không thấ y kế hoạch         Với BRG, cầ u phải
+  hoạch kinh                 2025–2027 công khai,                       trung hạn công khai; có      dựng từ phỏng vấ n và
+  doanh)                     có số : đầ u tư mảng                       dự án lớn (đô thị thông      dữ liệ u dự án; danh
+                             chiế n lược khoảng                         minh 4,2 tỷ USD, thêm 50     mục nhân sự độ ng
+                             130 tỷ yên                                 cửa hàng FujiMart đế n       (M3) phải chạy được
+                                                                        2028)                        với dữ liệ u thô
+
+  Mô hình việ c              Tuyển sinh viên mới,                       Tuyển theo vị trí, nhiề u    Toho Gas: điề u chuyển
+  làm                        công ty quyế t định                        người có kinh nghiệ m, có    do công ty lậ p kế
+                             điề u chuyển, gầ n như                     chuyên gia nước ngoài        hoạch là kênh chính.
+                             không sa thải                                                           BRG: kênh tự nguyệ n
+                                                                                                     (tuyển nộ i bộ ) là kênh
+                                                                                                     chính
+
+  Nghỉ việ c                 1,93% (FY2024)                             Không có số công khai;       BRG cầ n thêm lớp giữ
+                                                                        thị trường: 9,8% ở doanh     chân: lộ trình, khoảng
+                                                                        nghiệ p nộ i, khách sạn Đà   thu nhậ p, đo giữ chân
+                                                                        Nẵ ng 18,9%                  sau khi chuyển
+
+
+
+
+                                                                                                                       Page 2 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Khía cạnh                  Toho Gas                                   BRG                            Hệ quả cho giải pháp
+
+  Pháp lý điề u              人事異動 do công ty                            Bộ luậ t Lao độ ng: chuyển     BRG cầ n quy trình
+  chuyển                     quyế t; luậ t hạn chế sa                   tạm thời tố i đa 60            thỏa thuậ n, theo dõi
+                             thải                                       ngày/năm nế u không            hạn 60 ngày, lưu hồ sơ
+                                                                        đồ ng ý (Điề u 29); đổi hẳn    đã ưu tiên đào tạo lại
+                                                                        cầ n thỏa thuậ n (Điề u 33);
+                                                                        đổi công nghệ phải ưu
+                                                                        tiên đào tạo lại (Điề u 42,
+                                                                        44)
+
+  Di chuyển                  出向, 転籍 phổ biế n,                          Mỗ i công ty là doanh          BRG cầ n mẫ u thỏa
+  trong nhóm                 có khung sẵ n                              nghiệ p độ c lậ p;             thuậ n chuyển công ty,
+                                                                        [Inference] chuyển hẳn         cách tính thâm niên và
+                                                                        thường là chấ m dứt và ký      trợ cấ p
+                                                                        hợp đồ ng mới
+
+  Ngôn ngữ                   DSS ver.2.0 (METI,                         Không có mộ t chuẩn            Toho Gas bám mộ t
+  skill chung                IPA, 4/2026), doanh                        chung; ghép TT 02/2025,        khung chính. BRG cầ n
+                             nghiệ p Nhậ t đã quen                      VTOS/ACCSTP, SFIA 9,           cơ chế ánh xạ nhiề u
+                                                                        tiêu chuẩn kỹ năng nghề        khung
+                                                                        quố c gia
+
+  Mức DX, dữ                 Chứng nhậ n DX                             SeABank công bố rõ;            BRG cầ n giai đoạn
+  liệ u công                 (6/2025), 224 DX      ,    人材              phầ n còn lại gầ n như         khảo sát dài hơn, bắ t
+  khai                       Graffer AI Studio cho                      không có số ; không thấ y      đầ u từ đơn vị có dữ
+                             khoảng 1.500 người;                        chiế n lược AI cấ p tậ p       liệ u
+                             báo cáo tích hợp có                        đoàn
+                             chỉ số vố n nhân lực
+
+  Hệ thố ng                  Có thể đang chuyển                         Không rõ; [Speculation]        BRG cầ n nhiề u kế t nố i
+  nhân sự                    lõi lên SAP S/4HANA                        mỗ i pháp nhân mộ t hệ         và chuẩn hóa danh
+                             Cloud (cầ n xác nhậ n);                    thố ng, khách sạn theo hệ      mục chức danh giữa
+                             chế độ nhân sự mới                         thố ng của hãng                các công ty
+                             từ 4/2026
+
+  Dữ liệ u cá                個人情報保護法; dữ                                Luậ t Bảo vệ dữ liệ u cá       BRG cầ n quản lý đồ ng
+  nhân, AI                   liệ u lưu tại Nhậ t; tiêu                  nhân 2025 và Nghị định         ý, cửa duyệ t hồ sơ
+                             chuẩn bảo mậ t riêng                       356 (đồ ng ý kiểm chứng        trước khi dùng dữ liệ u
+                             của Toho Gas                               được, hồ sơ đánh giá tác       thậ t, thời hạn xử lý yêu
+                                                                        độ ng do Bộ Công an xem        cầ u của nhân viên
+                                                                        xét trước); Luậ t Trí tuệ
+                                                                        nhân tạo từ 1/3/2026
+
+
+
+
+                                                                                                                           Page 3 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Khía cạnh                  Toho Gas                                   BRG                             Hệ quả cho giải pháp
+
+  Đố i thoại                 Biệ n bạch với công                        Tổ chức đại diệ n người         Tương tự nhau; BRG
+  người lao                  đoàn                                       lao độ ng; bắ t buộ c trao      cầ n thêm hồ sơ chứng
+  độ ng                                                                 đổi khi cho thôi việ c vì       minh
+                                                                        đổi cơ cấ u
+
+  Người dùng                 Tiế ng Nhậ t; văn                          Tiế ng Việ t, thêm tiế ng       BRG cầ n giao diệ n điệ n
+                             phòng và hiệ n trường                      Anh cho chuyên gia nước         thoại trước, thông báo
+                             (an toàn, đường ố ng)                      ngoài; [Speculation] đa         qua SMS
+                                                                        số là nhân viên dịch vụ
+                                                                        tuyế n đầ u
+
+  Quyề n quyế t              Nộ i bộ nhóm Toho                          Có bên ngoài: hãng              BRG cầ n cho từng
+  định                       Gas                                        khách sạn quố c tế , liên       pháp nhân tự chọn
+                                                                        doanh Sumitomo, ngân            tham gia và chia sẻ gì
+                                                                        hàng niêm yế t
+
+  Vị thế nhà                 Khách Nhậ t; độ i Việ t                    Thị trường nhà của              [Inference] BRG ít rủi
+  cung cấ p                  Nam làm qua BrSE;                          AINAVI; tiế ng Việ t và luậ t   ro ngôn ngữ hơn, có
+                             phải bản địa hóa                           Việ t Nam là lợi thế sẵ n có    thể làm bản tham
+                             tiế ng Nhậ t                                                               chiế u trước
+
+
+Giố ng nhau: cả hai đề u là nhóm nhiề u công ty con; đề u vừa có job thu hẹp vừa có mảng
+thiế u người; đề u cầ n nguyên tắ c bắ t đầ u từ job đích, skill là ngôn ngữ chung, AI chỉ đề xuấ t
+và con người quyế t. Vì vậ y phầ n lõi của sáu khố i M1–M6 dùng chung được cho cả hai.
+[Inference]
+
+
+2. Giải pháp thay đổi thế nào
+Sáu khố i M1–M6 giữ nguyên khung; thay đổi lớn nhấ t của bản BRG là lớp pháp nhân và
+đồ ng ý, quy trình pháp lý Việ t Nam và từ điển skill nhiề u khung. [Inference]
+
+
+  Phầ n                         Bản Toho Gas                               Bản BRG                         Mức thay đổi
+
+  M1. Kiế n trúc                DSS ver.2.0 + skill                        TT 02/2025,                     Mở rộ ng: ánh xạ
+  job, từ điển                  ngành năng lượng +                         VTOS/ACCSTP, SFIA 9,            nhiề u khung, quản
+  skill                         skill riêng; song ngữ                      tiêu chuẩn kỹ năng nghề         lý phiên bản khung
+                                Nhậ t – Anh                                quố c gia + skill ngân
+                                                                           hàng, bán lẻ, golf, đô thị
+                                                                           thông minh; song ngữ
+                                                                           Việ t – Anh
+
+
+
+
+                                                                                                                           Page 4 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Phầ n                         Bản Toho Gas                            Bản BRG                        Mức thay đổi
+
+  M2. Hồ sơ skill               AI đọc      職務経歴tiế ng                  AI đọc văn bản tiế ng Việ t;   Mở rộ ng: xử lý tiế ng
+  có bằ ng chứng                Nhậ t, báo cáo dự án,                   thêm công nhậ n kỹ năng        Việ t, luồ ng RPL
+                                kế t quả DX   人材                        đã có (RPL), chứng chỉ
+                                                                        VTOS/ACCSTP, kế t quả
+                                                                        thi trực tuyế n
+
+  M3. Danh mục                  Kịch bản e-methane,                     Kịch bản mở cửa hàng,          Mở rộ ng: thêm
+  nhân sự độ ng                 smart meter, mảng                       tiế n độ dự án đô thị, tỷ lệ   chiề u pháp nhân
+                                điệ n; xuấ t     人材ポート                  giao dịch số ; xem theo
+                                フォリオ       cho báo cáo                  từng pháp nhân và hợp
+                                tích hợp                                nhấ t
+
+  M4. Định                      キャリアナビ; chuẩn bị                        Thêm khoảng thu nhậ p          Mở rộ ng: giao diệ n
+  hướng nghề                    buổi trao đổi nghề                      để giữ chân; điệ n thoại       di độ ng, minh bạch
+  nghiệ p                       nghiệ p hằ ng năm                       trước cho tuyế n đầ u;         thu nhậ p
+                                                                        thông báo SMS
+
+  M5. Thị trường                社内公募, 社内FA, 社内                          Tuyển nộ i bộ , dự án nộ i     Thay đổi lớn: đồ ng ý
+  nhân lực nộ i bộ              副業, biệ t phái trong                    bộ , ca làm ở đơn vị khác,     và đa pháp nhân
+                                nhóm                                    chuyển công ty có thỏa
+                                                                        thuậ n; hồ sơ chỉ hiệ n ở
+                                                                        công ty khác khi nhân
+                                                                        viên đồ ng ý
+
+  M6. Hỗ trợ                    Đề xuấ t bố trí cho đợt                 Thêm quy trình thỏa            Mới: phầ n pháp lý
+  điề u chuyển,                 人事異動     định kỳ                        thuậ n (Điề u 29, 33), theo    Việ t Nam
+  theo dõi                      (tháng 4, 10), kế thừa,                 dõi hạn 60 ngày, mẫ u
+                                theo dõi 90 ngày và 12                  chuyển công ty, hồ sơ đã
+                                tháng                                   ưu tiên đào tạo lại
+
+  Kiế n trúc dữ                 Workforce Graph 7 lớp                   7 lớp + lớp pháp nhân và       Mở rộ ng: mô hình
+  liệ u                         + lớp công ty trong                     đồ ng ý; tách dữ liệ u định    đồ ng ý, phân vùng
+                                nhóm; dữ liệ u tại Nhậ t                danh theo pháp nhân; dữ        dữ liệ u
+                                                                        liệ u tại Việ t Nam
+
+  AI                            Trích xuấ t skill từ                    Trích xuấ t skill từ tiế ng    Mới: mô hình và bộ
+                                tiế ng Nhậ t                            Việ t; kiểm tra công bằ ng     dữ liệ u kiểm thử
+                                                                        vì Luậ t Trí tuệ nhân tạo      tiế ng Việ t
+                                                                        đặ t nguyên tắ c không
+                                                                        phân biệ t đố i xử
+
+
+
+
+                                                                                                                       Page 5 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Phầ n                         Bản Toho Gas                            Bản BRG                      Mức thay đổi
+
+  Tuân thủ                      個人情報保護法; danh                           Luậ t Bảo vệ dữ liệ u cá     Khác hoàn toàn: hai
+                                mục kiểm tra bảo mậ t                   nhân, Nghị định 356 (hồ      bộ hồ sơ tuân thủ
+                                Toho Gas (đã dùng khi                   sơ đánh giá tác độ ng,       riêng
+                                chọn Graffer)                           nhân sự bảo vệ dữ liệ u),
+                                                                        Luậ t Trí tuệ nhân tạo, Bộ
+                                                                        luậ t Lao độ ng
+
+  Tích hợp                      SAP S/4HANA (nế u                       Hệ thố ng nhân sự của        Khác: nhiề u nguồ n,
+                                đúng), e-learning,                      từng công ty, Học việ n      chưa rõ hệ thố ng
+                                quản trị mục tiêu,                      SeABank, ATS AINAVI,
+                                Graffer AI Studio, SSO                  đánh giá, SSO
+
+  PoC                           Bán gas và văn phòng                    Bán lẻ → FujiMart mới,       Khác: thêm cửa
+                                → điệ n, giải pháp, DX;                 khách sạn – golf, job số ;   pháp lý, nhiề u pháp
+                                công ty mẹ + mộ t                       2–3 công ty; cửa duyệ t hồ   nhân hơn
+                                công ty con                             sơ dữ liệ u trước tuầ n 5
+
+
+Ý nghĩa: [Inference] phầ n lõi (M1–M6 và Workforce Graph) dùng chung được cho cả hai
+khách hàng. Phầ n riêng của mỗ i khách hàng tậ p trung ở ngôn ngữ, khung skill, pháp lý và
+tích hợp.
+
+
+3. Năng lực hệ thố ng hiệ n có
+Nề n tuyển dụng đã có và tái dùng được cho M5 (tuyển nộ i bộ ) và M2 (kiểm tra skill). Phầ n
+lõi của career development và Workforce Graph chưa thấ y trong hệ thố ng hiệ n tại.
+[Inference]
+
+Cách đọc trạng thái: Đã có · Đang làm (theo dự án khách hàng) · Mộ t phầ n · Chưa thấ y
+(không có trong thông tin đã biế t về TAS, Hub, AINAVI, IVIEC; chưa khẳng định là không
+có) · Cầ n xác nhậ n. Toàn bộ cộ t trạng thái cầ n team sản phẩm rà lại.
+
+
+  #           Năng lực cầ n                       Hệ thố ng hiệ n có                  Trạng thái         Dùng cho
+
+  1           Quản trị tuyển                      TAS / ATS của AINAVI                Đã có              M5: tuyển nộ i
+              dụng, quy trình                                                                            bộ
+              tuyển chọn
+
+  2           Trang tin tuyển                     Hub; trang tuyển dụng               Đã có              M5: bảng việ c
+              dụng, trang tuyển                   doanh nghiệ p; trang                                   làm nộ i bộ (cầ n
+              dụng doanh nghiệ p                  Employer Branding cho                                  chế độ chỉ nộ i
+                                                  công ty VIP                                            bộ )
+
+
+
+
+                                                                                                                    Page 6 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  #           Năng lực cầ n                       Hệ thố ng hiệ n có           Trạng thái       Dùng cho
+
+  3           Thi trực tuyế n,                    Thi trực tuyế n của          Đã có            M2: kiểm tra
+              đánh giá                            AINAVI; nề n tảng đánh                        skill (cầ n ngân
+                                                  giá IVIEC                                     hàng câu hỏi
+                                                                                                gắ n skill)
+
+  4           Đọc CV, OCR                         Pipeline quét CV và          Mộ t phầ n       M2: trích xuấ t
+                                                  OCR, đang demo với hồ        (demo)           skill; hợp với
+                                                  sơ tiế ng Nhậ t (     職務経歴                    Toho Gas trước,
+                                                  書 履歴書
+                                                    ,        )                                  BRG cầ n tiế ng
+                                                                                                Việ t
+
+  5           Giao diệ n tiế ng                   Đang bản địa hóa             Đang làm         Toho Gas
+              Nhậ t                               AINAVI cho Nhậ t, đã
+                                                  chố t thuậ t ngữ UI
+
+  6           Hồ sơ nhân sự                       EPIC Quản lý hồ sơ           Đang làm (ước    M2: nề n hồ sơ
+                                                  nhân sự trong CR của         lượng)           nhân viên
+                                                  TPBank
+
+  7           Thông báo SMS                       EPIC SMS Brand Name          Đang làm (ước    M4, M5: báo tin
+              Brand Name                          trong CR của TPBank          lượng)           cho nhân viên
+                                                                                                tuyế n đầ u BRG
+
+  8           Kế t nố i hệ thố ng                 Tích hợp AIViec –            Đang làm (phạm   Kế t nố i hệ
+              nhân sự lõi                         PeopleSoft cho LPBank        vi hợp đồ ng)    thố ng nhân sự
+                                                                                                từng pháp
+                                                                                                nhân BRG; SAP
+                                                                                                của Toho Gas
+
+  9           Gợi ý, chấ m điểm                                                Cầ n xác nhậ n   M4, M5
+              phù hợp người –
+              job
+
+  10          Từ điển skill, kiế n                                             Chưa thấ y       M1
+              trúc job
+
+  11          Hồ sơ skill có bằ ng                                             Chưa thấ y       M2
+              chứng, độ tin cậ y
+
+  12          Workforce Graph                     Thư mục dự án                [Inference]      Lớp dữ liệ u
+              (cơ sở dữ liệ u đồ                  Workforce-                   Chưa có, đang
+              thị)                                Graph\Discovery              khám phá
+
+  13          Danh mục nhân sự                                                 Chưa thấ y       M3
+              độ ng, mô phỏng
+              kịch bản
+
+
+
+
+                                                                                                           Page 7 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  #           Năng lực cầ n                       Hệ thố ng hiệ n có       Trạng thái        Dùng cho
+
+  14          Trang định hướng                                             Chưa thấ y        M4
+              nghề nghiệ p cá
+              nhân
+
+  15          Ứng tuyển ẩn                                                 Chưa thấ y        M5
+              danh, duyệ t hai
+              đơn vị, gợi ý bù
+              người
+
+  16          Dự án nộ i bộ , ca                                           Chưa thấ y        M5
+              làm ở đơn vị khác
+
+  17          Theo dõi sau điề u                                           Chưa thấ y        M6
+              chuyển 90 ngày, 12
+              tháng
+
+  18          Mộ t khách hàng                                              Cầ n xác nhậ n    Kiế n trúc BRG
+              nhiề u pháp nhân,                                            (mô hình tenant
+              chia sẻ theo đồ ng                                           hiệ n tại)
+              ý
+
+  19          Quản lý đồ ng ý,                                             Cầ n xác nhậ n    Tuân thủ Việ t
+              yêu cầ u của chủ                                                               Nam
+              thể dữ liệ u, xóa dữ
+              liệ u
+
+  20          Ghi vế t đề xuấ t của                                        Chưa thấ y        Luậ t Trí tuệ
+              AI và xác nhậ n của                                                            nhân tạo, quản
+              người                                                                          trị
+
+  21          Giao diệ n điệ n                                             Cầ n xác nhậ n    M4 cho BRG
+              thoại cho nhân viên
+
+  22          Đăng nhậ p mộ t lầ n                                         Cầ n xác nhậ n    Cả hai
+              với hệ thố ng khách
+              hàng
+
+  23          Đặ t dữ liệ u tại Nhậ t                                      Cầ n xác nhậ n    Toho Gas
+
+  24          Báo cáo,                            Báo cáo tuyển dụng của   Cầ n xác nhậ n    M3, chỉ số
+              dashboard                           ATS                                        thành công
+
+
+Đọc bảng: hàng 1–3 là nề n tái dùng ngay. Hàng 4–8 là năng lực đang hình thành.
+[Inference] Hàng 6–8 làm theo dự án TPBank và LPBank, chỉ thành tính năng dùng chung
+nế u hợp đồ ng cho phép tái dùng. Hàng 10–17 và 20 là phầ n phải xây mới.
+
+
+
+
+                                                                                                        Page 8 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+4. Khoảng cách và việ c cầ n làm thêm
+Cầ n thêm 4 nhóm việ c: lõi dùng chung (14 hạng mục), gói riêng BRG (12), gói riêng Toho
+Gas (9), dịch vụ và tổ chức (6). Mức ưu tiên là đề xuấ t ban đầ u [Inference]; cộ t Ưu tiên
+chỉnh được trực tiế p.
+
+
+4.1 Lõi dùng chung (xây mộ t lầ n, dùng cho cả hai)
+
+  Mã          Hạng mục                                                  Tái dùng từ                     Ưu tiên
+
+  C1          Cơ chế từ điển skill: nhiề u                                                              ​ P0 – cầ n cho PoC
+              khung, ánh xạ giữa khung,
+              phiên bản, song ngữ
+
+  C2          Kiế n trúc job: mô tả job bằ ng                           Mô tả công việ c đang có        ​ P0 – cầ n cho PoC
+              skill; AI gợi ý skill từ mô tả công                       trong ATS
+              việ c
+
+  C3          Hồ sơ skill: bằ ng chứng, độ tin                          Hồ sơ ứng viên trong ATS;       ​ P0 – cầ n cho PoC
+              cậ y, xác nhậ n của nhân viên và                          EPIC hồ sơ nhân sự (nế u được
+              quản lý                                                   tái dùng)
+
+  C4          Trích xuấ t skill bằ ng AI từ CV,                         Pipeline đọc CV, OCR            ​ P0 – cầ n cho PoC
+              mô tả công việ c, đánh giá
+
+  C5          Ghép nố i người – job có giải                             Chấ m điểm phù hợp của ATS      ​ P0 – cầ n cho PoC
+              thích, tính khoảng cách skill                             (nế u có)
+
+  C6          Tuyển nộ i bộ : chế độ chỉ nộ i bộ ,                      TAS/ATS, Hub                    ​ P0 – cầ n cho PoC
+              ẩn danh đế n danh sách ngắ n,
+              duyệ t hai đơn vị
+
+  C7          Lớp dữ liệ u Workforce Graph                                                              ​ P0 – cầ n cho PoC
+              và kho định danh mã hóa (bản
+              tố i thiểu)
+
+  C8          Ghi vế t đề xuấ t của AI và xác                                                           ​ P0 – cầ n cho PoC
+              nhậ n của người
+
+  C9          Trang định hướng nghề nghiệ p                             Khung giao diệ n trang tuyển    ​ P0 – cầ n cho PoC
+              (bản cơ bản)                                              dụng doanh nghiệ p
+
+  C10         Bản đồ cung – cầ u, báo cáo                               Báo cáo của ATS                 ​ P0 – cầ n cho PoC
+              khoảng cách (bản cơ bản; mô
+              phỏng kịch bản để sau)
+
+  C11         Kiểm tra skill bằ ng bài thi gắ n                         Thi trực tuyế n AINAVI, IVIEC   ​ P1 – sau PoC
+              skill
+
+
+
+                                                                                                                         Page 9 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Mã          Hạng mục                                                  Tái dùng từ                     Ưu tiên
+
+  C12         Dự án nộ i bộ , ca làm ở đơn vị                                                           ​ P1 – sau PoC
+              khác
+
+  C13         Theo dõi sau điề u chuyển 90                                                              ​ P1 – sau PoC
+              ngày, 12 tháng
+
+  C14         Dashboard chỉ số vố n nhân lực                                                            ​ P2 – mở rộ ng
+
+
+
+4.2 Gói riêng BRG
+
+  Mã          Hạng mục                                                     Tái dùng từ                  Ưu tiên
+
+  B1          Lớp pháp nhân và đồ ng ý: nhiề u                             Mô hình tenant hiệ n tại     ​ P0 – cầ n cho PoC
+              pháp nhân trong mộ t khách hàng,                             (cầ n xác nhậ n)
+              hồ sơ chỉ chia sẻ khi nhân viên
+              đồ ng ý
+
+  B2          Khung skill Việ t Nam: TT 02/2025,                                                        ​ P0 – cầ n cho PoC
+              VTOS/ACCSTP, SFIA 9, skill ngân
+              hàng, bán lẻ, golf, đô thị (trước hế t
+              cho phạm vi PoC)
+
+  B3          Trích xuấ t skill tiế ng Việ t và bộ dữ                      Pipeline đọc CV (hiệ n làm   ​ P0 – cầ n cho PoC
+              liệ u kiểm thử                                               tiế ng Nhậ t)
+
+  B4          Tuân thủ Việ t Nam: ghi nhậ n đồ ng                                                       ​ P0 – cầ n cho PoC
+              ý, hồ sơ đánh giá tác độ ng theo
+              Nghị định 356, thời hạn xử lý yêu
+              cầ u của nhân viên, xóa khi chấ m
+              dứt hợp đồ ng
+
+  B5          Giao diệ n điệ n thoại và thông báo                          EPIC SMS Brand Name          ​ P0 – cầ n cho PoC
+              SMS cho nhân viên tuyế n đầ u (nế u                          (TPBank)
+              PoC có tuyế n đầ u)
+
+  B6          Nhậ p dữ liệ u từ hệ thố ng nhân sự                          Tích hợp PeopleSoft          ​ P0 – cầ n cho PoC
+              từng pháp nhân: PoC dùng                                     (LPBank)
+              Excel/CSV, sau đó kế t nố i API
+
+  B7          Quy trình thỏa thuậ n chuyển việ c:                                                       ​ P1 – sau PoC
+              Điề u 29, 33, theo dõi hạn 60 ngày,
+              mẫ u chuyển công ty (PoC dùng
+              mẫ u văn bản)
+
+
+
+
+                                                                                                                     Page 10 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Mã          Hạng mục                                                   Tái dùng từ             Ưu tiên
+
+  B8          Hồ sơ "đã ưu tiên đào tạo lại" cho                                                 ​ P1 – sau PoC
+              phương án sử dụng lao độ ng (Điề u
+              42, 44)
+
+  B9          Luồ ng công nhậ n kỹ năng đã có                                                    ​ P1 – sau PoC
+              (RPL)
+
+  B10         Kiểm tra công bằ ng của AI                                                         ​ P1 – sau PoC
+
+  B11         Song ngữ Việ t – Anh                                                               ​ P1 – sau PoC
+
+  B12         Khoảng thu nhậ p trên trang nghề                                                   ​ P1 – sau PoC
+              nghiệ p (cầ n BRG đồ ng ý chính
+              sách)
+
+
+
+4.3 Gói riêng Toho Gas
+
+  Mã          Hạng mục                                                  Tái dùng từ              Ưu tiên
+
+  T1          Giao diệ n và thuậ t ngữ tiế ng Nhậ t                     Bản địa hóa AINAVI, bộ   ​ P0 – cầ n cho PoC
+              cho module mới                                            thuậ t ngữ đã chố t
+
+  T2          Ánh xạ DSS ver.2.0 và skill ngành                                                  ​ P0 – cầ n cho PoC
+              năng lượng
+
+  T3          Trích xuấ t skill từ        職務経歴 tiế ng                   Pipeline đọc CV (demo    ​ P0 – cầ n cho PoC
+              Nhậ t                                                     tiế ng Nhậ t)
+
+  T4          Luồ ng 社内公募                                               TAS/ATS                  ​ P0 – cầ n cho PoC
+
+  T5          Luồ ng 社内FA, 社内副業; hỗ trợ                                                          ​ P1 – sau PoC
+              đợt 人事異動 tháng 4, 10; 出向, 転
+              籍
+  T6          Đặ t dữ liệ u tại Nhậ t; đáp ứng                                                   ​ P0 – cầ n cho PoC
+              danh mục kiểm tra bảo mậ t của
+              Toho Gas
+
+  T7          Kế t nố i SAP S/4HANA (nế u xác                                                    ​ P1 – sau PoC
+              nhậ n), quản trị mục tiêu, Graffer
+              AI Studio
+
+  T8          Xuấ t   人材ポートフォリオ cho báo                                                          ​ P1 – sau PoC
+              cáo tích hợp
+
+
+
+
+                                                                                                              Page 11 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+  Mã          Hạng mục                                                  Tái dùng từ                      Ưu tiên
+
+  T9          BrSE và người bản ngữ duyệ t nộ i                                                          ​ P0 – cầ n cho PoC
+              dung
+
+
+
+4.4 Dịch vụ, pháp lý, tổ chức
+
+  Mã          Hạng mục                                              Ghi chú                              Ưu tiên
+
+  S1          Gói tư vấ n: hộ i thảo kiế n trúc                     Phầ n việ c không phải phầ n         ​ P0 – cầ n cho PoC
+              job, xây từ điển skill theo                           mề m nhưng quyế t định chấ t
+              ngành                                                 lượng dữ liệ u
+
+  S2          Luậ t sư Việ t Nam: mẫ u thỏa                         Cho BRG                              ​ P0 – cầ n cho PoC
+              thuậ n chuyển việ c, chuyển
+              công ty; rà soát tuân thủ dữ
+              liệ u và AI
+
+  S3          Tư vấ n pháp lý Nhậ t:            個人情報                Cho Toho Gas                         ​ P0 – cầ n cho PoC
+              保護法    , quy trình với công
+              đoàn
+
+  S4          Năng lực độ i: kỹ sư dữ liệ u và                      [Inference] Thành phầ n độ i đã      ​ P0 – cầ n cho PoC
+              AI (xử lý tiế ng Việ t, tiế ng                        biế t (FE, BE, tester) chưa có vai
+              Nhậ t), cơ sở dữ liệ u đồ thị                         trò dữ liệ u, AI chuyên trách
+
+  S5          Quyề n tái dùng tính năng làm                         Rà lại điề u khoản sở hữu trí tuệ    ​ P0 – cầ n cho PoC
+              cho TPBank, LPBank                                    trong hợp đồ ng
+
+  S6          Mô hình giá: theo số nhân                                                                  ​ P1 – sau PoC
+              viên, theo pháp nhân
+
+
+
+
+                                                                                                                      Page 12 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+5. Thứ tự triển khai đề xuấ t
+
+
+
+
+Thứ tự triển khai đề xuấ t · 6 bước, 2 nhánh khách hàng
+
+Bước 1–3 chặ n mọi việ c phía sau; hai gói khách hàng chỉ chạy song song nế u độ i đủ người.
+[Inference] Nế u phải chọn mộ t nhánh trước, cân nhắ c:
+
+       BRG trước: lợi thế tiế ng Việ t, luậ t Việ t Nam và độ i ở gầ n. Bấ t lợi là nhiề u pháp nhân,
+       phải chờ duyệ t hồ sơ dữ liệ u, dữ liệ u công khai ít.
+       Toho Gas trước: lợi thế mộ t chuẩn skill (DSS), dữ liệ u công khai tố t, PoC gọn (công ty
+       mẹ và mộ t công ty con), điề u chuyển do công ty quyế t. Bấ t lợi là tiế ng Nhậ t, dữ liệ u tại
+       Nhậ t, danh mục bảo mậ t và cầ n BrSE.
+       Cách chọn: theo khách hàng nào cam kế t PoC trước. Phầ n lõi (bước 3) vẫ n làm mộ t lầ n
+       cho cả hai.
+
+
+6. Câu hỏi cầ n xác nhậ n với team sản phẩm
+Các câu trả lời sẽ chuyển những ô "Cầ n xác nhậ n" và "Chưa thấ y" ở mục 3 thành trạng thái
+chắ c chắ n.
+
+   1. ATS hiệ n có chấ m điểm hoặ c gợi ý ứng viên phù hợp với job không? Có giải thích lý do
+       không?
+
+
+
+
+                                                                                                Page 13 of 14
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+
+
+
+   2. Mô hình tenant hiệ n tại: mộ t khách hàng có nhiề u pháp nhân được không? Có cơ chế
+       chia sẻ dữ liệ u giữa các tenant không?
+   3. Pipeline đọc CV, OCR đã chạy thậ t hay mới demo? Đọc được tiế ng Việ t chưa? Có trích
+       xuấ t skill hay chỉ trích trường thông tin?
+   4. Hub và trang tuyển dụng doanh nghiệ p có chế độ chỉ nộ i bộ và đăng nhậ p mộ t lầ n
+       (SAML, OIDC) không?
+   5. Thi trực tuyế n và IVIEC có gắ n câu hỏi với skill và mức độ không?
+   6. Hệ thố ng đã ghi nhậ n đồ ng ý, xử lý yêu cầ u của chủ thể dữ liệ u và xóa dữ liệ u theo Luậ t
+       Bảo vệ dữ liệ u cá nhân chưa?
+   7. Hạ tầ ng hiệ n đặ t ở đâu? Có thể đặ t dữ liệ u tại Nhậ t cho Toho Gas không?
+   8. Thư mục Workforce-Graph\Discovery đã có thiế t kế , prototype hay mô hình dữ liệ u
+       nào?
+   9. Độ i nào làm phầ n career development: team TAS + Hub hay team mới? Có kỹ sư dữ
+       liệ u, AI không?
+ 10. EPIC hồ sơ nhân sự và SMS Brand Name (TPBank), kế t nố i PeopleSoft (LPBank): hợp
+       đồ ng có cho tái dùng làm tính năng chung không?
+ 11. Sản phẩm có ứng dụng điệ n thoại hay chỉ có web responsive?
+ 12. Báo cáo và dashboard hiệ n có những gì, dùng làm nề n cho bản đồ cung – cầ u được
+       không?
+
+
+7. Nguồ n
+       BRG — Career Development trong bố i cảnh AI: nghiên cứu và giải pháp (24/11/2026)
+       Toho Gas — Career Development trong bố i cảnh AI: nghiên cứu và giải pháp (bản PDF,
+       19/11/2026)
+       Thông tin hệ thố ng: những gì đã biế t về TAS, Hub, AINAVI, IVIEC và các CR của
+       TPBank, LPBank; cầ n team sản phẩm xác nhậ n (mục 6)
+       CareerLink – Điề u 29, 33 Bộ luậ t Lao độ ng 2019
+       Báo Lào Cai – Điề u 42, 47 Bộ luậ t Lao độ ng 2019
+       Thư việ n Nhà đấ t – Công ty trong tậ p đoàn là doanh nghiệ p độ c lậ p
+       Tiề n Phong – Điề u 25 Luậ t Bảo vệ dữ liệ u cá nhân
+       EY – Nghị định 356/2025/NĐ-CP
+       Đại biểu Nhân dân – Luậ t Trí tuệ nhân tạo
+       SGGP – Báo cáo Talentnet–Mercer 2025
+       The Leader – Khảo sát Hoteljob.vn về nhân lực khách sạn (8/2026)
+
+Các nhãn [Inference], [Speculation], [Unverified] đánh dấ u nộ i dung suy luậ n hoặ c chưa
+kiểm chứng. Phầ n pháp lý không phải tư vấ n luậ t.
+
+
+                                                                                            Page 14 of 14
+

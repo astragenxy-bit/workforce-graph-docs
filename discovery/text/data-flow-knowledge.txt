@@ -1,0 +1,545 @@
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+BRG và Toho Gas — data flow và tri thức
+doanh nghiệ p
+  ​Nov 24, 2026 · ​@Thu Phan Thi
+
+
+
+0. Kế t luậ n
+Toho Gas và BRG đi cùng mộ t luồ ng dữ liệ u và dùng được mộ t lõi Workforce Graph. Hai
+case tách nhau ở bố n điểm về data flow và hai điểm về tri thức; mỗ i điểm thành mộ t phầ n
+của gói riêng. [Inference]
+
+Giố ng nhau
+
+       Cùng luồ ng: nguồ n → cổng pháp lý → chuẩn hóa → AI trích skill → người xác nhậ n →
+       graph → suy luậ n → con người quyế t → đo sau 90 ngày và 12 tháng.
+       Cùng lõi 7 lớp; định danh tách khỏi graph; dữ liệ u skill không dùng để trừ điểm.
+       [Inference] Cùng có vị trí bắ t buộ c người đủ điề u kiệ n, và cùng phải giữ tri thức ngầ m
+       trước khi người rời vị trí.
+
+Khác về data flow
+
+   1. Cơ sở chia sẻ trong nhóm: Toho Gas dùng                      共同利用
+                                                         (thông báo trước). [Inference]
+      BRG cầ n đồ ng ý kiểm chứng được khi dữ liệ u sang pháp nhân khác.
+   2. Điểm xuyên biên giới: ở Toho Gas là độ i phát triển tại Việ t Nam (Điề u 28); ở BRG là mô
+      hình AI nế u đặ t ở nước ngoài.
+   3. Nhịp: Toho Gas theo chu kỳ (                     人事異動 tháng 4 và 10); BRG theo sự kiệ n và mùa vụ, có
+      giới hạn 60 ngày chuyển tạm thời.
+   4. Đầ u ra: Toho Gas phải công bố vố n nhân lực; BRG chủ yế u báo cáo nộ i bộ .
+
+Khác về tri thức
+
+   1. Toho Gas: chiế n lược tường minh, tay nghề ngầ m; tấ t cả tậ p trung trong mộ t nhóm,
+      mộ t khung skill, mộ t ngôn ngữ.
+   2. BRG: job tường minh nhưng rải ở hàng chục pháp nhân và nhiề u chuẩn; chiế n lược ít
+       ghi thành văn bản công khai; tay nghề tuyế n đầ u phân tán và dễ mấ t. [Inference]
+
+Hệ quả: gói Toho Gas tậ p trung vào ghi lại tay nghề và thông báo                    共同利用
+                                                                           ; gói BRG tậ p
+trung vào gom và quy đổi nhiề u nguồ n, lớp pháp nhân và đồ ng ý, hồ sơ đánh giá tác độ ng.
+[Inference]
+
+
+
+
+                                                                                                       Page 1 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+1. Luồ ng dữ liệ u chung và điểm tách
+Hai case dùng chung mộ t luồ ng; sơ đồ gộ p 11 chặ ng ở mục 2 thành 8. Bố n chặ ng viề n đậ m
+khác nhau về cách làm: cơ sở pháp lý, vị trí xử lý, nhịp, đầ u ra. Bố n chặ ng còn lại khác chủ
+yế u ở nộ i dung: ngôn ngữ, khung skill, lớp mở rộ ng của graph. [Inference]
+
+
+
+
+data flow · 8 chặ ng, 4 điểm tách
+
+
+
+2. Data flow theo từng chặ ng
+Hai case giố ng nhau ở hình dạng luồ ng; khác nhau ở cơ sở pháp lý để dữ liệ u đi qua ranh
+giới công ty, vị trí dữ liệ u so với độ i làm, cách chuẩn hóa và nhịp ra quyế t định. [Inference]
+
+
+
+
+                                                                                           Page 2 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Chặ ng                             Giố ng nhau            Toho Gas                  BRG
+
+  1. Nguồ n dữ liệ u                 Nhân sự lõi, đào       Hệ thố ng nhân sự lõi     Hệ thố ng nhân sự của
+                                     tạo, đánh giá,         (chưa rõ; [Unverified]    từng pháp nhân (chưa
+                                     tuyển nộ i bộ , kế     báo chí nói hệ thố ng     rõ), Học việ n SeABank,
+                                     hoạch kinh doanh;      lõi đang chuyển lên       đào tạo tại từng sân
+                                     văn bản tự do (hồ      SAP S/4HANA Cloud),       golf, khách sạn, chứng
+                                     sơ, mô tả công         dữ liệ u quản trị theo    chỉ VTOS/ACCSTP, hồ sơ
+                                     việ c)                 mục tiêu, kế t quả DX     dự án. [Inference] Tiế ng
+                                                            人材 社内公募
+                                                                 ,          , kế      Việ t, tiế ng Anh; tiế ng
+                                                            hoạch trung hạn và        Nhậ t ở liên doanh
+                                                            báo cáo tích hợp,         Sumitomo.
+                                                            Graffer AI Studio. Chủ    [Speculation] Khách sạn
+                                                            yế u tiế ng Nhậ t         do hãng quản lý có thể
+                                                                                      dùng hệ thố ng của hãng
+
+  2. Cơ sở pháp lý                   Phải nêu rõ mục        個人情報保護法 Điề u             Luậ t Bảo vệ dữ liệ u cá
+  để chia sẻ trong                   đích; dữ liệ u skill   27 khoản 5 mục 3 (共       nhân lấ y đồ ng ý làm
+  nhóm                               không dùng để          同利用): nế u thông          nguyên tắ c; Điề u 19 có 5
+                                     đánh giá trừ điểm      báo trước hạng mục        ngoại lệ , trong đó có
+                                                            dữ liệ u, phạm vi bên     thực hiệ n thỏa thuậ n
+                                                            dùng chung, mục đích      của chủ thể dữ liệ u.
+                                                            và người chịu trách       [Inference] Dùng trong
+                                                            nhiệ m, bên nhậ n         mộ t công ty có thể dựa
+                                                            không phải "bên thứ       vào hợp đồ ng lao độ ng;
+                                                            ba" và không cầ n         chia sẻ sang công ty
+                                                            đồ ng ý từng người        khác nên dựa vào đồ ng
+                                                                                      ý kiểm chứng được
+                                                                                      (Nghị định 356)
+
+  3. Vị trí dữ liệ u và              Dữ liệ u lưu tại       Dữ liệ u ở Nhậ t, độ i    Dữ liệ u và độ i cùng ở
+  độ i làm                           nước của khách         phát triển ở Việ t Nam.   Việ t Nam. [Inference]
+                                     hàng                   Giao xử lý cho bên ở      Rủi ro xuyên biên giới
+                                                            nước ngoài cũng cầ n      nằ m ở việ c gọi mô hình
+                                                            đồ ng ý theo Điề u 28,    AI đặ t ngoài nước; khi
+                                                            trừ khi bên nhậ n ở       đó cầ n hồ sơ chuyển dữ
+                                                            nước tương đương          liệ u ra nước ngoài theo
+                                                            hoặ c có hệ thố ng đạt    Nghị định 356, hoặ c
+                                                            chuẩn. [Inference]        dùng mô hình đặ t trong
+                                                            Độ i Việ t Nam nên chỉ    nước
+                                                            làm trên dữ liệ u ẩn
+                                                            danh, hoặ c phải
+                                                            chứng minh hệ thố ng
+                                                            đạt chuẩn
+
+
+
+
+                                                                                                          Page 3 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Chặ ng                             Giố ng nhau            Toho Gas                  BRG
+
+  4. Thu nhậ n và                    Chuẩn hóa chức         Mộ t hệ bậ c vai trò      Nhiề u thang chức danh
+  chuẩn hóa                          danh, đơn vị, skill    nhiề u ngạch (chế độ      (ngân hàng, hãng khách
+                                     về từ điển chung       nhân sự mới từ            sạn, golf, bán lẻ, đơn vị
+                                                            4/2026), ánh xạ về        gố c nhà nước) cầ n bảng
+                                                            DSS ver.2.0.              quy đổi; ánh xạ nhiề u
+                                                            [Inference] Mô hình       khung skill. [Inference]
+                                                            thành viên khiế n mô      Tuyển theo vị trí nên mô
+                                                            tả công việ c mỏng,       tả công việ c thường có
+                                                            phải suy skill từ lịch    sẵ n
+                                                            sử công tác và báo
+                                                            cáo
+
+  5. AI trích xuấ t                  Trích từ văn bản tự                 職務経歴,
+                                                            Tiế ng Nhậ t (            Tiế ng Việ t, thêm tiế ng
+  skill                              do, chuẩn hóa về       báo cáo dự án)            Anh
+                                     từ điển
+
+  6. Người xác nhậ n                 Nhân viên và quản      [Inference] Gắ n với      Thêm bước nhân viên
+                                     lý xác nhậ n; ghi      chu kỳ quản trị mục       đồ ng ý chia sẻ hồ sơ
+                                     vế t mọi gợi ý của     tiêu và buổi trao đổi     sang công ty khác; công
+                                     AI                     nghề nghiệ p hằ ng        nhậ n kỹ năng đã có
+                                                            năm                       (RPL) cho người không
+                                                                                      bằ ng cấ p
+
+  7. Workforce                       7 lớp; định danh       Thêm lớp công ty          Thêm lớp pháp nhân và
+  Graph                              tách riêng, graph      trong nhóm: thuộ c        đồ ng ý: thuộ c pháp
+                                     dùng mã ẩn danh        công ty nào, đang biệ t   nhân nào, phạm vi đồ ng
+                                                            phái (出向 ) ở đâu          ý, đơn vị do đố i tác quản
+                                                                                      lý, mùa vụ
+
+  8. Suy luậ n, mô                   Ghép nố i có giải      Kịch bản theo chỉ số      Kịch bản theo dự án và
+  phỏng                              thích, khoảng          kế hoạch trung hạn        mùa vụ (mở cửa hàng,
+                                     cách skill, kịch bản   (e-methane, smart         tiế n độ đô thị, cao điểm
+                                     cung – cầ u, vị trí    meter, mảng điệ n);       golf – khách sạn); ràng
+                                     trọng yế u phải có     ràng buộ c 保安  ;          buộ c 60 ngày và đồ ng ý;
+                                     người kế thừa          [Inference] phân bổ       [Inference] ghép nố i
+                                                            nhiề u người cùng lúc     liên tục theo từng cơ
+                                                            cho đợt 人事異動              hộ i, xét thêm thu nhậ p
+                                                            tháng 4, 10               và rủi ro nghỉ việ c
+
+
+
+
+                                                                                                           Page 4 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Chặ ng                             Giố ng nhau            Toho Gas                     BRG
+
+  9. Quyế t định                     AI chỉ đề xuấ t, con   Nhân sự và quản lý           Kênh tự nguyệ n trước;
+                                     người quyế t và        quyế t định  人事異動            cầ n đồ ng ý của nhân
+                                     được ghi lại           (thường tháng 4 và           viên, duyệ t của hai đơn
+                                                            10); kênh tự nguyệ n   社     vị, thỏa thuậ n chuyển
+                                                            内公募    . [Unverified]        công ty. [Speculation]
+                                                            Chưa xác nhậ n Toho          Có thể cầ n ý kiế n của
+                                                            Gas có  社内  FA. Bản          hãng quản lý khách sạn
+                                                            Toho Gas đề xuấ t nói
+                                                            rõ với công đoàn
+
+  10. Phản hồ i, báo                 Theo dõi 90 ngày       Dữ liệ u đi ra báo cáo       Chủ yế u báo cáo nộ i bộ
+  cáo                                và 12 tháng; cậ p      bên ngoài:  人材ポート            cho lãnh đạo tậ p đoàn;
+                                     nhậ t cầ u và cung     フォリオ      trong báo          riêng SeABank công bố
+                                                            cáo tích hợp; công ty        báo cáo phát triển bề n
+                                                            niêm yế t ở Nhậ t phải       vững
+                                                            công bố chỉ số vố n
+                                                            nhân lực trong báo
+                                                            cáo chứng khoán từ
+                                                            năm tài chính kế t thúc
+                                                            sau 31/3/2023
+
+  11. Lưu giữ và xóa                 Chỉ giữ khi còn        Theo quy định nộ i bộ        Điề u 25 Luậ t Bảo vệ dữ
+                                     mục đích               và 個人情報保護法                   liệ u cá nhân: xóa khi
+                                                            (cầ n xác nhậ n chi tiế t)   chấ m dứt hợp đồ ng, trừ
+                                                                                         khi có thỏa thuậ n hoặ c
+                                                                                         luậ t khác; Nghị định 356:
+                                                                                         yêu cầ u xóa phản hồ i
+                                                                                         trong 2 ngày làm việ c,
+                                                                                         thực hiệ n trong 20 ngày
+
+
+
+
+3. Bản đồ tri thức doanh nghiệ p
+Tri thức Toho Gas nằ m phía tậ p trung; phầ n lớn tri thức BRG nằ m phía phân tán. Gói Toho
+Gas cầ n đầ u tư vào ô dưới bên phải: ghi tay nghề của người thâm niên thành dữ liệ u. Gói
+BRG cầ n đầ u tư vào hai ô bên trái: gom, quy đổi và giữ tri thức trước khi người nghỉ việ c.
+[Inference]
+
+
+
+
+                                                                                                             Page 5 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+tri thức doanh nghiệ p · 2x2 mức tường minh × mức tậ p trung
+
+
+
+4. Tri thức theo từng loại
+Toho Gas có chiế n lược tường minh và mộ t ngôn ngữ skill; phầ n khó là tay nghề nằ m trong
+người thâm niên. BRG có job tường minh hơn nhưng rải ở nhiề u pháp nhân và nhiề u chuẩn;
+chiế n lược ít được ghi thành văn bản công khai. [Inference]
+
+
+
+
+                                                                                     Page 6 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Loại tri thức                    Giố ng nhau             Toho Gas                   BRG
+
+  Chiế n lược (cầ u                Phải đổi chiế n lược    Tường minh, có số : kế     [Unverified] Chưa thấ y
+  tương lai)                       thành số người và       hoạch trung hạn            kế hoạch trung hạn hay
+                                   skill cầ n theo thời    2025–2027; đầ u tư         chiế n lược AI cấ p tậ p
+                                   gian                    mảng chiế n lược           đoàn được công bố . Có
+                                                           khoảng 130 tỷ yên,         số theo dự án: đô thị
+                                                           mảng lõi khoảng 110 tỷ     thông minh gầ n 272 ha,
+                                                           yên; e-methane và          4,2 tỷ USD, khởi công
+                                                           biogas ít nhấ t 1%         19/8/2025; FujiMart
+                                                           lượng gas bán ra vào       thêm 50 cửa hàng đế n
+                                                           2030. Báo cáo tích hợp     2028; sân golf thứ hai
+                                                           nói sẽ xây 人材ポート           Legend Valley dự kiế n
+                                                           フォリオ      nhưng chưa       5/2026. [Inference] Cầ u
+                                                           có số dịch chuyển          phải dựng từ danh mục
+                                                           người                      dự án và phỏng vấ n lãnh
+                                                                                      đạo
+
+  Tổ chức và job                   Cầ n cây tổ chức,       Mô hình thành viên:        Hàng chục pháp nhân
+                                   danh mục job, bậ c      FY2024 tuyển 95 sinh       và liên doanh.
+                                   và vị trí trọng yế u    viên mới, 53 người có      [Inference] Tuyển theo
+                                                           kinh nghiệ m; hệ bậ c      vị trí nên thường có mô
+                                                           vai trò nhiề u ngạch.      tả công việ c. Mỗ i mảng
+                                                           [Inference] Định           có thang chức danh
+                                                           nghĩa job mỏng; "ai        riêng: ngân hàng, khách
+                                                           làm được gì" nằ m          sạn của đố i tác Hilton,
+                                                           trong lịch sử 人事異動         Marriott, IHG, golf, bán
+                                                           và trong trí nhớ của       lẻ, đơn vị gố c nhà nước
+                                                           phòng nhân sự              (Hapro). Chưa rõ hệ
+                                                                                      thố ng nhân sự lõi dùng
+                                                                                      chung hay riêng
+
+  Skill (ngôn ngữ                  Cầ n từ điển skill có   Mộ t khung chính DSS       Nhiề u khung: TT
+  chung)                           cấ p độ và bằ ng        ver.2.0; DX人材    224       02/2025 (6 miề n, 24
+                                   chứng; skill số và AI   người qua ba bước          năng lực, 8 bậ c; miề n 6
+                                   là phầ n dùng chung     đào tạo; skill ngành: 保    là AI), VTOS và ACCSTP
+                                                           安 , vậ n hành, điệ n, e-   cho du lịch – khách sạn,
+                                                           methane, hydrogen.         SFIA 9 cho CNTT.
+                                                           Mộ t ngôn ngữ              [Inference] Thêm chuẩn
+                                                                                      riêng của hãng khách
+                                                                                      sạn và của ngân hàng.
+                                                                                      Đô thị thông minh là
+                                                                                      miề n skill mới
+
+
+
+
+                                                                                                         Page 7 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Loại tri thức                    Giố ng nhau              Toho Gas                   BRG
+
+  Tri thức ngầ m                   Phầ n quý nhấ t nằ m     Thiế u保安人材       do dân    Tay nghề dịch vụ ở từng
+  (tay nghề , kinh                 trong người; cầ n        số già; cầ n truyề n       khách sạn, sân golf, cửa
+  nghiệ m)                         ghi lại trước khi        nghề (技能伝承       ). Thâm   hàng. [Inference] Có
+                                   người rời vị trí         niên bình quân 14,7        chuyên gia nước ngoài ở
+                                                            năm; nghỉ việ c 1,93%;     vị trí vậ n hành golf,
+                                                            66 người về hưu được       khách sạn. [Inference]
+                                                            tuyển lại (FY2024).        Tri thức ngầ m phân tán
+                                                            [Inference] Tri thức       và dễ mấ t theo người
+                                                            ngầ m tậ p trung ở         nghỉ việ c; khách sạn Đà
+                                                            người lâu năm; mấ t khi    Nẵ ng có tỷ lệ nghỉ việ c
+                                                            nghỉ hưu hơn là khi        18,9%
+                                                            nghỉ việ c
+
+  Quy trình và quy                 Có vị trí bắ t buộ c     Mộ t hệ chính: an toàn     Nhiề u hệ : [Inference]
+  định                             người đủ điề u kiệ n;                     保
+                                                            gas (METI đưa thiế u       quy định riêng của ngân
+                                   có luậ t dữ liệ u cá     安人材     thành vấ n đề      hàng; [Speculation]
+                                   nhân và luậ t về điề u   chính sách); 個人情報          chuẩn vậ n hành của
+                                   chuyển                   保護法         人事異動
+                                                                   ; lịch              hãng quản lý khách sạn;
+                                                            tháng 4 và 10              FujiMart theo nguyên
+                                                                                       tắ c 5S và văn hóa phục
+                                                                                       vụ Nhậ t, dựa trên hơn
+                                                                                       50 năm vậ n hành siêu
+                                                                                       thị của Sumitomo; Bộ
+                                                                                       luậ t Lao độ ng (Điề u 29,
+                                                                                       33, 42, 44); Luậ t Bảo vệ
+                                                                                       dữ liệ u cá nhân, Nghị
+                                                                                       định 356; Luậ t Trí tuệ
+                                                                                       nhân tạo hiệ u lực
+                                                                                       1/3/2026
+
+  Kế t quả (đo sau                 Đo sau 90 ngày và        Niêm yế t nên phải         Chưa niêm yế t, không
+  khi chuyển)                      12 tháng; đưa kế t       công bố chỉ số vố n        bắ t buộ c công bố cấ p
+                                   quả về cung và cầ u      nhân lực; số đo chủ        tậ p đoàn. SeABank đo
+                                                            yế u cho công ty mẹ và     rõ nhấ t: 1.541 khóa học,
+                                                            mộ t số công ty con.       62 giờ/người, 90,37%
+                                                            Nữ quản lý 4,1%; gắ n      hài lòng (2025).
+                                                            kế t mức BB                [Inference] Phầ n còn lại
+                                                                                       phải đo từ đầ u trong
+                                                                                       PoC
+
+
+Số liệ u lấ y từ bản Toho Gas và bản BRG trước đó; nguồ n gố c nằ m trong hai bản đó.
+
+
+
+
+                                                                                                           Page 8 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+5. Hệ quả cho thiế t kế Workforce Graph
+Mộ t lõi graph dùng chung cho cả hai; khác biệ t đi vào năm chỗ : lớp mở rộ ng, mô hình thời
+gian, cách thu tri thức, cổng quản trị dữ liệ u và cách chạy AI. [Inference]
+
+
+  Hạng                Lõi dùng chung                   Gói Toho Gas                Gói BRG
+  mục
+
+  Mô hình             7 lớp. Mỗ i cạnh skill           Lớp công ty trong           Lớp pháp nhân và đồ ng ý:
+  dữ liệ u            mang nguồ n bằ ng                nhóm: công ty gố c,         pháp nhân ký hợp đồ ng,
+                      chứng (chứng chỉ, quản                            出
+                                                       công ty đang làm (          phạm vi đồ ng ý theo mục
+                      lý xác nhậ n, AI suy ra) và      向              保安
+                                                          ). Nhãn vị trí   phải    đích và bên nhậ n, ngày rút
+                      mức tin cậ y. Định danh ở        luôn có người đủ điề u      đồ ng ý. Đơn vị do đố i tác
+                      kho PostgreSQL mã hóa;           kiệ n                       quản lý. Bảng quy đổi
+                      graph chỉ giữ mã ẩn                                          chức danh
+                      danh
+
+  Thời                Mỗ i node và cạnh có             Theo chu kỳ: năm tài        Theo sự kiệ n: mở cửa
+  gian                hiệ u lực từ – đế n, để          chính, đợt 人事異動             hàng, mố c dự án, mùa cao
+                      xem lại trạng thái ở mộ t        tháng 4 và 10               điểm. Đế m số ngày
+                      ngày và chạy kịch bản                                        chuyển tạm thời của từng
+                                                                                   người so với mức 60 ngày
+                                                                                   làm việ c/năm
+
+  Thu tri             AI trích skill từ văn bản;       Ưu tiên tri thức ngầ m:     Ưu tiên gom và chuẩn hóa
+  thức                người xác nhậ n; mọi gợi         phỏng vấ n người thâm       nguồ n tường minh rải rác:
+                      ý được ghi vế t                  niên và người về hưu        mô tả công việ c, chứng
+                                                       được tuyển lại; suy skill   chỉ VTOS/ACCSTP, khóa
+                                                       từ lịch sử人事異動      và      học SeABank. Ghi tay
+                                                       báo cáo tiế ng Nhậ t        nghề tuyế n đầ u trước khi
+                                                                                   người nghỉ; công nhậ n kỹ
+                                                                                   năng đã có (RPL)
+
+  Quản trị            Nêu mục đích; dữ liệ u           Thông báo  共同利用       ghi   Hồ sơ đánh giá tác độ ng
+  dữ liệ u            skill không dùng để              rõ hạng mục skill và các    gửi A05 trước khi dùng dữ
+                      đánh giá trừ điểm; nhân          công ty dùng chung.         liệ u thậ t (A05 trả lời trong
+                      viên xem và sửa được hồ          Độ i Việ t Nam làm trên     15 ngày). Đồ ng ý kiểm
+                      sơ của mình                      dữ liệ u ẩn danh, hoặ c     chứng được cho mỗ i lầ n
+                                                       chứng minh hệ thố ng        chia sẻ sang pháp nhân
+                                                       đạt chuẩn theo Điề u 28     khác. Quy trình yêu cầ u
+                                                                                   của nhân viên theo thời
+                                                                                   hạn của Nghị định 356;
+                                                                                   xóa khi chấ m dứt hợp
+                                                                                   đồ ng nế u không có thỏa
+                                                                                   thuậ n
+
+
+
+
+                                                                                                           Page 9 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  Hạng                Lõi dùng chung                      Gói Toho Gas              Gói BRG
+  mục
+
+  AI                  AI chỉ đề xuấ t, có giải            Xử lý tiế ng Nhậ t.       Xử lý tiế ng Việ t và tiế ng
+                      thích; con người quyế t             [Inference] Chạy mô       Anh. Chọn mô hình đặ t
+                                                          hình trên hạ tầ ng ở      trong nước, hoặ c lậ p hồ sơ
+                                                          Nhậ t; có thể dùng lại    chuyển dữ liệ u ra nước
+                                                          Graffer AI Studio, cầ n   ngoài. [Inference] Công
+                                                          xác nhậ n                 cụ gợi ý điề u chuyển có
+                                                                                    thể thuộ c nhóm rủi ro cao
+                                                                                    theo Luậ t Trí tuệ nhân tạo;
+                                                                                    cầ n chờ văn bản hướng
+                                                                                    dẫ n
+
+
+[Inference] Thứ tự gợi ý: dựng lõi chung và mô hình thời gian trước. Gói Toho Gas đi cùng
+thông báo          共同利用
+                   ; gói BRG đi cùng hồ sơ đánh giá tác độ ng, vì chưa có hồ sơ thì PoC chỉ
+nên chạy trên dữ liệ u giả.
+
+
+
+6. Câu hỏi cầ n xác nhậ n
+Mười hai câu hỏi này quyế t định cách nố i và cách quản trị dữ liệ u; nên hỏi trước khi chố t
+mô hình dữ liệ u.
+
+
+  #           Khách                 Câu hỏi                                         Ảnh hưởng đế n
+              hàng
+
+  T1          Toho Gas              Hệ thố ng nhân sự lõi và hệ thố ng đào tạo      Chặ ng 1, 4: kế t nố i và
+                                    là gì? Hệ thố ng lõi đã chuyển lên SAP          chuẩn hóa
+                                    S/4HANA Cloud chưa?
+
+  T2          Toho Gas              Thông báo          共同利用
+                                                          hiệ n có ghi hạng mục     Chặ ng 2: cơ sở chia sẻ
+                                    skill, đánh giá và các công ty dùng chung
+                                    không?
+
+  T3          Toho Gas              Độ i ở Việ t Nam được làm trên dữ liệ u ở       Chặ ng 3: vị trí xử lý
+                                    mức nào: ẩn danh, mã hóa định danh hay
+                                    dữ liệ u thậ t?
+
+  T4          Toho Gas              Vị trí   保安 nào bắ t buộ c có người đủ điề u    Chặ ng 8: ràng buộ c khi mô
+                                    kiệ n? Mỗ i vị trí hiệ n có bao nhiêu người     phỏng
+                                    đủ điề u kiệ n?
+
+  T5          Toho Gas              Tay nghề truyề n nghề (   技能伝承  ) đã ghi lại    Thu tri thức ngầ m
+                                    ở dạng nào: sổ tay, video, chương trình
+                                    OJT?
+
+
+
+                                                                                                                Page 10 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+  #           Khách                 Câu hỏi                                       Ảnh hưởng đế n
+              hàng
+
+  T6          Toho Gas              人材ポートフォリオ trong báo cáo tích                  Chặ ng 10: đầ u ra báo cáo
+                                    hợp đã có bản nháp có số chưa? Ai giữ?
+
+  B1          BRG                   Mỗ i pháp nhân dùng hệ thố ng nhân sự         Chặ ng 1, 4: kế t nố i và
+                                    nào? Có kho dữ liệ u nhân sự chung            chuẩn hóa
+                                    không?
+
+  B2          BRG                   Pháp nhân nào vào PoC? Đã có người phụ        Chặ ng 2, 11: cơ sở pháp lý,
+                                    trách bảo vệ dữ liệ u và hồ sơ đánh giá tác   xóa
+                                    độ ng chưa?
+
+  B3          BRG                   Với khách sạn do hãng quản lý, dữ liệ u       Chặ ng 1, 2: nguồ n và quyề n
+                                    nhân sự nằ m ở BRG hay ở hãng? Hãng có        dùng
+                                    cho dùng không?
+
+  B4          BRG                   Có thư việ n mô tả công việ c và thang        Chặ ng 4: bảng quy đổi
+                                    chức danh của từng mảng không?
+
+  B5          BRG                   Ai nắ m danh mục dự án và kế hoạch mở         Tri thức chiế n lược
+                                    mới (đô thị thông minh, FujiMart, golf) để
+                                    dựng cầ u?
+
+  B6          BRG                   Có được gọi mô hình AI đặ t ở nước ngoài      Chặ ng 3, 5: vị trí xử lý, AI
+                                    không, hay phải đặ t trong nước?
+
+
+
+
+Nguồ n
+Số liệ u về hai doanh nghiệ p lấ y từ hai bản nghiên cứu trước; nguồ n pháp lý và nguồ n mới
+dùng trong bản này:
+
+       Bản Toho Gas — Career Development trong bố i cảnh AI: nghiên cứu và giải pháp (tệ p
+       PDF đã gửi trong cuộ c trao đổi)
+       BRG — Career Development trong bố i cảnh AI: nghiên cứu và giải pháp
+       BRG và Toho Gas — khác biệ t bài toán và khoảng cách năng lực hệ thố ng
+       PPC — FAQ 4-Q330 về                     共同利用
+       PPC — FAQ 1-Q12-1 về giao xử lý cho bên ở nước ngoài
+       PwC Japan — công bố thông tin vố n nhân lực trong báo cáo chứng khoán
+       LuatVietnam — 5 trường hợp xử lý dữ liệ u cá nhân không cầ n sự đồ ng ý của chủ thể
+       Tiề n Phong, 29/7/2025 — Doanh nghiệ p khi chấ m dứt hợp đồ ng phải xóa dữ liệ u cá
+       nhân người lao độ ng
+
+
+
+
+                                                                                                              Page 11 of 12
+BRG và Toho Gas — data flow và tri thức doanh nghiệp
+
+
+
+
+       EY Việ t Nam — Nghị định 356/2025/NĐ-CP quy định chi tiế t Luậ t Bảo vệ dữ liệ u cá
+       nhân
+       VnEconomy, 12/12/2018 — FujiMart: Sự pha trộ n giữa ẩm thực Việ t và văn hóa phục vụ
+       Nhậ t
+
+
+
+
+                                                                                      Page 12 of 12
+

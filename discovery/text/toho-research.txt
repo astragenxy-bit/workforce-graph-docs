@@ -1,0 +1,934 @@
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Toho Gas — Career Development trong bố i
+cảnh AI: nghiên cứu và giải pháp
+  ​Nov 19, 2026      ·   ​@Astra
+
+
+
+
+0. Tóm tắ t điề u hành
+Bài toán: AI và tự độ ng hóa đang tạo ra job mới và đổi skill của job cũ. Doanh nghiệ p Nhậ t
+như Toho Gas lại tuyển chủ yế u sinh viên mới tố t nghiệ p, tự đào tạo và gầ n như không sa
+thải. Vì vậ y cách duy nhấ t để có đúng người cho job mới là chuyển đổi người đang có: biế t
+ai có gì, cầ n học gì, rồ i đưa họ vào đúng job nộ i bộ .
+
+Toho Gas đang ở đâu:
+
+       Chiế n lược rõ: kế hoạch trung hạn 2025–2027 chuyển nguồ n lực từ kinh doanh lõi (gas
+       đô thị, LPG) sang kinh doanh chiế n lược (điệ n, nước ngoài, giải pháp), mục tiêu đế n
+       giữa thậ p niên 2030 mảng chiế n lược lớn ngang mảng lõi.
+       Đã có nề n tảng: cấ p chứng nhậ n DX (6/2025), đã đào tạo 224 DX            人材
+                                                                         (mục tiêu 200),
+       đưa AI tạo sinh cho khoảng 1.500 người trong nhóm, có chế độ tuyển nộ i bộ (      社内公募
+                                                                                         ),
+       và áp dụng chế độ nhân sự mới từ tháng 4/2026.
+       Điểm còn thiế u: báo cáo tích hợp nói sẽ xây "                      人材ポートフォリオ
+                                                                         " nhưng chưa có con
+       số về việ c dịch chuyển nhân sự sang mảng chiế n lược. Chính họ thừa nhậ n văn hóa thử
+       thách còn "         道半ば
+                          " (mới được nửa đường). Tuyển nộ i bộ cầ n cả hai phòng đồ ng ý, nhân
+       viên trẻ thiế u thông tin, và chưa có hỗ trợ sau khi chuyển.
+
+Nhậ n định: Toho Gas không thiế u chương trình đào tạo. Họ thiế u mộ t vòng khép kín nố i
+chiế n lược kinh doanh với job nộ i bộ , skill của từng người, lộ trình học và cơ hộ i được bố trí.
+Hiệ n đào tạo được đo bằ ng số người đã học, chưa đo bằ ng số người đã vào đúng job.
+
+Đề xuấ t: xây thị trường lao độ ng nộ i bộ dựa trên skill (                   スキルベースの社内人材市場
+                                                                                      ) cho
+toàn nhóm Toho Gas, chạy trên nề n Workforce Graph: (1) kiế n trúc job và từ điển skill dùng
+chung, chuẩn theo Digital Skill Standard ver.2.0 cộ ng với skill ngành năng lượng; (2) hồ sơ
+skill có bằ ng chứng cho mọi nhân viên; (3) danh mục nhân sự độ ng theo kịch bản kinh
+doanh; (4) lộ trình nghề nghiệ p và học tậ p cá nhân; (5) ghép nố i nộ i bộ cho tuyển nộ i bộ ,
+FA, dự án và việ c làm thêm trong công ty; (6) đo kế t quả để công bố vố n nhân lực.
+
+Bước đầ u: PoC 12 tuầ n trên mộ t mảng đang thu hẹp và mộ t mảng chiế n lược (ví dụ nghiệ p
+vụ bán lẻ gas sang mảng điệ n và giải pháp), khoảng 200–300 nhân viên.
+
+
+
+
+                                                                                              Page 1 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+1. Bố i cảnh 1: AI và tự độ ng hóa tạo job mới, đổi skill của job cũ
+
+1.1 Toàn cầ u
+       Theo Future of Jobs Report 2025 của WEF (khảo sát hơn 1.000 nhà tuyển dụng, 55
+       nề n kinh tế ): đế n 2030 khoảng 170 triệ u job mới được tạo ra và 92 triệ u job bị thay thế ,
+       ròng tăng 78 triệ u.
+       Trung bình 39% skill cố t lõi của người lao độ ng sẽ thay đổi hoặ c lỗ i thời trong giai đoạn
+       2025–2030.
+       Công nghệ là lực tạo và xóa job lớn nhấ t; chuyển đổi xanh cũng là lực lớn, và "quản lý
+       môi trường" lầ n đầ u vào top 10 skill tăng nhanh.
+
+Ý nghĩa: vấ n đề không chỉ là "job mới cầ n người mới". Phầ n lớn là job cũ cầ n skill mới: người
+đang làm cùng mộ t chức danh phải làm việ c với AI, dữ liệ u và hệ thố ng tự độ ng.
+
+
+1.2 Nhậ t Bản
+       Theo IPA "DX           動向 2025", 85,1% doanh nghiệ p Nhậ t thiế u nhân lực thúc đẩy DX, cao
+       hơn nhiề u so với Mỹ và Đức. IPA cũng ghi nhậ n tỷ lệ OJT và tự học của Nhậ t thuộ c
+       nhóm thấ p trong các nước được so sánh.
+       Digital Skill Standard (                デジタルスキル標準, DSS) ver.2.0 do METI và IPA công bố tháng
+       4/2026: hai lớp (DSS-L cho mọi người, DSS-P cho nhân lực chuyên DX), DSS-P có 6 loại
+       nhân lực: Business Architect, Designer, Data Scientist, Data Management (mới),
+       Software Engineer, Cyber Security. Bản này đưa skill về AI agent, AI tạo sinh và quản
+       trị AI vào hệ thố ng. Đây là ngôn ngữ chung mà doanh nghiệ p Nhậ t đã quen, nên giải
+       pháp nên bám theo.
+
+
+1.3 Ngành gas và năng lượng Nhậ t
+Job đang đổi theo bố n hướng:
+
+
+  Hướng                                   Ví dụ job bị ảnh hưởng            Skill mới cầ n
+
+  Tự độ ng hóa vậ n                       Đọc đồ ng hồ (         検針
+                                                             ) → smart      Phân tích dữ liệ u thiế t bị, vậ n
+  hành                                    meter; tuầ n tra đường ố ng →     hành hệ thố ng tự độ ng
+                                          drone, camera AI
+
+  Điệ n và nhiề u nguồ n                  Bán gas → bán điệ n, năng lượng   Thị trường điệ n, dự báo nhu cầ u,
+  năng lượng                              tái tạo, giao dịch điệ n          quản trị rủi ro
+
+  Trung hòa carbon                        e-methane, hydrogen, thu hồ i     Kỹ thuậ t hóa học mới, quản lý dự
+                                          CO₂                               án quố c tế
+
+
+
+
+                                                                                                            Page 2 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Hướng                                   Ví dụ job bị ảnh hưởng              Skill mới cầ n
+
+  Khách hàng và dịch                      Tổng đài, bán hàng → kênh số , AI   Digital marketing, phân tích
+  vụ                                      hỗ trợ                              khách hàng, thiế t kế dịch vụ
+
+
+Ngành còn chịu thêm áp lực thiế u nhân lực an toàn (    保安人材) do dân số già. METI đã đưa
+việ c vượt qua thiế u hụt này thành mộ t vấ n đề chính sách, cùng với "smart 保安" (an toàn
+thông minh). Vậ y là vừa có job thu hẹp do tự độ ng hóa, vừa có job an toàn thiế u người và
+cầ n truyề n nghề (技能伝承).
+
+
+2. Bố i cảnh 2: tuyển fresher, tự đào tạo, không sa thải — doanh
+nghiệ p Nhậ t vậ n hành thế nào
+
+2.1 Mô hình truyề n thố ng (                        メンバーシップ型雇用)
+       Tuyển theo tư cách thành viên, không theo job: tuyển đồ ng loạt sinh viên mới tố t
+              新卒一括採用), không ghi rõ công việ c, địa điểm hay giờ làm.
+       nghiệ p (
+       Công ty quyế t định điề u chuyển (会社主導の人事異動): người lao độ ng làm tố t việ c
+       được giao. Bản "Chỉ dẫ n nhân sự kiểu job" của Chính phủ nói thẳng: việ c học lại có
+       dùng được hay không phụ thuộ c vào điề u chuyển, nên người lao độ ng khó tự xây dựng
+       sự nghiệ p.
+       Đào tạo trong công ty: chủ yế u OJT và luân chuyển (                   ジョブローテーション), đào tạo ra
+       người biế t nhiề u việ c của chính công ty.
+       Gầ n như không sa thải: luậ t Nhậ t áp dụng nguyên tắ c cấ m lạm dụng quyề n sa thải (                   解
+       雇権濫用法理). Doanh nghiệ p có trách nhiệ m chứng minh lý do hợp lý. Thông lệ là giữ
+       việ c làm, tránh sa thải tố i đa.
+
+
+2.2 Vì sao mô hình này vấ p khi AI đế n
+       Job mới cầ n skill chuyên sâu; luân chuyển đa năng không tạo ra kịp.
+       Job cũ thu hẹp nhưng không thể cắ t người; nế u không chuyển họ sang việ c khác thì
+       chi phí dư thừa tăng.
+       NTT Data tóm tắ t ba nút thắ t của doanh nghiệ p Nhậ t trong chuyển đổi AI: công việ c
+       phụ thuộ c vào cá nhân, học lại không tiế n triển, và điề u chỉnh lao độ ng cứng nhắ c.
+
+
+2.3 Cách doanh nghiệ p và Chính phủ Nhậ t đang thích ứng
+Chính sách:
+
+
+
+
+                                                                                                          Page 3 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+                                             三位一体の労働市場改革): học lại
+       Cải cách thị trường lao độ ng "tam vị nhấ t thể" (
+       (リ・スキリング), lương theo công việ c (ジョブ型人事・職務給), và tạo điề u kiệ n dịch
+       chuyển lao độ ng sang ngành tăng trưởng.
+       " ジョブ型人事指針" (28/8/2024) giới thiệ u 20 doanh nghiệ p áp dụng.
+       Đầ u tư vào con người 1.000 tỷ yên trong 5 năm (công bố 10/2022), với ba trụ: hỗ trợ
+       dịch chuyển lao độ ng, hỗ trợ chuyển việ c, hỗ trợ học lại.
+       人材版伊藤レポート (2020, 2.0 năm 2022): khung 3P·5F, trong đó danh mục nhân sự
+       độ ng (動的な人材ポートフォリオ) là yế u tố đầ u tiên: xác định nhân sự cầ n có (To be),
+       hiệ n trạng (As is) và đo khoảng cách cả về chấ t và lượng.
+
+Doanh nghiệ p: phầ n lớn không bỏ hẳn mô hình thành viên mà tạo mô hình lai:
+
+
+  Cách làm                                    Nộ i dung                              Ví dụ
+
+  Kiểu job cho mộ t phầ n                     Định nghĩa job, lương theo job,        Fujitsu: khoảng 15.000 quản lý
+  nhân sự                                     bắ t đầ u từ quản lý                   (2020), mở rộ ng 45.000 nhân
+                                                                                     viên (2022); Hitachi xây nề n
+                                                                                     tảng hơn 10 năm
+
+  "Kiểu skill" (      スキル型雇                   Lấ y skill làm ngôn ngữ chung          Đề xuấ t của Việ n nghiên cứu
+  用 )                                         cho tuyển dụng, học lại, bố trí,       Dai-ichi Life
+                                              đánh giá
+
+  Học lại có mục tiêu                         Đào tạo DX        人材
+                                                             theo tầ ng,                               人材
+                                                                                     Daihatsu: đạt 1.000 DX    sớm,
+                                              chứng chỉ, mục tiêu số người           mục tiêu 3.000 đế n 2027;
+                                                                                     Daigas: 243 DX 中核スタッフ
+  Tiế t kiệ m nhờ AI rồ i bố                  Không cắ t người, chuyển sang          DeNA: mục tiêu vậ n hành bằ ng
+  trí lại                                     mảng mới                               nửa số người, phầ n dôi chuyển
+                                                                                     sang kinh doanh mới
+
+  Người lao độ ng tự                          Tuyển nộ i bộ , tự ứng cử (       社内   Xem mục 3
+  chọn điề u chuyển                           FA)
+
+  Điề u độ ng trong nhóm                      Biệ t phái (    出向
+                                                            ), chuyển hẳn            Phổ biế n ở tậ p đoàn nhiề u công
+                                              sang công ty con (    )      転籍        ty con
+
+
+Kế t luậ n cho bài toán: doanh nghiệ p Nhậ t không giải bài toán AI bằ ng tuyển và sa thải. Họ
+giải bằ ng chuyển đổi người đang có và tái bố trí trong nộ i bộ nhóm công ty. Điề u kiệ n để
+làm được là có mộ t ngôn ngữ skill chung và thấ y được cả cung (người có gì) lẫ n cầ u (job
+cầ n gì).
+
+
+
+
+                                                                                                                 Page 4 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+3. Bố i cảnh 3: sau khi phát triển, đưa người vào job nộ i bộ nào
+
+3.1 Các cơ chế bố trí nộ i bộ ở Nhậ t
+
+  Cơ chế                                                     Ai chủ độ ng     Cách vậ n hành
+
+  人事異動 (điề u chuyển thường                                  Công ty          Nhân sự và quản lý quyế t định,
+  niên)                                                                       thường vào tháng 4 và tháng 10
+
+  社内公募 / ジョブポスティング                                           Phòng ban cầ n   Đăng vị trí và yêu cầ u, nhân viên ứng
+  (tuyển nộ i bộ )                                           người            tuyển, tuyển chọn nộ i bộ
+
+  社内FA (tự ứng cử)                                           Nhân viên        Nhân viên đăng skill và nguyệ n vọng,
+                                                                              phòng ban chủ độ ng mời
+
+  社内副業 / dự án nộ i bộ                                       Cả hai           Làm mộ t phầ n thời gian cho phòng
+                                                                              khác trước khi chuyển hẳn
+
+  出向 / 転籍                                                    Công ty          Điề u độ ng sang công ty con hoặ c đố i
+                                                                              tác
+
+
+
+3.2 Mức độ phổ biế n và hiệ u quả thực tế
+       Tỷ lệ doanh nghiệ p có tuyển nộ i bộ tăng từ 34,7% (2006) lên 42,2% (2022). Khảo sát
+       HR Pro 2025: khoảng 65% doanh nghiệ p 1.001–5.000 người và 83% doanh nghiệ p trên
+       5.000 người có chế độ này.
+       Nhưng có chế độ không có nghĩa là người được chuyển. Khảo sát của Thinkings
+       (9/2025, 1.069 nhân viên doanh nghiệ p trên 1.000 người): khoảng 40% tự nhậ n là "                         埋も
+       れ人材" (nhân lực bị chôn vùi, năng lực chưa được dùng); chỉ khoảng 20% từng ứng
+       tuyển nộ i bộ và khoảng 10% thực sự được chuyển. Người đã chuyển qua tuyển nộ i bộ
+       hài lòng với công ty hơn.
+
+
+3.3 Vì sao tuyển nộ i bộ khó chạy
+Recruit Works Institute liệ t kê các vấ n đề điển hình:
+
+   1. Ngại quản lý hiệ n tại nên không dám ứng tuyển.
+   2. Phòng mấ t người không bù được chỗ trố ng.
+   3. Tiêu chí tuyển chọn không minh bạch.
+   4. Ảnh hưởng đế n kế hoạch đào tạo lãnh đạo.
+   5. Nhân sự không biế t can thiệ p đế n đâu.
+   6. Không đo được hiệ u quả sau khi chuyển.
+
+
+
+
+                                                                                                                Page 5 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Thêm vào đó là rào cản tâm lý trong văn hóa thâm niên: xin chuyển bị xem như phản bộ i,
+trượt thì sợ ảnh hưởng đánh giá.
+
+
+3.4 Job nộ i bộ nào để đưa người vào
+Với mộ t công ty năng lượng như Toho Gas, điểm đế n sau khi phát triển nên được xế p
+thành bố n nhóm:
+
+
+  Nhóm job đích                          Ví dụ                                    Nguồ n người phù hợp
+
+  A. Job chiế n lược                     Kinh doanh điệ n, năng lượng tái         Kỹ sư gas, bán hàng doanh
+  mới                                    tạo, dự án nước ngoài, e-methane,        nghiệ p có skill kề cậ n
+                                         giải pháp cho doanh nghiệ p
+
+  B. Job DX và AI                        6 loại trong DSS-P: Business             Người làm nghiệ p vụ có nề n
+                                         Architect, Data Scientist, Data          tảng dữ liệ u, đã qua đào tạo DX
+                                         Management, Software Engineer,
+                                         Designer, Cyber Security
+
+  C. Job cũ nâng cấ p                    Bán hàng có AI hỗ trợ, vậ n hành     保   Chính người đang làm job đó
+                                         安 bằ ng dữ liệ u, kế toán tự độ ng
+
+  D. Job thiế u người                    Kỹ thuậ t an toàn, thi công, truyề n     Người từ job bị tự độ ng hóa
+  do dân số già                          nghề                                     (đọc đồ ng hồ , văn phòng),
+                                                                                  người lớn tuổi làm người dạy
+
+
+Điểm mấ u chố t: phát triển phải bắ t đầ u từ job đích. Nế u đào tạo trước rồ i mới tìm chỗ ,
+người học xong không có nơi dùng skill và dễ trở thành                        埋もれ人材 hoặ c nghỉ việ c.
+4. Hồ sơ Toho Gas (                           東邦ガス)
+4.1 Doanh nghiệ p
+       Thành lậ p 1922, trụ sở Nagoya. Mộ t trong ba công ty gas đô thị lớn nhấ t Nhậ t (cùng
+       Tokyo Gas, Osaka Gas). Cung cấ p gas, LPG và điệ n cho khoảng 3,12 triệ u khách hàng ở
+       ba tỉnh Aichi, Gifu, Mie (3/2026). Tỷ trọng bán cho doanh nghiệ p cao vì khu vực này
+       mạnh về sản xuấ t.
+       Doanh thu hợp nhấ t khoảng 651 tỷ yên (năm tài chính kế t thúc 3/2026). Khoảng 30
+       công ty con và 40 công ty liên kế t.
+       Năm 2022 tách mảng ố ng dẫ n sang Toho Gas Network (   東邦ガスネットワーク). Vì vậ y
+       công ty mẹ chỉ còn khoảng 970 người, phầ n lớn nhân sự nằ m ở các công ty con:
+       Network, Life Solutions, Communications, Energy Engineering, LPG (東邦液化ガス)…
+
+
+
+
+                                                                                                             Page 6 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Bài toán career development vì thế là bài toán cấ p tậ p đoàn, không chỉ của công ty
+       mẹ.
+
+
+4.2 Chiế n lược
+       Tầ m nhìn nhóm (2022): đế n giữa thậ p niên 2030 trở thành (1) nhà cung cấ p năng
+       lượng vững chắ c của vùng, (2) đố i tác của đời số ng và kinh doanh vượt ra ngoài năng
+       lượng, (3) nhóm doanh nghiệ p dẫ n dắ t xã hộ i bề n vững.
+       Kế hoạch trung hạn 2025–2027: "đẩy nhanh phân bổ lại nguồ n lực, chuyển đổi cơ cấ u
+       kinh doanh". Mục tiêu lợi nhuậ n thường xuyên hợp nhấ t 30 tỷ yên (năm 2027). Đầ u tư
+       cho mảng chiế n lược (khoảng 130 tỷ yên) lớn hơn mảng lõi (khoảng 110 tỷ yên). Mục
+       tiêu đế n giữa thậ p niên 2030 mảng chiế n lược lớn ngang mảng lõi, quản trị theo ROIC.
+       Trung hòa carbon: đế n 2030 cung cấ p e-methane và biogas tương đương ít nhấ t 1%
+       lượng gas bán ra, tham gia dự án ở Bắ c Mỹ và Úc. Phát triển công nghệ thu hồ i CO₂
+       Cryo-Capture® hướng tới ứng dụng năm 2030. Mở cơ sở mới ở Mỹ , Việ t Nam,
+       Indonesia.
+
+
+4.3 Nhân sự
+
+  Chỉ số                                                       Giá trị
+
+  Nhân viên hợp nhấ t (3/2026)                                 6.131 (gas 3.391; LPG và năng lượng khác 1.284; điệ n
+                                                               196; khác 1.260)
+
+  Nhân viên công ty mẹ                                         973; tuổi bình quân 41,4; thâm niên bình quân 14,7
+                                                               năm
+
+  Tuyển dụng công ty mẹ (FY2024)                               95 sinh viên mới, 53 người có kinh nghiệ m, 66 người
+                                                               về hưu được tuyển lại
+
+  Tỷ lệ nghỉ việ c                                             1,93% (FY2024); nghỉ trong 3 năm đầ u 1,9%
+
+  Nữ quản lý                                                   4,1%; mục tiêu 50 người trở lên vào FY2027
+
+  Gắ n kế t (đánh giá bên ngoài)                               Mức BB, mục tiêu "cải thiệ n liên tục"
+
+
+Đọc số liệ u: nghỉ việ c rấ t thấ p và thâm niên cao, đúng mô hình thành viên. Gầ n như toàn bộ
+nhân lực cho mảng mới phải đế n từ người đang có. Mảng điệ n hiệ n mới có 196 người trên
+hơn 6.000, trong khi chiế n lược muố n mảng chiế n lược ngang mảng lõi. Theo báo cáo,
+nhiề u nhân sự mảng điệ n và năng lượng tái tạo hiệ n là người tuyển có kinh nghiệ m.
+
+
+
+
+                                                                                                                       Page 7 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+4.4 Chiế n lược nhân sự hiệ n tại (Báo cáo tích hợp 2025)
+       Ưu tiên: giữ và phát triển nhân sự cho mảng lõi; tuyển, phát triển và bố trí quản lý và
+       chuyên gia cho mảng chiế n lược và các đợt cải tổ nghiệ p vụ.
+       Biệ n pháp: kênh tuyển mới cho chuyên gia và cho mảng chiế n lược; thăng tiế n sớm;
+       biệ t phái trong và ngoài nhóm; MBA cho lãnh đạo tương lai; đào tạo ngoại ngữ, kinh
+       nghiệ m nước ngoài, chuyên môn điệ n, DX.
+       Chế độ nhân sự mới từ tháng 4/2026: để người có chuyên môn sâu phát huy được và
+       cho phép thăng tiế n sớm người trẻ, củng cố "vòng tuầ n hoàn thử thách và trưởng
+       thành". Cơ cấ u đang dùng là bậ c vai trò nhiề u ngạch cộ ng quản trị theo mục tiêu.
+       Công cụ nghề nghiệ p: tuyển nộ i bộ (                           社内公募), học cao học trong và ngoài nước, tiế ng
+       Anh trực tuyế n, làm việ c ngắ n hạn ở cơ sở nước ngoài, trao đổi nghề nghiệ p với cấ p
+       trên mỗ i năm.
+       DX: chứng nhậ n DX                認定 (6/2025); DX人材 đạt 224 người (mục tiêu 200 vào FY2026)
+       qua ba bước: kiế n thức cơ bản, thực hành cố t lõi, tự chọn (phát triển hệ thố ng, RPA);
+       mục tiêu 700 quy trình được tự độ ng hóa (lũy kế ) vào FY2027; AI dự báo bấ t thường
+       thiế t bị, dự báo xuố ng cấ p đường ố ng, tố i ưu tuyế n giao LPG.
+       AI tạo sinh: triển khai Graffer AI Studio cho khoảng 1.500 người trong khoảng 30 công
+       ty nhóm, có kèm đào tạo.
+
+
+4.5 Những vấ n đề chính Toho Gas tự nêu
+       CEO: văn hóa thử thách "còn đang nửa đường" (                             まだ道半ば).
+       Tọa đàm nhân viên trong báo cáo tích hợp:
+              Tuyển nộ i bộ cầ n cả phòng đi và phòng đế n đồ ng ý.
+              Nhân viên trẻ thiế u thông tin về các chương trình.
+              Cầ n hỗ trợ sau khi đã tham gia chương trình.
+              Cầ n lựa chọn ngắ n hạn cho người có ràng buộ c gia đình.
+              Người tiên phong chịu áp lực lớn.
+       Báo cáo nói sẽ xây dựng                    人材ポートフォリオ
+                                                  nhưng không đưa con số dịch chuyển
+       nhân sự sang mảng chiế n lược. Không nhắ c đế n "                          リスキリング
+                                                                 " như mộ t chương trình
+       riêng. Chỉ số vố n nhân lực chủ yế u đo cho công ty mẹ và mộ t số công ty con, chưa phủ
+       toàn nhóm.
+       Nguồ n báo chí công nghệ cho thấ y Toho Gas đang chuyển hệ thố ng lõi lên SAP
+       S/4HANA Cloud (RISE with SAP). Cầ n xác nhậ n vì ảnh hưởng đế n tích hợp dữ liệ u
+       nhân sự.
+
+
+
+
+                                                                                                               Page 8 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+5. Bài toán career development của Toho Gas
+
+5.1 Phát biểu bài toán
+
+    Làm sao để nhóm Toho Gas, với khoảng 6.000 người gầ n như không nghỉ việ c và
+    không sa thải, chuyển được đủ người có đủ skill từ mảng lõi đang thu hẹp và tự độ ng
+    hóa sang mảng chiế n lược và các job mới của AI, đúng thời điểm chiế n lược cầ n, mà
+    vẫ n giữ an toàn cung cấ p và gắ n kế t của nhân viên?
+
+
+5.2 Bảy vấ n đề cấ u thành (giả thuyế t cầ n kiểm chứng với khách hàng)
+
+  #           Vấ n đề                                                      Bằ ng chứng hiệ n có                  Mức chắ c
+                                                                                                                 chắ n
+
+  P1          Cầ u không rõ: chưa có con số cầ n                           Báo cáo tích hợp không có số dịch     Cao
+              bao nhiêu người, skill gì, cho job                           chuyển nhân sự
+              nào, vào lúc nào
+
+  P2          Cung không thấ y: skill thực của                             Chỉ số DX 人材     đo bằ ng số người    Trung bình
+              nhân viên chưa được số hóa theo                              đã học; số liệ u nhân sự chưa phủ
+              chuẩn chung, nhấ t là ở công ty                              toàn nhóm
+              con
+
+  P3          Học không nố i với job: đào tạo                              Mục tiêu 200 DX  人材 không gắ n        Trung bình
+              theo tầ ng và theo chương trình,                             với vị trí
+              không theo job đích cụ thể
+
+  P4          Ma sát khi chuyển: tuyển nộ i bộ                             Tọa đàm trong báo cáo; vấ n đề        Cao
+              cầ n hai phòng đồ ng ý, ngại cấ p                            chung của Nhậ t
+              trên, phòng đi không bù được
+              người
+
+  P5          Thiế u thông tin và định hướng:                              Tọa đàm: người trẻ thiế u thông tin   Cao
+              nhân viên không biế t có job gì, cầ n
+              skill gì, mình cách bao xa
+
+  P6          Ranh giới công ty con: nhân sự rải                           Công ty mẹ chỉ khoảng 970 trên        Cao
+              ở khoảng 30 công ty, dịch chuyển                             6.100 người
+              qua biệ t phái
+
+  P7          Không đo kế t quả: không biế t                               Tọa đàm: cầ n hỗ trợ sau chương       Trung bình
+              người đã học hoặ c đã chuyển có                              trình; gắ n kế t chỉ ở mức BB
+              tạo giá trị không
+
+
+
+
+                                                                                                                       Page 9 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+5.3 Ràng buộ c phải tôn trọng
+       An toàn cung cấ p là ưu tiên tuyệ t đố i. Không được rút người khỏi job an toàn khi chưa
+       có người thay và chưa truyề n nghề xong.
+       Nhân sự vẫ n do công ty quyế t định. Giải pháp phải hỗ trợ cả điề u chuyển do công ty
+       lậ p kế hoạch lẫ n cơ chế nhân viên tự chọn, không thay thế mộ t trong hai.
+       Công đoàn và đồ ng thuậ n: thay đổi chế độ bố trí và đánh giá thường cầ n biệ n bạch với
+       công đoàn. Dữ liệ u skill không được dùng để đánh giá trừ điểm.
+       Luậ t bảo vệ thông tin cá nhân Nhậ t (                              個人情報保護法) và tiêu chuẩn bảo mậ t riêng của
+       Toho Gas.
+       Chế độ nhân sự mới từ 4/2026 đã chạy. Giải pháp phải khớp với bậ c vai trò và quản trị
+       mục tiêu mới, không đề xuấ t lại chế độ .
+
+
+6. Hướng giải pháp nghiệ p vụ
+
+6.1 Nguyên tắ c thiế t kế
+   1. Bắ t đầ u từ job đích, không từ khóa học. Mọi lộ trình phát triển phải trỏ về mộ t job nộ i
+       bộ có thậ t, và job đó phải trỏ về kế hoạch kinh doanh.
+   2. Skill là ngôn ngữ chung. Job, con người, khóa học và cơ hộ i nộ i bộ đề u mô tả bằ ng
+      cùng mộ t bộ skill, chuẩn theo DSS ver.2.0 cộ ng với skill ngành năng lượng.
+   3. Làm mô hình lai, không ép kiểu job. Giữ điề u chuyển do công ty lậ p kế hoạch, nhưng
+       dùng dữ liệ u skill để lậ p tố t hơn, và mở thêm kênh để nhân viên tự chọn.
+   4. Thử trước khi chuyển hẳn. Dự án nộ i bộ và việ c làm thêm trong công ty (                            社内副業)
+       giảm rủi ro cho cả người lẫ n phòng ban.
+   5. Toàn nhóm, không chỉ công ty mẹ.
+   6. Đo đế n tậ n nơi: đo số người đã vào đúng job và tạo được giá trị, không chỉ số người đã
+       học.
+
+
+6.2 Vòng career development khép kín (sáu bước)
+
+  Bước                                    Nộ i dung                                    Ai làm              Giải quyế t
+                                                                                                           vấ n đề
+
+  1. Nhìn cầ u (       需要の可               Từ kế hoạch trung hạn, xác                   Ban giám đố c, kế   P1
+  視化   )                                  định job tăng, job giữ, job thu              hoạch, nhân sự
+                                          hẹp theo từng mảng và giai
+                                          đoạn; số người và skill cầ n
+
+
+
+
+                                                                                                                 Page 10 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Bước                                    Nộ i dung                           Ai làm                 Giải quyế t
+                                                                                                     vấ n đề
+
+  2. Nhìn cung (          スキル             Hồ sơ skill có bằ ng chứng cho      Nhân viên, quản lý,    P2, P6
+  の可視化     )                              mọi nhân viên toàn nhóm             hệ thố ng
+
+  3. Định hướng (            キャ           Mỗ i người thấ y job phù hợp,       Nhân viên, cấ p trên   P5
+  リア支援     )                              khoảng cách skill, và lộ trình;
+                                          dùng trong buổi trao đổi nghề
+                                          nghiệ p hằ ng năm
+
+  4. Phát triển (         リスキ             Học theo khoảng cách skill          Nhân viên, đào tạo     P3
+  リング   )                                 của job đích, kế t hợp học và
+                                          dự án thực hành
+
+  5. Bố trí (    配置・マッ                    Ghép nố i qua tuyển nộ i bộ , FA,   Nhân sự, phòng ban     P4, P6
+  チング    )                                dự án nộ i bộ , điề u chuyển có
+                                          kế hoạch, biệ t phái trong
+                                          nhóm
+
+  6. Theo dõi và đo (           定         Hỗ trợ 90 ngày đầ u, đo hiệ u       Nhân sự, cấ p trên     P7
+  着・効果測定       )                          quả, cậ p nhậ t lại cầ u và cung    mới
+
+
+
+6.3 Các biệ n pháp cụ thể cho từng vấ n đề
+       P1 – Danh mục nhân sự độ ng theo kịch bản: lậ p bản đồ job theo ba giai đoạn (0–1 năm,
+       1–2 năm, 2–3 năm trở lên) cho từng mảng. Gắ n với các kịch bản (ví dụ mức giá e-
+       methane, tố c độ lắ p smart meter, tố c độ mở rộ ng mảng điệ n). Đây cũng là dữ liệ u để
+       công bố        人材ポートフォリオ có số .
+       P2 – Hồ sơ skill có bằ ng chứng: tự khai chỉ là điểm bắ t đầ u. Bổ sung từ lịch sử công
+       việ c, dự án, chứng chỉ, kế t quả đào tạo DX và xác nhậ n của cấ p trên. Mỗ i skill có độ tin
+       cậ y.
+       P3 – Lộ trình học theo job đích: nâng cấ p chương trình DX                      人材 ba bước hiệ n có thành
+       lộ trình gắ n với 6 loại trong DSS-P và job đích cụ thể. Ưu tiên "kỹ năng chuyển đổi": học
+       những skill kề cậ n với cái đã giỏi, ví dụ kỹ sư vậ n hành gas sang vậ n hành điệ n, bán gas
+       doanh nghiệ p sang giải pháp năng lượng.
+       P4 – Giảm ma sát khi chuyển:
+               Ứng tuyển ẩn danh đế n vòng chọn lọc: cấ p trên chỉ biế t khi đã vào danh sách
+               ngắ n.
+               Quy tắ c bù người: khi mộ t người được chuyển, hệ thố ng đề xuấ t người hoặ c cách
+               thay (tự độ ng hóa, dự án) cho phòng đi.
+               Tiêu chí chọn công khai, dựa trên skill.
+               Dự án nộ i bộ 10–20% thời gian làm bước thử trước khi chuyển hẳn.
+
+
+                                                                                                           Page 11 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       P5 – Định hướng cho từng người: trang nghề nghiệ p cá nhân hiển thị job phù hợp,
+       khoảng cách, khóa học, người đi trước (đã chuyển cùng hướng). AI hỗ trợ chuẩn bị
+       buổi trao đổi nghề nghiệ p với cấ p trên.
+       P6 – Thị trường nộ i bộ cấ p nhóm: đăng vị trí và dự án của mọi công ty trong nhóm trên
+       mộ t nơi, hỗ trợ biệ t phái và chuyển công ty trong nhóm.
+       P7 – Đo hiệ u quả: theo dõi người đã chuyển trong 90 ngày và 12 tháng (đánh giá, gắ n
+       kế t, giữ chân). Cậ p nhậ t bảng chỉ số vố n nhân lực.
+
+
+6.4 Đưa người vào job nộ i bộ nào: ma trậ n nguồ n – đích (giả thuyế t)
+
+  Nguồ n (job thu hẹp hoặ c                            Đích khả thi                         Kỹ năng chuyển đổi
+  đổi)                                                                                      chính
+
+  Văn phòng, nghiệ p vụ hành                           Data Management, Business            Hiểu quy trình, dữ liệ u
+  chính bị RPA và AI thay                              Architect, vậ n hành tự độ ng hóa    nghiệ p vụ
+
+  Đọc đồ ng hồ , kiểm tra hiệ n                        Kỹ thuậ t an toàn, dịch vụ tại nhà   Hiểu thiế t bị, tiế p xúc
+  trường (smart meter)                                 khách hàng                           khách hàng
+
+  Bán gas cho doanh nghiệ p                            Giải pháp năng lượng, bán điệ n,     Quan hệ khách hàng,
+                                                       tư vấ n trung hòa carbon             kiế n thức năng lượng
+
+  Kỹ sư vậ n hành, sản xuấ t gas                       Điệ n, e-methane, hydrogen, dự       Kỹ thuậ t nhiệ t và hóa,
+                                                       án nước ngoài                        quản lý dự án
+
+  Tổng đài, chăm sóc khách                             Phân tích khách hàng, digital        Hiểu khách hàng, giao
+  hàng                                                 marketing, thiế t kế dịch vụ (Club   tiế p
+                                                       TOHOGAS)
+
+  Người lớn tuổi, tay nghề cao                         Người dạy, truyề n nghề , kiểm       Chuyên môn sâu
+                                                       định an toàn
+
+
+Ma trậ n này là giả thuyế t. Cầ n Toho Gas xác nhậ n job nào đang thu hẹp và mảng nào đang
+thiế u người.
+
+
+
+7. Giải pháp công nghệ
+
+7.1 Định vị
+Mộ t nề n tảng career development và thị trường nhân lực nộ i bộ dựa trên skill cho nhóm
+Toho Gas, chạy trên kiế n trúc Workforce Graph. Có thể đóng gói dưới dạng module Career
+Development của AINAVI, bản địa phương hóa cho Nhậ t (giao diệ n tiế ng Nhậ t, chuẩn skill
+Nhậ t, dữ liệ u lưu tại Nhậ t).
+
+
+
+
+                                                                                                                  Page 12 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+Nề n tảng không thay hệ thố ng nhân sự lõi, hệ thố ng đào tạo hay công cụ AI tạo sinh mà
+Toho Gas đang dùng. Nó là lớp ở giữa, nố i cầ u (job) với cung (người).
+
+
+7.2 Sáu khố i chức năng
+
+  Khố i                                                 Chức năng                            Người dùng         Vấ n
+                                                                                                                đề
+
+  M1. Kiế n trúc job và từ điển                         Mô tả job bằ ng skill; từ điển       Nhân sự, phòng     P1,
+  skill                                                 skill ba tầ ng: DSS ver.2.0, skill   ban                P3
+                                                        ngành năng lượng (an toàn,
+                                                        ố ng dẫ n, điệ n, LNG, e-
+                                                        methane, CCUS), skill riêng
+                                                        của Toho Gas; song ngữ Nhậ t–
+                                                        Anh; AI gợi ý skill từ mô tả
+                                                        công việ c hiệ n có
+
+  M2. Hồ sơ skill có bằ ng                              AI đọc lịch sử công việ c, dự        Nhân viên, cấ p    P2
+  chứng                                                 án, chứng chỉ, kế t quả đào tạo      trên
+                                                        để đề xuấ t skill; nhân viên và
+                                                        cấ p trên xác nhậ n; mỗ i skill có
+                                                        độ tin cậ y, giảm dầ n nế u
+                                                        không cậ p nhậ t
+
+  M3. Danh mục nhân sự độ ng                            Bản đồ cung–cầ u theo mảng,          Ban giám đố c,     P1,
+                                                        job, giai đoạn; mô phỏng theo        nhân sự            P7
+                                                        kịch bản; cảnh báo rủi ro phụ
+                                                        thuộ c người chủ chố t và thiế u
+                                                        người kế thừa; xuấ t số liệ u cho
+                                                        công bố vố n nhân lực
+
+  M4. Định hướng nghề                                   Job phù hợp với mức sẵ n             Nhân viên, cấ p    P3,
+  nghiệ p cá nhân (           キャリアナ                     sàng; khoảng cách skill; kỹ          trên               P5
+  ビ )                                                   năng chuyển đổi gầ n nhấ t; gợi
+                                                        ý khóa học từ hệ thố ng đào
+                                                        tạo; người đi trước; AI tóm tắ t
+                                                        để chuẩn bị buổi trao đổi với
+                                                        cấ p trên
+
+
+
+
+                                                                                                               Page 13 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Khố i                                                 Chức năng                         Người dùng            Vấ n
+                                                                                                                đề
+
+  M5. Thị trường nhân lực nộ i                          Đăng tuyển nộ i bộ , FA, dự án    Nhân viên, phòng      P4,
+  bộ                                                    và việ c làm thêm trong nhóm;     ban, nhân sự          P6
+                                                        ghép nố i có giải thích (vì sao
+                                                        phù hợp, thiế u gì); ứng tuyển
+                                                        ẩn danh đế n danh sách ngắ n;
+                                                        quy trình duyệ t của hai
+                                                        phòng; gợi ý cách bù người
+                                                        cho phòng đi
+
+  M6. Hỗ trợ điề u chuyển và                            Nhân sự nhậ n đề xuấ t phương     Nhân sự, cấ p trên    P4,
+  theo dõi                                              án bố trí cho đợt điề u chuyển    mới                   P7
+                                                        định kỳ (luôn do con người
+                                                        quyế t); kế hoạch kế thừa; theo
+                                                        dõi 90 ngày và 12 tháng sau
+                                                        khi chuyển
+
+
+
+7.3 Kiế n trúc
+       Lớp dữ liệ u: Workforce Graph trên Neo4j với 7 lớp (bố i cảnh kinh doanh, năng lực, tổ
+       chức và job, từ điển skill, con người và bằ ng chứng, mạng lưới, phát triển tương lai), mở
+       rộ ng thêm lớp công ty trong nhóm (mỗ i nhân viên thuộ c công ty nào, đang biệ t phái đi
+       đâu). Dữ liệ u cá nhân định danh lưu riêng ở PostgreSQL có mã hóa; graph chỉ dùng mã
+       ẩn danh.
+       Lớp AI:
+              Trích xuấ t skill từ văn bản tiế ng Nhậ t (                  職務経歴, báo cáo dự án, mục tiêu cá nhân)
+              và chuẩn hóa về từ điển skill.
+              Ghép nố i có giải thích, gợi ý lộ trình, tóm tắ t buổi trao đổi nghề nghiệ p.
+              Mọi gợi ý của AI đề u có bước con người xác nhậ n và được ghi lại để truy vế t.
+       Lớp ứng dụng: giao diệ n web tiế ng Nhậ t cho nhân viên, cấ p trên, nhân sự, ban giám
+       đố c; có bản cho điệ n thoại cho nhân viên hiệ n trường.
+       Tích hợp (cầ n xác nhậ n hệ thố ng thực tế của Toho Gas):
+              Hệ thố ng nhân sự lõi và hệ thố ng lõi SAP (nế u đúng là đang chuyển lên S/4HANA
+              Cloud): tổ chức, chức danh, lịch sử điề u chuyển.
+              Hệ thố ng đào tạo và e-learning: khóa học, kế t quả, kế t quả chương trình DX                    人材.
+              Quản trị mục tiêu và đánh giá theo chế độ mới 4/2026 (chỉ đọc những trường được
+              phép).
+              Graffer AI Studio: có thể dùng làm giao diệ n hỏi đáp về nghề nghiệ p hoặ c nguồ n
+              dữ liệ u kiế n thức nộ i bộ .
+
+
+                                                                                                               Page 14 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+              Đăng nhậ p mộ t lầ n theo hệ thố ng xác thực của Toho Gas.
+       Hạ tầ ng: dữ liệ u lưu tại trung tâm dữ liệ u ở Nhậ t; đáp ứng tiêu chuẩn bảo mậ t của Toho
+       Gas (họ đã dùng tiêu chuẩn này khi chọn Graffer, nên cầ n lấ y danh mục kiểm tra sớm).
+
+
+7.4 Quản trị và đạo đức dữ liệ u
+       Dữ liệ u skill chỉ dùng cho phát triển và bố trí, không dùng để đánh giá trừ điểm hay
+       xế p hạng cắ t giảm. Nói rõ với nhân viên và công đoàn.
+       Nhân viên xem được toàn bộ hồ sơ skill và bằ ng chứng của mình, có quyề n sửa.
+       Không ra quyế t định điề u chuyển tự độ ng. AI chỉ đề xuấ t, con người quyế t và được ghi
+       lại.
+       Tuân thủ        個人情報保護法: mục đích sử dụng rõ, phân quyề n xem theo vai trò, nhậ t ký
+       truy cậ p.
+
+
+7.5 Chỉ số thành công
+
+  Nhóm                      Chỉ số
+
+  Nhìn thấ y                % nhân viên có hồ sơ skill đã xác nhậ n; % job có mô
+                            tả skill
+
+  Dịch chuyển               Số người chuyển vào mảng chiế n lược và job DX
+                            mỗ i năm; thời gian để lấ p mộ t vị trí bằ ng người nộ i
+                            bộ
+
+  Tham gia                  % nhân viên dùng trang nghề nghiệ p; số đơn ứng
+                            tuyển nộ i bộ và dự án nộ i bộ
+
+  Hiệ u quả                 Giữ chân và đánh giá của người đã chuyển sau 12
+                            tháng; điểm gắ n kế t
+
+  An toàn                   Không có job an toàn nào thiế u người kế thừa sẵ n
+                            sàng
+
+
+
+
+8. Lộ trình PoC, rủi ro và câu hỏi cho khách hàng
+
+8.1 PoC 12 tuầ n
+Phạm vi đề xuấ t: mộ t cặ p "nguồ n – đích" rõ nhấ t, ví dụ nghiệ p vụ bán gas và văn phòng
+(nguồ n) sang mảng điệ n, giải pháp và DX (đích). Khoảng 200–300 nhân viên, 20–30 job
+đích, gồ m công ty mẹ và mộ t công ty con.
+
+
+
+
+                                                                                          Page 15 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Tuầ n        Việ c                                                                 Đầ u ra
+
+  1–2          Phỏng vấ n ban giám đố c, nhân sự, kế hoạch, 2–                       Xác nhậ n 7 vấ n đề ; danh sách job
+               3 trưởng phòng; thu thậ p mô tả job, dữ liệ u                         đích
+               đào tạo, dữ liệ u nhân sự ẩn danh
+
+  3–4          Từ điển skill (DSS ver.2.0 cộ ng skill ngành); mô                     Kiế n trúc job và skill bản 1
+               tả 20–30 job đích bằ ng skill
+
+  5–7          Dựng hồ sơ skill cho nhóm thí điểm (AI trích                          Hồ sơ skill; đo tỷ lệ xác nhậ n
+               xuấ t, nhân viên và cấ p trên xác nhậ n)
+
+  8–9          Bản đồ cung–cầ u; trang định hướng nghề                               Báo cáo khoảng cách cho ban giám
+               nghiệ p; gợi ý lộ trình học                                           đố c
+
+  10–11        Chạy thử mộ t đợt tuyển nộ i bộ hoặ c dự án nộ i                      Số đơn, chấ t lượng ghép nố i, phản
+               bộ trên nề n tảng                                                     hồ i
+
+  12           Đánh giá và kế hoạch mở rộ ng toàn nhóm                               Quyế t định đi tiế p
+
+
+Tiêu chí thành công của PoC (đề xuấ t, cầ n thố ng nhấ t với khách hàng):
+
+       ≥ 70% nhân viên thí điểm xác nhậ n hồ sơ skill.
+       ≥ 80% gợi ý skill của AI được chấ p nhậ n.
+       Ban giám đố c dùng bản đồ cung–cầ u trong ít nhấ t mộ t cuộ c họp kế hoạch nhân sự.
+       Số đơn ứng tuyển nộ i bộ hoặ c dự án nộ i bộ cao hơn rõ rệ t so với đợt gầ n nhấ t trước đó.
+
+
+8.2 Rủi ro và cách giảm
+
+  Rủi ro                                                                   Cách giảm
+
+  Nhân viên sợ dữ liệ u skill bị dùng để đánh giá                          Cam kế t bằ ng văn bản về mục đích; biệ n
+  hoặ c cắ t giảm                                                          bạch với công đoàn; nhân viên kiểm soát hồ
+                                                                           sơ của mình
+
+  Cấ p trên cản trở vì sợ mấ t người                                       Ứng tuyển ẩn danh; cơ chế bù người; đưa
+                                                                           việ c "cho đi người giỏi" vào đánh giá quản lý
+
+  Từ điển skill quá lớn, không ai duy trì                                  Bắ t đầ u nhỏ, theo DSS; giao mỗ i mảng mộ t
+                                                                           người chịu trách nhiệ m; AI hỗ trợ cậ p nhậ t
+
+  AI trích xuấ t sai skill từ văn bản tiế ng Nhậ t                         Luôn có bước con người xác nhậ n; đo độ
+                                                                           chính xác trong PoC
+
+  Chồ ng chéo với hệ thố ng nhân sự hiệ n có                               Định vị là lớp nố i, không thay thế ; tích hợp
+                                                                           hai chiề u
+
+
+
+
+                                                                                                                       Page 16 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+  Rủi ro                                                                   Cách giảm
+
+  Rút người khỏi job an toàn quá sớm                                       Ràng buộ c cứng: job an toàn phải có người
+                                                                           kế thừa sẵ n sàng trước khi duyệ t chuyển
+
+  Khác biệ t văn hóa khi độ i Việ t Nam làm cho                            Có BrSE và người hiểu nhân sự Nhậ t; tài liệ u
+  khách Nhậ t                                                              và giao diệ n do người bản ngữ duyệ t
+
+
+
+8.3 Câu hỏi cầ n hỏi Toho Gas (bước nghiên cứu tiế p theo)
+Chiế n lược và cầ u:
+
+   1. Đế n 2027 và đế n giữa thậ p niên 2030, mảng điệ n, nước ngoài và giải pháp cầ n thêm
+        bao nhiêu người, job gì?
+   2. Job nào đang hoặ c sẽ thu hẹp do smart meter, RPA (mục tiêu 700 quy trình) và AI tạo
+        sinh? Bao nhiêu người?
+   3.   人材ポートフォリオ trong báo cáo tích hợp đã có bản nháp có số chưa?
+Cung và dữ liệ u:
+
+   4. Dữ liệ u skill hiệ n nằ m ở đâu (hệ thố ng nhân sự, Excel, báo cáo đào tạo)? Có mô tả job
+        theo chế độ mới 4/2026 không?
+   5. Hệ thố ng nhân sự lõi và hệ thố ng đào tạo đang dùng là gì? Đã chuyển lên SAP
+        S/4HANA Cloud chưa?
+   6. Phạm vi dữ liệ u: công ty mẹ hay toàn nhóm? Công ty con có chế độ nhân sự riêng
+        không?
+
+Bố trí:
+
+   7. Mỗ i năm bao nhiêu vị trí được đăng tuyển nộ i bộ , bao nhiêu đơn, bao nhiêu người được
+        chuyển?
+   8. Quy trình điề u chuyển định kỳ vậ n hành thế nào, ai quyế t, dựa trên thông tin gì?
+   9. Có định mở việ c làm thêm trong công ty (                            社内副業) hoặ c FA không?
+Tổ chức và điề u kiệ n:
+
+ 10. Ai là chủ đầ u tư và người ra quyế t định: phòng nhân sự, DX                           推進部 hay phòng kế hoạch?
+ 11. Yêu cầ u bảo mậ t, nơi lưu dữ liệ u, quy trình mua sắ m?
+ 12. Công đoàn cầ n được tham vấ n ở bước nào?
+
+
+9. Nguồ n
+Toho Gas
+
+        Báo cáo tích hợp Toho Gas 2025 (                         統合レポート)
+                                                                                                                    Page 17 of 18
+Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+
+
+
+       Kế hoạch trung hạn 2025–2027 (TDnet)
+       Vố n nhân lực Toho Gas theo báo cáo chứng khoán FY2026 (kitaishihon)
+       Định hướng kinh doanh theo báo cáo chứng khoán (ullet)
+       FISCO – báo cáo phân tích Toho Gas
+       Bộ Môi trường – tài liệ u về e-methane của Toho Gas
+       Graffer AI Studio tại Toho Gas (ASCII)
+       Thông tin tuyển dụng và chế độ nghề nghiệ p (Career-tasu)
+       Hồ sơ doanh nghiệ p (Mynavi 2028)
+
+Thị trường lao độ ng, chính sách Nhậ t
+
+       WEF Future of Jobs Report 2025 – Digest
+       IPA – DX      動向 2025: AI時代のデジタル人材育成
+       IPA – Digital Skill Standard (DSS) ver.2.0
+       ジョブ型人事指針 (tóm tắ t)
+       人材版伊藤レポート và danh mục nhân sự độ ng (Mizuho)
+       Việ n nghiên cứu Dai-ichi Life – スキル型雇用
+       NTT Data – ba nút thắ t của chuyển đổi AI ở doanh nghiệ p Nhậ t
+       Chính sách 1.000 tỷ yên cho học lại (Dai-ichi Life)
+       Fujitsu, Hitachi – kiểu job (Newswitch)
+       DeNA – bố trí lại nhân sự nhờ AI (ITmedia)
+       Bộ Lao độ ng – luậ t lao độ ng Nhậ t về sa thải
+
+Tuyển nộ i bộ
+
+       JIL – hiệ n trạng và vấ n đề của                    社内公募制度
+       Recruit Works – 7 vấ n đề của job posting
+       Thinkings – khảo sát                埋もれ人材 và tuyển nộ i bộ (2025)
+       Tỷ lệ áp dụng tuyển nộ i bộ theo quy mô (DIME)
+
+Ngành năng lượng
+
+       METI – an toàn công nghiệ p và thiế u nhân lực an toàn (2025)
+       Hiệ p hộ i Gas Nhậ t – smart                  保安
+       NTT Data – smart meter ở ba công ty ố ng dẫ n gas
+       Daigas – DX         中核スタッフ trong báo cáo tích hợp 2025
+
+
+
+
+                                                                              Page 18 of 18
+

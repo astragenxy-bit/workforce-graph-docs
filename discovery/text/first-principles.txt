@@ -1,0 +1,463 @@
+
+First principles — nghiên cứu và hướng áp dụng cho Toho Gas, BRG
+ · 
+0. Kết luận
+First principles có ích nhất ở ba quyết định lõi của hai case: đo cầu, viết ràng buộc, và đặt điểm ra quyết định. Phần còn lại, như giao diện và quy trình phụ, nên dùng thông lệ và loại suy có kiểm soát. [Inference]
+Ba thay đổi lớn nhất so với cách làm hiện tại [Inference]
+
+Đo cầu bằng giờ task theo mốc, không bằng số người hay số người qua khóa học. Phơi nhiễm AI đo theo task rồi cộng lên job, như cách nghiên cứu của OpenAI và ILO đo. Toho Gas đổi kế hoạch trung hạn thành giờ task; BRG đổi danh mục dự án thành giờ task theo mốc và mùa.
+
+Biến ràng buộc thành điều kiện cứng chạy trước khi xếp hạng. Toho Gas: ngưỡng người đủ điều kiện 保安 theo vị trí. BRG: đồng ý theo pháp nhân và mục đích, giới hạn 60 ngày chuyển tạm thời.
+
+Đổi điểm ra quyết định, không chỉ đổi dữ liệu. Khi doanh nghiệp Mỹ đổi sang tuyển "dựa trên skill", thay đổi thật chưa tới 1 trên 700 lượt tuyển. Toho Gas: quy tắc bàn giao và hạn trả lời cho phòng đi. BRG: mỗi cơ hội nội bộ hiện thu nhập và lộ trình; kênh tự nguyện là kênh chính.
+Giống và khác khi áp dụng
+
+Giống: cùng năm nguyên tố (cầu, cung, đường đi, ràng buộc, động lực) và cùng một lõi Workforce Graph.
+
+Khác: [Inference] Toho Gas cần first principles để lượng hóa cái đã có (chiến lược tường minh, quy tắc an toàn). BRG cần nó để bỏ hai giả định: phải có hệ thống nhân sự chung trước, và công ty quyết việc chuyển.
+Giới hạn: [Inference] first principles dễ bỏ qua tri thức thực hành (mētis) như tay nghề 保安 và tay nghề dịch vụ. Phải hỏi người làm trước khi kết luận việc nào AI làm thay.
+Bước tiếp: chạy workshop nửa ngày ở mục 8 với từng khách hàng; dùng hai ví dụ 5 Whys ở mục 5 và 6 làm giả thuyết để kiểm.
+1. First principles là gì
+First principles là những mệnh đề nền tảng, không suy ra từ mệnh đề khác. Tư duy first principles là tách vấn đề về các sự thật đó, rồi dựng lời giải lên từ đầu. Cách ngược lại là suy luận loại suy: chép lời giải của một trường hợp trông giống rồi sửa ít.
+ | 
+Nguồn | 
+Ý chính | 
+Điều dùng được cho dự án
+ | 
+Aristotle, Physics quyển I | 
+"we do not think that we know a thing until we are acquainted with its primary conditions or first principles"; phải phân tích tới yếu tố đơn giản nhất. Tiếng Hy Lạp gọi là archai | 
+Chưa tách được bài toán về yếu tố gốc thì chưa hiểu bài toán
+ | 
+Euclid, Elements | 
+Một số định nghĩa, tiên đề và khái niệm chung sinh ra toàn bộ hình học phẳng | 
+Ít nguyên lý gốc, nhiều hệ quả: một lõi sản phẩm, nhiều cấu hình
+ | 
+Descartes, Discours de la méthode (1637) | 
+Bốn quy tắc: không nhận gì là đúng nếu chưa rõ; chia mỗi khó khăn thành nhiều phần nhất có thể; đi từ đơn giản tới phức tạp; liệt kê đủ, không bỏ sót | 
+Ba bước làm việc: nghi ngờ giả định, tách nhỏ, dựng lại theo thứ tự
+ | 
+Vật lý ab initio | 
+Tính toán "từ first principles" xuất phát từ định luật đã biết, không dùng mô hình thực nghiệm hay tham số khớp | 
+Phân biệt ràng buộc thật với con số "khớp cho vừa" từ quá khứ
+ | 
+Elon Musk (APS News, 10/2013) | 
+Suy luận từ first principles thay vì loại suy; chính ông nói không thể sống hằng ngày theo cách này vì tốn quá nhiều công sức trí óc | 
+Chỉ dùng cho vài quyết định lớn; phần còn lại dùng thông lệ
+Định nghĩa làm việc trong tài liệu này gồm năm bước, vẽ ở mục 2: (1) nêu kết quả cần đạt; (2) liệt kê mọi giả định đang dùng; (3) hỏi tới khi chỉ còn ràng buộc không thương lượng được: luật, an toàn, kinh tế, hành vi đã đo; (4) dựng lại lời giải chỉ từ các ràng buộc đó; (5) kiểm bằng số và thử nhỏ.
+2. Phương pháp thực hành
+Cách làm có năm bước. Mỗi bước có một công cụ để tách giả định khỏi sự thật; bước 5 bác bỏ thì quay lại bước 2.
+ | 
+Công cụ | 
+Cách làm | 
+Ví dụ gốc | 
+Giới hạn
+ | 
+Câu hỏi Socrates | 
+Hỏi lần lượt: vì sao tôi tin điều này, làm sao biết nó đúng, bằng chứng nào, góc nhìn khác là gì, nếu sai thì sao (Farnam Street) | 
+Dùng trong workshop để lộ giả định của cả nhóm | 
+[Inference] Tốn thời gian; cần người điều phối trung lập
+ | 
+5 Whys | 
+Hỏi "vì sao" nhiều lần tới nguyên nhân gốc; Taiichi Ohno coi đây là nền của cách làm khoa học ở Toyota | 
+Ví dụ của Ohno: máy dừng vì cầu chì đứt; hỏi tiếp tới khi thấy thiếu lưới lọc nên mạt kim loại làm mòn trục bơm | 
+Một vấn đề có thể có nhiều nguyên nhân gốc; người ở các phần khác nhau của hệ thống trả lời khác nhau; một cựu giám đốc của Toyota chê là quá đơn giản
+ | 
+Ước lượng Fermi | 
+Tách đại lượng chưa biết thành tích các đại lượng đoán được; ghi rõ từng giả định | 
+Số thợ lên dây đàn piano ở Chicago: dân số → số hộ → hộ có đàn → số lần lên dây mỗi năm → năng suất một thợ | 
+[Inference] Đúng tới bậc độ lớn, không đúng tới con số; sai số lớn nếu nhiều giả định lệch cùng chiều
+ | 
+Tách chi phí theo thành phần | 
+So giá bán với giá các thành phần cơ bản | 
+Pin: thị trường nói khoảng 600 USD/kWh; vật liệu theo giá sàn kim loại London khoảng 80 USD/kWh (Musk nói với Kevin Rose). Tên lửa: vật liệu không quá 2% giá, nhiên liệu khoảng 0,3% | 
+Đây là số Musk tự nêu. Vật liệu rẻ không có nghĩa quy trình rẻ; phần chênh nằm ở quy trình và năng lực làm
+ | 
+Hàng rào Chesterton | 
+Trước khi bỏ một quy tắc, tìm vì sao nó có (Chesterton, The Thing, 1929) | 
+Không bỏ một quy định nhân sự cũ khi chưa biết nó chặn rủi ro gì | 
+[Inference] Có quy tắc không còn ai nhớ lý do; khi đó thử bỏ ở phạm vi nhỏ và đo
+3. Khi nào hiệu quả, khi nào sai
+First principles đáng dùng khi bài toán mới, sai thì đắt và khó đảo ngược, và lời giải cũ dựa trên giả định đã đổi. Nó dễ sai khi bỏ qua tri thức thực hành của người làm, hoặc khi người phân tích nhầm thói quen của mình là sự thật nền. Cách an toàn là ghép với loại suy có kiểm soát. [Inference]
+ | 
+Bằng chứng | 
+Kết quả | 
+Ý nghĩa cho dự án
+ | 
+Gavetti, Levinthal, Rivkin (2005), Strategic Management Journal | 
+Trong môi trường mới và phức tạp, cả suy diễn thuần lý trí lẫn dò tìm từng bước đều khó đưa tới lời giải tốt; loại suy có thể giúp. Lợi ích của kinh nghiệm sâu giảm nhanh, còn kinh nghiệm rộng tiếp tục cải thiện kết quả; cả hai chỉ có ích khi hiểu đúng điều gì phân biệt trường hợp giống với khác | 
+[Inference] Dùng mô hình của Toho Gas cho BRG chỉ được khi đã biết hai bên giống ở nguồn lực nào và khác ở ràng buộc nào
+ | 
+Farjoun (2008), bình luận trên cùng tạp chí | 
+Loại suy không phải lúc nào cũng hơn; trộn và điều chỉnh nhiều cách tìm lời giải có thể hiệu quả hơn | 
+Không chọn một phương pháp duy nhất
+ | 
+Musk (APS News, 2013) | 
+Chính người cổ vũ nói không thể sống hằng ngày bằng first principles vì tốn quá nhiều công sức | 
+Dành cho vài quyết định lõi, không dành cho mọi tính năng
+ | 
+James C. Scott, Seeing Like a State (1998) | 
+Các kế hoạch lớn thiết kế từ trên xuống thất bại khi bỏ qua mētis: tri thức thực hành từ kinh nghiệm, gắn với bối cảnh | 
+Tay nghề 保安 và tay nghề dịch vụ là mētis; phải hỏi người làm, không chỉ đọc dữ liệu
+ | 
+5 Whys bị chê quá đơn giản | 
+Một chuỗi "vì sao" dễ bỏ sót nguyên nhân song song | 
+Mỗi bài toán cần nhiều nhánh, không một chuỗi
+Khi nào dùng cách nào: [Inference]
+ | 
+Điều kiện | 
+Nghiêng về first principles | 
+Nghiêng về loại suy, thông lệ
+ | 
+Độ mới của bài toán | 
+Chưa có trường hợp giống đáng tin | 
+Có nhiều trường hợp giống đã kiểm chứng
+ | 
+Chi phí nếu sai | 
+Lớn, khó đảo ngược: mô hình dữ liệu lõi, cơ cấu tổ chức | 
+Nhỏ, đảo ngược được: giao diện, quy trình phụ
+ | 
+Giả định của lời giải cũ | 
+Đã đổi: AI, luật mới, cơ cấu lao động mới | 
+Còn đúng
+ | 
+Loại tri thức | 
+Đo được, tách được | 
+Nằm trong kinh nghiệm người làm; khi đó hỏi họ trước
+ | 
+Thời gian | 
+Có thời gian phân tích | 
+Cần quyết nhanh
+Cách ghép hai lối: dùng loại suy để sinh phương án; dùng first principles để kiểm xem phương án dựa trên ràng buộc nào, ràng buộc đó còn đúng ở khách hàng mới không. Trước khi bỏ một quy tắc cũ, áp dụng hàng rào Chesterton. [Inference]
+4. First principles trong quản trị nhân lực
+Trong nhân lực, đơn vị gốc là task và skill, không phải job. Kinh tế học lao động định nghĩa task là đơn vị hoạt động tạo ra đầu ra; skill là vốn năng lực của người lao động để làm các task. Job chỉ là một gói task do tổ chức đóng lại, nên có thể tháo ra và đóng lại khác.
+ | 
+Nguồn | 
+Phát hiện | 
+Hệ quả cho dự án
+ | 
+Acemoglu, Autor (2011), Handbook of Labor Economics | 
+Công nghệ thay thế hoặc bổ trợ từng task, không thay cả job; phân biệt rõ task và skill | 
+Mô hình dữ liệu phải có node task riêng, không dừng ở job
+ | 
+Eloundou và cộng sự (2023), "GPTs are GPTs" | 
+Khoảng 80% lao động Mỹ có ít nhất 10% task bị LLM ảnh hưởng; khoảng 19% có ít nhất 50% task bị ảnh hưởng | 
+Đo phơi nhiễm AI theo task, rồi cộng lên job
+ | 
+ILO (2025), chỉ số phơi nhiễm AI tạo sinh | 
+Chấm gần 30.000 task; cứ 4 lao động có 1 người làm nghề có phơi nhiễm; 3,3% thuộc mức cao nhất; phần lớn job sẽ đổi chứ không mất | 
+Trọng tâm là đóng gói lại job và học lại, không chỉ cắt giảm
+ | 
+Jesuthasan, Boudreau, Work without Jobs (MIT Press, 2022) | 
+Tách job thành thành phần rồi ghép lại theo skill của từng người; ghép job với người giữ job che mất khoảng cách skill cụ thể | 
+Thị trường nội bộ nên đăng cả dự án, task, không chỉ vị trí
+ | 
+Deloitte (2022), khảo sát tổ chức dựa trên skill | 
+Tổ chức dựa trên skill có khả năng bố trí đúng người cao hơn 107%, giữ người giỏi cao hơn 98% | 
+Đây là tương quan trong khảo sát tự khai, chưa chứng minh nhân quả
+ | 
+Burning Glass Institute, Harvard Business School (2024) | 
+Số vị trí bỏ yêu cầu bằng đại học tăng gần 4 lần (2014–2023), nhưng tác động thật chưa tới 1 trên 700 lượt tuyển năm 2023; khoảng 45% doanh nghiệp chỉ đổi trên giấy | 
+Đổi nhãn chưa đủ; phải đổi chính điểm ra quyết định và người quyết
+Từ các nguồn trên, career development có năm nguyên tố. Mọi giải pháp cho Toho Gas và BRG ở mục 5 và 6 được dựng lại từ năm nguyên tố này. [Inference]
+ | 
+Nguyên tố | 
+Câu hỏi gốc | 
+Đo bằng gì | 
+Quyết định dùng nó
+ | 
+Cầu: task | 
+Chiến lược cần làm những task gì, bao nhiêu, khi nào? AI làm thay hoặc giúp task nào? | 
+Danh mục task theo job; mức phơi nhiễm AI theo task | 
+Job nào thu hẹp, job nào mở
+ | 
+Cung: skill có bằng chứng | 
+Ai làm được task đó, ở mức nào, bằng chứng gì? | 
+Từ điển skill có cấp độ; chứng chỉ, xác nhận quản lý, sản phẩm | 
+Ai được ghép, ai cần học gì
+ | 
+Khoảng cách và đường đi | 
+Từ skill đang có tới skill cần, mất bao lâu, tốn bao nhiêu? | 
+Skill kề cận; thời gian học đã đo | 
+Đào tạo ai, cho job nào
+ | 
+Ràng buộc | 
+Luật, an toàn, đồng ý nào không được vi phạm? | 
+Danh sách điều kiện cứng theo vị trí và theo người | 
+Lọc phương án trước khi ghép
+ | 
+Động lực | 
+Người có muốn chuyển không? Quản lý có chịu nhả người không? | 
+Nguyện vọng, thu nhập, nghỉ việc, tỷ lệ nhận đề xuất | 
+Thiết kế kênh và đãi ngộ
+5. Áp dụng cho Toho Gas
+Với Toho Gas, first principles không đổi hướng giải pháp đã đề xuất. Nó đổi đơn vị đo cầu thành giờ task, và biến hai nguyên tắc mềm (an toàn cung cấp, bàn giao khi chuyển người) thành điều kiện cứng trong mô phỏng. [Inference]
+ | 
+Nguyên tố | 
+Giả định đang dùng | 
+Sự thật nền | 
+Lời giải dựng lại
+ | 
+Cầu: task | 
+[Inference] Cầu nêu bằng tiền đầu tư và số người qua khóa học (DX人材 224 người, mục tiêu 200) | 
+Đầu tư mảng chiến lược khoảng 130 tỷ yên, lớn hơn mảng lõi khoảng 110 tỷ yên; mảng điện có 196 trên 6.131 người; 人材ポートフォリオ được hứa nhưng chưa có số | 
+Đổi mỗi mục tiêu chiến lược thành giờ task cần theo năm; đo phơi nhiễm AI của task ở job lõi để biết giờ được giải phóng; ước lượng Fermi trước khi đủ dữ liệu [Inference]
+ | 
+Cung: skill có bằng chứng | 
+[Inference] Thâm niên và lịch sử luân chuyển thay cho hồ sơ skill | 
+Thâm niên bình quân 14,7 năm; skill thực chưa số hóa theo chuẩn chung, nhất là ở công ty con; công ty mẹ chỉ khoảng 970 trên 6.100 người | 
+Đọc lịch sử 人事異動 và 職務経歴 như chuỗi task đã làm; AI trích skill, quản lý xác nhận; chuẩn theo DSS ver.2.0 cộng skill ngành năng lượng
+ | 
+Khoảng cách và đường đi | 
+Luân chuyển đa năng sẽ tạo đủ người cho job mới | 
+Job mới cần skill chuyên sâu mà luân chuyển đa năng không tạo kịp; người học xong không có nơi dùng dễ thành 埋もれ人材 hoặc nghỉ | 
+Mỗi lộ trình học trỏ về một job đích có hạn; chọn người theo skill kề cận (vận hành gas sang điện, e-methane); thử qua 社内副業 hoặc dự án trước khi chuyển hẳn
+ | 
+Ràng buộc | 
+[Inference] An toàn là nguyên tắc chung, xử lý từng trường hợp | 
+Không được rút người khỏi job an toàn khi chưa có người thay và chưa truyền nghề xong; thiếu 保安人材 do dân số già | 
+Ghi thành điều kiện số: mỗi vị trí 保安 có số người đủ điều kiện tối thiểu; mô phỏng loại mọi phương án làm số này dưới ngưỡng; đánh dấu tay nghề có người nắm sắp nghỉ hưu [Inference]
+ | 
+Động lực | 
+Nhân viên đi nơi công ty cử; phòng ban tự thỏa thuận | 
+Tuyển nội bộ cần cả phòng đi và phòng đến đồng ý; người trẻ thiếu thông tin; người tiên phong chịu áp lực; cần lựa chọn ngắn hạn cho người có ràng buộc gia đình | 
+Phòng đi nhận người thay hoặc kế hoạch bàn giao do hệ thống gợi ý, kèm hạn trả lời [Inference]; công khai job đích và skill cần; có lựa chọn ngắn hạn
+Ví dụ 5 Whys, là giả thuyết cần kiểm với Toho Gas. Vấn đề: mảng điện có 196 người dù đầu tư chiến lược lớn hơn mảng lõi.
+
+Vì sao? Mảng điện dùng nhiều người tuyển có kinh nghiệm, ít người chuyển từ mảng lõi.
+
+Vì sao ít người chuyển? Tuyển nội bộ cần cả phòng đi và phòng đến đồng ý.
+
+Vì sao phòng đi không đồng ý? [Inference] Không thấy ai thay được, và không thấy việc nào AI sẽ làm thay.
+
+Vì sao không thấy? Skill chưa số hóa theo chuẩn chung; job định nghĩa theo mô hình thành viên.
+
+Vì sao chưa số hóa? [Inference] Lịch sử luân chuyển đang được dùng thay cho hồ sơ skill.
+[Inference] Gốc là thiếu dữ liệu task–skill và thiếu quy tắc bàn giao khi chuyển người. Thêm khóa học không chạm tới gốc này.
+Số liệu và ý kiến tọa đàm lấy từ bản Toho Gas đã gửi.
+6. Áp dụng cho BRG
+Với BRG, first principles bỏ hai giả định: phải có một hệ thống nhân sự chung trước khi ghép, và chuyển người là quyết định của công ty. Sự thật nền là dữ liệu và hợp đồng thuộc từng pháp nhân, còn người lao động có quyền từ chối và có thị trường bên ngoài. Lời giải là một lớp skill chung mỏng có đồng ý, và kênh chuyển tự nguyện đủ hấp dẫn. [Inference]
+ | 
+Nguyên tố | 
+Giả định đang dùng | 
+Sự thật nền | 
+Lời giải dựng lại
+ | 
+Cầu: task | 
+[Inference] Cầu là kế hoạch tuyển riêng của từng công ty | 
+[Unverified] Chưa thấy kế hoạch trung hạn cấp tập đoàn được công bố. Có dự án với mốc: đô thị thông minh gần 272 ha, 4,2 tỷ USD, khởi công 19/8/2025; FujiMart thêm 50 cửa hàng đến 2028; sân golf thứ hai Legend Valley dự kiến 5/2026 | 
+Dựng cầu từ danh mục dự án: mỗi dự án đổi thành giờ task theo mốc và mùa; đo phơi nhiễm AI ở job quầy, thu ngân, văn phòng để biết giờ được giải phóng [Inference]
+ | 
+Cung: skill có bằng chứng | 
+[Inference] Phải gom về một hệ thống nhân sự chung mới ghép được | 
+Gần 22.000 người ở hàng chục pháp nhân; chưa rõ hệ thống nhân sự dùng chung hay riêng; mỗi mảng có thang chức danh và chuẩn riêng; SeABank có học viện với 1.541 khóa học (2025) | 
+Chỉ cần một lớp chung mỏng: từ điển skill ánh xạ TT 02/2025, VTOS/ACCSTP, SFIA 9. Mỗi pháp nhân giữ dữ liệu gốc; hồ sơ skill chỉ sang pháp nhân khác khi nhân viên đồng ý [Inference]
+ | 
+Khoảng cách và đường đi | 
+[Inference] Đào tạo theo từng công ty, người học tự tìm chỗ | 
+Có job thu hẹp (quầy, thu ngân, văn phòng) và job thiếu người (khách sạn, golf, dự án mới); người được đào tạo mà không có job đích dễ rời đi | 
+Ma trận nguồn – đích xuyên ngành theo skill kề cận: thu ngân sang tư vấn bán hàng đa kênh, lễ tân sang trải nghiệm khách và doanh thu; công nhận kỹ năng đã có (RPL) để rút ngắn đường
+ | 
+Ràng buộc | 
+[Inference] Điều chuyển trong tập đoàn như trong một công ty | 
+Không có đồng ý thì chuyển tạm thời tối đa 60 ngày làm việc cộng dồn/năm (Điều 29); đổi hẳn công việc cần thỏa thuận (Điều 33); đổi công nghệ phải ưu tiên đào tạo lại (Điều 42, 44). [Inference] Chuyển công ty là hợp đồng mới; dữ liệu sang pháp nhân khác cần cơ sở theo Luật Bảo vệ dữ liệu cá nhân | 
+Điều kiện cứng trong graph: đếm ngày chuyển tạm thời theo người, trạng thái đồng ý theo mục đích và bên nhận; lưu hồ sơ cho thấy đã ưu tiên đào tạo lại trước khi cắt giảm
+ | 
+Động lực | 
+[Inference] Người lao động sẽ nhận job nội bộ vì ổn định hơn | 
+203/331 đơn vị khách sạn nói người nghỉ vì thu nhập hoặc job khác hấp dẫn hơn (Hoteljob.vn, 2026); 51% người lao động Việt Nam có thể đề nghị tăng lương trong 12 tháng (PwC); nghỉ việc ở khách sạn Đà Nẵng 18,9% | 
+Mỗi cơ hội nội bộ hiện thu nhập và lộ trình so với hiện tại; đo tỷ lệ nhận đề xuất và giữ chân sau 12 tháng; kênh tự nguyện là kênh chính
+Ví dụ 5 Whys, là giả thuyết cần kiểm với BRG. Vấn đề: [Inference] người giỏi ở mảng thu hẹp rời BRG thay vì chuyển sang mảng thiếu người.
+
+Vì sao rời? Thu nhập hoặc job khác hấp dẫn hơn là lý do chính trong khảo sát ngành khách sạn.
+
+Vì sao không chọn job nội bộ? [Unverified] Chưa rõ BRG có tuyển nội bộ giữa công ty thành viên không; nếu có, người lao động khó thấy.
+
+Vì sao khó thấy? [Inference] Mỗi pháp nhân tuyển riêng, mô tả job theo thang chức danh riêng.
+
+Vì sao không ghép được giữa các thang? [Inference] Chưa có ngôn ngữ skill chung; dữ liệu nằm ở từng pháp nhân.
+
+Vì sao chưa làm? [Speculation] Lời giải loại suy là gom về một hệ thống chung, quá đắt và quá chậm cho hàng chục pháp nhân.
+[Inference] Gốc là thiếu lớp skill chung có đồng ý, và cơ hội nội bộ chưa cạnh tranh về thu nhập. Một hệ thống nhân sự chung không phải điều kiện để bắt đầu.
+Số liệu và điều luật lấy từ bản BRG — Career Development trong bối cảnh AI.
+7. Hệ quả cho sản phẩm Workforce Graph
+Năm nguyên tố cho ra một lõi graph chung. Khác biệt giữa hai khách hàng chỉ là thuộc tính gắn thêm: nguồn cầu, khung skill, ràng buộc và nhịp. Vì vậy nên xây lõi một lần và để phần riêng của khách hàng ở dạng cấu hình. [Inference]
+ | 
+Nguyên tố | 
+Lõi chung | 
+Cấu hình Toho Gas | 
+Cấu hình BRG
+ | 
+Cầu | 
+Kế hoạch, dự án cần giờ task theo mốc; mức phơi nhiễm AI trên task | 
+Kế hoạch trung hạn; nhịp năm tài chính, tháng 4 và 10 | 
+Danh mục dự án; nhịp theo mốc dự án và mùa
+ | 
+Cung | 
+Người có skill kèm cấp, bằng chứng, độ tin | 
+DSS ver.2.0 cộng skill năng lượng; văn bản tiếng Nhật | 
+TT 02/2025, VTOS/ACCSTP, SFIA 9; tiếng Việt, tiếng Anh
+ | 
+Đường đi | 
+Skill kề cận kèm số tuần học | 
+Vận hành gas sang điện, e-methane | 
+Thu ngân sang tư vấn đa kênh; lễ tân sang doanh thu
+ | 
+Ràng buộc | 
+Điều kiện cứng chạy trước khi xếp hạng | 
+Ngưỡng người đủ điều kiện 保安 theo vị trí; biệt phái 出向 | 
+Đồng ý theo mục đích và bên nhận; đếm 60 ngày; pháp nhân; đơn vị do hãng quản lý
+ | 
+Động lực | 
+Nguyện vọng; kết quả đề xuất (nhận hay từ chối) | 
+社内公募; nguyện vọng trong trao đổi nghề nghiệp hằng năm | 
+Chênh lệch thu nhập; tỷ lệ nhận đề xuất; giữ chân 12 tháng
+Ví dụ truy vấn Neo4j: tìm ứng viên nội bộ cho một job đích. Ràng buộc cứng lọc trước, xếp hạng sau, mỗi kết quả kèm khoảng cách skill để giải thích. [Unverified] Truy vấn minh họa, chưa chạy trên dữ liệu thật; tên nhãn và thuộc tính là đề xuất.(je:LegalEntity)
+MATCH (p:Person)-[:EMPLOYED_BY]->(pe:LegalEntity)
+WHERE NOT EXISTS { MATCH (p)-[:HOLDS]->(:Position)-[:OF]->(j) }
+  // BRG: khác pháp nhân thì phải có đồng ý còn hiệu lực cho mục đích này
+  AND (pe = je OR EXISTS {
+        MATCH (p)-[c:CONSENTS {purpose: 'internal_mobility'}]->(je)
+        WHERE c.validUntil >= date() })
+  // Toho Gas: không kéo người khỏi vị trí 保安 nếu số người đủ điều kiện về dưới ngưỡng
+  AND NOT EXISTS {
+        MATCH (p)-[:HOLDS]->(pos:Position {safetyCritical: true})
+        WHERE COUNT { (:Person)-[:QUALIFIED_FOR]->(pos) } - 1 ]]><(:Task)-[u:USES]->(need:Skill)
+OPTIONAL MATCH (p)-[has:HAS_SKILL]->(need)
+OPTIONAL MATCH (p)-[:HAS_SKILL]->(:Skill)-[adj:ADJACENT]->(need)
+WITH p, need, max(u.level) AS lvl, max(u.weight) AS w,
+     max(has.level) AS mine, min(adj.weeks) AS weeks
+WITH p,
+     sum(CASE WHEN mine >= lvl THEN w
+              WHEN weeks IS NOT NULL THEN w * $adjacentFactor
+              ELSE 0 END) AS score,
+     collect(CASE WHEN mine >= lvl THEN null
+                  ELSE {skill: need.name, weeksToLearn: weeks} END) AS gaps
+RETURN p.pid AS candidate, score, gaps
+ORDER BY score DESC
+LIMIT 20;]]>
+Cách làm nên giữ: [Inference]
+
+Lọc ràng buộc cứng trước khi tính điểm; không trộn ràng buộc vào điểm số.
+
+Mỗi điểm trả kèm danh sách khoảng cách, để quản lý và nhân viên thấy vì sao.
+
+Hệ số như $adjacentFactor là cấu hình theo khách hàng, có ghi vết khi đổi.
+
+Graph chỉ giữ mã ẩn danh pid; định danh thật nằm ở kho riêng.
+
+Ước lượng Fermi cho giờ task được giải phóng ở một job: số người × giờ làm mỗi năm × tỷ lệ task phơi nhiễm × tỷ lệ áp dụng thực tế. Ghi rõ từng thừa số, thay dần bằng số đo.
+8. Workshop first principles với khách hàng
+Mỗi khách hàng một workshop nửa ngày (khoảng 3,5 giờ), đi theo năm bước ở mục 2. Đầu ra là danh sách ràng buộc cứng có người chịu trách nhiệm, và phạm vi PoC có cổng dừng. [Inference]
+ | 
+Phiên | 
+Thời lượng | 
+Câu hỏi chính | 
+Công cụ | 
+Đầu ra
+ | 
+1. Kết quả cần đạt | 
+30 phút | 
+Toho Gas: đến FY2027 cần bao nhiêu giờ task mới ở mảng điện, e-methane? BRG: dự án nào mở trong 12–24 tháng tới, cần bao nhiêu giờ task? | 
+Viết bài toán bằng kết quả đo được | 
+Một câu bài toán, ba chỉ số
+ | 
+2. Giả định | 
+45 phút | 
+"Chúng ta luôn…" về điều chuyển, đào tạo, dữ liệu; vì sao quy tắc này có? | 
+Câu hỏi Socrates; hàng rào Chesterton | 
+Danh sách giả định kèm lý do gốc
+ | 
+3. Sự thật nền | 
+60 phút | 
+Vì sao người không chuyển? Luật, an toàn, đồng ý nào không được vi phạm? | 
+5 Whys nhiều nhánh; người phụ trách pháp lý và an toàn có mặt | 
+Ràng buộc cứng, mỗi cái có nguồn và người chịu trách nhiệm
+ | 
+4. Dựng lại | 
+45 phút | 
+Nếu chỉ giữ ràng buộc cứng, cách nhanh nhất đưa người vào job đích là gì? So với cách các công ty khác làm | 
+Ghép từ ràng buộc; loại suy có kiểm soát | 
+Một đến hai phương án
+ | 
+5. Kiểm | 
+30 phút | 
+Phương án có đáng thử không? Cần dữ liệu gì, cổng dừng ở đâu? | 
+Ước lượng Fermi; thiết kế PoC | 
+Phạm vi PoC, cổng dừng, danh sách dữ liệu
+Người tham dự: [Inference]
+
+Toho Gas: 人事部, đại diện mảng điện và mảng lõi, người phụ trách 保安. Nên mời đại diện công đoàn dự phiên 2 và 3, vì bản Toho Gas đề xuất nói rõ với công đoàn.
+
+BRG: nhân sự của 2–3 pháp nhân trong PoC, người phụ trách bảo vệ dữ liệu, lãnh đạo các dự án đích (đô thị thông minh, FujiMart, golf).
+Cách điều phối nên giữ: [Inference]
+
+Ghi giả định và ràng buộc vào hai cột riêng. Chỉ cột ràng buộc được dùng ở phiên 4.
+
+Mỗi ràng buộc ghi nguồn: điều luật, quy định an toàn, hoặc số đo. Không có nguồn thì xếp lại vào cột giả định.
+
+Hỏi người làm trực tiếp về tay nghề (mētis) trước khi kết luận một việc là "AI làm thay được".
+
+Với BRG, chạy phiên 2–3 theo từng pháp nhân trước, rồi ghép ở phiên 4.
+Nguồn
+Nguồn gốc và phương pháp
+
+Aristotle, Physics, quyển I (Lit2Go)
+
+Stanford Encyclopedia of Philosophy — Aristotle and First Principles in Greek Mathematics
+
+Descartes, Discours de la méthode (trích, MacTutor)
+
+Wikipedia — First principle
+
+APS News, 10/2013 — phỏng vấn Elon Musk
+
+Elon Musk: First Principles (bản chép lời)
+
+Space.com, 2013 — chi phí tên lửa Falcon 9
+
+Farnam Street — First Principles: The Building Blocks of True Knowledge
+
+Farnam Street — Chesterton's Fence
+
+Taiichi Ohno về 5 Whys (trích dẫn)
+
+IHI — 5 Whys: Finding the Root Cause
+
+Five whys — phần phê bình
+
+Plus Maths — The art of guessing (bài toán Fermi)
+Bằng chứng và giới hạn
+
+Gavetti, Levinthal, Rivkin (2005), Strategy making in novel and complex worlds: the power of analogy
+
+Farjoun (2008), bình luận về suy luận loại suy trong chiến lược
+
+James C. Scott, Seeing Like a State (1998)
+Nhân lực, task, skill, AI
+
+Acemoglu, Autor (2011), Skills, Tasks and Technologies (NBER w16082)
+
+Eloundou và cộng sự (2023), GPTs are GPTs
+
+ILO (2025), Generative AI and Jobs: A Refined Global Index of Occupational Exposure
+
+ILO (2025), Generative AI and jobs: A 2025 update
+
+Jesuthasan, Boudreau, Work without Jobs (MIT Press, 2022)
+
+MIT Sloan Management Review — Work Without Jobs
+
+Deloitte (2022), The skills-based organization
+
+Burning Glass Institute, Harvard Business School (2024), Skills-Based Hiring: The Long Road from Pronouncements to Practice
+
+Higher Ed Dive — tóm tắt báo cáo trên
+Tài liệu nội bộ của dự án
+
+Bản Toho Gas — Career Development trong bối cảnh AI: nghiên cứu và giải pháp (tệp PDF đã gửi)
+
+BRG — Career Development trong bối cảnh AI: nghiên cứu và giải pháp
+
+BRG và Toho Gas — khác biệt bài toán và khoảng cách năng lực hệ thống
+
+BRG và Toho Gas — data flow và tri thức doanh nghiệp

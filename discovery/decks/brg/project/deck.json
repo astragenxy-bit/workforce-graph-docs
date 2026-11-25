@@ -1,0 +1,75 @@
+{
+  "v": 5,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-24T21:30:00Z"
+  },
+  "lists": "css",
+  "format": {
+    "v": 1,
+    "shared": [
+      "project/deck.css"
+    ]
+  },
+  "title": "Talent Flow cho BRG — từ dự án chiến lược đến kỹ năng của từng nhân sự",
+  "cover": "cover",
+  "order": [
+    "cover",
+    "context",
+    "brg-today",
+    "problem",
+    "talent-flow",
+    "roles",
+    "flow-dev",
+    "flow-mobility",
+    "flow-strategy",
+    "architecture",
+    "data-flow",
+    "ai",
+    "compliance",
+    "poc",
+    "kpi",
+    "next-steps",
+    "thanks",
+    "ap-problems",
+    "ap-principles",
+    "ap-matrix",
+    "ap-roles",
+    "ap-mobility",
+    "ap-legal",
+    "ap-sources"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Bối cảnh, hiện trạng và bài toán của BRG",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Talent Flow: vai trò tham gia và ba luồng hoạt động",
+      "start": "talent-flow"
+    },
+    "s3": {
+      "description": "Nền tảng: kiến trúc cơ sở tri thức, luồng dữ liệu, nguyên tắc AI và tuân thủ",
+      "start": "architecture"
+    },
+    "s4": {
+      "description": "PoC 12 tuần, đo lường và bước tiếp theo",
+      "start": "poc"
+    },
+    "s5": {
+      "description": "Phụ lục",
+      "start": "ap-problems"
+    }
+  },
+  "faces": {
+    "barlow-semi-condensed": {
+      "family": "Barlow Semi Condensed",
+      "href": "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    },
+    "be-vietnam-pro": {
+      "family": "Be Vietnam Pro",
+      "href": "https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+    }
+  },
+  "designSystems": []
+}
